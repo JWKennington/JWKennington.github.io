@@ -1,2 +1,0 @@
-# jwkennington
-Personal Site
