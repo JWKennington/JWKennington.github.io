@@ -1,2 +1,2 @@
-# JWKennington.github.io
+# jwkennington
 Personal Site
