@@ -1,6 +1,21 @@
 Title: Publications
 Date: 2019-02-20 10:20
+image_header: ../images/lick-obs.png
 
-## The list below are my pubs, yo:
-- [about link]({filename}about.md)
-- [DRP Slides 2014]({static}/pdfs/DRP.pdf)
+
+### List of my publications so far:
+- 2019 APSJournals
+- 2018 MPOW abstract
+- 2015 SBS1520 paper
+
+
+### Talk Slides
+- [2013 Dec - Directed Reading Program]({static}/pdfs/DRP.pdf)
+
+
+### Archive author pages:
+- arxiv
+- ads
+- researchgate
+
+<br>

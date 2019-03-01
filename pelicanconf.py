@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'J. W. Kennington'
 SITENAME = 'J. W. Kennington'
+COPYRIGHT = AUTHOR
 SITEURL = ''
 
 PATH = 'content'
@@ -42,3 +43,23 @@ DEFAULT_PAGINATION = 10
 
 # Theme control
 THEME = '/Users/jim/repos/professional/jwk-theme'
+
+# Static home page
+INDEX_SAVE_AS = 'blog.html'
+ARTICLE_URL = 'blog/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
+ARTICLE_ORDER_BY = 'date'
+
+# CONTOL menu
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+MENUITEMS = (
+    ('Blog','/blog'),
+    ('CV','/pages/cv'),
+    ('Code','/pages/code'),
+    ('Publications','/pages/publications'),
+    ('Research','/pages/research'),
+)
+
+BLOG_PAGE_IMAGE_HEADER = '../images/nyc.png'
+SIDEBAR_DISPLAY = ['categories', 'tags']

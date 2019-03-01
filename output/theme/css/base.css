@@ -106,7 +106,7 @@
 		border: 0;
 		-ms-interpolation-mode: bicubic;
 	}
-
+	
 	/* Flexible Embeds */
 	.embed {
 		position: relative;
@@ -247,3 +247,18 @@
 		font-weight: normal;
 		font-size: 14px;
 		color: #444; }
+	
+/* #Page header images
+================================================== */
+	.page-header-image {
+		margin: auto !important;
+	  	/*width: 90% !important;*/
+	  	padding: 10px !important;
+	}
+
+	.page-header-image img {
+		max-height: 300px !important;
+		margin: auto !important;
+	  	width: auto !important;
+	  	padding: 10px !important;
+	}
