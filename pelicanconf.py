@@ -64,4 +64,8 @@ MENUITEMS = (
 )
 
 BLOG_PAGE_IMAGE_HEADER = '../images/nyc.png'
+ARTICLE_PAGE_IMAGE_HEADER = '../' + BLOG_PAGE_IMAGE_HEADER
 SIDEBAR_DISPLAY = ['categories', 'tags']
+
+# PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
+# PLUGINS = ['render_math']
