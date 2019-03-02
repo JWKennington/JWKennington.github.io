@@ -35,7 +35,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (
     ('github', 'http://github.com/JWKennington'),
-    ('twitter', 'http://twitter.com/jwkastro'),
+    ('twitter', 'https://twitter.com/JwKennington'),
+    ('facebook', 'https://www.facebook.com/jimmy.kennington'),
 )
 
 DEFAULT_PAGINATION = 10
@@ -67,5 +68,7 @@ BLOG_PAGE_IMAGE_HEADER = '../images/nyc.png'
 ARTICLE_PAGE_IMAGE_HEADER = '../' + BLOG_PAGE_IMAGE_HEADER
 SIDEBAR_DISPLAY = ['categories', 'tags']
 
-# PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
-# PLUGINS = ['render_math']
+PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
+PLUGINS = ['render_math']
+
+LOAD_CONTENT_CACHE = False

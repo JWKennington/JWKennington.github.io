@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Wed, 20 Feb 2019 10:20:00 -0600</lastBuildDate><item><title>ABC</title><link>/blog/abc/</link><description>&lt;p&gt;This is a sample article!&lt;/p&gt;
-&lt;p&gt;This is an example of inline math $a=b$ &lt;/p&gt;
-&lt;p&gt;This is an example of newline math&lt;/p&gt;
-&lt;p&gt;$$ a = b $$&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 20 Feb 2019 10:20:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-02-20:/blog/abc/</guid></item><item><title>Sample Article</title><link>/blog/sample-article/</link><description>&lt;p&gt;This is a sample article!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 20 Feb 2019 10:20:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-02-20:/blog/sample-article/</guid></item></channel></rss>
+&lt;p&gt;This is an example of inline math &lt;span class="math"&gt;\(a=b\)&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;This is an example of newline math &lt;/p&gt;
+&lt;div class="math"&gt;$$ a = b $$&lt;/div&gt;
+&lt;p&gt;with something right after&lt;/p&gt;
+&lt;p&gt;This is something else afterwards&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 20 Feb 2019 10:20:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-02-20:/blog/abc/</guid></item><item><title>Sample Article</title><link>/blog/sample-article/</link><description>&lt;p&gt;This is a sample article!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 20 Feb 2019 10:20:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-02-20:/blog/sample-article/</guid></item></channel></rss>
