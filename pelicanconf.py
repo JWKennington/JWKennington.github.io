@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'J. W. Kennington'
 SITENAME = 'J. W. Kennington'
+COPYRIGHT = AUTHOR
 SITEURL = ''
 
 PATH = 'content'
@@ -32,8 +33,11 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('github', 'http://github.com/JWKennington'),
+    ('twitter', 'https://twitter.com/JwKennington'),
+    ('facebook', 'https://www.facebook.com/jimmy.kennington'),
+)
 
 DEFAULT_PAGINATION = 10
 
@@ -42,3 +46,29 @@ DEFAULT_PAGINATION = 10
 
 # Theme control
 THEME = '/Users/jim/repos/professional/jwk-theme'
+
+# Static home page
+INDEX_SAVE_AS = 'blog.html'
+ARTICLE_URL = 'blog/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
+ARTICLE_ORDER_BY = 'date'
+
+# CONTOL menu
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+MENUITEMS = (
+    ('Blog','/blog'),
+    ('CV','/pages/cv'),
+    ('Code','/pages/code'),
+    ('Publications','/pages/publications'),
+    ('Research','/pages/research'),
+)
+
+BLOG_PAGE_IMAGE_HEADER = '../images/nyc.png'
+ARTICLE_PAGE_IMAGE_HEADER = '../' + BLOG_PAGE_IMAGE_HEADER
+SIDEBAR_DISPLAY = ['categories', 'tags']
+
+PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
+PLUGINS = ['render_math']
+
+LOAD_CONTENT_CACHE = False
