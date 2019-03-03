@@ -8,7 +8,7 @@ This is an example of inline math $a=b$
 
 This is an example of newline math 
 
-$$ a = b $$ 
+$$ c = \int\limits_{a}^{b} f(x)dx $$ 
 
 with something right after
 

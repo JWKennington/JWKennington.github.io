@@ -2,7 +2,7 @@
 <rss version="2.0"><channel><title>J. W. Kennington - J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Wed, 20 Feb 2019 10:20:00 -0600</lastBuildDate><item><title>ABC</title><link>/blog/abc/</link><description>&lt;p&gt;This is a sample article!&lt;/p&gt;
 &lt;p&gt;This is an example of inline math &lt;span class="math"&gt;\(a=b\)&lt;/span&gt; &lt;/p&gt;
 &lt;p&gt;This is an example of newline math &lt;/p&gt;
-&lt;div class="math"&gt;$$ a = b $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ c = \int\limits_{a}^{b} f(x)dx $$&lt;/div&gt;
 &lt;p&gt;with something right after&lt;/p&gt;
 &lt;p&gt;This is something else afterwards&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -37,7 +37,7 @@
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
         "}); " +

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-02-20T10:20:00-06:00</updated><entry><title>ABC</title><link href="/blog/abc/" rel="alternate"></link><published>2019-02-20T10:20:00-06:00</published><updated>2019-02-20T10:20:00-06:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-02-20:/blog/abc/</id><summary type="html">&lt;p&gt;This is a sample article!&lt;/p&gt;
 &lt;p&gt;This is an example of inline math &lt;span class="math"&gt;\(a=b\)&lt;/span&gt; &lt;/p&gt;
 &lt;p&gt;This is an example of newline math &lt;/p&gt;
-&lt;div class="math"&gt;$$ a = b $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ c = \int\limits_{a}^{b} f(x)dx $$&lt;/div&gt;
 &lt;p&gt;with something right after&lt;/p&gt;
 &lt;p&gt;This is something else afterwards&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -10,11 +10,10 @@
         indent = "0em",
         linebreak = "false";
 
-    if (false) {
-        align = (screen.width &lt; 768) ? "left …&lt;/script&gt;</summary><content type="html">&lt;p&gt;This is a sample article!&lt;/p&gt;
+    if …&lt;/script&gt;</summary><content type="html">&lt;p&gt;This is a sample article!&lt;/p&gt;
 &lt;p&gt;This is an example of inline math &lt;span class="math"&gt;\(a=b\)&lt;/span&gt; &lt;/p&gt;
 &lt;p&gt;This is an example of newline math &lt;/p&gt;
-&lt;div class="math"&gt;$$ a = b $$&lt;/div&gt;
+&lt;div class="math"&gt;$$ c = \int\limits_{a}^{b} f(x)dx $$&lt;/div&gt;
 &lt;p&gt;with something right after&lt;/p&gt;
 &lt;p&gt;This is something else afterwards&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -49,7 +48,7 @@
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
         "}); " +

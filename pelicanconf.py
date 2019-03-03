@@ -33,8 +33,13 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
+FA_SOCIAL = (
+    ('beaker', 'https://www.researchgate.net/profile/James_Kennington'),
+)
+
 SOCIAL = (
     ('github', 'http://github.com/JWKennington'),
+    ('linkedin', 'https://www.linkedin.com/in/jameskennington/'),
     ('twitter', 'https://twitter.com/JwKennington'),
     ('facebook', 'https://www.facebook.com/jimmy.kennington'),
 )
@@ -61,7 +66,7 @@ MENUITEMS = (
     ('CV','/pages/cv'),
     ('Code','/pages/code'),
     ('Publications','/pages/publications'),
-    ('Research','/pages/research'),
+    # ('Research','/pages/research'),
 )
 
 BLOG_PAGE_IMAGE_HEADER = '../images/nyc.png'
@@ -72,3 +77,5 @@ PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
 PLUGINS = ['render_math']
 
 LOAD_CONTENT_CACHE = False
+
+MATH_JAX = {'color':'blue'}
