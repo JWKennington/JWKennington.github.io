@@ -35,7 +35,7 @@
 		position: relative;
 	}
 	ol, ul {
-		list-style: none; }
+		list-style: disc; }
 	blockquote, q {
 		quotes: none; }
 	blockquote:before, blockquote:after,
@@ -106,7 +106,7 @@
 		border: 0;
 		-ms-interpolation-mode: bicubic;
 	}
-
+	
 	/* Flexible Embeds */
 	.embed {
 		position: relative;
@@ -184,7 +184,7 @@
 /* #Lists
 ================================================== */
 	ul, ol { margin: 0; }
-	ul { list-style: none outside; }
+	ul { list-style: disc inside; }
 	ol { list-style: decimal; }
 	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
 	ul.square { list-style: square outside; }
@@ -194,7 +194,7 @@
 	ol ol, ol ul {}
 	ul ul li, ul ol li,
 	ol ol li, ol ul li {}
-	li { line-height: 18px; }
+	li { line-height: 18px; padding-left: 20px; }
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
 
@@ -247,3 +247,24 @@
 		font-weight: normal;
 		font-size: 14px;
 		color: #444; }
+	
+/* #Page header images
+================================================== */
+	.page-header-image {
+		margin: auto !important;
+	  	/*width: 90% !important;*/
+	  	padding: 10px !important;
+	}
+
+	.page-header-image img {
+		max-height: 300px !important;
+		margin: auto !important;
+	  	width: auto !important;
+	  	padding: 10px !important;
+	}
+	
+/* #MathJax coloring
+================================================== */
+.MathJax .mi, .MathJax .mo {
+    color: inherit;
+}
