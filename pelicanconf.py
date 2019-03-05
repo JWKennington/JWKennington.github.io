@@ -56,7 +56,8 @@ THEME = '/Users/jim/repos/professional/jwk-theme'
 INDEX_SAVE_AS = 'blog.html'
 ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
-ARTICLE_ORDER_BY = 'date'
+ARTICLE_ORDER_BY = 'reversed-date'
+
 
 # CONTOL menu
 DISPLAY_PAGES_ON_MENU = False

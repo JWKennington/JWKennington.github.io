@@ -1,62 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Wed, 20 Feb 2019 10:20:00 -0600</lastBuildDate><item><title>ABC</title><link>/blog/abc/</link><description>&lt;p&gt;This is a sample article!&lt;/p&gt;
-&lt;p&gt;This is an example of inline math &lt;span class="math"&gt;\(a=b\)&lt;/span&gt; &lt;/p&gt;
-&lt;p&gt;This is an example of newline math &lt;/p&gt;
-&lt;div class="math"&gt;$$ c = \int\limits_{a}^{b} f(x)dx $$&lt;/div&gt;
-&lt;p&gt;with something right after&lt;/p&gt;
-&lt;p&gt;This is something else afterwards&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 20 Feb 2019 10:20:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-02-20:/blog/abc/</guid></item><item><title>Sample Article</title><link>/blog/sample-article/</link><description>&lt;p&gt;This is a sample article!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 20 Feb 2019 10:20:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-02-20:/blog/sample-article/</guid></item></channel></rss>
+<rss version="2.0"><channel><title>J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Tue, 05 Mar 2019 00:00:00 -0600</lastBuildDate><item><title>Mass of Sound waves</title><link>/blog/mass-of-sound-waves/</link><description>&lt;p&gt;A recent article published in Physical Review B by &lt;a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.134516"&gt;Nicolis and Penco&lt;/a&gt;
+arrives at an unconventional physical assertion: that non-relativistic sound waves carry gravitational mass.&lt;/p&gt;
+&lt;p&gt;This claim should sound odd to anyone who has taken an undergraduate mechanics course, as one of the first physical assertions
+about waves is that they transport energy &lt;em&gt;through&lt;/em&gt; matter (which possesses gravitational mass), but not having any
+mass of it's own. The original paper focuses on the focused effect of such behavior on condensed matter solids, though
+they authors assert the result is more general.&lt;/p&gt;
+&lt;p&gt;If we assume their result to be true, then I find the following train of thought interesting. Given a sound wave propagating through
+a solid that itself possesses gravitational mass, to what extent do the sound wave and the medium interact gravitationally? Are 
+there any circumstances (very "loose" media, such as IGM) under which that interaction would play an important role in the dynamics
+of the resulting wave? &lt;/p&gt;
+&lt;p&gt;Though the above questions are tempting - I'll wait until Nicolis and Penco either experimentally observe their proposed effect,
+or can present a more general version of their initial results. Either way - interesting!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Tue, 05 Mar 2019 00:00:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-03-05:/blog/mass-of-sound-waves/</guid><category>physics</category><category>waves</category></item><item><title>Book Review: Tensors and Group Theory for Physcists (Jeevanjee)</title><link>/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/</link><description>&lt;h5&gt;Summary&lt;/h5&gt;
+&lt;p&gt;I picked up a copy of Nadir Jeevnajee's &lt;a href="https://www.amazon.com/Introduction-Tensors-Group-Theory-Physicists/dp/3319147935/ref=sr_1_3?keywords=jeevanjee&amp;amp;qid=1551765862&amp;amp;s=gateway&amp;amp;sr=8-3"&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/a&gt;
+a few months ago with the intent of skimming through and spending most of my time in reference texts. To my pleasant
+surprise, I found this text to be self contained - requiring little to no references. The presentation is at once mathematically rigorous 
+and physically intuitive, alluding to well-known examples from physics throughout.&lt;/p&gt;
+&lt;p&gt;In the below sections, I will briefly summarize the content presented as well as how this presentation compares to other known
+texts in the subject (that I'm aware of!). &lt;/p&gt;
+&lt;h5&gt;Part I: Tensors&lt;/h5&gt;
+&lt;p&gt;The introduction to tensors as multilinear functions &lt;/p&gt;
+&lt;h5&gt;Part II: Group Theory&lt;/h5&gt;
+&lt;p&gt;In progress, check back later for more.&lt;/p&gt;
+&lt;h5&gt;Solutions&lt;/h5&gt;
+&lt;p&gt;As I read through the text I'm compiling a solutions manual, which I will post on this site when complete. Until then,
+you can access a preliminary manuscript &lt;a href="/pdfs/solns/jeevanjee.pdf"&gt;here&lt;/a&gt;. I will also continue to update this review
+as relevant.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Mon, 04 Mar 2019 00:00:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-03-04:/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/</guid><category>physics</category><category>linear algebra</category><category>group theory</category><category>tensors</category></item></channel></rss>
