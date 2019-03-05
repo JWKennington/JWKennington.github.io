@@ -80,3 +80,6 @@ PLUGINS = ['render_math']
 LOAD_CONTENT_CACHE = False
 
 MATH_JAX = {'color':'blue'}
+
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
