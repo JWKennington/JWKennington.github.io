@@ -2396,9 +2396,9 @@ ol li ol.childlist .comment-des {
 
 .categories a {
 	color: #888;
-	display: block;
-	line-height: 19px;
-	padding: 3px 0;
+	/*display: block;*/
+	/*line-height: 19px;*/
+	/*padding: 3px 0;*/
 }
 
 .categories a:hover {
@@ -2406,12 +2406,12 @@ ol li ol.childlist .comment-des {
 }
 
 .categories ul li:before {
-	content: "";
-	font-family: "FontAwesome";
-	font-size: 13px;
-	color: #ccc;
-	margin: 3px 9px 0 0;
-	float: left;
+	/*content: "";*/
+	/*font-family: "FontAwesome";*/
+	/*font-size: 13px;*/
+	/*color: #ccc;*/
+	/*margin: 3px 9px 0 0;*/
+	/*float: left;*/
 }
 
 /* Blog Tabs */

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington - Physics</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2019-03-05T00:00:00-06:00</updated><entry><title>Mass of Sound waves</title><link href="/blog/mass-of-sound-waves/" rel="alternate"></link><published>2019-03-05T00:00:00-06:00</published><updated>2019-03-05T00:00:00-06:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-03-05:/blog/mass-of-sound-waves/</id><summary type="html">&lt;p&gt;A recent article published in Physical Review B by &lt;a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.134516"&gt;Nicolis and Penco&lt;/a&gt;
+arrives at an unconventional physical assertion: that non-relativistic sound waves carry gravitational mass.&lt;/p&gt;
+&lt;p&gt;This claim should sound odd to anyone who has taken an undergraduate mechanics course, as one of the first physical assertions
+about waves is that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A recent article published in Physical Review B by &lt;a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.134516"&gt;Nicolis and Penco&lt;/a&gt;
+arrives at an unconventional physical assertion: that non-relativistic sound waves carry gravitational mass.&lt;/p&gt;
+&lt;p&gt;This claim should sound odd to anyone who has taken an undergraduate mechanics course, as one of the first physical assertions
+about waves is that they transport energy &lt;em&gt;through&lt;/em&gt; matter (which possesses gravitational mass), but not having any
+mass of it's own. The original paper focuses on the focused effect of such behavior on condensed matter solids, though
+they authors assert the result is more general.&lt;/p&gt;
+&lt;p&gt;If we assume their result to be true, then I find the following train of thought interesting. Given a sound wave propagating through
+a solid that itself possesses gravitational mass, to what extent do the sound wave and the medium interact gravitationally? Are 
+there any circumstances (very "loose" media, such as IGM) under which that interaction would play an important role in the dynamics
+of the resulting wave? &lt;/p&gt;
+&lt;p&gt;Though the above questions are tempting - I'll wait until Nicolis and Penco either experimentally observe their proposed effect,
+or can present a more general version of their initial results. Either way - interesting!&lt;/p&gt;</content><category term="physics"></category><category term="waves"></category></entry></feed>
