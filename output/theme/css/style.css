@@ -248,8 +248,7 @@
 
 	#mobile-navigation { display: block; }
 
-	#responsive,
-	.search-container { display: none; }
+	/*#responsive, .search-container { }*/
 
 	#header {
 		z-index: 999;
