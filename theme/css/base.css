@@ -261,6 +261,7 @@
 		margin: auto !important;
 	  	width: auto !important;
 	  	padding: 10px !important;
+		max-width: 100% !important;
 	}
 	
 /* #MathJax coloring
