@@ -269,3 +269,19 @@
 .MathJax .mi, .MathJax .mo {
     color: inherit;
 }
+
+/* GITHUB SOCIAL
+================================================== */
+.social-github img {
+    width: 16px !important;
+	height: 16px !important;
+	margin-right: 5px;
+}
+
+.social-github .push {
+	padding-left: 35px;
+}
+
+.social-github .commits span {
+	display: none;
+}

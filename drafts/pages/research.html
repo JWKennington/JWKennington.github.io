@@ -16,7 +16,7 @@
             <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="J. W. Kennington Full RSS Feed" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/theme/css/style.css?v=1.0.0">
+        <link rel="stylesheet" href="/theme/css/style.css?v=1.0.1">
 
         <!-- Custom CSS -->
         	<link rel="stylesheet" href="/theme/css/colors/blue.css" id="colors">
@@ -31,6 +31,9 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+		
+		<script src="/theme/js/jquery-3.3.1.min.js"></script>
+		
 
                 <meta property="og:locale" content="">
 		<meta property="og:site_name" content="J. W. Kennington">
@@ -59,10 +62,17 @@
 							    <li><a href="/pages/code">Code</a></li>
 							    <li><a href="/pages/publications">Publications</a></li>
 
+							<!--<li>-->
+								<!--<div class="clearfix search-nav-clearfix"></div>-->
+								<!--<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
+								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
+								<!--</form>	-->
+							<!--</li>-->
 						</ul>
 					</nav>
 				</div>
 			</div>
+			
 			<!-- Container / End -->
 		</header>
 		<!-- Header / End -->
@@ -134,6 +144,15 @@ in the context of relativity.  </p>
 		<!-- Footer Bottom / End -->
 
 	<!-- Javascripts -->
-	<script src="/theme/js/jquery.min.js"></script>
+	<script src="/theme/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    var disqus_shortname = 'JWKennington';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 	</body>
 </html>
