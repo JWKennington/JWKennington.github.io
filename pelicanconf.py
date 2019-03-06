@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'J. W. Kennington'
 SITENAME = 'J. W. Kennington'
 COPYRIGHT = AUTHOR
-SITEURL = 'https://jwkennington.com/'
+SITEURL = ''
 
 PATH = 'content'
 
@@ -75,7 +75,7 @@ ARTICLE_PAGE_IMAGE_HEADER = '../' + BLOG_PAGE_IMAGE_HEADER
 SIDEBAR_DISPLAY = ['categories', 'tags']
 
 PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
-PLUGINS = ['render_math']
+PLUGINS = ['render_math', 'github_activity']
 
 LOAD_CONTENT_CACHE = False
 
@@ -83,3 +83,10 @@ MATH_JAX = {'color':'blue'}
 
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
+DISQUS_SITENAME = 'JWKennington'
+
+# GITHUB
+GITHUB_ACTIVITY_FEED = 'https://github.com/JWKennington.atom'
+GITHUB_ACTIVITY_MAX_ENTRIES = 3
+

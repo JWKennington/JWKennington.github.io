@@ -1,6 +1,7 @@
 Title: Code
 Date: 2019-02-20 10:20
 image_header: ../images/reservoir.png
+Template: page-code
 
 
 #### `apsjournals` - A Python interface to APS publications

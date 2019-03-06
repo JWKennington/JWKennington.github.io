@@ -12,7 +12,7 @@ hide_headline: True
 
 
 I am a quantitative developer, aspiring physicist, and armchair geometer. My research interests include general relativity and 
-gravitational waves, as well as the geometry underlying those theories. I also enjoy studying the effects of relatviity 
+gravitational waves, as well as the geometry underlying those theories. I also enjoy studying the effects of relativity 
 on various astrophysical phenomena, such as AGN and dark matter clustering.
 
 Here you will find some [informal posts](/blog), [my CV](/pages/cv) and [publications](/pages/publications). I've also posted links 
