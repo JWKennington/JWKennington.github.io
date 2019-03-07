@@ -105,3 +105,6 @@ venv.bak/
 
 # ignore build
 output/
+
+*.p12
+*.pem

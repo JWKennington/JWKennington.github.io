@@ -75,7 +75,11 @@ ARTICLE_PAGE_IMAGE_HEADER = '../' + BLOG_PAGE_IMAGE_HEADER
 SIDEBAR_DISPLAY = ['categories', 'tags']
 
 PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
-PLUGINS = ['render_math', 'github_activity']
+PLUGINS = [
+    'render_math', 
+    'github_activity',
+    'ga_page_view',
+]
 
 LOAD_CONTENT_CACHE = False
 
@@ -90,3 +94,10 @@ DISQUS_SITENAME = 'JWKennington'
 GITHUB_ACTIVITY_FEED = 'https://github.com/JWKennington.atom'
 GITHUB_ACTIVITY_MAX_ENTRIES = 3
 
+# GOOGLE ANALYTICS
+GOOGLE_ANALYTICS = 'UA-135655259-1'
+GOOGLE_SERVICE_ACCOUNT = 'sitetracker@high-unity-233520.iam.gserviceaccount.com'
+GOOGLE_KEY_FILE = './client_private.p12'
+GA_START_DATE = '2019-01-01'
+GA_END_DATE = 'today'
+GA_METRIC = 'ga:pageviews'
