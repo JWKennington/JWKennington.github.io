@@ -4,16 +4,6 @@
 <html lang="en">
 <!--<![endif]-->
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135655259-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-135655259-1');
-		</script>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -55,6 +45,19 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135655259-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-135655259-1', {
+        'page_title' : 'blog.html',
+        'page_path': 'blog.html'
+      });
     </script>
 	</head>
 	<body>
@@ -192,6 +195,11 @@ arrives at an unconventional physical assertion: that non-relativistic sound wav
 			<h3 class="headline">Support Me</h3><span class="line"></span><div class="clearfix"></div>
 			<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a soda', '#46b798', 'Z8Z4RGIA');kofiwidget2.draw();</script>
 		</div>
+		<div class="widget">
+			<br>
+			<span class="line"></span><div class="clearfix"></div>
+				<b>Page views: </b>
+		</div>
 		<br>
 		 
 	</div>
@@ -203,8 +211,13 @@ arrives at an unconventional physical assertion: that non-relativistic sound wav
 		<div id="footer-bottom">
 			<!-- Container -->
 			<div class="container">
-				<div class="eight columns">&copy; J. W. Kennington </div>
-					<div class="eight columns">
+				<div class="six columns">&copy; 
+					J. W. Kennington
+				</div>
+				<div class="four columns">
+				<b>Page views: </b>
+				</div>
+					<div class="six columns">
 						<ul class="social-icons-footer">
 								<li class="social-icons-footer-fa-override">
 									<a href="https://www.researchgate.net/profile/James_Kennington" class="tooltip top social-icons-footer-fa-override" title="beaker">
