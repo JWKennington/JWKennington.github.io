@@ -56,7 +56,7 @@ Here is my CV. Click the link below for a pdf version or see some listed items b
 
 
 #### Work Experience
-- _2015 - Now_ **Quantitative Developer°°, HBK Capital Management, Dallas TX
+- _2015 - Now_ **Quantitative Developer**, HBK Capital Management, Dallas TX
     - Designed and implemented high-performance, deferred computation libraries in Python for heterogeneous computing environments. Conducted research into systematic currency trading, statistical arbi- trage equity models, and various quantitative fixed-income models. Also contributed yield and credit spread curve models and calibration techniques in Python. Proposed thermodynamics-based portfolio optimization methodology.
 - _2016 - Now_ **Co-founder and Researcher**, Poincaré Research LLC, Dallas TX
     - Built and operated deferred calculation framework in Python, experimenting with techniques from computational topology. Applied computational geometry to various problems in physics.

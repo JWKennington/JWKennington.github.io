@@ -93,6 +93,10 @@ DISQUS_SITENAME = 'JWKennington'
 # GITHUB
 GITHUB_ACTIVITY_FEED = 'https://github.com/JWKennington.atom'
 GITHUB_ACTIVITY_MAX_ENTRIES = 3
+GITHUB_REPO_IGNORE = [
+    'JWKennington.github.io',
+    'jwk-theme',
+]
 
 # GOOGLE ANALYTICS
 GOOGLE_ANALYTICS = 'UA-135655259-1'
