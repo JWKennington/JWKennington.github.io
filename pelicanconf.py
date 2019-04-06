@@ -76,6 +76,7 @@ SIDEBAR_DISPLAY = ['categories', 'tags']
 
 PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
 PLUGINS = [
+    'pelican-cite',
     'render_math', 
     'github_activity',
     'ga_page_view',
@@ -92,7 +93,7 @@ DISQUS_SITENAME = 'JWKennington'
 
 # GITHUB
 GITHUB_ACTIVITY_FEED = 'https://github.com/JWKennington.atom'
-GITHUB_ACTIVITY_MAX_ENTRIES = 3
+GITHUB_ACTIVITY_MAX_ENTRIES = 5
 GITHUB_REPO_IGNORE = [
     'JWKennington.github.io',
     'jwk-theme',
@@ -105,3 +106,6 @@ GOOGLE_KEY_FILE = './client_private.p12'
 GA_START_DATE = '2019-01-01'
 GA_END_DATE = 'today'
 GA_METRIC = 'ga:pageviews'
+
+# CITATIONS
+PUBLICATIONS_SRC = 'content/references.bib'
