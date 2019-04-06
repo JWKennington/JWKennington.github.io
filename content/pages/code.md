@@ -10,6 +10,12 @@ and has since been augmented with additional features, such as querying by autho
 source and may be found on [github](https://github.com/JWKennington/apsjournals).
 
 
+#### `pyperbolic` - Hyperbolic geometry in Python
+The Pyperbolic project started as a way to produce Poincare disk model diagrams, and is still under
+active development. The scope subsequently increased to include some projective and spherical geometry. 
+This project is open source and may be found on [github](https://github.com/JWKennington/pyperbolic).
+
+
 <!---
 #### Contributions to Open Source Projects
 The below items listed are projects that existed prior to my involvement, that I have assisted to varying degress.
