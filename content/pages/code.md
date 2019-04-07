@@ -16,6 +16,14 @@ active development. The scope subsequently increased to include some projective 
 This project is open source and may be found on [github](https://github.com/JWKennington/pyperbolic).
 
 
+#### `solman` - Solutions Manual utility in Python
+Solutions manual writing utility. Though this utility is written in Python, the user is not expected to write 
+any python as part of writing solutions. Rather, the solutions are written individually as markdown files (.md) 
+in a meaningful directory structure. This package can convert those separate solutions into a variety of outputs, 
+including a single LaTeX file as well as Pelican-compatible blog posts / web pages. 
+This project is open source and may be found on [github](https://github.com/JWKennington/solman).
+
+
 <!---
 #### Contributions to Open Source Projects
 The below items listed are projects that existed prior to my involvement, that I have assisted to varying degress.
