@@ -10,11 +10,11 @@
         <meta name="author" content="J. W. Kennington">
 
 
-        <title>J. W. Kennington - Calling all Texas Physicists - TSAPS Spring Meeting 2019</title>
+        <title>J. W. Kennington - Tensor Product for Programmers</title>
 
             <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="J. W. Kennington Full Atom Feed" />
             <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="J. W. Kennington Full RSS Feed" />
-            <link href="/feeds/physics.atom.xml" type="application/atom+xml" rel="alternate" title="J. W. Kennington Categories Atom Feed" />
+            <link href="/feeds/maths.atom.xml" type="application/atom+xml" rel="alternate" title="J. W. Kennington Categories Atom Feed" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="/theme/css/style.css?v=1.0.1">
@@ -38,16 +38,16 @@
 
 
 
-        <meta name="tags" contents="physics" />
-        <meta name="tags" contents="conference" />
+        <meta name="tags" contents="maths" />
+        <meta name="tags" contents="tensors" />
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Calling all Texas Physicists - TSAPS Spring Meeting 2019">
-    <meta property="og:url" content="blog/calling-all-texas-physicists-tsaps-spring-meeting-2019/">
-    <meta property="og:description" content="Three hours south east of Dallas, Physicists gathered at Stephen F. Austin university in Nacogdoches to discuss recent developments in the field. They weren&#39;t alone, though. The meeting was shared between the APS, AAPT, and SPS - so if you were interested in physics research, studying physics, or teaching physics, there …">
-    <meta property="article:published_time" content="Tuesday, March 12, 2019">
-    <meta name="twitter:title" content="Calling all Texas Physicists - TSAPS Spring Meeting 2019">
-    <meta name="twitter:description" content="Three hours south east of Dallas, Physicists gathered at Stephen F. Austin university in Nacogdoches to discuss recent developments in the field. They weren&#39;t alone, though. The meeting was shared between the APS, AAPT, and SPS - so if you were interested in physics research, studying physics, or teaching physics, there …">
-    <meta name="description" content="Three hours south east of Dallas, Physicists gathered at Stephen F. Austin university in Nacogdoches to discuss recent developments in the field. They weren&#39;t alone, though. The meeting was shared between the APS, AAPT, and SPS - so if you were interested in physics research, studying physics, or teaching physics, there …">
+    <meta property="og:title" content="Tensor Product for Programmers">
+    <meta property="og:url" content="blog/tensor-product-for-programmers/">
+    <meta property="og:description" content="The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. Tensors are defined …">
+    <meta property="article:published_time" content="Monday, April 15, 2019">
+    <meta name="twitter:title" content="Tensor Product for Programmers">
+    <meta name="twitter:description" content="The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. Tensors are defined …">
+    <meta name="description" content="The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. Tensors are defined …">
     <meta name="twitter:image" content="">
     <meta property="og:image" content="">
 
@@ -56,11 +56,11 @@
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="/blog/calling-all-texas-physicists-tsaps-spring-meeting-2019/">
-	<meta property="og:title" content="Calling all Texas Physicists - TSAPS Spring Meeting 2019">
+	<meta property="og:url" content="/blog/tensor-product-for-programmers/">
+	<meta property="og:title" content="Tensor Product for Programmers">
 	<meta property="og:description" content="">
 	   <meta property="og:image" content="/images/guilherme-toti.jpg">
-	<meta property="article:published_time" content="2019-03-12 00:00:00-05:00">
+	<meta property="article:published_time" content="2019-04-15 00:00:00-05:00">
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-135655259-1']);
@@ -80,8 +80,8 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-135655259-1', {
-        'page_title' : 'blog/calling-all-texas-physicists-tsaps-spring-meeting-2019/index.html',
-        'page_path': 'blog/calling-all-texas-physicists-tsaps-spring-meeting-2019/index.html'
+        'page_title' : 'blog/tensor-product-for-programmers/index.html',
+        'page_path': 'blog/tensor-product-for-programmers/index.html'
       });
     </script>
 	</head>
@@ -141,18 +141,37 @@
 	<section class="post-content">
 
 		<header class="meta">
-			<h2><a href="/blog/calling-all-texas-physicists-tsaps-spring-meeting-2019/">Calling all Texas Physicists - TSAPS Spring Meeting 2019</a></h2>
+			<h2><a href="/blog/tensor-product-for-programmers/">Tensor Product for Programmers</a></h2>
 			<ul>
 				<li>By <a href="/author/j-w-kennington.html">J. W. Kennington</a></li>
-				<li>Tue 12 March 2019</li>
+				<li>Mon 15 April 2019</li>
 			</ul>
 		</header>
 
-		<p>Three hours south east of Dallas, Physicists gathered at Stephen F. Austin university in Nacogdoches to discuss recent developments in the field. They weren't alone, though. The meeting was shared between the APS, AAPT, and SPS - so if you were interested in physics research, studying physics, or teaching physics, there was something there that could hold your attention. For me, there were a couple talks related to astrophysics that seemed worth the drive; I hit the road early Friday morning to arrive in time for the first talk. </p>
-<p>Dr. Billy Quarles' talk, <em>Potential for Exoplanetary
-Neighbors in Alpha Centauri</em>, included a brief discussion of methodologies used to detect exoplanets. Though Quarles and his collaborators recent work seemed to focus mostly in RV techniques, the discussion on photometric methods was particularly interesting. The way that he presented the problem seemed to lend itself naturally to some geometric tricks that would allow for closed-form solutions to the intensity of the star during an exoplanet transit. I am drafting an analysis of these tricks presently, and will update this post with a link once complete - however the sketch goes something like this:</p>
-<p>Let an exoplanet of mass <span class="math">\(m\)</span> orbit a star of mass <span class="math">\(M\)</span> (clearly, <span class="math">\(m &lt; M\)</span>). The ellipticity of this orbit isn't immediately important, since we're going to make a few simplifying assumptions. First we use <span class="math">\(T \cup \mathcal{O}(3)\)</span> invariance of the trajectory geometry to align the orbital plane with the <span class="math">\(x\)</span> - <span class="math">\(y\)</span> plane in <span class="math">\(\mathcal{R}^3\)</span>. We also choose to align the orbital angular momentum <span class="math">\(L\)</span> with the <span class="math">\(z\)</span> axis of <span class="math">\(\mathcal{R}^3\)</span>. Next, we choose a reference point <span class="math">\(p\)</span> along the <span class="math">\(x\)</span> axis to serve as the "observer". When the observer is sufficiently far from the planetary system, as the Earth is from even our nearest  neighboring system, then we may approximate the path of the light exiting the system as a projection along the <span class="math">\(x\)</span> axis into the <span class="math">\(y\)</span> - <span class="math">\(z\)</span> plane, namely <span class="math">\(\pi_{1}: \mathcal{R}^3 \rightarrow \mathcal{R}^2\)</span> defined by <span class="math">\(\pi_{1}(x, y, z) = (y, z)\)</span>. This assumption allows us to reduce the problem of intersecting volumes to one of intersecting areas! The remaining geometric problem can thus be stated: Given two circles <span class="math">\(S_{p1}^1(r_1)\)</span> and <span class="math">\(S_{p_2}^1(r_2)\)</span>, where the centers <span class="math">\(p_1\)</span> and <span class="math">\(p_2\)</span> are represented as smooth functions of time <span class="math">\(\alpha_1(t)\)</span> and <span class="math">\(\alpha_2(t)\)</span>, give the intersectional area <span class="math">\(A_{\cap}(t)\)</span> as a function of time. The intensity of the star during transit will be proportional to this function to a first order.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+		<p>The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. </p>
+<p>Tensors are defined and introduced in two equivalent ways. The first way, called the "expansion coefficient" (or array) style of introducing tensors relies on many indices and iterates over the n dimensions of some array (n-dimensional generalization of a matrix) <a href='#wikipediaTensorMultidimensionalArrays2019' id='ref-wikipediaTensorMultidimensionalArrays2019-1'>Wikipedia (2019)</a>. I have found this approach to be overly cluttered; missing the forest for the trees. Instead, I prefer the second way of defining tensors, namely as "multilinear maps" <a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'>Roman (2007)</a> <a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'>Jeevanjee (2015)</a>. This technique focuses on functions and interfaces, as opposed to components, and will be the chosen method of explaining below. </p>
+<p>Before we begin, a brief note about preferences between the "coefficient" and "multilinear" approaches. The latter way has found greater resonance with mathematicians, while programmers often find the former more comforting. I believe this is caused by an over-reliance on data structures as atomic units of understanding. True, it is natural as a developer to ask "but what <em>is</em> the object"; however, using more functional-programming style of thought, the multilinear map approach is actually simpler! No need to keep track of various coefficients on various axes of some imaginary n-dimensional array (leave that to <code>numpy</code>). In the below, I outline a functional-programming style analogy for tensors, and the tensor product. Thought the below snippets are in python, some details are left to the imagination (i.e. this code is not a script).</p>
+<h3>Setting the Stage</h3>
+<p>Before we get to define tensors, we need to briefly define a few building blocks. First, there is a field <span class="math">\(C\)</span>, commonly the reals <span class="math">\(\mathbb{R}\)</span>, occasionally the complex numbers <span class="math">\(\mathbb{C}\)</span>. Members of <span class="math">\(C\)</span> are called <em>scalars</em> and are represented in the code by the type <code>scalar</code>. Second, there are vector spaces <span class="math">\(V\)</span> over this field, with the usual properties of closure under addition and scalar multiplication. Elements of <span class="math">\(V\)</span> are of type <code>vector</code>. Note, I am not specifying a vector as a tuple of scalars - though that is a valid vector space, there are others based on non-tuple like entities, like the vector space of square-integrable functions! The last piece of machinery is the dual space <span class="math">\(V^*\)</span>. If you're not familiar with the dual space, it is essentially the set of all linear functions that take 1 vector and spit out a scalar (specifically <span class="math">\(V^* = \{f: V\rightarrow C\}\)</span> where <span class="math">\(f\)</span> is linear). Elements of <span class="math">\(V^*\)</span> are of type <code>dual</code>.</p>
+<h4>Some dual vectors</h4>
+<p>Recall that dual vectors are functions that take a vector and return a scalar. Let <span class="math">\(f, g \in V^*\)</span>. In code:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="n">vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scalar</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">w</span><span class="p">:</span> <span class="n">vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scalar</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+
+<h4>Tensor Product</h4>
+<p>Now let's define the tensor product of <span class="math">\(f\)</span> and <span class="math">\(g\)</span> as <span class="math">\(h = f \otimes g\)</span>. What this amounts to, is combining the functional interface into a new, single tensor (function), that curries to the functions it was made from! Specifically:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">vector</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scalar</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+
+<p>In some sense, the tensor (or outer) product is like a concatenation operation, that joins functions together, using the superset of arguments, and passing those arguments back to the original functions returning a scalar! This definition is easy!</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%&#64;#$&#64;#')) {
     var align = "center",
         indent = "0em",
         linebreak = "false";
@@ -164,7 +183,7 @@ Neighbors in Alpha Centauri</em>, included a brief discussion of methodologies u
     }
 
     var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%&#64;#$&#64;#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
@@ -206,9 +225,23 @@ Neighbors in Alpha Centauri</em>, included a brief discussion of methodologies u
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>
+</script><hr>
+<h3>Bibliography</h3>
+<p id='jeevanjeeIntroductionTensorsGroup2015'>Nadir Jeevanjee.
+<em>An Introduction to Tensors and Group Theory for Physicists</em>.
+<span class="bibtex-protected">Springer Science+Business Media</span>, New York, NY, 2015.
+ISBN 978-3-319-14793-2. <a class="cite-backref" href="#ref-jeevanjeeIntroductionTensorsGroup2015-1" title="Jump back to reference 1">↩</a></p>
+<p id='romanAdvancedLinearAlgebra2007'>Steven Roman.
+<em>Advanced Linear Algebra</em>.
+Number&nbsp;135 in Graduate Texts in Mathematics.
+<span class="bibtex-protected">Springer</span>, New York, 3rd ed edition, 2007.
+ISBN 978-0-387-72828-5. <a class="cite-backref" href="#ref-romanAdvancedLinearAlgebra2007-1" title="Jump back to reference 1">↩</a></p>
+<p id='wikipediaTensorMultidimensionalArrays2019'>Wikipedia.
+Tensor, as multidimensional arrays.
+<em>Wikipedia</em>, April 2019. <a class="cite-backref" href="#ref-wikipediaTensorMultidimensionalArrays2019-1" title="Jump back to reference 1">↩</a></p>
+
 		    <div class="tags">
-		        <p>tags: <a href="/tag/physics.html">physics</a><a href="/tag/conference.html">conference</a></p>
+		        <p>tags: <a href="/tag/maths.html">maths</a><a href="/tag/tensors.html">tensors</a></p>
 		    </div>
 
 <div class="sharing">
@@ -219,8 +252,8 @@ Neighbors in Alpha Centauri</em>, included a brief discussion of methodologies u
 		        <div id="disqus_thread"></div>
 		        <script type="text/javascript">
 		            var disqus_shortname = 'JWKennington';
-		            var disqus_identifier = 'blog/calling-all-texas-physicists-tsaps-spring-meeting-2019/';
-		            var disqus_url = '/blog/calling-all-texas-physicists-tsaps-spring-meeting-2019/';
+		            var disqus_identifier = 'blog/tensor-product-for-programmers/';
+		            var disqus_url = '/blog/tensor-product-for-programmers/';
 		            (function() {
 		                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 		                dsq.src = '//JWKennington.disqus.com/embed.js';
@@ -245,8 +278,8 @@ Neighbors in Alpha Centauri</em>, included a brief discussion of methodologies u
 			<nav class="categories">
 				<ul>
 					    <li><a href="/category/books.html">Books</a></li>
-					    <li><a href="/category/maths.html">Maths</a></li>
-					    <li class="active"><a href="/category/physics.html">Physics</a></li>
+					    <li class="active"><a href="/category/maths.html">Maths</a></li>
+					    <li><a href="/category/physics.html">Physics</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -272,7 +305,7 @@ Neighbors in Alpha Centauri</em>, included a brief discussion of methodologies u
 			<br>
 			<span class="line"></span><div class="clearfix"></div>
 					<b>Page views: </b>
- 11
+ 4
 		</div>
 		<br>
 		 
@@ -290,7 +323,7 @@ Neighbors in Alpha Centauri</em>, included a brief discussion of methodologies u
 				</div>
 				<div class="four columns">
 					<b>Page views: </b>
- 11
+ 4
 				</div>
 					<div class="six columns">
 						<ul class="social-icons-footer">
