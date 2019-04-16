@@ -89,7 +89,8 @@ MATH_JAX = {'color':'blue'}
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
-DISQUS_SITENAME = 'JWKennington'
+DISQUS_SITENAME = 'jwkennington'
+DISQUS_SITEURL = 'jwkennington.com'
 
 # GITHUB
 GITHUB_ACTIVITY_FEED = 'https://github.com/JWKennington.atom'

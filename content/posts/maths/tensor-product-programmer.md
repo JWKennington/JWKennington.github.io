@@ -3,7 +3,6 @@ Date: 2019-04-15
 Category: Maths
 Tags: maths, tensors
 
-
 The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. 
 
 Tensors are defined and introduced in two equivalent ways. The first way, called the "expansion coefficient" (or array) style of introducing tensors relies on many indices and iterates over the n dimensions of some array (n-dimensional generalization of a matrix) [@wikipediaTensorMultidimensionalArrays2019]. I have found this approach to be overly cluttered; missing the forest for the trees. Instead, I prefer the second way of defining tensors, namely as "multilinear maps" [@romanAdvancedLinearAlgebra2007] [@jeevanjeeIntroductionTensorsGroup2015]. This technique focuses on functions and interfaces, as opposed to components, and will be the chosen method of explaining below. 
