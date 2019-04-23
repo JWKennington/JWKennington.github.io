@@ -38,22 +38,30 @@ jobs:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
-        
-      # run tests!
-      # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
-      # https://pytest.org
-      # https://nose.readthedocs.io
-      - run:
-          name: run tests
+
+      - make_html:
+          name: make html
           command: |
             . venv/bin/activate
-            mkdir ./test-reports
-            nosetests --with-xunit --xunit-file ./test-reports/results.xml
-#
-#      - store_artifacts:
-#          path: test-reports
-#          destination: test-reports
+            make html
 
-      - store_test_results:
-          path: test-reports/
+      - make_github:
+          name: make github
+            command: |
+              . venv/bin/activate
+              make github
+            
+workflows:
+  commit:
+    obs:
+      - make_html
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - source
+    jobs:
+      - make_html
