@@ -1,7 +1,7 @@
 pip>=19.0.3
 setuptools>=41.0.1
 feedparser
-googleapis-common-protos
+googleapis-common-protos>=1.5.9
 
 jwk_theme
 oauth2client
