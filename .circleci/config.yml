@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  build_html:
     docker:
       - image: circleci/python:3.6.1
 
@@ -34,16 +34,44 @@ jobs:
             . venv/bin/activate
             make html
 
-#      - make_github:
-#          name: make github
-#            command: |
-#              . venv/bin/activate
-#              make github
+  publish:
+    docker:
+      - image: circleci/python:3.6.1
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+
+      - make_github:
+          name: make github
+            command: |
+              . venv/bin/activate
+              make github
             
 workflows:
   commit:
     jobs:
-      - make_html
+      - build_html
   nightly:
     triggers:
       - schedule:
@@ -53,4 +81,4 @@ workflows:
               only:
                 - source
     jobs:
-      - make_html
+      - build_html
