@@ -28,7 +28,7 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-      - make_html:
+      - run:
           name: make html
           command: |
             . venv/bin/activate
