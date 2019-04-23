@@ -1,5 +1,6 @@
 google-api-python-client
 oauth2client
+parsedatetime
 pelican
 pelican_cite_nice
 pelican_render_math
