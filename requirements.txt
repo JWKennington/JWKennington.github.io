@@ -1,4 +1,5 @@
 google-api-python-client
+oauth2client
 pelican
 pelican_cite_nice
 pelican_render_math
