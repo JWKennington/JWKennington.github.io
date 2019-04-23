@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import pelican_github_activity, pelican_ga_pageview, pelican_cite_nice, pelican_render_math
 
 AUTHOR = 'J. W. Kennington'
 SITENAME = 'J. W. Kennington'
@@ -75,11 +76,12 @@ ARTICLE_PAGE_IMAGE_HEADER = '../' + BLOG_PAGE_IMAGE_HEADER
 SIDEBAR_DISPLAY = ['categories', 'tags']
 
 PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
+
 PLUGINS = [
-    'pelican-cite',
-    'render_math', 
-    'github_activity',
-    'ga_page_view',
+    pelican_cite_nice,
+    pelican_render_math, 
+    pelican_github_activity,
+    pelican_ga_pageview,
 ]
 
 LOAD_CONTENT_CACHE = False
@@ -98,6 +100,11 @@ GITHUB_ACTIVITY_MAX_ENTRIES = 5
 GITHUB_REPO_IGNORE = [
     'JWKennington.github.io',
     'jwk-theme',
+    'pelican-ga-pageview',
+    'pelican-render-math',
+    'pelican-cite-nice',
+    'pelican-github-activity',
+    'pelican-cite'
 ]
 
 # GOOGLE ANALYTICS
