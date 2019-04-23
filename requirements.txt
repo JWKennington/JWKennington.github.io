@@ -1,4 +1,5 @@
 feedparser
+googleapis-common-protos
 google-api-python-client
 jwk_theme
 oauth2client
