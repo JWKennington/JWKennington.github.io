@@ -9,3 +9,4 @@ pelican_render_math
 pelican_ga_pageview
 pelican_github_activity
 pybtex
+pyopenssl
