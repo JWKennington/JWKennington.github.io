@@ -34,11 +34,11 @@ jobs:
             . venv/bin/activate
             make html
 
-      - make_github:
-          name: make github
-            command: |
-              . venv/bin/activate
-              make github
+#      - make_github:
+#          name: make github
+#            command: |
+#              . venv/bin/activate
+#              make github
             
 workflows:
   commit:
