@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 import pelican_github_activity, pelican_ga_pageview, pelican_cite_nice, pelican_render_math
+import jwk_theme
 
 AUTHOR = 'J. W. Kennington'
 SITENAME = 'J. W. Kennington'
@@ -51,7 +52,7 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 # Theme control
-THEME = '/Users/jim/repos/professional/jwk-theme'
+THEME = jwk_theme.THEME_PATH
 
 # Static home page
 INDEX_SAVE_AS = 'blog.html'

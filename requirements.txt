@@ -1,4 +1,5 @@
 google-api-python-client
+jwk_theme
 oauth2client
 parsedatetime
 pelican
