@@ -75,10 +75,10 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "21 6 * * *"
+          cron: "31 6 * * *"
           filters:
             branches:
               only:
                 - source
     jobs:
-      - build_html
+      - publish
