@@ -1,3 +1,4 @@
+google-api-python-client
 pelican
 pelican_cite_nice
 pelican_render_math
