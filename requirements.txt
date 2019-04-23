@@ -2,7 +2,7 @@ pip>=19.0.3
 setuptools>=34.3.0
 feedparser
 googleapis-common-protos
-google-api-python-client
+
 jwk_theme
 oauth2client
 parsedatetime
