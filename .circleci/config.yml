@@ -64,9 +64,9 @@ jobs:
 
       - make_github:
           name: make github
-            command: |
-              . venv/bin/activate
-              make github
+          command: |
+            . venv/bin/activate
+            make github
             
 workflows:
   commit:
