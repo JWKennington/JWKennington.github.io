@@ -1,3 +1,4 @@
+setuptools>=34.3.0
 feedparser
 googleapis-common-protos
 google-api-python-client
@@ -11,4 +12,4 @@ pelican_ga_pageview
 pelican_github_activity
 pybtex
 pyopenssl
-setuptools>=34.3.0
+
