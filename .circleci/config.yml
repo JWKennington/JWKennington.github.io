@@ -62,7 +62,7 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-      - make_github:
+      - run:
           name: make github
           command: |
             . venv/bin/activate
