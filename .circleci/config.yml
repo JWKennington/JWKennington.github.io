@@ -42,7 +42,7 @@ jobs:
             
 workflows:
   commit:
-    obs:
+    jobs:
       - make_html
   nightly:
     triggers:
