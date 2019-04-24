@@ -3,6 +3,7 @@ ghp-import
 googleapis-common-protos>=1.5.9
 google-api-python-client
 jwk_theme
+markdown
 oauth2client
 parsedatetime
 pelican
