@@ -53,7 +53,8 @@ with their duals in the Cartesian notation. This "replacement" effect combined w
 to reversing the order of the input spaces the domain. For example, the *VF* convention would define a type $(r, s)$ tensor $T$ 
 using the tensor product notation as $$T: V^*_1\otimes \cdot\cdot\cdot \otimes V^*_r \otimes V_1 \otimes \cdot\cdot\cdot \otimes 
 V_s\rightarrow C$$ For good measure, I will also note that the *DF* convention would define a type $(r, s)$ tensor $T$ using the 
-tensor product notation as $$$$ Notice that these definitions are equivalent to the previous definitions using Cartesian product 
+tensor product notation as $$T: V_1\otimes \cdot\cdot\cdot \otimes V_r \otimes V^*_1 \otimes \cdot\cdot\cdot \otimes 
+V^*_s\rightarrow C$$ Notice that these definitions are equivalent to the previous definitions using Cartesian product 
 notation, but that now the vector spaces are written first in what we called the *dual first* convention, not the *vector first* 
 convention!
 
