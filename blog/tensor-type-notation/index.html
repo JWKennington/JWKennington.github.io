@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="author" content="J. W. Kennington">
+
+
+        <title>J. W. Kennington - Tensor Type Notation</title>
+
+            <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="J. W. Kennington Full Atom Feed" />
+            <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="J. W. Kennington Full RSS Feed" />
+            <link href="/feeds/maths.atom.xml" type="application/atom+xml" rel="alternate" title="J. W. Kennington Categories Atom Feed" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/theme/css/style.css?v=1.0.1">
+
+        <!-- Custom CSS -->
+        	<link rel="stylesheet" href="/theme/css/colors/blue.css" id="colors">
+
+        <!-- Code highlight color scheme -->
+            <link href="/theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+		
+		<script src="/theme/js/jquery-3.3.1.min.js"></script>
+
+
+
+
+        <meta name="tags" contents="maths" />
+        <meta name="tags" contents="tensors" />
+        <meta name="tags" contents="notation" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Tensor Type Notation">
+    <meta property="og:url" content="blog/tensor-type-notation/">
+    <meta property="og:description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted \((r, s)\) as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …">
+    <meta property="article:published_time" content="Tuesday, April 23, 2019">
+    <meta name="twitter:title" content="Tensor Type Notation">
+    <meta name="twitter:description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted \((r, s)\) as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …">
+    <meta name="description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted \((r, s)\) as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …">
+    <meta name="twitter:image" content="">
+    <meta property="og:image" content="">
+
+	                <meta property="og:locale" content="">
+		<meta property="og:site_name" content="J. W. Kennington">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="/blog/tensor-type-notation/">
+	<meta property="og:title" content="Tensor Type Notation">
+	<meta property="og:description" content="">
+	   <meta property="og:image" content="/images/guilherme-toti.jpg">
+	<meta property="article:published_time" content="2019-04-23 00:00:00-05:00">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-135655259-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135655259-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-135655259-1', {
+        'page_title' : 'blog/tensor-type-notation/index.html',
+        'page_path': 'blog/tensor-type-notation/index.html'
+      });
+    </script>
+	</head>
+	<body>
+		<header id="header">
+			<!-- Container -->
+			<div class="container">
+				<!-- Logo / Mobile Menu -->
+				<div class="five columns">
+					<div id="textlogo">
+						<h1><a href="/">J. W. Kennington</a></h1>
+					</div>
+				</div>
+						<!-- Navigation
+				================================================== -->
+				<div class="eleven columns">
+
+					<nav id="navigation" class="menu">
+						<ul id="responsive">
+
+							<li><a href="/">Home</a></li>
+
+							    <li><a href="/blog">Blog</a></li>
+							    <li><a href="/pages/cv">CV</a></li>
+							    <li><a href="/pages/code">Code</a></li>
+							    <li><a href="/pages/publications">Publications</a></li>
+
+							<!--<li>-->
+								<!--<div class="clearfix search-nav-clearfix"></div>-->
+								<!--<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
+								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
+								<!--</form>	-->
+							<!--</li>-->
+						</ul>
+					</nav>
+				</div>
+			</div>
+			
+			<!-- Container / End -->
+		</header>
+		<!-- Header / End -->
+
+		<!-- Breadcrumbs Container-->
+		<div id="content-wrapper">
+			<!--<section id="titlebar">-->
+			<!---->
+			<!--</section>-->
+
+			<div class="container page-header-image">
+		<img src="../../images/nyc.png">
+			</div>
+
+			<div class="container">
+	<div class="twelve alt columns">
+<article class="post" style="margin: 0; border: 0;">
+
+	<section class="post-content">
+
+		<header class="meta">
+			<h2><a href="/blog/tensor-type-notation/">Tensor Type Notation</a></h2>
+			<ul>
+				<li>By <a href="/author/j-w-kennington.html">J. W. Kennington</a></li>
+				<li>Tue 23 April 2019</li>
+			</ul>
+		</header>
+
+		<h3>What does type (r, s) mean?</h3>
+<p>I'd like to discuss the notation of the tensor type, commonly denoted <span class="math">\((r, s)\)</span> as it relates to the tensor product. Specifically, 
+the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically 
+categorized by the number of vectors and dual vectors they require as arguments. To avoid ambiguity, for a given tensor <span class="math">\(T\)</span>, I will 
+denote the number of vector arguments as <span class="math">\(n_v\)</span> and the number of dual vector arguments as <span class="math">\(n_d\)</span>. </p>
+<h4>Preliminaries</h4>
+<p>Before we begin, recall that the dual vector space <span class="math">\(V^*\)</span> is defined as the set of linear functionals from <span class="math">\(V\rightarrow C\)</span>, 
+where <span class="math">\(C\)</span> is the field over which <span class="math">\(V\)</span> is a vector space. Note, the dual space <span class="math">\(V^*\)</span> is defined in terms of the vector space <span class="math">\(V\)</span>. 
+For similar reasons, the topic of dual spaces is introduced after the topic of vector spaces - in other words, <strong>epistemologically, 
+the dual space follows the vector space</strong>. I only draw attention to this ordering between the vector space and the dual because 
+it informs the aesthetic nature of the notation, as we'll see.</p>
+<h4>Conventions</h4>
+<p>The tensor type <span class="math">\((r, s)\)</span> is used to categories tensors based on the number of vectors and dual vectors they consume. Problem is, 
+there is a choice to made between the <span class="math">\(r=n_v\)</span> or <span class="math">\(r=n_d\)</span> conventions - and this choice isn't made consistently. As I mentioned above, 
+the epistemological ordering of vectors and dual vectors is unambiguous; dual vectors follow vectors. It therefore seems natural to 
+make the first number <span class="math">\(r\)</span> equal the number of vector arguments <span class="math">\(n_v\)</span>. I'll call this convention the <em>vector first</em> convention, or 
+"VF" for short. Similarly, I'll call the opposite convention, of using the number of dual vectors <span class="math">\(n_d\)</span> as the first number <span class="math">\(r\)</span>, 
+the <em>dual first</em> convention, or "DF" for short.</p>
+<h4>Usage of Conventions</h4>
+<p>Some sources that use the <em>VF</em> convention <a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'>Jeevanjee (2015)</a>, <a href='#langLinearAlgebra1987' id='ref-langLinearAlgebra1987-1'>Lang (1987)</a>. Some sources that 
+use the <em>DF</em> convention <a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'>Roman (2007)</a>, <a href='#hallLieGroupsLie2015' id='ref-hallLieGroupsLie2015-1'>Hall (2015)</a>, <a href='#tuDifferentialGeometryConnections2017' id='ref-tuDifferentialGeometryConnections2017-1'>Tu (2017)</a>, 
+<a href='#leeIntroductionSmoothManifolds2013' id='ref-leeIntroductionSmoothManifolds2013-1'>Lee (2013)</a>, <a href='#rentelnManifoldsTensorsForms2014' id='ref-rentelnManifoldsTensorsForms2014-1'>Renteln (2014)</a>, <a href='#dasTensorsMathematicsRelativity2007' id='ref-dasTensorsMathematicsRelativity2007-1'>Das (2007)</a>, 
+<a href='#carrollSpacetimeGeometryIntroduction2013' id='ref-carrollSpacetimeGeometryIntroduction2013-1'>Carroll (2013)</a>, <a href='#poissonRelativistToolkitMathematics2004' id='ref-poissonRelativistToolkitMathematics2004-1'>Poisson (2004)</a>, <a href='#misnerGravitation2017' id='ref-misnerGravitation2017-1'>Misner et al. (2017)</a>, 
+<a href='#spivakComprehensiveIntroductionDifferential1999' id='ref-spivakComprehensiveIntroductionDifferential1999-1'>Spivak (1999)</a>. 
+To explicitly make clear the above conventions, the <em>VF</em> convention 
+would define a type <span class="math">\((r, s)\)</span> tensor <span class="math">\(T\)</span> as
+</p>
+<div class="math">$$T: V_1\times \cdot\cdot\cdot \times V_r \times V^*_1 \times \cdot\cdot\cdot \times V^*_s\rightarrow C$$</div>
+<p> 
+where <span class="math">\(V_{i}=V\)</span> and <span class="math">\(V^*_{i}=V^*\)</span> for all <span class="math">\(i\)</span>. On the other hand, the <em>DF</em> convention would define a type <span class="math">\((r, s)\)</span> tensor <span class="math">\(T\)</span> as
+</p>
+<div class="math">$$T: V^*_1\times \cdot\cdot\cdot \times V^*_r \times V_1 \times \cdot\cdot\cdot \times V_s\rightarrow C$$</div>
+<p> where again 
+<span class="math">\(V_{I}=V\)</span> and <span class="math">\(V^*_{i}=V^*\)</span> for all <span class="math">\(i\)</span>.</p>
+<h3>Cartesian vs. Tensor Product Notations</h3>
+<p>The usage of Cartesian products to define the domain of <span class="math">\(T\)</span> is typically used before introducing the tensor product, 
+as it is more familiar. In the Cartesian product notation, the <em>VF</em> convention places the vector spaces before the dual 
+spaces, and in some sense is "aligned" with the way in which the subject is taught. When using the tensor product notation, 
+however, this is no longer the case!</p>
+<p>Recall the tensor product of two vector spaces <span class="math">\(V\)</span> and <span class="math">\(W\)</span> is denoted <span class="math">\(V\otimes W\)</span> and is the set of all multilinear functions 
+from <span class="math">\(V^* \times W^* \rightarrow C\)</span>. Notice how the usage of the tensor product <span class="math">\(\otimes\)</span> essentially replaces vector spaces 
+with their duals in the Cartesian notation. This "replacement" effect combined with only using the spaces <span class="math">\(V\)</span> and <span class="math">\(V^*\)</span> amounts 
+to reversing the order of the input spaces the domain. For example, the <em>VF</em> convention would define a type <span class="math">\((r, s)\)</span> tensor <span class="math">\(T\)</span> 
+using the tensor product notation as </p>
+<div class="math">$$T: V^*_1\otimes \cdot\cdot\cdot \otimes V^*_r \otimes V_1 \otimes \cdot\cdot\cdot \otimes 
+V_s\rightarrow C$$</div>
+<p> For good measure, I will also note that the <em>DF</em> convention would define a type <span class="math">\((r, s)\)</span> tensor <span class="math">\(T\)</span> using the 
+tensor product notation as <span class="math">\($\)</span>$ Notice that these definitions are equivalent to the previous definitions using Cartesian product 
+notation, but that now the vector spaces are written first in what we called the <em>dual first</em> convention, not the <em>vector first</em> 
+convention!</p>
+<h3>Why is <em>DF</em> convention preferred?</h3>
+<p>It seems that the <span class="math">\(DF\)</span> convention has wider usage and appeal; naturally I wonder why. Since it feels natural to align the 
+notation with the epistemological order, in other words, to write <span class="math">\(V\)</span> before <span class="math">\(V^*\)</span>, then I am forced to conclude that the 
+mathematical community, with malice of forethought, prefers to base the definition of a type <span class="math">\((r, s)\)</span> tensor on the tensor 
+product notation, rather than the Cartesian notation, since the former requires that <span class="math">\(V\)</span> be written before <span class="math">\(V^*\)</span>. I personally 
+have no objection to the choice, as it seems sensible.</p>
+<h4>Parting note on terminology</h4>
+<p>In the <em>DF</em> convention, the number <span class="math">\(r\)</span> is often referred to as the <em>covariant</em> number and the number <span class="math">\(s\)</span> is called the 
+<em>contravariant</em> number. These terms refer to the number of dual vectors and vectors respectively, since vectors are typically
+considered contravariant. Similar terms refer to <em>lower</em> and <em>upper</em> indices respectively.</p>
+<p>I should note that my exploration of these conventions is limited to differential geometry, relativity, and linear algebra texts. </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%&#64;#$&#64;#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%&#64;#$&#64;#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script><hr>
+<h3>Bibliography</h3>
+<p id='carrollSpacetimeGeometryIntroduction2013'>Sean Carroll.
+<em>Spacetime and <span class="bibtex-protected"><span class="bibtex-protected">Geometry</span></span>: <span class="bibtex-protected"><span class="bibtex-protected">An Introduction</span></span> to <span class="bibtex-protected"><span class="bibtex-protected">General Relativity</span></span></em>.
+<span class="bibtex-protected">Pearson Education</span>, 3 edition, 2013. <a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1">↩</a></p>
+<p id='dasTensorsMathematicsRelativity2007'>Anadijiban Das.
+<em>Tensors: The Mathematics of Relativity Theory and Continuum Mechanics</em>.
+<span class="bibtex-protected">Springer</span>, New York, 2007.
+ISBN 978-0-387-69468-9 978-0-387-69469-6.
+OCLC: ocm77795794. <a class="cite-backref" href="#ref-dasTensorsMathematicsRelativity2007-1" title="Jump back to reference 1">↩</a></p>
+<p id='hallLieGroupsLie2015'>Brian&nbsp;C. Hall.
+<em>Lie Groups, <span class="bibtex-protected"><span class="bibtex-protected">Lie</span></span> Algebras, and Representations: An Elementary Introduction</em>.
+Number&nbsp;222 in Graduate Texts in Mathematics.
+<span class="bibtex-protected">Springer</span>, Cham ; New York, second edition edition, 2015.
+ISBN 978-3-319-13466-6.
+OCLC: ocn910324548. <a class="cite-backref" href="#ref-hallLieGroupsLie2015-1" title="Jump back to reference 1">↩</a></p>
+<p id='jeevanjeeIntroductionTensorsGroup2015'>Nadir Jeevanjee.
+<em>An Introduction to Tensors and Group Theory for Physicists</em>.
+<span class="bibtex-protected">Springer Science+Business Media</span>, New York, NY, 2015.
+ISBN 978-3-319-14793-2. <a class="cite-backref" href="#ref-jeevanjeeIntroductionTensorsGroup2015-1" title="Jump back to reference 1">↩</a></p>
+<p id='langLinearAlgebra1987'>Serge Lang.
+<em>Linear Algebra</em>.
+Undergraduate Texts in Mathematics.
+<span class="bibtex-protected">Springer-Verlag</span>, New York, 3rd ed edition, 1987.
+ISBN 978-0-387-96412-6. <a class="cite-backref" href="#ref-langLinearAlgebra1987-1" title="Jump back to reference 1">↩</a></p>
+<p id='leeIntroductionSmoothManifolds2013'>John&nbsp;M. Lee.
+<em>Introduction to Smooth Manifolds</em>.
+Number&nbsp;218 in Graduate Texts in Mathematics.
+<span class="bibtex-protected">Springer</span>, New York ; London, 2nd ed edition, 2013.
+ISBN 978-1-4419-9981-8 978-1-4419-9982-5.
+OCLC: ocn800646950. <a class="cite-backref" href="#ref-leeIntroductionSmoothManifolds2013-1" title="Jump back to reference 1">↩</a></p>
+<p id='misnerGravitation2017'>Charles&nbsp;W. Misner, Kip&nbsp;S. Thorne, John&nbsp;Archibald Wheeler, and David Kaiser.
+<em>Gravitation</em>.
+<span class="bibtex-protected">Princeton University Press</span>, Princeton, N.J, 2017.
+ISBN 978-0-691-17779-3.
+OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1">↩</a></p>
+<p id='poissonRelativistToolkitMathematics2004'>Eric Poisson.
+<em>A Relativist's Toolkit: The Mathematics of Black-Hole Mechanics</em>.
+<span class="bibtex-protected">Cambridge University Press</span>, Cambridge, UK ; New York, 2004.
+ISBN 978-0-521-83091-1. <a class="cite-backref" href="#ref-poissonRelativistToolkitMathematics2004-1" title="Jump back to reference 1">↩</a></p>
+<p id='rentelnManifoldsTensorsForms2014'>Paul Renteln.
+<em>Manifolds, Tensors, and Forms: An Introduction for Mathematicians and Physicists</em>.
+<span class="bibtex-protected">Cambridge University Press</span>, Cambridge, UK ; New York, 2014.
+ISBN 978-1-107-04219-3. <a class="cite-backref" href="#ref-rentelnManifoldsTensorsForms2014-1" title="Jump back to reference 1">↩</a></p>
+<p id='romanAdvancedLinearAlgebra2007'>Steven Roman.
+<em>Advanced Linear Algebra</em>.
+Number&nbsp;135 in Graduate Texts in Mathematics.
+<span class="bibtex-protected">Springer</span>, New York, 3rd ed edition, 2007.
+ISBN 978-0-387-72828-5. <a class="cite-backref" href="#ref-romanAdvancedLinearAlgebra2007-1" title="Jump back to reference 1">↩</a></p>
+<p id='spivakComprehensiveIntroductionDifferential1999'>Michael Spivak.
+<em>A Comprehensive Introduction to Differential Geometry</em>.
+<span class="bibtex-protected">Publish or Perish, Inc</span>, Houston, Tex, 3rd ed edition, 1999.
+ISBN 978-0-914098-70-6 978-0-914098-71-3 978-0-914098-72-0 978-0-914098-73-7 978-0-914098-74-4.
+OCLC: ocm42962004. <a class="cite-backref" href="#ref-spivakComprehensiveIntroductionDifferential1999-1" title="Jump back to reference 1">↩</a></p>
+<p id='tuDifferentialGeometryConnections2017'>Loring&nbsp;W. Tu.
+<em>Differential Geometry: Connections, Curvature, and Characteristic Classes</em>.
+<span class="bibtex-protected">Springer Science+Business Media</span>, New York, NY, 2017.
+ISBN 978-3-319-55082-4. <a class="cite-backref" href="#ref-tuDifferentialGeometryConnections2017-1" title="Jump back to reference 1">↩</a></p>
+
+		    <div class="tags">
+		        <p>tags: <a href="/tag/maths.html">maths</a><a href="/tag/tensors.html">tensors</a><a href="/tag/notation.html">notation</a></p>
+		    </div>
+
+<div class="sharing">
+</div>
+<hr>
+
+		<!---->
+		    <!--<div class="comments">-->
+		        <!--<div id="disqus_thread"></div>-->
+		        <!--<script type="text/javascript">-->
+		            <!--var disqus_shortname = 'jwkennington';-->
+		            <!--var disqus_identifier = 'blog/tensor-type-notation/';-->
+		            <!--var disqus_url = 'jwkennington.com/blog/tensor-type-notation/';-->
+		            <!--(function() {-->
+		                <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
+		                <!--dsq.src = 'https://jwkennington.disqus.com/embed.js';-->
+		                <!--(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
+		            <!--})();-->
+		        <!--</script>-->
+		        <!--<noscript>Please enable JavaScript to view the comments.</noscript>-->
+		    <!--</div>-->
+		<!---->
+			<div id="disqus_thread"></div>
+				<script>
+					
+					var disqus_config = function () {
+						this.page.url = 'https://jwkennington.com/blog/tensor-type-notation/';
+
+						this.page.identifier = 'blog/tensor-type-notation/'; 
+					};
+					
+					(function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+						var d = document, s = d.createElement('script');
+						
+						s.src = 'https://jwkennington.disqus.com/embed.js';
+						
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>
+					Please enable JavaScript to view the 
+					<a href="https://disqus.com/?ref_noscript" rel="nofollow">
+						comments powered by Disqus.
+					</a>
+				</noscript>
+	</section>
+	<div class="clearfix"></div>
+
+</article>
+
+	</div>
+
+	<!-- Sidebar -->
+	<div class="four columns">
+
+		<!-- Categories -->
+		<div class="widget no-mg-top">
+			<h3 class="headline">Categories</h3><span class="line"></span><div class="clearfix"></div>
+			<nav class="categories">
+				<ul>
+					    <li><a href="/category/books.html">Books</a></li>
+					    <li class="active"><a href="/category/maths.html">Maths</a></li>
+					    <li><a href="/category/physics.html">Physics</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<!-- Tags -->
+		<div class="widget">
+			<h3 class="headline">Tags</h3><span class="line"></span><div class="clearfix"></div>
+			<nav class="tags">				    <a href="/tag/conference.html">conference</a>
+				    <a href="/tag/group-theory.html">group theory</a>
+				    <a href="/tag/linear-algebra.html">linear algebra</a>
+				    <a href="/tag/maths.html">maths</a>
+				    <a href="/tag/notation.html">notation</a>
+				    <a href="/tag/physics.html">physics</a>
+				    <a href="/tag/tensors.html">tensors</a>
+				    <a href="/tag/waves.html">waves</a>
+			</nav>
+		</div>
+		<div>
+			<br>
+			<h3 class="headline">Support Me</h3><span class="line"></span><div class="clearfix"></div>
+			<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a soda', '#46b798', 'Z8Z4RGIA');kofiwidget2.draw();</script>
+		</div>
+		<div class="widget">
+			<br>
+			<span class="line"></span><div class="clearfix"></div>
+					<b>Page views: </b>
+ 5
+		</div>
+		<br>
+		 
+	</div>
+			</div>
+			<!-- Container / End -->
+		</div>
+		<!-- Content Wrapper / End -->
+
+		<div id="footer-bottom">
+			<!-- Container -->
+			<div class="container">
+				<div class="six columns">&copy; 
+					J. W. Kennington
+				</div>
+				<div class="four columns">
+					<b>Page views: </b>
+ 5
+				</div>
+					<div class="six columns">
+						<ul class="social-icons-footer">
+								<li class="social-icons-footer-fa-override">
+									<a href="https://www.researchgate.net/profile/James_Kennington" class="tooltip top social-icons-footer-fa-override" title="beaker">
+										<i class="icon-beaker"></i>
+									</a>
+								</li>
+								<li>
+									<a href="http://github.com/JWKennington" class="tooltip top" title="github">
+										<i class="icon-github"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/in/jameskennington/" class="tooltip top" title="linkedin">
+										<i class="icon-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/JwKennington" class="tooltip top" title="twitter">
+										<i class="icon-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.facebook.com/jimmy.kennington" class="tooltip top" title="facebook">
+										<i class="icon-facebook"></i>
+									</a>
+								</li>
+							<li><a href="/feeds/all.atom.xml" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
+						</ul>
+					</div>
+			</div>
+			<!-- Container / End -->
+		</div>
+		<!-- Footer Bottom / End -->
+
+	<!-- Javascripts -->
+	<script src="/theme/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    var disqus_shortname = 'jwkennington';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+	</body>
+</html>

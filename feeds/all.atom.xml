@@ -1,5 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-04-15T00:00:00-05:00</updated><entry><title>Tensor Product for Programmers</title><link href="/blog/tensor-product-for-programmers/" rel="alternate"></link><published>2019-04-15T00:00:00-05:00</published><updated>2019-04-15T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-04-15:/blog/tensor-product-for-programmers/</id><summary type="html">&lt;p&gt;The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-04-23T00:00:00-05:00</updated><entry><title>Tensor Type Notation</title><link href="/blog/tensor-type-notation/" rel="alternate"></link><published>2019-04-23T00:00:00-05:00</published><updated>2019-04-23T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-04-23:/blog/tensor-type-notation/</id><summary type="html">&lt;h3&gt;What does type (r, s) mean?&lt;/h3&gt;
+&lt;p&gt;I'd like to discuss the notation of the tensor type, commonly denoted &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; as it relates to the tensor product. Specifically, 
+the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically 
+categorized …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;What does type (r, s) mean?&lt;/h3&gt;
+&lt;p&gt;I'd like to discuss the notation of the tensor type, commonly denoted &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; as it relates to the tensor product. Specifically, 
+the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically 
+categorized by the number of vectors and dual vectors they require as arguments. To avoid ambiguity, for a given tensor &lt;span class="math"&gt;\(T\)&lt;/span&gt;, I will 
+denote the number of vector arguments as &lt;span class="math"&gt;\(n_v\)&lt;/span&gt; and the number of dual vector arguments as &lt;span class="math"&gt;\(n_d\)&lt;/span&gt;. &lt;/p&gt;
+&lt;h4&gt;Preliminaries&lt;/h4&gt;
+&lt;p&gt;Before we begin, recall that the dual vector space &lt;span class="math"&gt;\(V^*\)&lt;/span&gt; is defined as the set of linear functionals from &lt;span class="math"&gt;\(V\rightarrow C\)&lt;/span&gt;, 
+where &lt;span class="math"&gt;\(C\)&lt;/span&gt; is the field over which &lt;span class="math"&gt;\(V\)&lt;/span&gt; is a vector space. Note, the dual space &lt;span class="math"&gt;\(V^*\)&lt;/span&gt; is defined in terms of the vector space &lt;span class="math"&gt;\(V\)&lt;/span&gt;. 
+For similar reasons, the topic of dual spaces is introduced after the topic of vector spaces - in other words, &lt;strong&gt;epistemologically, 
+the dual space follows the vector space&lt;/strong&gt;. I only draw attention to this ordering between the vector space and the dual because 
+it informs the aesthetic nature of the notation, as we'll see.&lt;/p&gt;
+&lt;h4&gt;Conventions&lt;/h4&gt;
+&lt;p&gt;The tensor type &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; is used to categories tensors based on the number of vectors and dual vectors they consume. Problem is, 
+there is a choice to made between the &lt;span class="math"&gt;\(r=n_v\)&lt;/span&gt; or &lt;span class="math"&gt;\(r=n_d\)&lt;/span&gt; conventions - and this choice isn't made consistently. As I mentioned above, 
+the epistemological ordering of vectors and dual vectors is unambiguous; dual vectors follow vectors. It therefore seems natural to 
+make the first number &lt;span class="math"&gt;\(r\)&lt;/span&gt; equal the number of vector arguments &lt;span class="math"&gt;\(n_v\)&lt;/span&gt;. I'll call this convention the &lt;em&gt;vector first&lt;/em&gt; convention, or 
+"VF" for short. Similarly, I'll call the opposite convention, of using the number of dual vectors &lt;span class="math"&gt;\(n_d\)&lt;/span&gt; as the first number &lt;span class="math"&gt;\(r\)&lt;/span&gt;, 
+the &lt;em&gt;dual first&lt;/em&gt; convention, or "DF" for short.&lt;/p&gt;
+&lt;h4&gt;Usage of Conventions&lt;/h4&gt;
+&lt;p&gt;Some sources that use the &lt;em&gt;VF&lt;/em&gt; convention &lt;a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'&gt;Jeevanjee (2015)&lt;/a&gt;, &lt;a href='#langLinearAlgebra1987' id='ref-langLinearAlgebra1987-1'&gt;Lang (1987)&lt;/a&gt;. Some sources that 
+use the &lt;em&gt;DF&lt;/em&gt; convention &lt;a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'&gt;Roman (2007)&lt;/a&gt;, &lt;a href='#hallLieGroupsLie2015' id='ref-hallLieGroupsLie2015-1'&gt;Hall (2015)&lt;/a&gt;, &lt;a href='#tuDifferentialGeometryConnections2017' id='ref-tuDifferentialGeometryConnections2017-1'&gt;Tu (2017)&lt;/a&gt;, 
+&lt;a href='#leeIntroductionSmoothManifolds2013' id='ref-leeIntroductionSmoothManifolds2013-1'&gt;Lee (2013)&lt;/a&gt;, &lt;a href='#rentelnManifoldsTensorsForms2014' id='ref-rentelnManifoldsTensorsForms2014-1'&gt;Renteln (2014)&lt;/a&gt;, &lt;a href='#dasTensorsMathematicsRelativity2007' id='ref-dasTensorsMathematicsRelativity2007-1'&gt;Das (2007)&lt;/a&gt;, 
+&lt;a href='#carrollSpacetimeGeometryIntroduction2013' id='ref-carrollSpacetimeGeometryIntroduction2013-1'&gt;Carroll (2013)&lt;/a&gt;, &lt;a href='#poissonRelativistToolkitMathematics2004' id='ref-poissonRelativistToolkitMathematics2004-1'&gt;Poisson (2004)&lt;/a&gt;, &lt;a href='#misnerGravitation2017' id='ref-misnerGravitation2017-1'&gt;Misner et al. (2017)&lt;/a&gt;, 
+&lt;a href='#spivakComprehensiveIntroductionDifferential1999' id='ref-spivakComprehensiveIntroductionDifferential1999-1'&gt;Spivak (1999)&lt;/a&gt;. 
+To explicitly make clear the above conventions, the &lt;em&gt;VF&lt;/em&gt; convention 
+would define a type &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; tensor &lt;span class="math"&gt;\(T\)&lt;/span&gt; as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$T: V_1\times \cdot\cdot\cdot \times V_r \times V^*_1 \times \cdot\cdot\cdot \times V^*_s\rightarrow C$$&lt;/div&gt;
+&lt;p&gt; 
+where &lt;span class="math"&gt;\(V_{i}=V\)&lt;/span&gt; and &lt;span class="math"&gt;\(V^*_{i}=V^*\)&lt;/span&gt; for all &lt;span class="math"&gt;\(i\)&lt;/span&gt;. On the other hand, the &lt;em&gt;DF&lt;/em&gt; convention would define a type &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; tensor &lt;span class="math"&gt;\(T\)&lt;/span&gt; as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$T: V^*_1\times \cdot\cdot\cdot \times V^*_r \times V_1 \times \cdot\cdot\cdot \times V_s\rightarrow C$$&lt;/div&gt;
+&lt;p&gt; where again 
+&lt;span class="math"&gt;\(V_{I}=V\)&lt;/span&gt; and &lt;span class="math"&gt;\(V^*_{i}=V^*\)&lt;/span&gt; for all &lt;span class="math"&gt;\(i\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h3&gt;Cartesian vs. Tensor Product Notations&lt;/h3&gt;
+&lt;p&gt;The usage of Cartesian products to define the domain of &lt;span class="math"&gt;\(T\)&lt;/span&gt; is typically used before introducing the tensor product, 
+as it is more familiar. In the Cartesian product notation, the &lt;em&gt;VF&lt;/em&gt; convention places the vector spaces before the dual 
+spaces, and in some sense is "aligned" with the way in which the subject is taught. When using the tensor product notation, 
+however, this is no longer the case!&lt;/p&gt;
+&lt;p&gt;Recall the tensor product of two vector spaces &lt;span class="math"&gt;\(V\)&lt;/span&gt; and &lt;span class="math"&gt;\(W\)&lt;/span&gt; is denoted &lt;span class="math"&gt;\(V\otimes W\)&lt;/span&gt; and is the set of all multilinear functions 
+from &lt;span class="math"&gt;\(V^* \times W^* \rightarrow C\)&lt;/span&gt;. Notice how the usage of the tensor product &lt;span class="math"&gt;\(\otimes\)&lt;/span&gt; essentially replaces vector spaces 
+with their duals in the Cartesian notation. This "replacement" effect combined with only using the spaces &lt;span class="math"&gt;\(V\)&lt;/span&gt; and &lt;span class="math"&gt;\(V^*\)&lt;/span&gt; amounts 
+to reversing the order of the input spaces the domain. For example, the &lt;em&gt;VF&lt;/em&gt; convention would define a type &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; tensor &lt;span class="math"&gt;\(T\)&lt;/span&gt; 
+using the tensor product notation as &lt;/p&gt;
+&lt;div class="math"&gt;$$T: V^*_1\otimes \cdot\cdot\cdot \otimes V^*_r \otimes V_1 \otimes \cdot\cdot\cdot \otimes 
+V_s\rightarrow C$$&lt;/div&gt;
+&lt;p&gt; For good measure, I will also note that the &lt;em&gt;DF&lt;/em&gt; convention would define a type &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; tensor &lt;span class="math"&gt;\(T\)&lt;/span&gt; using the 
+tensor product notation as &lt;span class="math"&gt;\($\)&lt;/span&gt;$ Notice that these definitions are equivalent to the previous definitions using Cartesian product 
+notation, but that now the vector spaces are written first in what we called the &lt;em&gt;dual first&lt;/em&gt; convention, not the &lt;em&gt;vector first&lt;/em&gt; 
+convention!&lt;/p&gt;
+&lt;h3&gt;Why is &lt;em&gt;DF&lt;/em&gt; convention preferred?&lt;/h3&gt;
+&lt;p&gt;It seems that the &lt;span class="math"&gt;\(DF\)&lt;/span&gt; convention has wider usage and appeal; naturally I wonder why. Since it feels natural to align the 
+notation with the epistemological order, in other words, to write &lt;span class="math"&gt;\(V\)&lt;/span&gt; before &lt;span class="math"&gt;\(V^*\)&lt;/span&gt;, then I am forced to conclude that the 
+mathematical community, with malice of forethought, prefers to base the definition of a type &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; tensor on the tensor 
+product notation, rather than the Cartesian notation, since the former requires that &lt;span class="math"&gt;\(V\)&lt;/span&gt; be written before &lt;span class="math"&gt;\(V^*\)&lt;/span&gt;. I personally 
+have no objection to the choice, as it seems sensible.&lt;/p&gt;
+&lt;h4&gt;Parting note on terminology&lt;/h4&gt;
+&lt;p&gt;In the &lt;em&gt;DF&lt;/em&gt; convention, the number &lt;span class="math"&gt;\(r\)&lt;/span&gt; is often referred to as the &lt;em&gt;covariant&lt;/em&gt; number and the number &lt;span class="math"&gt;\(s\)&lt;/span&gt; is called the 
+&lt;em&gt;contravariant&lt;/em&gt; number. These terms refer to the number of dual vectors and vectors respectively, since vectors are typically
+considered contravariant. Similar terms refer to &lt;em&gt;lower&lt;/em&gt; and &lt;em&gt;upper&lt;/em&gt; indices respectively.&lt;/p&gt;
+&lt;p&gt;I should note that my exploration of these conventions is limited to differential geometry, relativity, and linear algebra texts. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;&lt;hr&gt;
+&lt;h3&gt;Bibliography&lt;/h3&gt;
+&lt;p id='carrollSpacetimeGeometryIntroduction2013'&gt;Sean Carroll.
+&lt;em&gt;Spacetime and &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Geometry&lt;/span&gt;&lt;/span&gt;: &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;An Introduction&lt;/span&gt;&lt;/span&gt; to &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;General Relativity&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Pearson Education&lt;/span&gt;, 3 edition, 2013. &lt;a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='dasTensorsMathematicsRelativity2007'&gt;Anadijiban Das.
+&lt;em&gt;Tensors: The Mathematics of Relativity Theory and Continuum Mechanics&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, New York, 2007.
+ISBN 978-0-387-69468-9 978-0-387-69469-6.
+OCLC: ocm77795794. &lt;a class="cite-backref" href="#ref-dasTensorsMathematicsRelativity2007-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='hallLieGroupsLie2015'&gt;Brian&amp;nbsp;C. Hall.
+&lt;em&gt;Lie Groups, &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Lie&lt;/span&gt;&lt;/span&gt; Algebras, and Representations: An Elementary Introduction&lt;/em&gt;.
+Number&amp;nbsp;222 in Graduate Texts in Mathematics.
+&lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, Cham ; New York, second edition edition, 2015.
+ISBN 978-3-319-13466-6.
+OCLC: ocn910324548. &lt;a class="cite-backref" href="#ref-hallLieGroupsLie2015-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='jeevanjeeIntroductionTensorsGroup2015'&gt;Nadir Jeevanjee.
+&lt;em&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Springer Science+Business Media&lt;/span&gt;, New York, NY, 2015.
+ISBN 978-3-319-14793-2. &lt;a class="cite-backref" href="#ref-jeevanjeeIntroductionTensorsGroup2015-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='langLinearAlgebra1987'&gt;Serge Lang.
+&lt;em&gt;Linear Algebra&lt;/em&gt;.
+Undergraduate Texts in Mathematics.
+&lt;span class="bibtex-protected"&gt;Springer-Verlag&lt;/span&gt;, New York, 3rd ed edition, 1987.
+ISBN 978-0-387-96412-6. &lt;a class="cite-backref" href="#ref-langLinearAlgebra1987-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='leeIntroductionSmoothManifolds2013'&gt;John&amp;nbsp;M. Lee.
+&lt;em&gt;Introduction to Smooth Manifolds&lt;/em&gt;.
+Number&amp;nbsp;218 in Graduate Texts in Mathematics.
+&lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, New York ; London, 2nd ed edition, 2013.
+ISBN 978-1-4419-9981-8 978-1-4419-9982-5.
+OCLC: ocn800646950. &lt;a class="cite-backref" href="#ref-leeIntroductionSmoothManifolds2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='misnerGravitation2017'&gt;Charles&amp;nbsp;W. Misner, Kip&amp;nbsp;S. Thorne, John&amp;nbsp;Archibald Wheeler, and David Kaiser.
+&lt;em&gt;Gravitation&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Princeton University Press&lt;/span&gt;, Princeton, N.J, 2017.
+ISBN 978-0-691-17779-3.
+OCLC: on1006427790. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='poissonRelativistToolkitMathematics2004'&gt;Eric Poisson.
+&lt;em&gt;A Relativist's Toolkit: The Mathematics of Black-Hole Mechanics&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Cambridge University Press&lt;/span&gt;, Cambridge, UK ; New York, 2004.
+ISBN 978-0-521-83091-1. &lt;a class="cite-backref" href="#ref-poissonRelativistToolkitMathematics2004-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='rentelnManifoldsTensorsForms2014'&gt;Paul Renteln.
+&lt;em&gt;Manifolds, Tensors, and Forms: An Introduction for Mathematicians and Physicists&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Cambridge University Press&lt;/span&gt;, Cambridge, UK ; New York, 2014.
+ISBN 978-1-107-04219-3. &lt;a class="cite-backref" href="#ref-rentelnManifoldsTensorsForms2014-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='romanAdvancedLinearAlgebra2007'&gt;Steven Roman.
+&lt;em&gt;Advanced Linear Algebra&lt;/em&gt;.
+Number&amp;nbsp;135 in Graduate Texts in Mathematics.
+&lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, New York, 3rd ed edition, 2007.
+ISBN 978-0-387-72828-5. &lt;a class="cite-backref" href="#ref-romanAdvancedLinearAlgebra2007-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='spivakComprehensiveIntroductionDifferential1999'&gt;Michael Spivak.
+&lt;em&gt;A Comprehensive Introduction to Differential Geometry&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Publish or Perish, Inc&lt;/span&gt;, Houston, Tex, 3rd ed edition, 1999.
+ISBN 978-0-914098-70-6 978-0-914098-71-3 978-0-914098-72-0 978-0-914098-73-7 978-0-914098-74-4.
+OCLC: ocm42962004. &lt;a class="cite-backref" href="#ref-spivakComprehensiveIntroductionDifferential1999-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='tuDifferentialGeometryConnections2017'&gt;Loring&amp;nbsp;W. Tu.
+&lt;em&gt;Differential Geometry: Connections, Curvature, and Characteristic Classes&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Springer Science+Business Media&lt;/span&gt;, New York, NY, 2017.
+ISBN 978-3-319-55082-4. &lt;a class="cite-backref" href="#ref-tuDifferentialGeometryConnections2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</content><category term="maths"></category><category term="tensors"></category><category term="notation"></category></entry><entry><title>Tensor Product for Programmers</title><link href="/blog/tensor-product-for-programmers/" rel="alternate"></link><published>2019-04-15T00:00:00-05:00</published><updated>2019-04-15T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-04-15:/blog/tensor-product-for-programmers/</id><summary type="html">&lt;p&gt;The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. &lt;/p&gt;
 &lt;p&gt;Tensors are defined …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. &lt;/p&gt;
 &lt;p&gt;Tensors are defined and introduced in two equivalent ways. The first way, called the "expansion coefficient" (or array) style of introducing tensors relies on many indices and iterates over the n dimensions of some array (n-dimensional generalization of a matrix) &lt;a href='#wikipediaTensorMultidimensionalArrays2019' id='ref-wikipediaTensorMultidimensionalArrays2019-1'&gt;Wikipedia (2019)&lt;/a&gt;. I have found this approach to be overly cluttered; missing the forest for the trees. Instead, I prefer the second way of defining tensors, namely as "multilinear maps" &lt;a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'&gt;Roman (2007)&lt;/a&gt; &lt;a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'&gt;Jeevanjee (2015)&lt;/a&gt;. This technique focuses on functions and interfaces, as opposed to components, and will be the chosen method of explaining below. &lt;/p&gt;
 &lt;p&gt;Before we begin, a brief note about preferences between the "coefficient" and "multilinear" approaches. The latter way has found greater resonance with mathematicians, while programmers often find the former more comforting. I believe this is caused by an over-reliance on data structures as atomic units of understanding. True, it is natural as a developer to ask "but what &lt;em&gt;is&lt;/em&gt; the object"; however, using more functional-programming style of thought, the multilinear map approach is actually simpler! No need to keep track of various coefficients on various axes of some imaginary n-dimensional array (leave that to &lt;code&gt;numpy&lt;/code&gt;). In the below, I outline a functional-programming style analogy for tensors, and the tensor product. Thought the below snippets are in python, some details are left to the imagination (i.e. this code is not a script).&lt;/p&gt;
