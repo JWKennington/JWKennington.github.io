@@ -68,6 +68,7 @@ jobs:
           name: show contents
           command: |
             ls
+            ls -R content
 
       - run:
           name: make github
