@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington - Books</title><link href="/" rel="alternate"></link><link href="/feeds/books.atom.xml" rel="self"></link><id>/</id><updated>2019-03-04T00:00:00-06:00</updated><entry><title>Book Review: Tensors and Group Theory for Physcists (Jeevanjee)</title><link href="/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/" rel="alternate"></link><published>2019-03-04T00:00:00-06:00</published><updated>2019-03-04T00:00:00-06:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-03-04:/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/</id><summary type="html">&lt;h5&gt;Summary&lt;/h5&gt;
+&lt;p&gt;I picked up a copy of Nadir Jeevnajee's &lt;a href="https://www.amazon.com/Introduction-Tensors-Group-Theory-Physicists/dp/3319147935/ref=sr_1_3?keywords=jeevanjee&amp;amp;qid=1551765862&amp;amp;s=gateway&amp;amp;sr=8-3"&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/a&gt;
+a few months ago with the intent of skimming through and spending most of my time in reference texts. To my pleasant
+surprise, I found this text to be self contained - requiring …&lt;/p&gt;</summary><content type="html">&lt;h5&gt;Summary&lt;/h5&gt;
+&lt;p&gt;I picked up a copy of Nadir Jeevnajee's &lt;a href="https://www.amazon.com/Introduction-Tensors-Group-Theory-Physicists/dp/3319147935/ref=sr_1_3?keywords=jeevanjee&amp;amp;qid=1551765862&amp;amp;s=gateway&amp;amp;sr=8-3"&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/a&gt;
+a few months ago with the intent of skimming through and spending most of my time in reference texts. To my pleasant
+surprise, I found this text to be self contained - requiring little to no references. The presentation is at once mathematically rigorous 
+and physically intuitive, alluding to well-known examples from physics throughout.&lt;/p&gt;
+&lt;p&gt;In the below sections, I will briefly summarize the content presented as well as how this presentation compares to other known
+texts in the subject (that I'm aware of!). &lt;/p&gt;
+&lt;h5&gt;Part I: Tensors&lt;/h5&gt;
+&lt;p&gt;The introduction to tensors as multilinear functions &lt;/p&gt;
+&lt;h5&gt;Part II: Group Theory&lt;/h5&gt;
+&lt;p&gt;In progress, check back later for more.&lt;/p&gt;
+&lt;h5&gt;Solutions&lt;/h5&gt;
+&lt;p&gt;As I read through the text I'm compiling a solutions manual, which I will post on this site when complete. Until then,
+you can access a preliminary manuscript &lt;a href="/pdfs/solns/jeevanjee.pdf"&gt;here&lt;/a&gt;. I will also continue to update this review
+as relevant.&lt;/p&gt;</content><category term="physics"></category><category term="linear algebra"></category><category term="group theory"></category><category term="tensors"></category></entry></feed>
