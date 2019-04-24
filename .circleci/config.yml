@@ -81,7 +81,7 @@ workflows:
   commit:
     jobs:
       - build_html
-  nightly:
+  daily:
     triggers:
       - schedule:
           cron: "0 14 * * *"
