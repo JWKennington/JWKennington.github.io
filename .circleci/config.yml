@@ -51,6 +51,11 @@ jobs:
           - v1-dependencies-
 
       - run:
+          name: google cloud api
+          command: |
+            sudo apt-get install google-cloud-sdk
+
+      - run:
           name: install dependencies
           command: |
             python3 -m venv venv
