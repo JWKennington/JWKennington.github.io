@@ -69,6 +69,7 @@ jobs:
           command: |
             ls
             ls -R content
+            echo cwd
 
       - run:
           name: make github
