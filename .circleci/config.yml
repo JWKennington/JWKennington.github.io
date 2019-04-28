@@ -80,7 +80,7 @@ jobs:
 workflows:
   commit:
     jobs:
-      - build_html
+      - publish
   daily:
     triggers:
       - schedule:
