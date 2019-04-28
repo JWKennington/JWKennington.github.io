@@ -80,11 +80,11 @@ jobs:
 workflows:
   commit:
     jobs:
-      - publish
+      - build_html
   daily:
     triggers:
       - schedule:
-          cron: "13 4 * * *"
+          cron: "0 14 * * *"
           filters:
             branches:
               only:
