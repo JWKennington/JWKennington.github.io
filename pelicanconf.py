@@ -40,7 +40,7 @@ FA_SOCIAL = (
 )
 
 SOCIAL = (
-    ('github', 'http://github.com/JWKennington'),
+    ('github', 'https://github.com/JWKennington'),
     ('linkedin', 'https://www.linkedin.com/in/jameskennington/'),
     ('twitter', 'https://twitter.com/JwKennington'),
     ('facebook', 'https://www.facebook.com/jimmy.kennington'),
