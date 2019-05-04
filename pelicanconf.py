@@ -70,6 +70,7 @@ MENUITEMS = (
     ('Code','/pages/code'),
     ('Publications','/pages/publications'),
     ('Tools','/pages/tools'),
+    ('Texts','/pages/texts'),
     # ('Research','/pages/research'),
 )
 
