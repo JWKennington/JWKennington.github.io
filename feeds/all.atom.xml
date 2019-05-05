@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-04-23T00:00:00-05:00</updated><entry><title>Tensor Type Notation</title><link href="/blog/tensor-type-notation/" rel="alternate"></link><published>2019-04-23T00:00:00-05:00</published><updated>2019-04-23T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-04-23:/blog/tensor-type-notation/</id><summary type="html">&lt;h3&gt;What does type (r, s) mean?&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-05-06T00:00:00-05:00</updated><entry><title>Erasing Efficiently</title><link href="/blog/erasing-efficiently/" rel="alternate"></link><published>2019-05-06T00:00:00-05:00</published><updated>2019-05-06T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-05-06:/blog/erasing-efficiently/</id><summary type="html">&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
+not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I 
+played around with several different methods of erasing chalk marks to find …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
+not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I 
+played around with several different methods of erasing chalk marks to find which is most effective. The results were
+decisive. This post outlines the results, and attempts to present a simple test as justification (though my own testing 
+was more extensive). &lt;/p&gt;
+&lt;p&gt;Of the suggestions I was given, I decided to test the methods listed below. Felt erasers were what I had always used, 
+and I think are the standard in many universities across the US. The sponge was an interesting suggestion, in that it has
+a similar form factor to conventional felt erasers. I was most skeptical of the microfiber towel suggestion. I 
+thought it would feel weird to not have a handle to grab.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://amzn.to/2L9k43X"&gt;Felt Eraser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://amzn.to/2PxWCMc"&gt;Sponge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://amzn.to/2GI8vLH"&gt;Microfiber Towel&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To demonstrate the differences between the methods, I drew a fair amount of horizontal lines in different colors (white, 
+blue, yellow, and red). I divided the lines vertically into multiple columns; one column for each method. I took a few 
+images after each pass.&lt;/p&gt;
+&lt;p&gt;A look at the tools pre-erasing, note that they are all chalk-free!
+&lt;img alt="Eraser Tools Pre" src="/images/eraser-tools-pre.png"&gt;&lt;/p&gt;
+&lt;p&gt;The board after a single pass with each tool. Notice how the felt eraser just smeared the existing lines, but they are 
+still fully recognizable and distinguishable (bad). The sponge did a little better, but made a terrible noise while in 
+contact with the board. Lastly, the microfiber towel surpassed my expectations and the other competitors, erasing nearly 
+all trace of the lines in the first pass! Not only does the towel method erase better than the others, but it produces
+less dust as well. 
+&lt;img alt="After 1 Pass" src="/images/eraser-pass-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;The board after 5 passes with each tool. The felt eraser has closed the gap on the other methods, but still doesn't compare
+fully. The microfiber towel method:
+&lt;img alt="After 5 Passes" src="/images/eraser-pass-5.png"&gt;&lt;/p&gt;
+&lt;p&gt;A quick look at the tools post erasing. The felt eraser has gathered the chalk in highly-clustered places, whereas the microfiber 
+towel has absorbed the chalk in a fairly uniform pattern. This latter observation explains why the towel continues to work
+well long after the eraser needs to be cleaned, there's a surface-area advantage!
+&lt;img alt="Eraser Tools Post" src="/images/eraser-tools-post.png"&gt;&lt;/p&gt;
+&lt;p&gt;An aside about cleaning up the tools: the microfiber towels are machine-washable (do &lt;em&gt;not&lt;/em&gt; use softener, only dry on low 
+or no heat). This is much easier than the felt erasers, which I either had to clap against eachother outdoors, or vacuum 
+with a special nozzle on the vacuum cleaner.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Winner: Microfiber Towel!&lt;/strong&gt; (I won't go back). If you prefer the form-factor of the felt eraser, wrap it in a microfiber towel!&lt;/p&gt;</content><category term="maths"></category><category term="tools"></category><category term="chalk"></category></entry><entry><title>Tensor Type Notation</title><link href="/blog/tensor-type-notation/" rel="alternate"></link><published>2019-04-23T00:00:00-05:00</published><updated>2019-04-23T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-04-23:/blog/tensor-type-notation/</id><summary type="html">&lt;h3&gt;What does type (r, s) mean?&lt;/h3&gt;
 &lt;p&gt;I'd like to discuss the notation of the tensor type, commonly denoted &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; as it relates to the tensor product. Specifically, 
 the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically 
 categorized …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;What does type (r, s) mean?&lt;/h3&gt;
