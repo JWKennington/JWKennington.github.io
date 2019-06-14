@@ -24,6 +24,14 @@ including a single LaTeX file as well as Pelican-compatible blog posts / web pag
 This project is open source and may be found on [github](https://github.com/JWKennington/solman).
 
 
+#### `julialg` - Julia-style arrays in Python
+Small package that wraps numpy n-dimensional arrays and allows for 1-indexed slicing (more mathematically 
+intuitive) instead of 0-indexed slicing (computer science convention). Also improves the prettiness of the 
+representation of the array in a manner similar to Julia's LinearAlgebra package. To be clear, this is a _Python_
+package, meant to bring some of the elegance of Julia's interface for tensors to the Python setting.
+This project is open source and may be found on [github](https://github.com/JWKennington/julialg).
+
+
 <!---
 #### Contributions to Open Source Projects
 The below items listed are projects that existed prior to my involvement, that I have assisted to varying degress.

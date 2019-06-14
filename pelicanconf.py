@@ -102,7 +102,9 @@ GITHUB_ACTIVITY_FEED = 'https://github.com/JWKennington.atom'
 GITHUB_ACTIVITY_MAX_ENTRIES = 5
 GITHUB_REPO_IGNORE = [
     'JWKennington.github.io',
+    'HRKennington.github.io',
     'jwk-theme',
+    'hrk-theme',
     'pelican-ga-pageview',
     'pelican-render-math',
     'pelican-cite-nice',

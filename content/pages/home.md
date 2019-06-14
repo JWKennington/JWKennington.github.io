@@ -11,9 +11,9 @@ hide_headline: True
 > <i>- R. P. Feynman</i>
 
 
-I am a quantitative developer, aspiring physicist, and armchair geometer. My research interests include general relativity and 
-gravitational waves, as well as the geometry underlying those theories. I also enjoy studying the effects of relativity 
-on various astrophysical phenomena, such as AGN and dark matter clustering.
+I am a quantitative developer, aspiring physicist, and armchair geometer. My research interests include classical and 
+quantum gravity, as well as the geometry underlying those theories. I also enjoy studying related phenomena through computation,
+such as gravitational waves, black hole dynamics, and tensor networks.
 
 Here you will find some [informal posts](/blog), [my CV](/pages/cv) and [publications](/pages/publications). I've also posted links 
 to my open-source software projects on [github](/pages/code). You may contact me 
