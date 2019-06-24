@@ -8,9 +8,9 @@ Here is my CV. Click the link below for a pdf version or see some listed items b
 
 
 #### Research Experience
-- **2017 - 2018: Zale Lipshy Hospital, UT Southwestern Medical Center, Dallas TX**
-    - **_Mathematical Consultant_**, Pain Medicine Lab
-    - Provided statistical and programming expertise to various research projects related to the dosing of pain medication. Wrote Python code to model pain medicine response, resulting in publication.
+- **2019 Quantum Gravity Computing Lab, Bard College, Red Hook NY**
+    - **_Collaborator_**, Tensor Network Renormalization Lab
+    - Studied tensor network formulation of the Ising model in the Julia programming language. Observed the phase transition in the Ising model by means of renormalized tensor flow. Explored applications of these techniques to LQG, and contributed Python programming language algorithms for improved computational efficiency.
 - **2013 - 2015: Center for Nonlinear Dynamics, University of Texas, Austin TX**
     - **_Undergraduate Researcher_**, Raizen Lab
     - Researched brownian motion under various non-Newtonian fluid model assumptions. Assisted with atomic optics experiments, focused on the optical tweezing of micrometer-scale beads to understand short-timescale behavior transition of fluids. Also conducted exploratory work in nanofluid and graphene manipulation.
@@ -26,6 +26,8 @@ Here is my CV. Click the link below for a pdf version or see some listed items b
 
 
 #### Education
+- _Summer 2019_: Summer School on Quantum Gravity, **Bard College**, Red Hook
+    - Coursework included: Covariant LQG, Quantum Cosmology, Soft Modes and Quantum Gravity, QFT in Curved Spacetime, 3D Gravity and Quantum Groups.
 - _2013 - 2015_: BS, Physics, **The University of Texas at Austin**, Austin
     - _Departmental Honors_ | Major: Physics
     - Thesis: _Brownian Motion in a Non-Newtonian Fluid_| Advisor: Prof. Mark Raizen
