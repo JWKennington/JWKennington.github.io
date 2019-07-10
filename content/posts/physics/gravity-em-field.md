@@ -1,11 +1,11 @@
 Title: Gravity of a Photon
-Date: 2019-06-12
+Date: 2019-06-15
 Category: Physics
 Tags: physics, gravity
 
 A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity.
 Specifically, he asked how the presence of electromagnetic fields impacts the gravitational field. Applying some modern-physics
-reasoning, he proposed that electromagnetic fields should exert gravitational influence because photons have rest energy that
+reasoning, he proposed that electromagnetic fields should exert gravitational influence because photons have momentum that
 can be viewed as mass in special relativity, and should interact gravitationally. I found this idea interesting, if a bit
 interpretive, and answered with the precise formulation of the impact of the electromagnetic field on the curvature tensor.
 He suggested I post this response in case anyone else finds it interesting; to colleagues working in classical or quantum gravity
@@ -28,7 +28,7 @@ Various forms of matter contribute differently to the stress-energy tensor, and 
 equation below outlines the way in which the electromagnetic field contributes to the stress energy density of a particular
 area of spacetime.
 
-$$T^{\mu\nu} = \frac{1}{\mu_0}\left[F^{\mu\alpha}F^{\nu}{}_{\alpha} - \frac{1}{4}\eta^{\mu\nu}F_{\alpha\beta}F^{\alpha\beta} \right] \quad\quad\quad(2)$$
+$$T^{\mu\nu} = \frac{1}{\mu_0}\left[F^{\mu\alpha}F^{\nu}{}_{\alpha} - \frac{1}{4} g^{\mu\nu}F_{\alpha\beta}F^{\alpha\beta} \right] \quad\quad\quad(2)$$
 
 Where $F_{\mu\nu}$ is the electromagnetic field tensor, also called the *Faraday* tensor, where $\mathbf{E} = E^i e_i$ and
 $\mathbf{B} = B^i e_i$ are the familiar electric and magnetic vector fields. Note that in the below, I adopt the $c=1$
@@ -46,4 +46,4 @@ Thus, equation (2) tells us how the electromagnetic fields we are familiar with,
 contribute to the energy density of a region of spacetime. Then equation (1) builds on that result to relate the
 electromagnetic fields to the curvature of spacetime, which as Einstein revealed, manifests as the gravitational field. So
 yes, the conventional electromagnetic fields, and the photons that constitute them, impact the gravitational field despite
-having no inertial mass!
+having no rest mass!
