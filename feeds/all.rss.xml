@@ -35,7 +35,7 @@ this might appear a bit pedestrian.&lt;/p&gt;
 law, and despite its seemingly-complex tensorial notation, expresses a beautifully elegant and simple concept. For those less
 familiar, Einstein's general relativity reformulates gravitational interaction as a manifestation of the curvature of spacetime.
 Specifically, Einstein's formulation makes concrete the relationship between the curvature of spacetime and the mass-energy content
- of spacetime.&lt;/p&gt;
+ of spacetime &lt;a href='#misnerGravitation2017' id='ref-misnerGravitation2017-1'&gt;Misner et al. (2017)&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="math"&gt;$$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} \quad\quad\quad(1)$$&lt;/div&gt;
 &lt;p&gt;In the above equation (Einstein equation), the left-hand side contains terms related to curvature of spacetime, like the Ricci
 tensor &lt;span class="math"&gt;\(R_{\mu\nu}\)&lt;/span&gt;  and the metric &lt;span class="math"&gt;\(g_{\mu\nu}\)&lt;/span&gt;. The right-hand side contains terms related to energy and matter content,
@@ -47,7 +47,7 @@ area of spacetime.&lt;/p&gt;
 &lt;div class="math"&gt;$$T^{\mu\nu} = \frac{1}{\mu_0}\left[F^{\mu\alpha}F^{\nu}{}_{\alpha} - \frac{1}{4}\eta^{\mu\nu}F_{\alpha\beta}F^{\alpha\beta} \right] \quad\quad\quad(2)$$&lt;/div&gt;
 &lt;p&gt;Where &lt;span class="math"&gt;\(F_{\mu\nu}\)&lt;/span&gt; is the electromagnetic field tensor, also called the &lt;em&gt;Faraday&lt;/em&gt; tensor, where &lt;span class="math"&gt;\(\mathbf{E} = E^i e_i\)&lt;/span&gt; and
 &lt;span class="math"&gt;\(\mathbf{B} = B^i e_i\)&lt;/span&gt; are the familiar electric and magnetic vector fields. Note that in the below, I adopt the &lt;span class="math"&gt;\(c=1\)&lt;/span&gt;
-convention for convenience.&lt;/p&gt;
+convention for convenience &lt;a href='#carrollSpacetimeGeometryIntroduction2013' id='ref-carrollSpacetimeGeometryIntroduction2013-1'&gt;Carroll (2013)&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="math"&gt;$$F^{\mu\nu} =
 \begin{bmatrix}
     0 &amp;amp; -E^x &amp;amp; -E^y &amp;amp; -E^z \\
@@ -60,7 +60,7 @@ contribute to the energy density of a region of spacetime. Then equation (1) bui
 electromagnetic fields to the curvature of spacetime, which as Einstein revealed, manifests as the gravitational field. So
 yes, the conventional electromagnetic fields, and the photons that constitute them, impact the gravitational field despite
 having no inertial mass!&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#')) {
     var align = "center",
         indent = "0em",
         linebreak = "false";
@@ -72,7 +72,7 @@ having no inertial mass!&lt;/p&gt;
     }
 
     var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
@@ -114,7 +114,17 @@ having no inertial mass!&lt;/p&gt;
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 12 Jun 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-06-12:/blog/gravity-of-a-photon/</guid><category>physics</category><category>gravity</category></item><item><title>Erasing Efficiently</title><link>/blog/erasing-efficiently/</link><description>&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
+&lt;/script&gt;&lt;hr&gt;
+&lt;h3&gt;Bibliography&lt;/h3&gt;
+&lt;p id='carrollSpacetimeGeometryIntroduction2013'&gt;Sean Carroll.
+&lt;em&gt;Spacetime and &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Geometry&lt;/span&gt;&lt;/span&gt;: &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;An Introduction&lt;/span&gt;&lt;/span&gt; to &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;General Relativity&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Pearson Education&lt;/span&gt;, 3 edition, 2013. &lt;a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='misnerGravitation2017'&gt;Charles&amp;nbsp;W. Misner, Kip&amp;nbsp;S. Thorne, John&amp;nbsp;Archibald Wheeler, and David Kaiser.
+&lt;em&gt;Gravitation&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Princeton University Press&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Princeton, N.J&lt;/span&gt;, 2017.
+ISBN 978-0-691-17779-3.
+OCLC: on1006427790. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 12 Jun 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-06-12:/blog/gravity-of-a-photon/</guid><category>physics</category><category>gravity</category></item><item><title>Erasing Efficiently</title><link>/blog/erasing-efficiently/</link><description>&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
 not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I 
 played around with several different methods of erasing chalk marks to find which is most effective. The results were
 decisive. This post outlines the results, and attempts to present a simple test as justification (though my own testing 
