@@ -15,7 +15,7 @@ The Einstein field equation (below) is arguably the most famous equation in grav
 law, and despite its seemingly-complex tensorial notation, expresses a beautifully elegant and simple concept. For those less
 familiar, Einstein's general relativity reformulates gravitational interaction as a manifestation of the curvature of spacetime.
 Specifically, Einstein's formulation makes concrete the relationship between the curvature of spacetime and the mass-energy content
- of spacetime.
+ of spacetime [@misnerGravitation2017].
 
 $$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} \quad\quad\quad(1)$$
 
@@ -32,7 +32,7 @@ $$T^{\mu\nu} = \frac{1}{\mu_0}\left[F^{\mu\alpha}F^{\nu}{}_{\alpha} - \frac{1}{4
 
 Where $F_{\mu\nu}$ is the electromagnetic field tensor, also called the *Faraday* tensor, where $\mathbf{E} = E^i e_i$ and
 $\mathbf{B} = B^i e_i$ are the familiar electric and magnetic vector fields. Note that in the below, I adopt the $c=1$
-convention for convenience.
+convention for convenience [@carrollSpacetimeGeometryIntroduction2013].
 
 $$F^{\mu\nu} =
 \begin{bmatrix}
