@@ -1,5 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Mon, 06 May 2019 00:00:00 -0500</lastBuildDate><item><title>Erasing Efficiently</title><link>/blog/erasing-efficiently/</link><description>&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
+<rss version="2.0"><channel><title>J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Fri, 28 Jun 2019 00:00:00 -0500</lastBuildDate><item><title>Book Review: Tensors and Group Theory for Physcists (Jeevanjee)</title><link>/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/</link><description>&lt;h5&gt;Summary&lt;/h5&gt;
+&lt;p&gt;I picked up a copy of Nadir Jeevnajee's &lt;a href="https://amzn.to/2XzHfp2"&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/a&gt;
+a few months ago with the intent of skimming through and spending most of my time in reference texts. To my pleasant
+surprise, I found this text to be self contained - requiring little to no references. The presentation is at once 
+mathematically rigorous and physically intuitive, alluding to well-known examples from physics throughout. I've found this
+text to be such a great introduction to tensors that I have even recommended it to computer-scientist colleagues of mine
+who have no interest in physics. I whole-heartedly recommend it to anyone interesting in becoming more familiar with tensors
+and elementary group / representation theory.&lt;/p&gt;
+&lt;h5&gt;Part I: Tensors&lt;/h5&gt;
+&lt;p&gt;The presentation of tensors as multilinear functions achieves a remarkable degree of exposition, and arrives at all the 
+more heuristic definitions of tensors as derived from the simple multilinear-map definitions. This gave the impression
+of a more solid ground basis for many subsequent tensorial notations and usages.&lt;/p&gt;
+&lt;p&gt;The derivation of commonly assumed definitions is most satisfying. Specifically, the definitions of the adjoint operator
+and tensor product are much simpler than the more commonly given "behavioral" definitions presented in physics. I appreciated
+the rigorous yet succinct treatment of the tensor and wedge products.&lt;/p&gt;
+&lt;h5&gt;Part II: Group Theory&lt;/h5&gt;
+&lt;p&gt;Though I am still working through the last part of chapter 6, I must admit I found this section to be superbly clear. The 
+methodical, sequential development of topics in Lie theory were especially thoughtful. The presentation of Lie algebra elements
+as derivatives of Lie group elements yielded the conventional tangent-space definitions nicely. &lt;/p&gt;
+&lt;p&gt;At the same time, Jeevanjee also presents many common groups and the important relations between them, such as the double-cover 
+relationship of SU(2) and SO(3). He also presents the higher-level relations between the various common groups, such as the
+quantum implications of the Lorentz (improper) group. Good stuff!&lt;/p&gt;
+&lt;h5&gt;Solutions&lt;/h5&gt;
+&lt;p&gt;As I read through the text I'm compiling some solutions. Much to my fortunate suprise, Dr. Jeevanjee has welcomed these 
+solutions as contributions to his solutions manual which he has published on 
+Overleaf here: &lt;a href="https://www.overleaf.com/read/smdmygtbwtxk"&gt;Solutions Manual&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Fri, 28 Jun 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-06-28:/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/</guid><category>physics</category><category>linear algebra</category><category>group theory</category><category>tensors</category></item><item><title>Gravity of a Photon</title><link>/blog/gravity-of-a-photon/</link><description>&lt;p&gt;A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity.
+Specifically, he asked how the presence of electromagnetic fields impacts the gravitational field. Applying some modern-physics
+reasoning, he proposed that electromagnetic fields should exert gravitational influence because photons have rest energy that
+can be viewed as mass in special relativity, and should interact gravitationally. I found this idea interesting, if a bit
+interpretive, and answered with the precise formulation of the impact of the electromagnetic field on the curvature tensor.
+He suggested I post this response in case anyone else finds it interesting; to colleagues working in classical or quantum gravity
+this might appear a bit pedestrian.&lt;/p&gt;
+&lt;p&gt;The Einstein field equation (below) is arguably the most famous equation in gravity theory, second perhaps to Newton's inverse-square
+law, and despite its seemingly-complex tensorial notation, expresses a beautifully elegant and simple concept. For those less
+familiar, Einstein's general relativity reformulates gravitational interaction as a manifestation of the curvature of spacetime.
+Specifically, Einstein's formulation makes concrete the relationship between the curvature of spacetime and the mass-energy content
+ of spacetime.&lt;/p&gt;
+&lt;div class="math"&gt;$$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} \quad\quad\quad(1)$$&lt;/div&gt;
+&lt;p&gt;In the above equation (Einstein equation), the left-hand side contains terms related to curvature of spacetime, like the Ricci
+tensor &lt;span class="math"&gt;\(R_{\mu\nu}\)&lt;/span&gt;  and the metric &lt;span class="math"&gt;\(g_{\mu\nu}\)&lt;/span&gt;. The right-hand side contains terms related to energy and matter content,
+specifically &lt;span class="math"&gt;\(T_{\mu\nu}\)&lt;/span&gt;. This latter term, called the &lt;em&gt;stress-energy&lt;/em&gt; tensor, is where the connection to the electromagnetic
+field appears.&lt;/p&gt;
+&lt;p&gt;Various forms of matter contribute differently to the stress-energy tensor, and electromagnetic energy is no exception. The
+equation below outlines the way in which the electromagnetic field contributes to the stress energy density of a particular
+area of spacetime.&lt;/p&gt;
+&lt;div class="math"&gt;$$T^{\mu\nu} = \frac{1}{\mu_0}\left[F^{\mu\alpha}F^{\nu}{}_{\alpha} - \frac{1}{4}\eta^{\mu\nu}F_{\alpha\beta}F^{\alpha\beta} \right] \quad\quad\quad(2)$$&lt;/div&gt;
+&lt;p&gt;Where &lt;span class="math"&gt;\(F_{\mu\nu}\)&lt;/span&gt; is the electromagnetic field tensor, also called the &lt;em&gt;Faraday&lt;/em&gt; tensor, where &lt;span class="math"&gt;\(\mathbf{E} = E^i e_i\)&lt;/span&gt; and
+&lt;span class="math"&gt;\(\mathbf{B} = B^i e_i\)&lt;/span&gt; are the familiar electric and magnetic vector fields. Note that in the below, I adopt the &lt;span class="math"&gt;\(c=1\)&lt;/span&gt;
+convention for convenience.&lt;/p&gt;
+&lt;div class="math"&gt;$$F^{\mu\nu} =
+\begin{bmatrix}
+    0 &amp;amp; -E^x &amp;amp; -E^y &amp;amp; -E^z \\
+    E^x &amp;amp; 0 &amp;amp; -B^z &amp;amp; B^y \\
+    E^y &amp;amp; B^z &amp;amp; 0 &amp;amp; -B^x \\
+    E^z &amp;amp; -B^y &amp;amp; B^x &amp;amp; 0 \\
+\end{bmatrix} \quad\quad\quad(3)$$&lt;/div&gt;
+&lt;p&gt;Thus, equation (2) tells us how the electromagnetic fields we are familiar with, namely &lt;span class="math"&gt;\(\mathbf{E}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathbf{B}\)&lt;/span&gt;,
+contribute to the energy density of a region of spacetime. Then equation (1) builds on that result to relate the
+electromagnetic fields to the curvature of spacetime, which as Einstein revealed, manifests as the gravitational field. So
+yes, the conventional electromagnetic fields, and the photons that constitute them, impact the gravitational field despite
+having no inertial mass!&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Wed, 12 Jun 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-06-12:/blog/gravity-of-a-photon/</guid><category>physics</category><category>gravity</category></item><item><title>Erasing Efficiently</title><link>/blog/erasing-efficiently/</link><description>&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
 not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I 
 played around with several different methods of erasing chalk marks to find which is most effective. The results were
 decisive. This post outlines the results, and attempts to present a simple test as justification (though my own testing 
@@ -369,18 +484,4 @@ a solid that itself possesses gravitational mass, to what extent do the sound wa
 there any circumstances (very "loose" media, such as IGM) under which that interaction would play an important role in the dynamics
 of the resulting wave? &lt;/p&gt;
 &lt;p&gt;Though the above questions are tempting - I'll wait until Nicolis and Penco either experimentally observe their proposed effect,
-or can present a more general version of their initial results. Either way - interesting!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Tue, 05 Mar 2019 00:00:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-03-05:/blog/mass-of-sound-waves/</guid><category>physics</category><category>waves</category></item><item><title>Book Review: Tensors and Group Theory for Physcists (Jeevanjee)</title><link>/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/</link><description>&lt;h5&gt;Summary&lt;/h5&gt;
-&lt;p&gt;I picked up a copy of Nadir Jeevnajee's &lt;a href="https://www.amazon.com/Introduction-Tensors-Group-Theory-Physicists/dp/3319147935/ref=sr_1_3?keywords=jeevanjee&amp;amp;qid=1551765862&amp;amp;s=gateway&amp;amp;sr=8-3"&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/a&gt;
-a few months ago with the intent of skimming through and spending most of my time in reference texts. To my pleasant
-surprise, I found this text to be self contained - requiring little to no references. The presentation is at once mathematically rigorous 
-and physically intuitive, alluding to well-known examples from physics throughout.&lt;/p&gt;
-&lt;p&gt;In the below sections, I will briefly summarize the content presented as well as how this presentation compares to other known
-texts in the subject (that I'm aware of!). &lt;/p&gt;
-&lt;h5&gt;Part I: Tensors&lt;/h5&gt;
-&lt;p&gt;The introduction to tensors as multilinear functions &lt;/p&gt;
-&lt;h5&gt;Part II: Group Theory&lt;/h5&gt;
-&lt;p&gt;In progress, check back later for more.&lt;/p&gt;
-&lt;h5&gt;Solutions&lt;/h5&gt;
-&lt;p&gt;As I read through the text I'm compiling a solutions manual, which I will post on this site when complete. Until then,
-you can access a preliminary manuscript &lt;a href="/pdfs/solns/jeevanjee.pdf"&gt;here&lt;/a&gt;. I will also continue to update this review
-as relevant.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Mon, 04 Mar 2019 00:00:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-03-04:/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/</guid><category>physics</category><category>linear algebra</category><category>group theory</category><category>tensors</category></item></channel></rss>
+or can present a more general version of their initial results. Either way - interesting!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">J. W. Kennington</dc:creator><pubDate>Tue, 05 Mar 2019 00:00:00 -0600</pubDate><guid isPermaLink="false">tag:None,2019-03-05:/blog/mass-of-sound-waves/</guid><category>physics</category><category>waves</category></item></channel></rss>
