@@ -11,12 +11,12 @@ hide_headline: True
 > <i>- R. P. Feynman</i>
 
 
-I am a quantitative developer, aspiring physicist, and armchair geometer. My research interests include classical and 
-quantum gravity, as well as the geometry underlying those theories. I also enjoy studying related phenomena through computation,
-such as gravitational waves, black hole dynamics, and tensor networks.
+I am a quantitative developer, aspiring physicist, and armchair geometer. My research interests broadly include classical and
+quantum gravity, the underlying geometry, and related astrophysical systems. I also enjoy studying associated relativistic 
+phenomena through both observation and computation, such as gravitational waves, quasar lensing, and black hole dynamics.
 
-Here you will find some [informal posts](/blog), [my CV](/pages/cv) and [publications](/pages/publications). I've also posted links 
-to my open-source software projects on [github](/pages/code). You may contact me 
+Here you will find some [informal posts](/blog), [my CV](/pages/cv) and [publications](/pages/publications). I've also posted 
+links to my open-source software projects on [github](/pages/code). You may contact me 
 at [jameswkennington@gmail.com](mailto:jameswkennington@gmail.com).
 
 Away from the key and chalk boards, I spend most of my time hiking, stargazing, and baking sourdough breads. 
