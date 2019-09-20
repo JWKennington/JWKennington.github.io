@@ -72,7 +72,8 @@ Here is my CV. Click the link below for a pdf version or see some listed items b
 
 
 #### Skills
-- Programming Languages: Python (advanced), Mathemaica, C++, Bash 
+- Programming Languages: Python (advanced), Mathemaica, C++, Bash
+- Scientific python packages: AstroPy, GWpy, LALsuite, NumPy, PyCBC, SciPy 
 - Other Scientific Tools: LaTeX, GIT, IRAF, SAOImage DS9  
 - Languages: English (primary), French (conversational), Russian (conversational), German (basic)
 
