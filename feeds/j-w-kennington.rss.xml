@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>J. W. Kennington - J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Tue, 02 Jul 2019 00:00:00 -0500</lastBuildDate><item><title>Quick Python Setup</title><link>/blog/quick-python-setup/</link><description>&lt;h3&gt;Motivation&lt;/h3&gt;
+<rss version="2.0"><channel><title>J. W. Kennington - J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Tue, 02 Jul 2019 00:00:00 -0500</lastBuildDate><item><title>Quick Python Setup</title><link>/blog/quick-python-setup/</link><description>&lt;h4&gt;Motivation&lt;/h4&gt;
 &lt;p&gt;Python has increased in popularity to near ubiquity in the past five years. While the Python community (correctly) professes 
 simplicity as a major accomplishment of the language, I still get a lot of questions about how to get a python environment 
 setup properly. There are some lengthy guides out there on this - this post will aim to summarize and explain the relevant 
 components to getting started.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note: skip to bottom if you want quick install commands&lt;/strong&gt;&lt;/p&gt;
-&lt;h3&gt;The Pieces&lt;/h3&gt;
+&lt;h4&gt;The Pieces&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Python&lt;/em&gt;&lt;/strong&gt; is a language. Combination of a set of syntax rules, keyword commands, and an interpreter that can compile code abiding the rules into C. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Python&lt;/em&gt;&lt;/strong&gt; is a language. Combination of syntax rules, semantics, keyword commands, an interpreter that can execute code abiding the rules. &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;package&lt;/em&gt;&lt;/strong&gt; is a self-contained, reusable piece of python code. Often a directory containing one or more python files (or more subdirectories). One typically packages python code in order to share it. There are some packages that come with the language itself (called "builtin") and others that users can install optionally (called "3rd party" packages)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;environment&lt;/em&gt;&lt;/strong&gt; is a combination of a Python installation and a collection of packages. Pip can only install python packages - not any precompiled binaries (conda can do that!)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;conda&lt;/em&gt;&lt;/strong&gt; is a 3rd party package manager, and frankly I find it superior to pip in almost every way. It can install packages in a variety of languages, precompiled binaries (meaning numpy will install &lt;em&gt;much&lt;/em&gt; faster).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;miniconda&lt;/em&gt;&lt;/strong&gt; is an environment that contains bare-bones packages only, including the conda package manager.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;Anaconda&lt;/em&gt;&lt;/strong&gt; is an environment that contains a &lt;em&gt;large&lt;/em&gt; amount of packages, aimed at scientific computing (such as numpy, scipy, etc)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;The Process&lt;/h3&gt;
+&lt;h4&gt;The Process&lt;/h4&gt;
 &lt;p&gt;Recall that this guide is designed for novice-users, or as a reference for other users. I will assume that the user is 
 able to use a desktop GUI (not headless).&lt;/p&gt;
-&lt;h4&gt;Using Pip (not recommended)&lt;/h4&gt;
+&lt;h5&gt;Using Pip (not recommended)&lt;/h5&gt;
 &lt;p&gt;Install python using the &lt;a href="https://www.python.org/downloads/"&gt;os-specific Python installation programs&lt;/a&gt;. I recommend 
 installing the latest version of Python 3.*, since most new packages do not include support for older versions of 2.7. 
 The program will install all the base packages you require, including pip. At which point you can open up a command line 
 (terminal on Mac or CMD on Win), and use commands like &lt;code&gt;pip install x&lt;/code&gt; to install a package named "x" (for more pip commands 
 see the &lt;a href="https://pip.pypa.io/en/stable/quickstart/"&gt;docs&lt;/a&gt;).&lt;/p&gt;
-&lt;h4&gt;Using Conda (recommended)&lt;/h4&gt;
+&lt;h5&gt;Using Conda (recommended)&lt;/h5&gt;
 &lt;p&gt;Install &lt;strong&gt;miniconda&lt;/strong&gt; using the &lt;a href="https://docs.conda.io/en/latest/miniconda.html"&gt;install program&lt;/a&gt;. Once installed, create 
 your Python environment by doing the following:&lt;/p&gt;
 &lt;ol&gt;
@@ -36,7 +36,7 @@ your Python environment by doing the following:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;There are, of course, more complicated options available using conda, for those see 
 the &lt;a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf"&gt;conda cheat sheet&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;TL;DR - Get Python Setup&lt;/h3&gt;
+&lt;h4&gt;TL;DR - Get Python Setup&lt;/h4&gt;
 &lt;p&gt;The below steps give a quick, general-purpose environment setup.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Install &lt;a href="https://docs.conda.io/en/latest/miniconda.html"&gt;miniconda&lt;/a&gt;&lt;/li&gt;
