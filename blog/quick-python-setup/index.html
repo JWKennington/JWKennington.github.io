@@ -10,11 +10,11 @@
         <meta name="author" content="J. W. Kennington">
 
 
-        <title>J. W. Kennington - Erasing Efficiently</title>
+        <title>J. W. Kennington - Quick Python Setup</title>
 
             <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="J. W. Kennington Full Atom Feed" />
             <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="J. W. Kennington Full RSS Feed" />
-            <link href="/feeds/maths.atom.xml" type="application/atom+xml" rel="alternate" title="J. W. Kennington Categories Atom Feed" />
+            <link href="/feeds/python.atom.xml" type="application/atom+xml" rel="alternate" title="J. W. Kennington Categories Atom Feed" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="/theme/css/style.css?v=1.0.1">
@@ -38,17 +38,16 @@
 
 
 
-        <meta name="tags" contents="maths" />
-        <meta name="tags" contents="tools" />
-        <meta name="tags" contents="chalk" />
+        <meta name="tags" contents="python" />
+        <meta name="tags" contents="comp-physics" />
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Erasing Efficiently">
-    <meta property="og:url" content="blog/erasing-efficiently/">
-    <meta property="og:description" content="I&#39;ve spent time focusing on the best chalkboards and chalks on my tools page, but -until recently- I&#39;ve not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I played around with several different methods of erasing chalk marks to find …">
-    <meta property="article:published_time" content="Monday, May 06, 2019">
-    <meta name="twitter:title" content="Erasing Efficiently">
-    <meta name="twitter:description" content="I&#39;ve spent time focusing on the best chalkboards and chalks on my tools page, but -until recently- I&#39;ve not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I played around with several different methods of erasing chalk marks to find …">
-    <meta name="description" content="I&#39;ve spent time focusing on the best chalkboards and chalks on my tools page, but -until recently- I&#39;ve not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I played around with several different methods of erasing chalk marks to find …">
+    <meta property="og:title" content="Quick Python Setup">
+    <meta property="og:url" content="blog/quick-python-setup/">
+    <meta property="og:description" content="Motivation Python has increased in popularity to near ubiquity in the past five years. While the Python community (correctly) professes simplicity as a major accomplishment of the language, I still get a lot of questions about how to get a python environment setup properly. There are some lengthy guides out …">
+    <meta property="article:published_time" content="Tuesday, July 02, 2019">
+    <meta name="twitter:title" content="Quick Python Setup">
+    <meta name="twitter:description" content="Motivation Python has increased in popularity to near ubiquity in the past five years. While the Python community (correctly) professes simplicity as a major accomplishment of the language, I still get a lot of questions about how to get a python environment setup properly. There are some lengthy guides out …">
+    <meta name="description" content="Motivation Python has increased in popularity to near ubiquity in the past five years. While the Python community (correctly) professes simplicity as a major accomplishment of the language, I still get a lot of questions about how to get a python environment setup properly. There are some lengthy guides out …">
     <meta name="twitter:image" content="">
     <meta property="og:image" content="">
 
@@ -57,11 +56,11 @@
 
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="">
-	<meta property="og:url" content="/blog/erasing-efficiently/">
-	<meta property="og:title" content="Erasing Efficiently">
+	<meta property="og:url" content="/blog/quick-python-setup/">
+	<meta property="og:title" content="Quick Python Setup">
 	<meta property="og:description" content="">
 	   <meta property="og:image" content="/images/guilherme-toti.jpg">
-	<meta property="article:published_time" content="2019-05-06 00:00:00-05:00">
+	<meta property="article:published_time" content="2019-07-02 00:00:00-05:00">
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-135655259-1']);
@@ -81,8 +80,8 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-135655259-1', {
-        'page_title' : 'blog/erasing-efficiently/index.html',
-        'page_path': 'blog/erasing-efficiently/index.html'
+        'page_title' : 'blog/quick-python-setup/index.html',
+        'page_path': 'blog/quick-python-setup/index.html'
       });
     </script>
 	</head>
@@ -144,51 +143,64 @@
 	<section class="post-content">
 
 		<header class="meta">
-			<h2><a href="/blog/erasing-efficiently/">Erasing Efficiently</a></h2>
+			<h2><a href="/blog/quick-python-setup/">Quick Python Setup</a></h2>
 			<ul>
 				<li>By <a href="/author/j-w-kennington.html">J. W. Kennington</a></li>
-				<li>Mon 06 May 2019</li>
+				<li>Tue 02 July 2019</li>
 			</ul>
 		</header>
 
-		<p>I've spent time focusing on the best chalkboards and chalks on my <a href="/pages/tools">tools page</a>, but -until recently- I've 
-not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I 
-played around with several different methods of erasing chalk marks to find which is most effective. The results were
-decisive. This post outlines the results, and attempts to present a simple test as justification (though my own testing 
-was more extensive). </p>
-<p>Of the suggestions I was given, I decided to test the methods listed below. Felt erasers were what I had always used, 
-and I think are the standard in many universities across the US. The sponge was an interesting suggestion, in that it has
-a similar form factor to conventional felt erasers. I was most skeptical of the microfiber towel suggestion. I 
-thought it would feel weird to not have a handle to grab.</p>
+		<h3>Motivation</h3>
+<p>Python has increased in popularity to near ubiquity in the past five years. While the Python community (correctly) professes 
+simplicity as a major accomplishment of the language, I still get a lot of questions about how to get a python environment 
+setup properly. There are some lengthy guides out there on this - this post will aim to summarize and explain the relevant 
+components to getting started.</p>
+<p><strong>Note: skip to bottom if you want quick install commands</strong></p>
+<h3>The Pieces</h3>
+<ul>
+<li><strong><em>Python</em></strong> is a language. Combination of a set of syntax rules, keyword commands, and an interpreter that can compile code abiding the rules into C. </li>
+<li><strong><em>package</em></strong> is a self-contained, reusable piece of python code. Often a directory containing one or more python files (or more subdirectories). One typically packages python code in order to share it. There are some packages that come with the language itself (called "builtin") and others that users can install optionally (called "3rd party" packages)</li>
+<li><strong><em>environment</em></strong> is a combination of a Python installation and a collection of packages. Pip can only install python packages - not any precompiled binaries (conda can do that!)</li>
+<li><strong><em>conda</em></strong> is a 3rd party package manager, and frankly I find it superior to pip in almost every way. It can install packages in a variety of languages, precompiled binaries (meaning numpy will install <em>much</em> faster).</li>
+<li><strong><em>miniconda</em></strong> is an environment that contains bare-bones packages only, including the conda package manager.</li>
+<li><strong><em>Anaconda</em></strong> is an environment that contains a <em>large</em> amount of packages, aimed at scientific computing (such as numpy, scipy, etc)</li>
+</ul>
+<h3>The Process</h3>
+<p>Recall that this guide is designed for novice-users, or as a reference for other users. I will assume that the user is 
+able to use a desktop GUI (not headless).</p>
+<h4>Using Pip (not recommended)</h4>
+<p>Install python using the <a href="https://www.python.org/downloads/">os-specific Python installation programs</a>. I recommend 
+installing the latest version of Python 3.*, since most new packages do not include support for older versions of 2.7. 
+The program will install all the base packages you require, including pip. At which point you can open up a command line 
+(terminal on Mac or CMD on Win), and use commands like <code>pip install x</code> to install a package named "x" (for more pip commands 
+see the <a href="https://pip.pypa.io/en/stable/quickstart/">docs</a>).</p>
+<h4>Using Conda (recommended)</h4>
+<p>Install <strong>miniconda</strong> using the <a href="https://docs.conda.io/en/latest/miniconda.html">install program</a>. Once installed, create 
+your Python environment by doing the following:</p>
 <ol>
-<li><a href="https://amzn.to/2L9k43X">Felt Eraser</a></li>
-<li><a href="https://amzn.to/2PxWCMc">Sponge</a></li>
-<li><a href="https://amzn.to/2GI8vLH">Microfiber Towel</a></li>
+<li><code>conda create --name env1 python=3.7</code> (you can replace "env1" with the preferred name of the environment, probably something related to your current coding project. You can also replace "3.7" with whatever version of python you want to use)</li>
+<li>This will do some thinking then print a list of packages that will be installed, accept this by typing <code>Y</code></li>
+<li>Your environment is created! You can activate this environment (on Mac/Linux by using <code>source activate env1</code> or on Win by using <code>activate env1</code>). </li>
+<li>Now that you are "in" the environment you created, you can install other packages into the environment using <code>conda install x</code> to install package "x"</li>
+<li>You can also install other packages from a text file using <code>conda install --file requirements.txt</code>, where "requirements.txt" is the requirements file containing a list of package names (one on each line).
+<br><br></li>
 </ol>
-<p>To demonstrate the differences between the methods, I drew a fair amount of horizontal lines in different colors (white, 
-blue, yellow, and red). I divided the lines vertically into multiple columns; one column for each method. I took a few 
-images after each pass.</p>
-<p>A look at the tools pre-erasing, note that they are all chalk-free!
-<img alt="Eraser Tools Pre" src="/images/eraser-tools-pre.png"></p>
-<p>The board after a single pass with each tool. Notice how the felt eraser just smeared the existing lines, but they are 
-still fully recognizable and distinguishable (bad). The sponge did a little better, but made a terrible noise while in 
-contact with the board. Lastly, the microfiber towel surpassed my expectations and the other competitors, erasing nearly 
-all trace of the lines in the first pass! Not only does the towel method erase better than the others, but it produces
-less dust as well. 
-<img alt="After 1 Pass" src="/images/eraser-pass-1.png"></p>
-<p>The board after 5 passes with each tool. The felt eraser has closed the gap on the other methods, but still doesn't compare
-fully. The microfiber towel method:
-<img alt="After 5 Passes" src="/images/eraser-pass-5.png"></p>
-<p>A quick look at the tools post erasing. The felt eraser has gathered the chalk in highly-clustered places, whereas the microfiber 
-towel has absorbed the chalk in a fairly uniform pattern. This latter observation explains why the towel continues to work
-well long after the eraser needs to be cleaned, there's a surface-area advantage!
-<img alt="Eraser Tools Post" src="/images/eraser-tools-post.png"></p>
-<p>An aside about cleaning up the tools: the microfiber towels are machine-washable (do <em>not</em> use softener, only dry on low 
-or no heat). This is much easier than the felt erasers, which I either had to clap against eachother outdoors, or vacuum 
-with a special nozzle on the vacuum cleaner.</p>
-<p><strong>Winner: Microfiber Towel!</strong> (I won't go back). If you prefer the form-factor of the felt eraser, wrap it in a microfiber towel!</p>
+<p>There are, of course, more complicated options available using conda, for those see 
+the <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">conda cheat sheet</a></p>
+<h3>TL;DR - Get Python Setup</h3>
+<p>The below steps give a quick, general-purpose environment setup.</p>
+<ol>
+<li>Install <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a></li>
+<li><code>conda create --name env1 python=3.7</code></li>
+<li><code>source activate env1</code></li>
+<li><code>conda install numpy scipy pandas</code>
+<br><br></li>
+</ol>
+<p>The "env1" directory will be installed in the user x directory (<code>~/.anaconda</code> on Mac or <code>C:\Users\x\.anaconda</code> on Win). 
+If you are using a python editor (like PyCharm) that wants to be "pointed" to the environment, then you will configure 
+it to look at the "env1" directory under the ".anaconda" folder.</p>
 		    <div class="tags">
-		        <p>tags: <a href="/tag/maths.html">maths</a><a href="/tag/tools.html">tools</a><a href="/tag/chalk.html">chalk</a></p>
+		        <p>tags: <a href="/tag/python.html">python</a><a href="/tag/comp-physics.html">comp-physics</a></p>
 		    </div>
 
 <div class="sharing">
@@ -200,8 +212,8 @@ with a special nozzle on the vacuum cleaner.</p>
 		        <!--<div id="disqus_thread"></div>-->
 		        <!--<script type="text/javascript">-->
 		            <!--var disqus_shortname = 'jwkennington';-->
-		            <!--var disqus_identifier = 'blog/erasing-efficiently/';-->
-		            <!--var disqus_url = 'jwkennington.com/blog/erasing-efficiently/';-->
+		            <!--var disqus_identifier = 'blog/quick-python-setup/';-->
+		            <!--var disqus_url = 'jwkennington.com/blog/quick-python-setup/';-->
 		            <!--(function() {-->
 		                <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
 		                <!--dsq.src = 'https://jwkennington.disqus.com/embed.js';-->
@@ -215,9 +227,9 @@ with a special nozzle on the vacuum cleaner.</p>
 				<script>
 					
 					var disqus_config = function () {
-						this.page.url = 'https://jwkennington.com/blog/erasing-efficiently/';
+						this.page.url = 'https://jwkennington.com/blog/quick-python-setup/';
 
-						this.page.identifier = 'blog/erasing-efficiently/'; 
+						this.page.identifier = 'blog/quick-python-setup/'; 
 					};
 					
 					(function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
@@ -251,9 +263,9 @@ with a special nozzle on the vacuum cleaner.</p>
 			<nav class="categories">
 				<ul>
 					    <li><a href="/category/books.html">Books</a></li>
-					    <li class="active"><a href="/category/maths.html">Maths</a></li>
+					    <li><a href="/category/maths.html">Maths</a></li>
 					    <li><a href="/category/physics.html">Physics</a></li>
-					    <li><a href="/category/python.html">Python</a></li>
+					    <li class="active"><a href="/category/python.html">Python</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -285,7 +297,7 @@ with a special nozzle on the vacuum cleaner.</p>
 			<br>
 			<span class="line"></span><div class="clearfix"></div>
 					<b>Page views: </b>
- 142
+ 33
 		</div>
 		<br>
 		 
@@ -303,7 +315,7 @@ with a special nozzle on the vacuum cleaner.</p>
 				</div>
 				<div class="four columns">
 					<b>Page views: </b>
- 142
+ 33
 				</div>
 					<div class="six columns">
 						<ul class="social-icons-footer">

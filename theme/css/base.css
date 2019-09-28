@@ -53,7 +53,7 @@
 		background: #fff;
 		font-size: 14px;
 		line-height: 24px;
-		color: #888;
+		color: #545;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  	}
@@ -184,7 +184,11 @@
 /* #Lists
 ================================================== */
 	ul, ol { margin: 0; }
-	ul { list-style: disc inside; }
+	ul {
+		list-style: disc outside;
+		margin-left: 1em;
+		padding-left: 1em;
+	}
 	ol { list-style: decimal; }
 	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
 	ul.square { list-style: square outside; }
@@ -194,7 +198,7 @@
 	ol ol, ol ul {}
 	ul ul li, ul ol li,
 	ol ol li, ol ul li {}
-	li { line-height: 18px; padding-left: 20px; }
+	li { line-height: 18px; padding-left: 0em; }
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
 
@@ -285,3 +289,16 @@
 .social-github .commits span {
 	display: none;
 }
+
+/* CODE STYLES
+================================================== */
+	code {
+		padding: .2em .4em;
+		margin: 0;
+		font-size: 85%;
+		background-color: rgba(27,31,35,.05);
+		border-radius: 3px;
+		font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+		box-sizing: border-box;
+		/*color: #24292e;*/
+	}

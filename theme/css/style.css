@@ -91,7 +91,7 @@
 .menu ul a { text-decoration: none; }
 
 .menu ul > li > a {
-	color: #888;
+	color: #575757;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 18px;
@@ -2107,14 +2107,14 @@ html[xmlns] .slides {display: block;}
 .meta ul li {
 	display: inline-block;
 	font-weight: 300;
-	color: #999;
+	color: #808080;
 	margin: 0 5px 0 0;
 	padding: 0 10px 0 0;
 	background: url('../images/blog-divider.png') no-repeat 100% 55%;
 }
 
 .meta ul li:last-child { background: 0; }
-.meta ul li a { color: #999; }
+.meta ul li a { color: #808080; }
 
 .meta ul li a,
 .post-content h2 a:hover {
@@ -3406,7 +3406,7 @@ table.standard-table tr { border-radius: 3px }
 blockquote {
 	border-left: 3px solid #e8e8e8;
 	padding-left: 20px;
-	color: #a0a0a0;
+	color: #616161;
 	line-height: 24px;
 	margin: 5px 0 20px 15px;
 }
