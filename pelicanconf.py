@@ -36,14 +36,14 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 # Social widget
 FA_SOCIAL = (
-    ('beaker', 'https://www.researchgate.net/profile/James_Kennington'),
-)
-
-SOCIAL = (
+    ('researchgate', 'https://www.researchgate.net/profile/James_Kennington'),
     ('github', 'https://github.com/JWKennington'),
     ('linkedin', 'https://www.linkedin.com/in/jameskennington/'),
     ('twitter', 'https://twitter.com/JwKennington'),
     ('facebook', 'https://www.facebook.com/jimmy.kennington'),
+)
+
+SOCIAL = (
 )
 
 DEFAULT_PAGINATION = 10
@@ -52,7 +52,7 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 # Theme control
-THEME = jwk_theme.THEME_PATH
+THEME = jwk_theme.THEME_PATH # '/Users/jim/repos/professional/jim/jwk-theme/jwk_theme'
 
 # Static home page
 INDEX_SAVE_AS = 'blog.html'

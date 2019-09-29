@@ -2,7 +2,7 @@ feedparser
 ghp-import
 googleapis-common-protos>=1.5.9
 google-api-python-client
-jwk_theme>=0.1.4
+jwk_theme>=0.1.5
 markdown
 oauth2client
 parsedatetime
