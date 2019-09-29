@@ -10,7 +10,7 @@
 ====================================================================== */
 @import url("base.css?v=1.0.1");				/* Default Reset, Typography, Forms, etc. */
 @import url("responsive.css?v=1.0.1");			/* Responsive Grid */
-@import url("icons.css?v=1.0.1");				/* Font Awesome Icons */
+/*@import url("icons.css?v=1.0.1");				!* Font Awesome Icons *!*/
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
 @import url("http://fonts.googleapis.com/css?family=Raleway:800");
 
@@ -514,6 +514,7 @@
 .social-icons-footer li i {
 	display: block;
 	padding-top: 5px;
+	padding-left: 5px;
 }
 
 
