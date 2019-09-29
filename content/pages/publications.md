@@ -2,8 +2,8 @@ Title: Publications
 Date: 2019-02-20 10:20
 image_header: ../images/lick-obs.png
 
-
-- 2019 Mar [APSJournals - a Python Interface to APS Publications]()
+- 2019 Jul [Contributions to Solutions Manual for _An Introduction to Tensors and Group Theory for Physicists_ by Nadir Jeevanjee](https://www.overleaf.com/read/smdmygtbwtxk)
+- 2019 Mar [APSJournals - a Python Interface to APS Publications](https://github.com/JWKennington/apsjournals/blob/master/README.md)
 - 2018 Jan [Does the relationship between pain level and opioid intake differ as a function of a patient’s sex and depression status]()
 - 2015 May [Brownian Motion in a non Newtonian Fluid (Thesis)]({static}/pdfs/thesis.pdf)
 - 2015 Jan [Optical Microlensing and Accretion Disk Structure in the Lensed Quasar SDSS 1520+530](http://adsabs.harvard.edu/abs/2015AAS...22514423M)
