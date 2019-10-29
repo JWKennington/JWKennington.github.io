@@ -36,11 +36,11 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 # Social widget
 FA_SOCIAL = (
+    ('amilia', 'http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?cookie=5db7b35acd30413'),
+    ('orcid', 'https://orcid.org/0000-0002-6899-3833'),
     ('researchgate', 'https://www.researchgate.net/profile/James_Kennington'),
     ('github', 'https://github.com/JWKennington'),
     ('linkedin', 'https://www.linkedin.com/in/jameskennington/'),
-    ('twitter', 'https://twitter.com/JwKennington'),
-    ('facebook', 'https://www.facebook.com/jimmy.kennington'),
 )
 
 SOCIAL = (
