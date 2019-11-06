@@ -17,7 +17,7 @@ The Directed Reading Program at The University of Texas at Austin, in which unde
 PhD candidates in the Math department for a semester to study a mathematical topic at the graduate-level, culminating in an
 AMS style 15 minute talk presented to the entire program.
 
-- [2019 Nov - Tensorial methods in optimization (Society for Industrial and Applied Mathematics)]()
+- [2019 Nov - Tensorial methods in optimization (Society for Industrial and Applied Mathematics)]({static}/pdfs/Tensorial Methods in Optimization.pdf)
 - [2014 May - Lyapunov stability in dynamical systems (Directed Reading Program)]({static}/pdfs/DRP14.pdf)
 - [2013 Dec - Topological construction in the language of categories (Directed Reading Program)]({static}/pdfs/DRP13.pdf)
 
