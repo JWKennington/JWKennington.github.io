@@ -52,4 +52,4 @@ the &lt;a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a9560
 If you are using a python editor (like PyCharm) that wants to be "pointed" to the environment, then you will configure 
 it to look at the "env1" directory under the ".anaconda" folder.&lt;/p&gt;
 &lt;h4&gt;Conda env shortcut&lt;/h4&gt;
-&lt;p&gt;It is also possible to create a clickable shortcut to the conda environment, see &lt;a href="https://anaconda.org/anaconda/console_shortcut"&gt;the docs&lt;/a&gt; for more.&lt;/p&gt;</content><category term="Python"></category><category term="python"></category><category term="comp-physics"></category></entry></feed>
+&lt;p&gt;It is also possible to create a clickable shortcut to the conda environment, see &lt;a href="https://anaconda.org/anaconda/console_shortcut"&gt;the docs&lt;/a&gt; for more.&lt;/p&gt;</content><category term="python"></category><category term="comp-physics"></category></entry></feed>
