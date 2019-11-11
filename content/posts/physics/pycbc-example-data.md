@@ -145,13 +145,15 @@ we show how to load the strain data, as well as how to do some useful manipulati
     Array Size: 100
 <br>
 
-<p style="background: #cce6ff; border-radius: 10px; padding: 10px">
-    <i><b>Physics Note:</b></i><br>
-    The <i>strain</i> recorded in the above timeseries basically represents the degree to which space has expanded 
-    or contracted along the path of the interferometer:
-    $h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$
-    Where $L$ is the original length of the detector, and the change is measured as the difference in the detector arms. For more information on the experimental setup, see the excellent review, <a href="https://link.springer.com/article/10.1007/s41114-016-0002-8">Interferometer techniques for gravitational wave detection</a> by Bond, Brown, Freise and Strain.
-</p>
+#### Physics Remark:
+The _strain_ recorded in the above timeseries basically represents the degree to which space has expanded 
+or contracted along the path of the interferometer:
+$$h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$$
+Where $L$ is the original length of the detector, and the change is measured as the difference in the 
+detector arms. For more information on the experimental setup, see the excellent review, 
+[Interferometer techniques for gravitational wave detection](https://link.springer.com/article/10.1007/s41114-016-0002-8) 
+by Bond, Brown, Freise and Strain.
+
 
 ### Visualize the Time-Domain
 This section is devoted to visualizing the Time-domain strain. We use the `sample_times` attribute of 
@@ -173,6 +175,8 @@ as the y-coordinates (since it is an array).
 
     # Display
     show(f)
+
+![GWaveData]({static}/images/gwave-data.png)
 
 
 <br>

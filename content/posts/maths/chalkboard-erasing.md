@@ -23,23 +23,23 @@ blue, yellow, and red). I divided the lines vertically into multiple columns; on
 images after each pass.
 
 A look at the tools pre-erasing, note that they are all chalk-free!
-![Eraser Tools Pre]({filename}/images/eraser-tools-pre.png)
+![Eraser Tools Pre]({static}/images/eraser-tools-pre.png)
 
 The board after a single pass with each tool. Notice how the felt eraser just smeared the existing lines, but they are 
 still fully recognizable and distinguishable (bad). The sponge did a little better, but made a terrible noise while in 
 contact with the board. Lastly, the microfiber towel surpassed my expectations and the other competitors, erasing nearly 
 all trace of the lines in the first pass! Not only does the towel method erase better than the others, but it produces
 less dust as well. 
-![After 1 Pass]({filename}/images/eraser-pass-1.png)
+![After 1 Pass]({static}/images/eraser-pass-1.png)
 
 The board after 5 passes with each tool. The felt eraser has closed the gap on the other methods, but still doesn't compare
 fully. The microfiber towel method:
-![After 5 Passes]({filename}/images/eraser-pass-5.png)
+![After 5 Passes]({static}/images/eraser-pass-5.png)
 
 A quick look at the tools post erasing. The felt eraser has gathered the chalk in highly-clustered places, whereas the microfiber 
 towel has absorbed the chalk in a fairly uniform pattern. This latter observation explains why the towel continues to work
 well long after the eraser needs to be cleaned, there's a surface-area advantage!
-![Eraser Tools Post]({filename}/images/eraser-tools-post.png)
+![Eraser Tools Post]({static}/images/eraser-tools-post.png)
 
 An aside about cleaning up the tools: the microfiber towels are machine-washable (do _not_ use softener, only dry on low 
 or no heat). This is much easier than the felt erasers, which I either had to clap against eachother outdoors, or vacuum 
