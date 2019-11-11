@@ -141,14 +141,16 @@ we show how to load the strain data, as well as how to do some useful manipulati
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p style="background: #cce6ff; border-radius: 10px; padding: 10px"&gt;
-    &lt;i&gt;&lt;b&gt;Physics Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
-    The &lt;i&gt;strain&lt;/i&gt; recorded in the above timeseries basically represents the degree to which space has expanded 
-    or contracted along the path of the interferometer:
-    $h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$
-    Where $L$ is the original length of the detector, and the change is measured as the difference in the detector arms. For more information on the experimental setup, see the excellent review, &lt;a href="https://link.springer.com/article/10.1007/s41114-016-0002-8"&gt;Interferometer techniques for gravitational wave detection&lt;/a&gt; by Bond, Brown, Freise and Strain.
+&lt;h4&gt;Physics Remark:&lt;/h4&gt;
+&lt;p&gt;The &lt;em&gt;strain&lt;/em&gt; recorded in the above timeseries basically represents the degree to which space has expanded 
+or contracted along the path of the interferometer:
 &lt;/p&gt;
-
+&lt;div class="math"&gt;$$h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$$&lt;/div&gt;
+&lt;p&gt;
+Where &lt;span class="math"&gt;\(L\)&lt;/span&gt; is the original length of the detector, and the change is measured as the difference in the 
+detector arms. For more information on the experimental setup, see the excellent review, 
+&lt;a href="https://link.springer.com/article/10.1007/s41114-016-0002-8"&gt;Interferometer techniques for gravitational wave detection&lt;/a&gt; 
+by Bond, Brown, Freise and Strain.&lt;/p&gt;
 &lt;h3&gt;Visualize the Time-Domain&lt;/h3&gt;
 &lt;p&gt;This section is devoted to visualizing the Time-domain strain. We use the &lt;code&gt;sample_times&lt;/code&gt; attribute of 
 the &lt;code&gt;TimeSeries&lt;/code&gt; class for the x-coordinates of the plot, and simply pass the &lt;code&gt;TimeSeries&lt;/code&gt; object itself 
@@ -170,6 +172,7 @@ as the y-coordinates (since it is an array). &lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;&lt;img alt="GWaveData" src="/images/gwave-data.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;p style="background: #e6e6e6; border-radius: 10px; padding: 10px"&gt;
     &lt;i&gt;&lt;b&gt;Developer Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
@@ -177,7 +180,62 @@ as the y-coordinates (since it is an array). &lt;/p&gt;
 &lt;/p&gt;&lt;/p&gt;
 &lt;h2&gt;Acknowledgments&lt;/h2&gt;
 &lt;p&gt;This post is based on the official &lt;a href="https://pycbc.org/tutorials/"&gt;PyCBC tutorials&lt;/a&gt;, and is cited in the example 
-repository's &lt;a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md"&gt;README&lt;/a&gt;. &lt;/p&gt;</content><category term="Physics"></category><category term="physics"></category><category term="gravity"></category></entry><entry><title>Quick Python Setup</title><link href="/blog/quick-python-setup/" rel="alternate"></link><published>2019-07-02T00:00:00-05:00</published><updated>2019-07-02T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-07-02:/blog/quick-python-setup/</id><summary type="html">&lt;h4&gt;Motivation&lt;/h4&gt;
+repository's &lt;a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md"&gt;README&lt;/a&gt;. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Physics"></category><category term="physics"></category><category term="gravity"></category></entry><entry><title>Quick Python Setup</title><link href="/blog/quick-python-setup/" rel="alternate"></link><published>2019-07-02T00:00:00-05:00</published><updated>2019-07-02T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-07-02:/blog/quick-python-setup/</id><summary type="html">&lt;h4&gt;Motivation&lt;/h4&gt;
 &lt;p&gt;Python has increased in popularity to near ubiquity in the past five years. While the Python community (correctly) professes 
 simplicity as a major accomplishment of the language, I still get a lot of questions about how to get a python environment 
 setup properly. There are some lengthy guides out …&lt;/p&gt;</summary><content type="html">&lt;h4&gt;Motivation&lt;/h4&gt;

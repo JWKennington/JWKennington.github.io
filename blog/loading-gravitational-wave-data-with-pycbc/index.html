@@ -289,14 +289,16 @@ we show how to load the strain data, as well as how to do some useful manipulati
 
 
 <p><br></p>
-<p style="background: #cce6ff; border-radius: 10px; padding: 10px">
-    <i><b>Physics Note:</b></i><br>
-    The <i>strain</i> recorded in the above timeseries basically represents the degree to which space has expanded 
-    or contracted along the path of the interferometer:
-    $h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$
-    Where $L$ is the original length of the detector, and the change is measured as the difference in the detector arms. For more information on the experimental setup, see the excellent review, <a href="https://link.springer.com/article/10.1007/s41114-016-0002-8">Interferometer techniques for gravitational wave detection</a> by Bond, Brown, Freise and Strain.
+<h4>Physics Remark:</h4>
+<p>The <em>strain</em> recorded in the above timeseries basically represents the degree to which space has expanded 
+or contracted along the path of the interferometer:
 </p>
-
+<div class="math">$$h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$$</div>
+<p>
+Where <span class="math">\(L\)</span> is the original length of the detector, and the change is measured as the difference in the 
+detector arms. For more information on the experimental setup, see the excellent review, 
+<a href="https://link.springer.com/article/10.1007/s41114-016-0002-8">Interferometer techniques for gravitational wave detection</a> 
+by Bond, Brown, Freise and Strain.</p>
 <h3>Visualize the Time-Domain</h3>
 <p>This section is devoted to visualizing the Time-domain strain. We use the <code>sample_times</code> attribute of 
 the <code>TimeSeries</code> class for the x-coordinates of the plot, and simply pass the <code>TimeSeries</code> object itself 
@@ -318,6 +320,7 @@ as the y-coordinates (since it is an array). </p>
 </pre></div>
 
 
+<p><img alt="GWaveData" src="/images/gwave-data.png" /></p>
 <p><br>
 <p style="background: #e6e6e6; border-radius: 10px; padding: 10px">
     <i><b>Developer Note:</b></i><br>
@@ -326,6 +329,61 @@ as the y-coordinates (since it is an array). </p>
 <h2>Acknowledgments</h2>
 <p>This post is based on the official <a href="https://pycbc.org/tutorials/">PyCBC tutorials</a>, and is cited in the example 
 repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md">README</a>. </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 		    <div class="tags">
 		        <p>tags: <a href="/tag/physics.html">physics</a><a href="/tag/gravity.html">gravity</a></p>
 		    </div>
@@ -424,7 +482,7 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
 			<br>
 			<span class="line"></span><div class="clearfix"></div>
 					<b>Page views: </b>
- 10
+ 16
 		</div>
 		<br>
 		 
@@ -442,7 +500,7 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
 				</div>
 				<div class="four columns">
 					<b>Page views: </b>
- 10
+ 16
 				</div>
 					<div class="six columns">
 						<ul class="social-icons-footer">
