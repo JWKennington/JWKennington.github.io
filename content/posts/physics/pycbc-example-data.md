@@ -3,7 +3,7 @@ Date: 2019-10-12
 Category: Physics
 Tags: physics, gravity
 
-This post is the first in a series of in-depth examples for analyzing gravitatonal wave data in Python, 
+This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, 
 using the PyCBC package. There is also a notebook-version of this post, available [here](https://github.com/JWKennington/pycbc-examples),
 in a repo of PyCBC examples.
 
