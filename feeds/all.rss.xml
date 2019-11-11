@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Sat, 12 Oct 2019 00:00:00 -0500</lastBuildDate><item><title>Loading Gravitational Wave Data with PyCBC</title><link>/blog/loading-gravitational-wave-data-with-pycbc/</link><description>&lt;p&gt;This post is the first in a series of in-depth examples for analyzing gravitatonal wave data in Python, 
+<rss version="2.0"><channel><title>J. W. Kennington</title><link>/</link><description></description><lastBuildDate>Sat, 12 Oct 2019 00:00:00 -0500</lastBuildDate><item><title>Loading Gravitational Wave Data with PyCBC</title><link>/blog/loading-gravitational-wave-data-with-pycbc/</link><description>&lt;p&gt;This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, 
 using the PyCBC package. There is also a notebook-version of this post, available &lt;a href="https://github.com/JWKennington/pycbc-examples"&gt;here&lt;/a&gt;,
 in a repo of PyCBC examples.&lt;/p&gt;
 &lt;h2&gt;Motivation&lt;/h2&gt;
