@@ -122,3 +122,11 @@ GA_METRIC = 'ga:pageviews'
 
 # CITATIONS
 PUBLICATIONS_SRC = 'content/references.bib'
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+}
