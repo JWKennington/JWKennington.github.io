@@ -4,16 +4,23 @@ image_header: ../images/reservoir.png
 Template: page-code
 
 
+#### `PyCBC Examples` - A Python interface to APS publications
+The PyCBC library provides excellent tools for loading and analyzing gravitational 
+wave data. It also includes some examples (though the are not installed with the package). 
+This repo aims to provide an installable set of thorough examples, primarily useful for 
+pedagogical purpsoes. This project is open source and may be found on [github](https://github.com/JWKennington/pycbc-examples).
+
+
+#### `gravtools` - Gravitational Wave Utilities in Python
+The gravtools module is a complementary module to the existing, well-written libraries 
+pycbc and gwpy. This package began as a few simple utilities, such as constants and date 
+conversion helper functions. This project is open source and may be found on [github](https://github.com/JWKennington/gravtools).
+
+
 #### `apsjournals` - A Python interface to APS publications
 The APSJournals project started as an effort to produce an on-demand summary of an entire APS Journal issue, 
 and has since been augmented with additional features, such as querying by author. This project is open
 source and may be found on [github](https://github.com/JWKennington/apsjournals).
-
-
-#### `pyperbolic` - Hyperbolic geometry in Python
-The Pyperbolic project started as a way to produce Poincare disk model diagrams, and is still under
-active development. The scope subsequently increased to include some projective and spherical geometry. 
-This project is open source and may be found on [github](https://github.com/JWKennington/pyperbolic).
 
 
 #### `solman` - Solutions Manual utility in Python
@@ -30,6 +37,12 @@ intuitive) instead of 0-indexed slicing (computer science convention). Also impr
 representation of the array in a manner similar to Julia's LinearAlgebra package. To be clear, this is a _Python_
 package, meant to bring some of the elegance of Julia's interface for tensors to the Python setting.
 This project is open source and may be found on [github](https://github.com/JWKennington/julialg).
+
+
+#### `pyperbolic` - Hyperbolic geometry in Python
+The Pyperbolic project started as a way to produce Poincare disk model diagrams, and is still under
+active development. The scope subsequently increased to include some projective and spherical geometry. 
+This project is open source and may be found on [github](https://github.com/JWKennington/pyperbolic).
 
 
 <!---
