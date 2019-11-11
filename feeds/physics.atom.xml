@@ -1,5 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington - Physics</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2019-06-15T00:00:00-05:00</updated><entry><title>Gravity of a Photon</title><link href="/blog/gravity-of-a-photon/" rel="alternate"></link><published>2019-06-15T00:00:00-05:00</published><updated>2019-06-15T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-06-15:/blog/gravity-of-a-photon/</id><summary type="html">&lt;p&gt;A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington - Physics</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2019-10-12T00:00:00-05:00</updated><entry><title>Loading Gravitational Wave Data with PyCBC</title><link href="/blog/loading-gravitational-wave-data-with-pycbc/" rel="alternate"></link><published>2019-10-12T00:00:00-05:00</published><updated>2019-10-12T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-10-12:/blog/loading-gravitational-wave-data-with-pycbc/</id><summary type="html">&lt;p&gt;This post is the first in a series of in-depth examples for analyzing gravitatonal wave data in Python, 
+using the PyCBC package. There is also a notebook-version of this post, available &lt;a href="https://github.com/JWKennington/pycbc-examples"&gt;here&lt;/a&gt;,
+in a repo of PyCBC examples.&lt;/p&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In order to analyze observed gravitational waves, we must first find …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is the first in a series of in-depth examples for analyzing gravitatonal wave data in Python, 
+using the PyCBC package. There is also a notebook-version of this post, available &lt;a href="https://github.com/JWKennington/pycbc-examples"&gt;here&lt;/a&gt;,
+in a repo of PyCBC examples.&lt;/p&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In order to analyze observed gravitational waves, we must first find the data containing the signal. This 
+example shows how to explore the Catalog of observed mergers available via the Gravitational Wave Open 
+Science Center (GWOSC). Though this example focuses on the Python API, the list of available mergers can also 
+be found on the web at the following &lt;a href="https://www.gw-openscience.org/catalog/GWTC-1-confident/html/"&gt;url&lt;/a&gt;.&lt;/p&gt;
+&lt;p style="background: #e6e6e6; border-radius: 10px; padding: 10px"&gt;
+    &lt;i&gt;&lt;b&gt;Developer Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
+    The below example also uses the &lt;a href="https://github.com/JWKennington/gravtools"&gt;gravtools&lt;/a&gt; package, which 
+    is just a small collection of convenience functions and utilities.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pycbc&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;catalog&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;frame&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;gravtools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;MergerParameters&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Observatory&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;merger&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;Exploring the Catalog&lt;/h2&gt;
+&lt;p&gt;A common structure for grouping astonomical data, a Catalog is a sensible concept for a programmatic API. 
+The PyCBC package has taken this approach, which is shown below using the &lt;code&gt;Catalog&lt;/code&gt; class.&lt;/p&gt;
+&lt;h3&gt;The &lt;code&gt;Catalog&lt;/code&gt; Class&lt;/h3&gt;
+&lt;p&gt;The PyCBC Catalog class is capable of using the GWOSC data api to see essentially the same information
+contained in the link above (albeit through JSON instead of HTML). Under the hood, PyCBC relies on AstroPy
+data-access file-download utilities.&lt;/p&gt;
+&lt;p&gt;We can create a catalog simply by creating an instance of the &lt;code&gt;Catalog&lt;/code&gt; class, and specifying a data source. 
+In this case we specify &lt;code&gt;'gwtc-1'&lt;/code&gt; which refers to the Gravitational-Wave Transient Catalog 1. This catalog 
+consists of compact binary mergers observed in the O1 and O2 runs, and is also the default catalog (so you don't 
+need to specify it, though we do for clarity).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;catalog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Catalog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;gwtc-1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;Where are the &lt;code&gt;Merger&lt;/code&gt;s stored?&lt;/h3&gt;
+&lt;p&gt;The Catalog class is an iterable with respect to the names of the mergers in the catalog, so you can pick your favorite 
+technique to iterate over the available merger names (we use the list coercion function below).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Get names of mergers in catalog &lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;merger_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Catalog class is iterable, any collection coercion will suffice&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;merger_names&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;GW150914&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;GW151012&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;GW151226&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;The Merger data associated to the name is stored in the &lt;code&gt;mergers&lt;/code&gt; attribute of the &lt;code&gt;Catalog&lt;/code&gt; instance, which 
+is a dictionary keyed by the name of the merger (which we examined above). &lt;/p&gt;
+&lt;h3&gt;Basic Merger Properties&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;Merger&lt;/code&gt; object retrieved from the Catalog contains all the estimated parameters of the waveform. Each 
+attribute may be accessed directly, but the preferred way is through the "median1d" method of the Merger class. 
+Keep in mind that these parameters are in the &lt;em&gt;source&lt;/em&gt; frame, not the &lt;em&gt;detector&lt;/em&gt; frame.&lt;/p&gt;
+&lt;p style="background: #e6e6e6; border-radius: 10px; padding: 10px"&gt;
+    &lt;i&gt;&lt;b&gt;Developer Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
+    Unfortunately, the merger-parameter attributes of the Merger instance are not inspectable in a code 
+    editor due the way they are set during instantiation (using the setattr function). The 
+    &lt;i&gt;gravtools.MergerParameters&lt;/i&gt; enumeration contains all the relevant parameter names, 
+    and _is_ inspectable, so we use it below.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mergers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;GW150914&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# convenient summary string from gravtools&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;merger&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;Merger[GW150914](Mass1=35.6, Mass2=30.6, FinalSpin=0.69)&amp;#39;&lt;/span&gt;
+
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Log the names of the mergers in the catalog&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Mergers in catalog:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;merger_names&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mergers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# load the Merger object by name&lt;/span&gt;
+        &lt;span class="c1"&gt;# the step above can also be done by instantiating a Merger object directly, e.g. catalog.Merger(&amp;#39;GW150914&amp;#39;)&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# Print some merger info by accessing parameters through the &amp;quot;median1d&amp;quot; method&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;    {}: M1={:2.0f} M2={:2.0f} z={:2.2f}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                                                            &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;median1d&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MergerParameters&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Mass1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;     &lt;span class="c1"&gt;# m.mass1&lt;/span&gt;
+                                                            &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;median1d&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MergerParameters&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Mass2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;     &lt;span class="c1"&gt;# m.mass2&lt;/span&gt;
+                                                            &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;median1d&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MergerParameters&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Redshift&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; &lt;span class="c1"&gt;# m.redshift&lt;/span&gt;
+&lt;span class="n"&gt;Mergers&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;catalog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;GW150914&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.09&lt;/span&gt;
+    &lt;span class="n"&gt;GW151012&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.21&lt;/span&gt;
+    &lt;span class="n"&gt;GW151226&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.09&lt;/span&gt;
+    &lt;span class="n"&gt;GW170104&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.19&lt;/span&gt;
+    &lt;span class="n"&gt;GW170608&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.07&lt;/span&gt;
+    &lt;span class="n"&gt;GW170729&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;51&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.48&lt;/span&gt;
+    &lt;span class="n"&gt;GW170809&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.20&lt;/span&gt;
+    &lt;span class="n"&gt;GW170814&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.12&lt;/span&gt;
+    &lt;span class="n"&gt;GW170817&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.01&lt;/span&gt;
+    &lt;span class="n"&gt;GW170818&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;27&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.20&lt;/span&gt;
+    &lt;span class="n"&gt;GW170823&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;M1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;40&lt;/span&gt; &lt;span class="n"&gt;M2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.34&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;Merger Strain&lt;/h2&gt;
+&lt;p&gt;Though a Merger object loads several scalar parameters once instantiated, it does not automatically load the 
+timeseries of strain data (for efficiency of the API). It is possible, however, and quite easy to load the 
+strain timeseries around the event. The below code shows how to load the waveform data. We begin by choosing a 
+specific merger from the catalog.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Pick a merger from the catalog&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mergers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;GW170823&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;The &lt;code&gt;TimeSeries&lt;/code&gt; Class&lt;/h3&gt;
+&lt;p&gt;The time series data containing the merger waveform is returned as an instance of the &lt;code&gt;TimeSeries&lt;/code&gt; class. Below, 
+we show how to load the strain data, as well as how to do some useful manipulations.&lt;/p&gt;
+&lt;p style="background: #e6e6e6; border-radius: 10px; padding: 10px"&gt;
+    &lt;i&gt;&lt;b&gt;Developer Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
+    The &lt;i&gt;pycbc.TimeSeries&lt;/i&gt; class, which contains the merger strain data (as mentioned above), is a thin wrapper 
+    around a numpy or pycuda array supporting many of the common array interface features, such as slicing. There is 
+    also additional metadata, including the GPS starting and ending time of the waveform, as well as the time 
+    interval between adjacent values in the array.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Query the strain timeseries for the merger&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strain&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ifo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Observatory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;LIGOHanford&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# the &amp;quot;ifo&amp;quot; argument refers to the observatory that recorded the strain&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Print the boundaries of the timeseries&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Duration={:.0f}s Interval={:.1e}s Start={} End={}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;duration&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;delta_t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                                                                 &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gps_to_datetime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start_time&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
+                                                                 &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gps_to_datetime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;end_time&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Print the size of the underlying array&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Array Size: {:,d}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Supports Slicing&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Array Size: {:,d}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;])))&lt;/span&gt;
+
+&lt;span class="n"&gt;Duration&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;Interval&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;2.4e-04&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;Start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2017&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt; &lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="n"&gt;End&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2017&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt; &lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;52&lt;/span&gt;
+&lt;span class="n"&gt;Array&lt;/span&gt; &lt;span class="n"&gt;Size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;131&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mo"&gt;072&lt;/span&gt;
+&lt;span class="n"&gt;Array&lt;/span&gt; &lt;span class="n"&gt;Size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p style="background: #cce6ff; border-radius: 10px; padding: 10px"&gt;
+    &lt;i&gt;&lt;b&gt;Physics Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
+    The &lt;i&gt;strain&lt;/i&gt; recorded in the above timeseries basically represents the degree to which space has expanded 
+    or contracted along the path of the interferometer:
+    $h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$
+    Where $L$ is the original length of the detector, and the change is measured as the difference in the detector arms. For more information on the experimental setup, see the excellent review, &lt;a href="https://link.springer.com/article/10.1007/s41114-016-0002-8"&gt;Interferometer techniques for gravitational wave detection&lt;/a&gt; by Bond, Brown, Freise and Strain.
+&lt;/p&gt;
+
+&lt;h3&gt;Visualize the Time-Domain&lt;/h3&gt;
+&lt;p&gt;This section is devoted to visualizing the Time-domain strain. We use the &lt;code&gt;sample_times&lt;/code&gt; attribute of 
+the &lt;code&gt;TimeSeries&lt;/code&gt; class for the x-coordinates of the plot, and simply pass the &lt;code&gt;TimeSeries&lt;/code&gt; object itself 
+as the y-coordinates (since it is an array). &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Import some plotting tools from the bokeh package&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bokeh.plotting&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;output_notebook&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;figure&lt;/span&gt;
+&lt;span class="n"&gt;output_notebook&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hide_banner&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# for Jupyter usage, otherwise it will write out files&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Create the figure&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Time-Domain data around &amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;files&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;eventName&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; 
+           &lt;span class="n"&gt;x_axis_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;datetime&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x_axis_label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Time (s)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_axis_label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Strain&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+           &lt;span class="n"&gt;plot_height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;plot_width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;800&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Plot the line-plot data&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample_times&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Display&lt;/span&gt;
+&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br&gt;
+&lt;p style="background: #e6e6e6; border-radius: 10px; padding: 10px"&gt;
+    &lt;i&gt;&lt;b&gt;Developer Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
+    Plotting in Python is notoriously subjective; there are many competing libraries that all deserve proper attention, such as plotly, bokeh, plotnine, altair, and others (excluding matplotlib). There are meta-plotting libraries as well that sit atop these, such as holoviews. However, we choose to use Bokeh here primarily due to the simple interface, and clean style.
+&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;Acknowledgments&lt;/h2&gt;
+&lt;p&gt;This post is based on the official &lt;a href="https://pycbc.org/tutorials/"&gt;PyCBC tutorials&lt;/a&gt;, and is cited in the example 
+repository's &lt;a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md"&gt;README&lt;/a&gt;. &lt;/p&gt;</content><category term="Physics"></category><category term="physics"></category><category term="gravity"></category></entry><entry><title>Gravity of a Photon</title><link href="/blog/gravity-of-a-photon/" rel="alternate"></link><published>2019-06-15T00:00:00-05:00</published><updated>2019-06-15T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-06-15:/blog/gravity-of-a-photon/</id><summary type="html">&lt;p&gt;A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity.
 Specifically, he asked how the presence of electromagnetic fields impacts the gravitational field. Applying some modern-physics
 reasoning, he proposed that electromagnetic fields should exert gravitational influence because photons have momentum that
 can be …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity.
