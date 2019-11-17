@@ -4,7 +4,7 @@ image_header: ../images/reservoir.png
 Template: page-code
 
 
-#### `PyCBC Examples` - A Python interface to APS publications
+#### `PyCBC Examples` - Gravitational Wave Data Analysis Examples
 The PyCBC library provides excellent tools for loading and analyzing gravitational 
 wave data. It also includes some examples (though the are not installed with the package). 
 This repo aims to provide an installable set of thorough examples, primarily useful for 
