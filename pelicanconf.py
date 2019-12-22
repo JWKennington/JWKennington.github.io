@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import pelican_github_activity, pelican_ga_pageview, pelican_cite_nice, pelican_render_math
+
+import pelican_cite_nice
+import pelican_ga_pageview
+import pelican_github_activity
+import pelican_render_math
+
 import jwk_theme
 
 AUTHOR = 'J. W. Kennington'
@@ -27,7 +32,6 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 
-
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
@@ -49,10 +53,10 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
 # Theme control
-THEME = jwk_theme.THEME_PATH # '/Users/jim/repos/professional/jim/jwk-theme/jwk_theme'
+THEME = jwk_theme.THEME_PATH  # '/Users/jim/repos/professional/jim/jwk-theme/jwk_theme'
 
 # Static home page
 INDEX_SAVE_AS = 'blog.html'
@@ -60,39 +64,37 @@ ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 ARTICLE_ORDER_BY = 'reversed-date'
 
-
 # CONTOL menu
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
-    ('Blog','/blog'),
-    ('CV','/pages/cv'),
-    ('Code','/pages/code'),
-    ('Publications','/pages/publications'),
-    ('Tools','/pages/tools'),
-    ('Texts','/pages/texts'),
     # ('Research','/pages/research'),
+    ('Blog', '/blog'),
+    ('CV', '/pages/cv'),
+    ('Code', '/pages/code'),
+    ('Publications', '/pages/publications'),
+    ('Resources', '/pages/resources'),
 )
 
 BLOG_PAGE_IMAGE_HEADER = '../images/nyc.png'
 ARTICLE_PAGE_IMAGE_HEADER = '../' + BLOG_PAGE_IMAGE_HEADER
 SIDEBAR_DISPLAY = ['categories', 'tags']
 
-PLUGIN_PATHS=['/Users/jim/repos/professional/pelican-plugins']
+PLUGIN_PATHS = ['/Users/jim/repos/professional/pelican-plugins']
 
 PLUGINS = [
     pelican_cite_nice,
-    pelican_render_math, 
+    pelican_render_math,
     pelican_github_activity,
     pelican_ga_pageview,
 ]
 
 LOAD_CONTENT_CACHE = False
 
-MATH_JAX = {'color':'blue'}
+MATH_JAX = {'color': 'blue'}
 
 STATIC_PATHS = ['images', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
 
 DISQUS_SITENAME = 'jwkennington'
 DISQUS_SITEURL = 'jwkennington.com'
