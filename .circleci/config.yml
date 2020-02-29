@@ -5,7 +5,8 @@ jobs:
       - image: circleci/python:3.6.1
 
     branches:
-      - source
+      only:
+        - source
 
     working_directory: ~/repo
 
