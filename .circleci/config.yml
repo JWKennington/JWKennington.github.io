@@ -1,9 +1,10 @@
 version: 2.1
 jobs:
   publish:
-    branches:
-      only:
-        - source
+    filters:
+      branches:
+        only:
+          - source
 
     docker:
       - image: circleci/python:3.6.1
