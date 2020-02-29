@@ -4,6 +4,9 @@ jobs:
     docker:
       - image: circleci/python:3.6.1
 
+    branches:
+      - source
+
     working_directory: ~/repo
 
     steps:
