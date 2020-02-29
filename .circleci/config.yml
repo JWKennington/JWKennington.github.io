@@ -49,9 +49,6 @@ jobs:
             make github
             
 workflows:
-  commit:
-    jobs:
-      - build_html
   daily:
     triggers:
       - schedule:
