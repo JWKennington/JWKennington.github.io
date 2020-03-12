@@ -1,6 +1,6 @@
 Title: Code
 Date: 2019-02-20 10:20
-image_header: ../images/reservoir.png
+image_header: ../images/diablo-canyon.png
 Template: page-code
 
 

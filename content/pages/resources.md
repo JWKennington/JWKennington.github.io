@@ -1,6 +1,6 @@
 Title: Resources
 Date: 2019-05-03 10:20
-image_header: ../images/golden-coast.png
+image_header: ../images/puye-cliff.png
 
 
 Here I've assembled links to various resources, some supplied by me, related to physics, maths, 
