@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington - Maths</title><link href="/" rel="alternate"></link><link href="/feeds/maths.atom.xml" rel="self"></link><id>/</id><updated>2019-05-06T00:00:00-05:00</updated><entry><title>Erasing Efficiently</title><link href="/blog/erasing-efficiently/" rel="alternate"></link><published>2019-05-06T00:00:00-05:00</published><updated>2019-05-06T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-05-06:/blog/erasing-efficiently/</id><summary type="html">&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>J. W. Kennington - Maths</title><link href="/" rel="alternate"></link><link href="/feeds/maths.atom.xml" rel="self"></link><id>/</id><updated>2020-03-15T00:00:00-05:00</updated><entry><title>Algebra Ladder</title><link href="/blog/algebra-ladder/" rel="alternate"></link><published>2020-03-15T00:00:00-05:00</published><updated>2020-03-15T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2020-03-15:/blog/algebra-ladder/</id><summary type="html">&lt;p&gt;I first encountered a diagram of algebraic structures at the end of Jeevanjee's second chapter, 
+"Vector Spaces", which elegantly summarizes the high-level differences in structure between sets, 
+vector spaces, and inner product spaces. &lt;a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'&gt;Jeevanjee (2015)&lt;/a&gt; 
+This diagram was immensely helpful to me, in that it helped show the relationships between …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I first encountered a diagram of algebraic structures at the end of Jeevanjee's second chapter, 
+"Vector Spaces", which elegantly summarizes the high-level differences in structure between sets, 
+vector spaces, and inner product spaces. &lt;a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'&gt;Jeevanjee (2015)&lt;/a&gt; 
+This diagram was immensely helpful to me, in that it helped show the relationships between various 
+commonly used objects in mathematical physics. As I've encountered new structures, I've attempted 
+to augment this map along two dimensions: a &lt;em&gt;structure&lt;/em&gt; dimension that aims to measure the number 
+of attributes an algebraic object has, and a &lt;em&gt;specificity&lt;/em&gt; dimension which measures the amount 
+of constraints placed on each attribute. &lt;/p&gt;
+&lt;p&gt;For instance, a Magma has more structure than a set, because a new attribute - a binary operator - has 
+been added. A group, though, is roughly similar in structure to a magma, but has more properties of 
+the binary operator specified, such as associativity, inverses, and identity, which make it more 
+specific (and the magma more general). &lt;a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'&gt;Roman (2007)&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Algebra Ladder" src="/images/algebra-ladder-small.png" /&gt;
+Figure 1. Relationship of various algebraic structures. &lt;a href="/images/algebra-ladder.png"&gt;Larger image&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The diagram above aims to show how an algebra is constructed from a set, though admittedly omits 
+several algebraic structures along the way. I've attempted to include the most primary objects used or
+seen in mathematical physics. I should also note, this diagram is intended as a quick-reference, and
+isn't a substitute for opening Hungerford! &lt;a href='#hungerfordAlgebra2003' id='ref-hungerfordAlgebra2003-1'&gt;Hungerford (2003)&lt;/a&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;h3&gt;Bibliography&lt;/h3&gt;
+&lt;p id='hungerfordAlgebra2003'&gt;Thomas&amp;nbsp;W. Hungerford.
+&lt;em&gt;Algebra&lt;/em&gt;.
+Number&amp;nbsp;73 in Graduate Texts in Mathematics.
+&lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;New York&lt;/span&gt;, corr. 8th print edition, 2003.
+ISBN 978-0-387-90518-1 978-3-540-90518-9. &lt;a class="cite-backref" href="#ref-hungerfordAlgebra2003-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='jeevanjeeIntroductionTensorsGroup2015'&gt;Nadir Jeevanjee.
+&lt;em&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Springer Science+Business Media&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;New York, NY&lt;/span&gt;, 2015.
+ISBN 978-3-319-14793-2. &lt;a class="cite-backref" href="#ref-jeevanjeeIntroductionTensorsGroup2015-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='romanAdvancedLinearAlgebra2007'&gt;Steven Roman.
+&lt;em&gt;Advanced Linear Algebra&lt;/em&gt;.
+Number&amp;nbsp;135 in Graduate Texts in Mathematics.
+&lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;New York&lt;/span&gt;, 3rd ed edition, 2007.
+ISBN 978-0-387-72828-5. &lt;a class="cite-backref" href="#ref-romanAdvancedLinearAlgebra2007-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</content><category term="Maths"></category><category term="maths"></category><category term="algebra"></category><category term="group"></category></entry><entry><title>Erasing Efficiently</title><link href="/blog/erasing-efficiently/" rel="alternate"></link><published>2019-05-06T00:00:00-05:00</published><updated>2019-05-06T00:00:00-05:00</updated><author><name>J. W. Kennington</name></author><id>tag:None,2019-05-06:/blog/erasing-efficiently/</id><summary type="html">&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
 not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I 
 played around with several different methods of erasing chalk marks to find …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
 not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I 
