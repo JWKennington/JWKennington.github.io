@@ -1,12 +1,21 @@
 Title: Research
 Date: 2019-02-20 10:20
-Status: draft
-image_header: ../../images/lick-dome.png
+image_header: ../../images/big-bounce-lqc-small.png
 
 
-#### This page is a **draft**
-My current research interests focus primarily on general relativity and geometry, especially where they
-intersect with gravitational waves. I have previously studied non-relativistic astrophysical phenomena 
-such as AGN and dark matter clustering, and continue to be interested in the intersection of these phenomena
-in the context of relativity.  
+### Research Interests
+My research is primarily focused on classical and quantum gravity. Presently, I am working on 
+applications of numerical, semiclassical techniques to loop quantum cosmology. More generally, I am 
+interested in analytical and computational approaches within general relativity (GR) and 
+loop quantum gravity (LQG), as well as the beautiful, mathematical machinery underlying these theories.  
 
+I aim to apply computational techniques such as tensor network renormalization and coarse 
+graining to singularity problems like black hole thermodynamics and early cosmology. Though presently 
+focused on theory, I have previously worked on observational problems, including microlensing of 
+AGN systems, and continue to be interested in more concrete, astrophysical phenomena, including
+gravitational waves. 
+
+For my research codes, see [here](/pages/code). For publications, see [here](/pages/publications).
+
+<br>
+<br>

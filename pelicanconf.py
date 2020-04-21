@@ -69,7 +69,7 @@ ARTICLE_ORDER_BY = 'reversed-date'
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
-    # ('Research','/pages/research'),
+    ('Research', '/pages/research'),
     ('Blog', '/blog'),
     ('CV', '/pages/cv'),
     ('Code', '/pages/code'),
