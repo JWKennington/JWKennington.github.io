@@ -5,15 +5,13 @@ image_header: ../../images/big-bounce-lqc-small.png
 
 ### Research Interests
 My research is primarily focused on classical and quantum gravity. Presently, I am working on 
-applications of numerical, semiclassical techniques to loop quantum cosmology. More generally, I am 
-interested in analytical and computational approaches within general relativity (GR) and 
-loop quantum gravity (LQG), as well as the beautiful, mathematical machinery underlying these theories.  
+applications of numerical, semiclassical techniques to loop quantum cosmology. Also, I'm investigating
+computational methods in tensor network renormalization with applications to spinfoams and loop quantum gravity.
 
-I aim to apply computational techniques such as tensor network renormalization and coarse 
-graining to singularity problems like black hole thermodynamics and early cosmology. Though presently 
-focused on theory, I have previously worked on observational problems, including microlensing of 
-AGN systems, and continue to be interested in more concrete, astrophysical phenomena, including
-gravitational waves. 
+More generally, I am interested in analytical and computational approaches within general relativity (GR) and 
+quantum gravity (QG), including loop quantum gravity, noncommutative geometry, causal dynamical triangulations, and causal sets. 
+I find the beautiful, mathematical machinery underlying these theories equally as intriguing.    
+ 
 
 For my research codes, see [here](/pages/code). For publications, see [here](/pages/publications).
 

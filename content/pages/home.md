@@ -11,9 +11,9 @@ hide_headline: True
 > <i>- R. P. Feynman</i>
 
 
-I am an quantitative developer, aspiring physicist, and armchair geometer. My research interests include classical and
-quantum gravity, the underlying geometry, and related astrophysical systems. I also enjoy studying associated relativistic 
-phenomena through computer simulation, such as gravitational waves and black hole dynamics.
+I am Graduate Fellow at Penn State University working in the [Institute for Gravitation and the Cosmos](http://www.gravity.psu.edu/). My research interests include classical and
+quantum gravity, as well as the underlying geometry and algebra. I also enjoy studying associated relativistic 
+phenomena through computer simulation, such as cosmological structure formation and black hole dynamics.
 
 Here you will find some [informal posts](/blog), [my CV](/pages/cv) and [publications](/pages/publications). I've also posted 
 links to my open-source software projects on [github](/pages/code). You may contact me 

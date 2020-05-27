@@ -9,8 +9,8 @@ import pelican_render_math
 
 import jwk_theme
 
-AUTHOR = 'J. W. Kennington'
-SITENAME = 'J. W. Kennington'
+AUTHOR = 'Jim Kennington'
+SITENAME = 'Jim W. Kennington'
 COPYRIGHT = AUTHOR
 SITEURL = ''
 
