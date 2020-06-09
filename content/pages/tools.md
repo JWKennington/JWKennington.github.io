@@ -88,7 +88,7 @@ If you have the patience to go that route _it is worth it_! If you have a hard t
 Marsh industries website has a sales email address [here](mailto:vpsales@marsh-ind.com). If you want the simpler solution, the Quartet boards on Amazon are nice too. 
 Make sure to stick with the porcelain board if possible, they make for better surfaces than the synthetics.
 
-1. [Marsh Industries Chalkboard (croll down for chalkboard surfaces)](https://www.marsh-ind.com/writing-surface-options)
+1. [Marsh Industries Chalkboard (scroll down for chalkboard surfaces)](https://www.marsh-ind.com/writing-surface-options)
 1. [BestRite Chalkboard (Old link, not for sale anymore)](https://moorecoinc.com/product/porcelain-steel-chalkboard-with-deluxe-aluminum-trim/)
 1. [Quartet Porcelain ChalkBoard](https://amzn.to/2DA5hJq)
 <br>
