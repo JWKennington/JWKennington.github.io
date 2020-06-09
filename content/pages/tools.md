@@ -82,12 +82,14 @@ time gripping the smaller chalk pieces. The chalk case is useful when traveling.
 ### Boards
 Give a nerd some chalk, he's going to want a board. The BestRite boards have been around (and American made if that's important
 to you) since the early 1930s, and have been the university standard since the mid 50's. These are a little trickier to buy, 
-since you'll need to contact a dealer; if you have the patience to go that route _it is worth it_! If you have a hard time finding
-a dealer, feel free to email me and I can put you in contact with the representative that helped me buy a couple. If you want the
-simpler solution, the Quartet boards on Amazon are nice too. Make sure to stick with the porcelain board if possible, they make
-for better surfaces than the synthetics.
+since MooreCo stopped making them in mid-2020. There is another prominent manufacturer still making great boards, by the name of 
+Marsh Industries. They also largely supply dealers, so you'll have to find a sales rep. 
+If you have the patience to go that route _it is worth it_! If you have a hard time finding a dealer, 
+Marsh industries website has a sales email address [here](mailto:vpsales@marsh-ind.com). If you want the simpler solution, the Quartet boards on Amazon are nice too. 
+Make sure to stick with the porcelain board if possible, they make for better surfaces than the synthetics.
 
-1. [BestRite ChalkBoard](https://moorecoinc.com/product/porcelain-steel-chalkboard-with-deluxe-aluminum-trim/)
+1. [Marsh Industries Chalkboard (croll down for chalkboard surfaces)](https://www.marsh-ind.com/writing-surface-options)
+1. [BestRite Chalkboard (Old link, not for sale anymore)](https://moorecoinc.com/product/porcelain-steel-chalkboard-with-deluxe-aluminum-trim/)
 1. [Quartet Porcelain ChalkBoard](https://amzn.to/2DA5hJq)
 <br>
 <br>
