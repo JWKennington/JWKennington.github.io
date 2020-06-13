@@ -11,7 +11,7 @@ hide_headline: True
 > <i>- R. P. Feynman</i>
 
 
-I am Graduate Fellow at Penn State University working in the [Institute for Gravitation and the Cosmos](http://www.gravity.psu.edu/). My research interests include classical and
+I am a Graduate Fellow at Penn State University working in the [Institute for Gravitation and the Cosmos](http://www.gravity.psu.edu/). My research interests include classical and
 quantum gravity, as well as the underlying geometry and algebra. I also enjoy studying associated relativistic 
 phenomena through computer simulation, such as cosmological structure formation and black hole dynamics.
 
