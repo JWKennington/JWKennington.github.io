@@ -77,7 +77,7 @@ MENUITEMS = (
     ('Resources', '/pages/resources'),
 )
 
-BLOG_PAGE_IMAGE_HEADER = '../images/nyc.png'
+BLOG_PAGE_IMAGE_HEADER = '../images/bookshelf.png'
 ARTICLE_PAGE_IMAGE_HEADER = '../' + BLOG_PAGE_IMAGE_HEADER
 SIDEBAR_DISPLAY = ['categories', 'tags']
 
