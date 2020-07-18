@@ -1,6 +1,6 @@
 Title: Publications
 Date: 2019-02-20 10:20
-image_header: ../images/lick-obs.png
+image_header: ../images/valles-caldera.png
 
 - 2019 Jul [Contributions to Solutions Manual for _An Introduction to Tensors and Group Theory for Physicists_ by Nadir Jeevanjee](https://www.overleaf.com/read/smdmygtbwtxk)
 - 2019 Mar [APSJournals - a Python Interface to APS Publications](https://github.com/JWKennington/apsjournals/blob/master/README.md)

@@ -1,6 +1,6 @@
 Title: Tools
 Date: 2019-02-20 10:20
-image_header: ../images/davidson.png
+image_header: ../images/bookshelf.png
 
 
 Here I'll list and describe my favorite supplies for math and science related tasks. I'm fairly particular when it comes

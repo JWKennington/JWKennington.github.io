@@ -1,6 +1,6 @@
 Title: CV
 Date: 2019-02-20 10:20
-image_header: ../images/google.png
+image_header: ../images/lick-dome.png
 
 Here is my CV. Click the link below for a pdf version or see some listed items below.
 

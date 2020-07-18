@@ -3,7 +3,6 @@ Date: 2019-02-20 10:20
 image_header: ../../images/big-bounce-lqc-small.png
 
 
-### Research Interests
 My research is primarily focused on classical and quantum gravity. Presently, I am working on 
 applications of numerical, semiclassical techniques to loop quantum cosmology. Also, I'm investigating
 computational methods in tensor network renormalization with applications to spinfoams and loop quantum gravity.

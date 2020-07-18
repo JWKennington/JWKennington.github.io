@@ -1,6 +1,6 @@
 Title: Texts
 Date: 2019-05-03 10:20
-image_header: ../images/golden-coast.png
+image_header: ../images/bookshelf.png
 
 
 Here I'll list and describe my favorite texts by topic. For each of the books listed below, I either own it or have 
