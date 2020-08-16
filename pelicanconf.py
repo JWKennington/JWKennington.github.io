@@ -56,8 +56,8 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 # Theme control
-THEME = jwk_theme.THEME_PATH
-# THEME = '/Users/jim/repos/professional/jim/jwk-theme/jwk_theme'
+# THEME = jwk_theme.THEME_PATH
+THEME = '/Users/jim/repos/professional/jim/jwk-theme/jwk_theme'
 
 # Static home page
 INDEX_SAVE_AS = 'blog.html'
