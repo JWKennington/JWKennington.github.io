@@ -108,6 +108,7 @@ Here is my CV. Click the link below for a pdf version or see some listed items b
 
 
 #### Conferences Attended
+- _Fall 2020_ APS Eastern Section, Pennsylvania State University - Virtual, State College PA
 - _Spring 2019_ APS Texas Section, Stephen F. Austin University, Nacogdoches TX
 - _Spring 2019_ Texas Geometry and Topology Conference, Texas Christian University, Fort Worth TX
 
