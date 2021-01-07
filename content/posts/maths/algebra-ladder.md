@@ -5,7 +5,9 @@ Tags: maths, algebra, group
 
 I first encountered a diagram of algebraic structures at the end of Jeevanjee's second chapter, 
 "Vector Spaces", which elegantly summarizes the high-level differences in structure between sets, 
-vector spaces, and inner product spaces. [@jeevanjeeIntroductionTensorsGroup2015] 
+vector spaces, and inner product spaces. 
+
+[@jeevanjeeIntroductionTensorsGroup2015] 
 This diagram was immensely helpful to me, in that it helped show the relationships between various 
 commonly used objects in mathematical physics. As I've encountered new structures, I've attempted 
 to augment this map along two dimensions: a _structure_ dimension that aims to measure the number 
