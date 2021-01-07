@@ -17,7 +17,7 @@
             <link href="/feeds/physics.atom.xml" type="application/atom+xml" rel="alternate" title="Jim W. Kennington Categories Atom Feed" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/theme/css/style.css?v=1.0.1">
+        <link rel="stylesheet" href="/theme/css/style.css?v=1.0.2">
 
         <!-- Custom CSS -->
         	<link rel="stylesheet" href="/theme/css/colors/blue.css" id="colors">
@@ -86,7 +86,7 @@
       });
     </script>
 	</head>
-	<body>
+	<body >
 		<header id="header">
 			<!-- Container -->
 			<div class="container">
@@ -105,9 +105,6 @@
 
 							<!--<li><a href="/">Home</a></li>-->
 
-							    <li><a href="/blog">Blog</a></li>
-							    <li><a href="/pages/cv">CV</a></li>
-							    <li><a href="/pages/research">Research</a></li>
 							    <li><a href="/pages/resources">Resources</a></li>
 
 							<!--<li>-->
@@ -219,13 +216,13 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
 
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Log the names of the mergers in the catalog</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Mergers in catalog:&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mergers in catalog:&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">merger_names</span><span class="p">:</span>
         <span class="n">m</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">mergers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="c1"># load the Merger object by name</span>
         <span class="c1"># the step above can also be done by instantiating a Merger object directly, e.g. catalog.Merger(&#39;GW150914&#39;)</span>
 
         <span class="c1"># Print some merger info by accessing parameters through the &quot;median1d&quot; method</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;    {}: M1={:2.0f} M2={:2.0f} z={:2.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    </span><span class="si">{}</span><span class="s1">: M1=</span><span class="si">{:2.0f}</span><span class="s1"> M2=</span><span class="si">{:2.0f}</span><span class="s1"> z=</span><span class="si">{:2.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>
                                                             <span class="n">m</span><span class="o">.</span><span class="n">median1d</span><span class="p">(</span><span class="n">MergerParameters</span><span class="o">.</span><span class="n">Mass1</span><span class="p">),</span>     <span class="c1"># m.mass1</span>
                                                             <span class="n">m</span><span class="o">.</span><span class="n">median1d</span><span class="p">(</span><span class="n">MergerParameters</span><span class="o">.</span><span class="n">Mass2</span><span class="p">),</span>     <span class="c1"># m.mass2</span>
                                                             <span class="n">m</span><span class="o">.</span><span class="n">median1d</span><span class="p">(</span><span class="n">MergerParameters</span><span class="o">.</span><span class="n">Redshift</span><span class="p">)))</span> <span class="c1"># m.redshift</span>
@@ -271,17 +268,17 @@ we show how to load the strain data, as well as how to do some useful manipulati
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">strain</span><span class="p">(</span><span class="n">ifo</span><span class="o">=</span><span class="n">Observatory</span><span class="o">.</span><span class="n">LIGOHanford</span><span class="p">)</span> <span class="c1"># the &quot;ifo&quot; argument refers to the observatory that recorded the strain</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Print the boundaries of the timeseries</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Duration={:.0f}s Interval={:.1e}s Start={} End={}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span> <span class="n">ts</span><span class="o">.</span><span class="n">delta_t</span><span class="p">,</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Duration=</span><span class="si">{:.0f}</span><span class="s1">s Interval=</span><span class="si">{:.1e}</span><span class="s1">s Start=</span><span class="si">{}</span><span class="s1"> End=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span> <span class="n">ts</span><span class="o">.</span><span class="n">delta_t</span><span class="p">,</span> 
                                                                  <span class="n">time</span><span class="o">.</span><span class="n">gps_to_datetime</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">start_time</span><span class="p">),</span> 
                                                                  <span class="n">time</span><span class="o">.</span><span class="n">gps_to_datetime</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">end_time</span><span class="p">)))</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Print the size of the underlying array</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Array Size: {:,d}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Array Size: </span><span class="si">{:,d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Supports Slicing</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Array Size: {:,d}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">[:</span><span class="mi">100</span><span class="p">])))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Array Size: </span><span class="si">{:,d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">[:</span><span class="mi">100</span><span class="p">])))</span>
 
 <span class="n">Duration</span><span class="o">=</span><span class="mi">32</span><span class="n">s</span> <span class="n">Interval</span><span class="o">=</span><span class="mf">2.4e-04</span><span class="n">s</span> <span class="n">Start</span><span class="o">=</span><span class="mi">2017</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">23</span> <span class="mi">13</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span> <span class="n">End</span><span class="o">=</span><span class="mi">2017</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">23</span> <span class="mi">13</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">52</span>
-<span class="n">Array</span> <span class="n">Size</span><span class="p">:</span> <span class="mi">131</span><span class="p">,</span><span class="mo">072</span>
+<span class="n">Array</span> <span class="n">Size</span><span class="p">:</span> <span class="mi">131</span><span class="p">,</span><span class="mi">072</span>
 <span class="n">Array</span> <span class="n">Size</span><span class="p">:</span> <span class="mi">100</span>
 </pre></div>
 
@@ -303,7 +300,7 @@ the <code>TimeSeries</code> class for the x-coordinates of the plot, and simply 
 as the y-coordinates (since it is an array). </p>
 <div class="highlight"><pre><span></span><span class="c1"># Import some plotting tools from the bokeh package</span>
 <span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">figure</span>
-<span class="n">output_notebook</span><span class="p">(</span><span class="n">hide_banner</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># for Jupyter usage, otherwise it will write out files</span>
+<span class="n">output_notebook</span><span class="p">(</span><span class="n">hide_banner</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># for Jupyter usage, otherwise it will write out files</span>
 
 <span class="c1"># Create the figure</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Time-Domain data around &#39;</span> <span class="o">+</span> <span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;files&#39;</span><span class="p">][</span><span class="s1">&#39;eventName&#39;</span><span class="p">],</span> 
@@ -508,7 +505,7 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
         <span class="line"></span>
         <div class="clearfix"></div>
 	        <b>Page views: </b>
- 188
+ 209
     </div>
     <br>
 
@@ -526,7 +523,7 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
 				</div>
 				<div class="four columns">
 	        <b>Page views: </b>
- 188
+ 209
 				</div>
 					<div class="six columns">
 						<ul class="social-icons-footer">
