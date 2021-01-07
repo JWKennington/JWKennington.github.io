@@ -4106,6 +4106,10 @@ input.search {
 	text-align: center;
 }
 
+.home-content p {
+	margin: 0;
+}
+
 .home-image-credit {
 	color: #777777 !important;
 	padding: 0;
