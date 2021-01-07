@@ -19,7 +19,7 @@
 /* Header
 ====================================================================== */
 #header {
-	height: 86px;
+	height: 5em;
 	z-index: 999;
 	background: #fff;
 	position: relative;
@@ -4093,7 +4093,7 @@ input.search {
 }
 
 .home-portrait-text {
-	padding: 3em;
+	padding: 1em;
 	text-align: center;
 }
 
@@ -4106,4 +4106,13 @@ input.search {
 	color: #777777 !important;
 	padding: 0;
 	font-style: italic;
+}
+
+#textlogo {
+	text-align: center;
+	margin-top: .7em;
+}
+
+#footer-bottom {
+	text-align: center;
 }
