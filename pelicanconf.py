@@ -7,7 +7,7 @@ import pelican_ga_pageview
 import pelican_github_activity
 import pelican_render_math
 
-import jwk_theme
+# import jwk_theme
 
 AUTHOR = 'Jim Kennington'
 SITENAME = 'Jim W. Kennington'
