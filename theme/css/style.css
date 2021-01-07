@@ -4092,13 +4092,17 @@ input.search {
 	border-radius: 6px 6px 0 0;
 }
 
+.home-portrait p {
+	margin: 0;
+}
+
 .home-portrait-text {
 	padding: 1em;
 	text-align: center;
 }
 
 .home-content {
-	padding: 3em;
+	padding: 2.5em;
 	text-align: center;
 }
 
