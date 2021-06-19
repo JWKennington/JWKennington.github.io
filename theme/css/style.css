@@ -8,8 +8,8 @@
 /* =================================================================== */
 /* Import Section
 ====================================================================== */
-@import url("base.css?v=1.0.2");				/* Default Reset, Typography, Forms, etc. */
-@import url("responsive.css?v=1.0.2");			/* Responsive Grid */
+@import url("base.css?v=1.0.1");				/* Default Reset, Typography, Forms, etc. */
+@import url("responsive.css?v=1.0.1");			/* Responsive Grid */
 /*@import url("icons.css?v=1.0.1");				!* Font Awesome Icons *!*/
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
 @import url("http://fonts.googleapis.com/css?family=Raleway:800");
@@ -19,7 +19,7 @@
 /* Header
 ====================================================================== */
 #header {
-	height: 5em;
+	height: 86px;
 	z-index: 999;
 	background: #fff;
 	position: relative;
@@ -2094,11 +2094,7 @@ html[xmlns] .slides {display: block;}
 .medium .post-content {margin:0;}
 .post-content h2 a { color: #505050; }
 .post-content h2 a:hover { color: #707070; }
-.post-content p {
-	margin-bottom: 19px;
-	text-align: justify;
-  	text-justify: inter-word;
-}
+.post-content p { margin-bottom: 19px; }
 
 
 /* Meta */
@@ -3672,13 +3668,13 @@ blockquote {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background-color: #ffffff;
+	background-color: #a0a0a0;
 	padding: 20px 0 17px 0;
-	color: #575757;
+	color: #fff;
 }
 
 #footer-bottom a {
-	color: #575757;
+	color: #fff;
 	font-weight: 600;
 }
 
@@ -4066,61 +4062,4 @@ input.search {
 .gallery img {
 		width: 100%;
 		height: auto;
-}
-
-
-/* Home Page Styles
-=========================== */
-
-#content-wrapper {
-	background-color: transparent;
-}
-
-.home-section {
-	padding: 10px;
-}
-
-.home-subsection {
-	background-color: #ffffff;
-	border-radius: 6px;
-	/*padding: 3em;*/
-}
-
-.home-portrait img {
-	display: block;
-	width: 100% !important;
-	border-radius: 6px 6px 0 0;
-}
-
-.home-portrait p {
-	margin: 0;
-}
-
-.home-portrait-text {
-	padding: 1em;
-	text-align: center;
-}
-
-.home-content {
-	padding: 3em;
-	text-align: center;
-}
-
-.home-content p {
-	margin: 0;
-}
-
-.home-image-credit {
-	color: #777777 !important;
-	padding: 0;
-	font-style: italic;
-}
-
-#textlogo {
-	text-align: center;
-	margin-top: .7em;
-}
-
-#footer-bottom {
-	text-align: center;
 }
