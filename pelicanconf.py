@@ -5,7 +5,6 @@ from __future__ import unicode_literals
 import pelican_cite_nice
 import pelican_ga_pageview
 import pelican_github_activity
-import pelican_render_math
 
 # import jwk_theme
 
@@ -85,7 +84,6 @@ PLUGIN_PATHS = ['/Users/jim/repos/professional/pelican-plugins']
 
 PLUGINS = [
     pelican_cite_nice,
-    pelican_render_math,
     pelican_github_activity,
     pelican_ga_pageview,
 ]
