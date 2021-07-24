@@ -91,31 +91,34 @@
 			<!-- Container -->
 			<div class="container">
 				<!-- Logo / Mobile Menu -->
-				<div class="five columns">
+				<div class="sixteen columns">
 					<div id="textlogo">
-						<h1><a href="/">Jim W. Kennington</a></h1>
+						<h1><a class="logo-text" href="/">Jim W. Kennington</a></h1>
 					</div>
 				</div>
 						<!-- Navigation
 				================================================== -->
-				<div class="eleven columns">
+<!--				<div class="eleven columns">-->
 
-					<nav id="navigation" class="menu">
-						<ul id="responsive">
+<!--					<nav id="navigation" class="menu">-->
+<!--						<ul id="responsive">-->
 
-							<!--<li><a href="/">Home</a></li>-->
+<!--							&lt;!&ndash;<li><a href="/">Home</a></li>&ndash;&gt;-->
 
-							    <li><a href="/pages/resources">Resources</a></li>
+<!--							-->
+<!--							    <li><a href="/pages/resources">Resources</a></li>-->
+<!--							-->
 
-							<!--<li>-->
-								<!--<div class="clearfix search-nav-clearfix"></div>-->
-								<!--<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
-								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
-								<!--</form>	-->
-							<!--</li>-->
-						</ul>
-					</nav>
-				</div>
+<!--							-->
+<!--							&lt;!&ndash;<li>&ndash;&gt;-->
+<!--								&lt;!&ndash;<div class="clearfix search-nav-clearfix"></div>&ndash;&gt;-->
+<!--								&lt;!&ndash;<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">&ndash;&gt;-->
+<!--								  &lt;!&ndash;<input id="tipue_search_input" type="text" name="q" placeholder="Search">&ndash;&gt;-->
+<!--								&lt;!&ndash;</form>	&ndash;&gt;-->
+<!--							&lt;!&ndash;</li>&ndash;&gt;-->
+<!--						</ul>-->
+<!--					</nav>-->
+<!--				</div>-->
 			</div>
 			
 			<!-- Container / End -->
@@ -158,85 +161,30 @@ law, and despite its seemingly-complex tensorial notation, expresses a beautiful
 familiar, Einstein's general relativity reformulates gravitational interaction as a manifestation of the curvature of spacetime.
 Specifically, Einstein's formulation makes concrete the relationship between the curvature of spacetime and the mass-energy content
  of spacetime <a href='#misnerGravitation2017' id='ref-misnerGravitation2017-1'>Misner et al. (2017)</a>.</p>
-<div class="math">$$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} \quad\quad\quad(1)$$</div>
+<p>$$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} \quad\quad\quad(1)$$</p>
 <p>In the above equation (Einstein equation), the left-hand side contains terms related to curvature of spacetime, like the Ricci
-tensor <span class="math">\(R_{\mu\nu}\)</span>  and the metric <span class="math">\(g_{\mu\nu}\)</span>. The right-hand side contains terms related to energy and matter content,
-specifically <span class="math">\(T_{\mu\nu}\)</span>. This latter term, called the <em>stress-energy</em> tensor, is where the connection to the electromagnetic
+tensor $R_{\mu\nu}$  and the metric $g_{\mu\nu}$. The right-hand side contains terms related to energy and matter content,
+specifically $T_{\mu\nu}$. This latter term, called the <em>stress-energy</em> tensor, is where the connection to the electromagnetic
 field appears.</p>
 <p>Various forms of matter contribute differently to the stress-energy tensor, and electromagnetic energy is no exception. The
 equation below outlines the way in which the electromagnetic field contributes to the stress energy density of a particular
 area of spacetime.</p>
-<div class="math">$$T^{\mu\nu} = \frac{1}{\mu_0}\left[F^{\mu\alpha}F^{\nu}{}_{\alpha} - \frac{1}{4} g^{\mu\nu}F_{\alpha\beta}F^{\alpha\beta} \right] \quad\quad\quad(2)$$</div>
-<p>Where <span class="math">\(F_{\mu\nu}\)</span> is the electromagnetic field tensor, also called the <em>Faraday</em> tensor, where <span class="math">\(\mathbf{E} = E^i e_i\)</span> and
-<span class="math">\(\mathbf{B} = B^i e_i\)</span> are the familiar electric and magnetic vector fields. Note that in the below, I adopt the <span class="math">\(c=1\)</span>
+<p>$$T^{\mu\nu} = \frac{1}{\mu_0}\left[F^{\mu\alpha}F^{\nu}{}<em _alpha_beta="\alpha\beta">{\alpha} - \frac{1}{4} g^{\mu\nu}F</em>F^{\alpha\beta} \right] \quad\quad\quad(2)$$</p>
+<p>Where $F_{\mu\nu}$ is the electromagnetic field tensor, also called the <em>Faraday</em> tensor, where $\mathbf{E} = E^i e_i$ and
+$\mathbf{B} = B^i e_i$ are the familiar electric and magnetic vector fields. Note that in the below, I adopt the $c=1$
 convention for convenience <a href='#carrollSpacetimeGeometryIntroduction2013' id='ref-carrollSpacetimeGeometryIntroduction2013-1'>Carroll (2013)</a>.</p>
-<div class="math">$$F^{\mu\nu} =
+<p>$$F^{\mu\nu} =
 \begin{bmatrix}
-    0 &amp; -E^x &amp; -E^y &amp; -E^z \\
-    E^x &amp; 0 &amp; -B^z &amp; B^y \\
-    E^y &amp; B^z &amp; 0 &amp; -B^x \\
-    E^z &amp; -B^y &amp; B^x &amp; 0 \\
-\end{bmatrix} \quad\quad\quad(3)$$</div>
-<p>Thus, equation (2) tells us how the electromagnetic fields we are familiar with, namely <span class="math">\(\mathbf{E}\)</span> and <span class="math">\(\mathbf{B}\)</span>,
+    0 &amp; -E^x &amp; -E^y &amp; -E^z \
+    E^x &amp; 0 &amp; -B^z &amp; B^y \
+    E^y &amp; B^z &amp; 0 &amp; -B^x \
+    E^z &amp; -B^y &amp; B^x &amp; 0 \
+\end{bmatrix} \quad\quad\quad(3)$$</p>
+<p>Thus, equation (2) tells us how the electromagnetic fields we are familiar with, namely $\mathbf{E}$ and $\mathbf{B}$,
 contribute to the energy density of a region of spacetime. Then equation (1) builds on that result to relate the
 electromagnetic fields to the curvature of spacetime, which as Einstein revealed, manifests as the gravitational field. So
 yes, the conventional electromagnetic fields, and the photons that constitute them, impact the gravitational field despite
-having no rest mass!</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%&#64;#$&#64;#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%&#64;#$&#64;#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script><hr>
+having no rest mass!</p><hr>
 <h3>Bibliography</h3>
 <p id='carrollSpacetimeGeometryIntroduction2013'>Sean Carroll.
 <em>Spacetime and <span class="bibtex-protected"><span class="bibtex-protected">Geometry</span></span>: <span class="bibtex-protected"><span class="bibtex-protected">An Introduction</span></span> to <span class="bibtex-protected"><span class="bibtex-protected">General Relativity</span></span></em>.
@@ -386,43 +334,41 @@ OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" 
 		<div id="footer-bottom">
 			<!-- Container -->
 			<div class="container">
-				<div class="six columns">&copy; 
-					Jim Kennington
-				</div>
-				<div class="four columns">
+				<div class="sixteen columns">&copy;
+					Jim Kennington&nbsp &middot &nbsp
 	        <b>Page views: </b>
  4255
-				</div>
-					<div class="six columns">
-						<ul class="social-icons-footer">
-								<li >
+&nbsp &middot &nbsp
+<!--						<ul class="social-icons-footer">-->
+<!--								<li >-->
 									<a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?cookie=5db7b35acd30413" class="tooltip top social-icons-footer-fa-override" title="amilia">
 										<i class="fab fa-amilia"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://orcid.org/0000-0002-6899-3833" class="tooltip top social-icons-footer-fa-override" title="orcid">
 										<i class="fab fa-orcid"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://www.researchgate.net/profile/James_Kennington" class="tooltip top social-icons-footer-fa-override" title="researchgate">
 										<i class="fab fa-researchgate"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://github.com/JWKennington" class="tooltip top social-icons-footer-fa-override" title="github">
 										<i class="fab fa-github"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://www.linkedin.com/in/jameskennington/" class="tooltip top social-icons-footer-fa-override" title="linkedin">
 										<i class="fab fa-linkedin"></i>
 									</a>
-								</li>
-							<li><a href="/feeds/all.atom.xml" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
-						</ul>
-					</div>
+<!--								</li>-->
+<!--							-->
+<!--							<li><a href="/feeds/all.atom.xml" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>-->
+<!--						</ul>-->
+				</div>
 			</div>
 			<!-- Container / End -->
 		</div>

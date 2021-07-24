@@ -91,31 +91,34 @@
 			<!-- Container -->
 			<div class="container">
 				<!-- Logo / Mobile Menu -->
-				<div class="five columns">
+				<div class="sixteen columns">
 					<div id="textlogo">
-						<h1><a href="/">Jim W. Kennington</a></h1>
+						<h1><a class="logo-text" href="/">Jim W. Kennington</a></h1>
 					</div>
 				</div>
 						<!-- Navigation
 				================================================== -->
-				<div class="eleven columns">
+<!--				<div class="eleven columns">-->
 
-					<nav id="navigation" class="menu">
-						<ul id="responsive">
+<!--					<nav id="navigation" class="menu">-->
+<!--						<ul id="responsive">-->
 
-							<!--<li><a href="/">Home</a></li>-->
+<!--							&lt;!&ndash;<li><a href="/">Home</a></li>&ndash;&gt;-->
 
-							    <li><a href="/pages/resources">Resources</a></li>
+<!--							-->
+<!--							    <li><a href="/pages/resources">Resources</a></li>-->
+<!--							-->
 
-							<!--<li>-->
-								<!--<div class="clearfix search-nav-clearfix"></div>-->
-								<!--<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
-								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
-								<!--</form>	-->
-							<!--</li>-->
-						</ul>
-					</nav>
-				</div>
+<!--							-->
+<!--							&lt;!&ndash;<li>&ndash;&gt;-->
+<!--								&lt;!&ndash;<div class="clearfix search-nav-clearfix"></div>&ndash;&gt;-->
+<!--								&lt;!&ndash;<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">&ndash;&gt;-->
+<!--								  &lt;!&ndash;<input id="tipue_search_input" type="text" name="q" placeholder="Search">&ndash;&gt;-->
+<!--								&lt;!&ndash;</form>	&ndash;&gt;-->
+<!--							&lt;!&ndash;</li>&ndash;&gt;-->
+<!--						</ul>-->
+<!--					</nav>-->
+<!--				</div>-->
 			</div>
 			
 			<!-- Container / End -->
@@ -148,62 +151,7 @@
 
 		<p>Three hours south east of Dallas, Physicists gathered at Stephen F. Austin university in Nacogdoches to discuss recent developments in the field. They weren't alone, though. The meeting was shared between the APS, AAPT, and SPS - so if you were interested in physics research, studying physics, or teaching physics, there was something there that could hold your attention. For me, there were a couple talks related to astrophysics that seemed worth the drive; I hit the road early Friday morning to arrive in time for the first talk. </p>
 <p>Dr. Billy Quarles' talk, <em>Potential for Exoplanetary Neighbors in Alpha Centauri</em>, included a brief discussion of methodologies used to detect exoplanets. Though Quarles and his collaborators recent work seemed to focus mostly in RV techniques, the discussion on photometric methods was particularly interesting. The way that he presented the problem seemed to lend itself naturally to some geometric tricks that would allow for closed-form solutions to the intensity of the star during an exoplanet transit. I am drafting an analysis of these tricks presently, and will update this post with a link once complete - however the sketch goes something like this:</p>
-<p>Let an exoplanet of mass <span class="math">\(m\)</span> orbit a star of mass <span class="math">\(M\)</span> (clearly, <span class="math">\(m &lt; M\)</span>). The ellipticity of this orbit isn't immediately important, since we're going to make a few simplifying assumptions. First we use <span class="math">\(T \cup \mathcal{O}(3)\)</span> invariance of the trajectory geometry to align the orbital plane with the <span class="math">\(x\)</span> - <span class="math">\(y\)</span> plane in <span class="math">\(\mathcal{R}^3\)</span>. We also choose to align the orbital angular momentum <span class="math">\(L\)</span> with the <span class="math">\(z\)</span> axis of <span class="math">\(\mathcal{R}^3\)</span>. Next, we choose a reference point <span class="math">\(p\)</span> along the <span class="math">\(x\)</span> axis to serve as the "observer". When the observer is sufficiently far from the planetary system, as the Earth is from even our nearest  neighboring system, then we may approximate the path of the light exiting the system as a projection along the <span class="math">\(x\)</span> axis into the <span class="math">\(y\)</span> - <span class="math">\(z\)</span> plane, namely <span class="math">\(\pi_{1}: \mathcal{R}^3 \rightarrow \mathcal{R}^2\)</span> defined by <span class="math">\(\pi_{1}(x, y, z) = (y, z)\)</span>. This assumption allows us to reduce the problem of intersecting volumes to one of intersecting areas! The remaining geometric problem can thus be stated: Given two circles <span class="math">\(S_{p1}^1(r_1)\)</span> and <span class="math">\(S_{p_2}^1(r_2)\)</span>, where the centers <span class="math">\(p_1\)</span> and <span class="math">\(p_2\)</span> are represented as smooth functions of time <span class="math">\(\alpha_1(t)\)</span> and <span class="math">\(\alpha_2(t)\)</span>, give the intersectional area <span class="math">\(A_{\cap}(t)\)</span> as a function of time. The intensity of the star during transit will be proportional to this function to a first order.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
+<p>Let an exoplanet of mass $m$ orbit a star of mass $M$ (clearly, $m &lt; M$). The ellipticity of this orbit isn't immediately important, since we're going to make a few simplifying assumptions. First we use $T \cup \mathcal{O}(3)$ invariance of the trajectory geometry to align the orbital plane with the $x$ - $y$ plane in $\mathcal{R}^3$. We also choose to align the orbital angular momentum $L$ with the $z$ axis of $\mathcal{R}^3$. Next, we choose a reference point $p$ along the $x$ axis to serve as the "observer". When the observer is sufficiently far from the planetary system, as the Earth is from even our nearest  neighboring system, then we may approximate the path of the light exiting the system as a projection along the $x$ axis into the $y$ - $z$ plane, namely $\pi_{1}: \mathcal{R}^3 \rightarrow \mathcal{R}^2$ defined by $\pi_{1}(x, y, z) = (y, z)$. This assumption allows us to reduce the problem of intersecting volumes to one of intersecting areas! The remaining geometric problem can thus be stated: Given two circles $S_{p1}^1(r_1)$ and $S_{p_2}^1(r_2)$, where the centers $p_1$ and $p_2$ are represented as smooth functions of time $\alpha_1(t)$ and $\alpha_2(t)$, give the intersectional area $A_{\cap}(t)$ as a function of time. The intensity of the star during transit will be proportional to this function to a first order.</p>
 		    <div class="tags">
 		        <p>tags: <a href="/tag/physics.html">physics</a><a href="/tag/conference.html">conference</a></p>
 		    </div>
@@ -343,43 +291,41 @@
 		<div id="footer-bottom">
 			<!-- Container -->
 			<div class="container">
-				<div class="six columns">&copy; 
-					Jim Kennington
-				</div>
-				<div class="four columns">
+				<div class="sixteen columns">&copy;
+					Jim Kennington&nbsp &middot &nbsp
 	        <b>Page views: </b>
  9
-				</div>
-					<div class="six columns">
-						<ul class="social-icons-footer">
-								<li >
+&nbsp &middot &nbsp
+<!--						<ul class="social-icons-footer">-->
+<!--								<li >-->
 									<a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?cookie=5db7b35acd30413" class="tooltip top social-icons-footer-fa-override" title="amilia">
 										<i class="fab fa-amilia"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://orcid.org/0000-0002-6899-3833" class="tooltip top social-icons-footer-fa-override" title="orcid">
 										<i class="fab fa-orcid"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://www.researchgate.net/profile/James_Kennington" class="tooltip top social-icons-footer-fa-override" title="researchgate">
 										<i class="fab fa-researchgate"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://github.com/JWKennington" class="tooltip top social-icons-footer-fa-override" title="github">
 										<i class="fab fa-github"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://www.linkedin.com/in/jameskennington/" class="tooltip top social-icons-footer-fa-override" title="linkedin">
 										<i class="fab fa-linkedin"></i>
 									</a>
-								</li>
-							<li><a href="/feeds/all.atom.xml" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
-						</ul>
-					</div>
+<!--								</li>-->
+<!--							-->
+<!--							<li><a href="/feeds/all.atom.xml" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>-->
+<!--						</ul>-->
+				</div>
 			</div>
 			<!-- Container / End -->
 		</div>

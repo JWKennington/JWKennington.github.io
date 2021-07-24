@@ -91,31 +91,34 @@
 			<!-- Container -->
 			<div class="container">
 				<!-- Logo / Mobile Menu -->
-				<div class="five columns">
+				<div class="sixteen columns">
 					<div id="textlogo">
-						<h1><a href="/">Jim W. Kennington</a></h1>
+						<h1><a class="logo-text" href="/">Jim W. Kennington</a></h1>
 					</div>
 				</div>
 						<!-- Navigation
 				================================================== -->
-				<div class="eleven columns">
+<!--				<div class="eleven columns">-->
 
-					<nav id="navigation" class="menu">
-						<ul id="responsive">
+<!--					<nav id="navigation" class="menu">-->
+<!--						<ul id="responsive">-->
 
-							<!--<li><a href="/">Home</a></li>-->
+<!--							&lt;!&ndash;<li><a href="/">Home</a></li>&ndash;&gt;-->
 
-							    <li><a href="/pages/resources">Resources</a></li>
+<!--							-->
+<!--							    <li><a href="/pages/resources">Resources</a></li>-->
+<!--							-->
 
-							<!--<li>-->
-								<!--<div class="clearfix search-nav-clearfix"></div>-->
-								<!--<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
-								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
-								<!--</form>	-->
-							<!--</li>-->
-						</ul>
-					</nav>
-				</div>
+<!--							-->
+<!--							&lt;!&ndash;<li>&ndash;&gt;-->
+<!--								&lt;!&ndash;<div class="clearfix search-nav-clearfix"></div>&ndash;&gt;-->
+<!--								&lt;!&ndash;<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">&ndash;&gt;-->
+<!--								  &lt;!&ndash;<input id="tipue_search_input" type="text" name="q" placeholder="Search">&ndash;&gt;-->
+<!--								&lt;!&ndash;</form>	&ndash;&gt;-->
+<!--							&lt;!&ndash;</li>&ndash;&gt;-->
+<!--						</ul>-->
+<!--					</nav>-->
+<!--				</div>-->
 			</div>
 			
 			<!-- Container / End -->
@@ -160,10 +163,9 @@ be found on the web at the following <a href="https://www.gw-openscience.org/cat
     is just a small collection of convenience functions and utilities.
 </p>
 
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pycbc</span> <span class="kn">import</span> <span class="n">catalog</span><span class="p">,</span> <span class="n">frame</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pycbc</span> <span class="kn">import</span> <span class="n">catalog</span><span class="p">,</span> <span class="n">frame</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">gravtools</span> <span class="kn">import</span> <span class="n">MergerParameters</span><span class="p">,</span> <span class="n">Observatory</span><span class="p">,</span> <span class="n">merger</span><span class="p">,</span> <span class="n">time</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><br></p>
 <h2>Exploring the Catalog</h2>
@@ -177,20 +179,18 @@ data-access file-download utilities.</p>
 In this case we specify <code>'gwtc-1'</code> which refers to the Gravitational-Wave Transient Catalog 1. This catalog 
 consists of compact binary mergers observed in the O1 and O2 runs, and is also the default catalog (so you don't 
 need to specify it, though we do for clarity).</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">cat</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">Catalog</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;gwtc-1&#39;</span><span class="p">)</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cat</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">Catalog</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;gwtc-1&#39;</span><span class="p">)</span>
+</code></pre></div>
 
 <p><br></p>
 <h3>Where are the <code>Merger</code>s stored?</h3>
 <p>The Catalog class is an iterable with respect to the names of the mergers in the catalog, so you can pick your favorite 
 technique to iterate over the available merger names (we use the list coercion function below).</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Get names of mergers in catalog </span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Get names of mergers in catalog </span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">merger_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span>  <span class="c1"># Catalog class is iterable, any collection coercion will suffice</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">merger_names</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;GW150914&#39;</span><span class="p">,</span> <span class="s1">&#39;GW151012&#39;</span><span class="p">,</span> <span class="s1">&#39;GW151226&#39;</span><span class="p">]</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><br></p>
 <p>The Merger data associated to the name is stored in the <code>mergers</code> attribute of the <code>Catalog</code> instance, which 
@@ -207,7 +207,7 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
     and _is_ inspectable, so we use it below.
 </p>
 
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">mergers</span><span class="p">[</span><span class="s1">&#39;GW150914&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">mergers</span><span class="p">[</span><span class="s1">&#39;GW150914&#39;</span><span class="p">]</span>
 
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># convenient summary string from gravtools</span>
@@ -216,13 +216,13 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
 
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Log the names of the mergers in the catalog</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Mergers in catalog:&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mergers in catalog:&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">merger_names</span><span class="p">:</span>
         <span class="n">m</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">mergers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="c1"># load the Merger object by name</span>
         <span class="c1"># the step above can also be done by instantiating a Merger object directly, e.g. catalog.Merger(&#39;GW150914&#39;)</span>
 
         <span class="c1"># Print some merger info by accessing parameters through the &quot;median1d&quot; method</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;    {}: M1={:2.0f} M2={:2.0f} z={:2.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    </span><span class="si">{}</span><span class="s1">: M1=</span><span class="si">{:2.0f}</span><span class="s1"> M2=</span><span class="si">{:2.0f}</span><span class="s1"> z=</span><span class="si">{:2.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>
                                                             <span class="n">m</span><span class="o">.</span><span class="n">median1d</span><span class="p">(</span><span class="n">MergerParameters</span><span class="o">.</span><span class="n">Mass1</span><span class="p">),</span>     <span class="c1"># m.mass1</span>
                                                             <span class="n">m</span><span class="o">.</span><span class="n">median1d</span><span class="p">(</span><span class="n">MergerParameters</span><span class="o">.</span><span class="n">Mass2</span><span class="p">),</span>     <span class="c1"># m.mass2</span>
                                                             <span class="n">m</span><span class="o">.</span><span class="n">median1d</span><span class="p">(</span><span class="n">MergerParameters</span><span class="o">.</span><span class="n">Redshift</span><span class="p">)))</span> <span class="c1"># m.redshift</span>
@@ -238,8 +238,7 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
     <span class="n">GW170817</span><span class="p">:</span> <span class="n">M1</span><span class="o">=</span> <span class="mi">1</span> <span class="n">M2</span><span class="o">=</span> <span class="mi">1</span> <span class="n">z</span><span class="o">=</span><span class="mf">0.01</span>
     <span class="n">GW170818</span><span class="p">:</span> <span class="n">M1</span><span class="o">=</span><span class="mi">36</span> <span class="n">M2</span><span class="o">=</span><span class="mi">27</span> <span class="n">z</span><span class="o">=</span><span class="mf">0.20</span>
     <span class="n">GW170823</span><span class="p">:</span> <span class="n">M1</span><span class="o">=</span><span class="mi">40</span> <span class="n">M2</span><span class="o">=</span><span class="mi">29</span> <span class="n">z</span><span class="o">=</span><span class="mf">0.34</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><br></p>
 <h2>Merger Strain</h2>
@@ -247,10 +246,9 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
 timeseries of strain data (for efficiency of the API). It is possible, however, and quite easy to load the 
 strain timeseries around the event. The below code shows how to load the waveform data. We begin by choosing a 
 specific merger from the catalog.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Pick a merger from the catalog</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Pick a merger from the catalog</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">mergers</span><span class="p">[</span><span class="s1">&#39;GW170823&#39;</span><span class="p">]</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><br></p>
 <h3>The <code>TimeSeries</code> Class</h3>
@@ -264,33 +262,30 @@ we show how to load the strain data, as well as how to do some useful manipulati
     interval between adjacent values in the array.
 </p>
 
-<div class="highlight"><pre><span></span><span class="c1"># Query the strain timeseries for the merger</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Query the strain timeseries for the merger</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">strain</span><span class="p">(</span><span class="n">ifo</span><span class="o">=</span><span class="n">Observatory</span><span class="o">.</span><span class="n">LIGOHanford</span><span class="p">)</span> <span class="c1"># the &quot;ifo&quot; argument refers to the observatory that recorded the strain</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Print the boundaries of the timeseries</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Duration={:.0f}s Interval={:.1e}s Start={} End={}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span> <span class="n">ts</span><span class="o">.</span><span class="n">delta_t</span><span class="p">,</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Duration=</span><span class="si">{:.0f}</span><span class="s1">s Interval=</span><span class="si">{:.1e}</span><span class="s1">s Start=</span><span class="si">{}</span><span class="s1"> End=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span> <span class="n">ts</span><span class="o">.</span><span class="n">delta_t</span><span class="p">,</span> 
                                                                  <span class="n">time</span><span class="o">.</span><span class="n">gps_to_datetime</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">start_time</span><span class="p">),</span> 
                                                                  <span class="n">time</span><span class="o">.</span><span class="n">gps_to_datetime</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">end_time</span><span class="p">)))</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Print the size of the underlying array</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Array Size: {:,d}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Array Size: </span><span class="si">{:,d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Supports Slicing</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Array Size: {:,d}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">[:</span><span class="mi">100</span><span class="p">])))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Array Size: </span><span class="si">{:,d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">[:</span><span class="mi">100</span><span class="p">])))</span>
 
 <span class="n">Duration</span><span class="o">=</span><span class="mi">32</span><span class="n">s</span> <span class="n">Interval</span><span class="o">=</span><span class="mf">2.4e-04</span><span class="n">s</span> <span class="n">Start</span><span class="o">=</span><span class="mi">2017</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">23</span> <span class="mi">13</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span> <span class="n">End</span><span class="o">=</span><span class="mi">2017</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">23</span> <span class="mi">13</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">52</span>
-<span class="n">Array</span> <span class="n">Size</span><span class="p">:</span> <span class="mi">131</span><span class="p">,</span><span class="mo">072</span>
+<span class="n">Array</span> <span class="n">Size</span><span class="p">:</span> <span class="mi">131</span><span class="p">,</span><span class="mi">072</span>
 <span class="n">Array</span> <span class="n">Size</span><span class="p">:</span> <span class="mi">100</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><br></p>
 <h4>Physics Remark:</h4>
 <p>The <em>strain</em> recorded in the above timeseries basically represents the degree to which space has expanded 
 or contracted along the path of the interferometer:
-</p>
-<div class="math">$$h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$$</div>
-<p>
-Where <span class="math">\(L\)</span> is the original length of the detector, and the change is measured as the difference in the 
+$$h = \frac{\Delta L}{L},\quad \Delta L = L_x - L_y$$
+Where $L$ is the original length of the detector, and the change is measured as the difference in the 
 detector arms. For more information on the experimental setup, see the excellent review, 
 <a href="https://link.springer.com/article/10.1007/s41114-016-0002-8">Interferometer techniques for gravitational wave detection</a> 
 by Bond, Brown, Freise and Strain.</p>
@@ -298,9 +293,9 @@ by Bond, Brown, Freise and Strain.</p>
 <p>This section is devoted to visualizing the Time-domain strain. We use the <code>sample_times</code> attribute of 
 the <code>TimeSeries</code> class for the x-coordinates of the plot, and simply pass the <code>TimeSeries</code> object itself 
 as the y-coordinates (since it is an array). </p>
-<div class="highlight"><pre><span></span><span class="c1"># Import some plotting tools from the bokeh package</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import some plotting tools from the bokeh package</span>
 <span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">figure</span>
-<span class="n">output_notebook</span><span class="p">(</span><span class="n">hide_banner</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># for Jupyter usage, otherwise it will write out files</span>
+<span class="n">output_notebook</span><span class="p">(</span><span class="n">hide_banner</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># for Jupyter usage, otherwise it will write out files</span>
 
 <span class="c1"># Create the figure</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Time-Domain data around &#39;</span> <span class="o">+</span> <span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;files&#39;</span><span class="p">][</span><span class="s1">&#39;eventName&#39;</span><span class="p">],</span> 
@@ -312,73 +307,18 @@ as the y-coordinates (since it is an array). </p>
 
 <span class="c1"># Display</span>
 <span class="n">show</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><img alt="GWaveData" src="/images/gwave-data.png" /></p>
-<p><br>
+<p><br></p>
 <p style="background: #e6e6e6; border-radius: 10px; padding: 10px">
     <i><b>Developer Note:</b></i><br>
     Plotting in Python is notoriously subjective; there are many competing libraries that all deserve proper attention, such as plotly, bokeh, plotnine, altair, and others (excluding matplotlib). There are meta-plotting libraries as well that sit atop these, such as holoviews. However, we choose to use Bokeh here primarily due to the simple interface, and clean style.
-</p></p>
+</p>
+
 <h2>Acknowledgments</h2>
 <p>This post is based on the official <a href="https://pycbc.org/tutorials/">PyCBC tutorials</a>, and is cited in the example 
 repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md">README</a>. </p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'blue ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
 		    <div class="tags">
 		        <p>tags: <a href="/tag/physics.html">physics</a><a href="/tag/gravity.html">gravity</a></p>
 		    </div>
@@ -505,7 +445,7 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
         <span class="line"></span>
         <div class="clearfix"></div>
 	        <b>Page views: </b>
- 230
+ 231
     </div>
     <br>
 
@@ -518,43 +458,41 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
 		<div id="footer-bottom">
 			<!-- Container -->
 			<div class="container">
-				<div class="six columns">&copy; 
-					Jim Kennington
-				</div>
-				<div class="four columns">
+				<div class="sixteen columns">&copy;
+					Jim Kennington&nbsp &middot &nbsp
 	        <b>Page views: </b>
- 230
-				</div>
-					<div class="six columns">
-						<ul class="social-icons-footer">
-								<li >
+ 231
+&nbsp &middot &nbsp
+<!--						<ul class="social-icons-footer">-->
+<!--								<li >-->
 									<a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?cookie=5db7b35acd30413" class="tooltip top social-icons-footer-fa-override" title="amilia">
 										<i class="fab fa-amilia"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://orcid.org/0000-0002-6899-3833" class="tooltip top social-icons-footer-fa-override" title="orcid">
 										<i class="fab fa-orcid"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://www.researchgate.net/profile/James_Kennington" class="tooltip top social-icons-footer-fa-override" title="researchgate">
 										<i class="fab fa-researchgate"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://github.com/JWKennington" class="tooltip top social-icons-footer-fa-override" title="github">
 										<i class="fab fa-github"></i>
 									</a>
-								</li>
-								<li >
+<!--								</li>-->
+<!--								<li >-->
 									<a href="https://www.linkedin.com/in/jameskennington/" class="tooltip top social-icons-footer-fa-override" title="linkedin">
 										<i class="fab fa-linkedin"></i>
 									</a>
-								</li>
-							<li><a href="/feeds/all.atom.xml" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
-						</ul>
-					</div>
+<!--								</li>-->
+<!--							-->
+<!--							<li><a href="/feeds/all.atom.xml" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>-->
+<!--						</ul>-->
+				</div>
 			</div>
 			<!-- Container / End -->
 		</div>
