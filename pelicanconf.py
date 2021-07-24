@@ -86,11 +86,12 @@ PLUGINS = [
     pelican_cite_nice,
     pelican_github_activity,
     pelican_ga_pageview,
+    'render_math',
 ]
 
 LOAD_CONTENT_CACHE = False
 
-MATH_JAX = {'color': 'blue'}
+MATH_JAX = {}
 
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
