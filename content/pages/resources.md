@@ -65,6 +65,7 @@ code referenced below, I either use routinely myself or have contributed to pers
 ##### General Python
 - [Quick Start with Python](/blog/quick-python-setup)
 - [Python Lib Tutorial](https://docs.python.org/3/tutorial/)
+- [Python Online Course](https://www.codecademy.com/catalog/language/python)
 <br><br>
 
 ##### Computational & HPC
