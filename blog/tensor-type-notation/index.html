@@ -45,11 +45,11 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Tensor Type Notation">
     <meta property="og:url" content="blog/tensor-type-notation/">
-    <meta property="og:description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted $(r, s)$ as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …">
+    <meta property="og:description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted \((r, s)\) as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
     <meta property="article:published_time" content="Tuesday, April 23, 2019">
     <meta name="twitter:title" content="Tensor Type Notation">
-    <meta name="twitter:description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted $(r, s)$ as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …">
-    <meta name="description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted $(r, s)$ as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …">
+    <meta name="twitter:description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted \((r, s)\) as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
+    <meta name="description" content="What does type (r, s) mean? I&#39;d like to discuss the notation of the tensor type, commonly denoted \((r, s)\) as it relates to the tensor product. Specifically, the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically categorized …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
     <meta name="twitter:image" content="">
     <meta property="og:image" content="">
 
@@ -151,22 +151,22 @@
 		</header>
 
 		<h3>What does type (r, s) mean?</h3>
-<p>I'd like to discuss the notation of the tensor type, commonly denoted $(r, s)$ as it relates to the tensor product. Specifically, 
+<p>I'd like to discuss the notation of the tensor type, commonly denoted <span class="math">\((r, s)\)</span> as it relates to the tensor product. Specifically, 
 the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically 
-categorized by the number of vectors and dual vectors they require as arguments. To avoid ambiguity, for a given tensor $T$, I will 
-denote the number of vector arguments as $n_v$ and the number of dual vector arguments as $n_d$. </p>
+categorized by the number of vectors and dual vectors they require as arguments. To avoid ambiguity, for a given tensor <span class="math">\(T\)</span>, I will 
+denote the number of vector arguments as <span class="math">\(n_v\)</span> and the number of dual vector arguments as <span class="math">\(n_d\)</span>. </p>
 <h4>Preliminaries</h4>
-<p>Before we begin, recall that the dual vector space $V^<em>$ is defined as the set of linear functionals from $V\rightarrow C$, 
-where $C$ is the field over which $V$ is a vector space. Note, the dual space $V^</em>$ is defined in terms of the vector space $V$. 
+<p>Before we begin, recall that the dual vector space <span class="math">\(V^*\)</span> is defined as the set of linear functionals from <span class="math">\(V\rightarrow C\)</span>, 
+where <span class="math">\(C\)</span> is the field over which <span class="math">\(V\)</span> is a vector space. Note, the dual space <span class="math">\(V^*\)</span> is defined in terms of the vector space <span class="math">\(V\)</span>. 
 For similar reasons, the topic of dual spaces is introduced after the topic of vector spaces - in other words, <strong>epistemologically, 
 the dual space follows the vector space</strong>. I only draw attention to this ordering between the vector space and the dual because 
 it informs the aesthetic nature of the notation, as we'll see.</p>
 <h4>Conventions</h4>
-<p>The tensor type $(r, s)$ is used to categories tensors based on the number of vectors and dual vectors they consume. Problem is, 
-there is a choice to made between the $r=n_v$ or $r=n_d$ conventions - and this choice isn't made consistently. As I mentioned above, 
+<p>The tensor type <span class="math">\((r, s)\)</span> is used to categories tensors based on the number of vectors and dual vectors they consume. Problem is, 
+there is a choice to made between the <span class="math">\(r=n_v\)</span> or <span class="math">\(r=n_d\)</span> conventions - and this choice isn't made consistently. As I mentioned above, 
 the epistemological ordering of vectors and dual vectors is unambiguous; dual vectors follow vectors. It therefore seems natural to 
-make the first number $r$ equal the number of vector arguments $n_v$. I'll call this convention the <em>vector first</em> convention, or 
-"VF" for short. Similarly, I'll call the opposite convention, of using the number of dual vectors $n_d$ as the first number $r$, 
+make the first number <span class="math">\(r\)</span> equal the number of vector arguments <span class="math">\(n_v\)</span>. I'll call this convention the <em>vector first</em> convention, or 
+"VF" for short. Similarly, I'll call the opposite convention, of using the number of dual vectors <span class="math">\(n_d\)</span> as the first number <span class="math">\(r\)</span>, 
 the <em>dual first</em> convention, or "DF" for short.</p>
 <h4>Usage of Conventions</h4>
 <p>Some sources that use the <em>VF</em> convention <a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'>Jeevanjee (2015)</a>, <a href='#langLinearAlgebra1987' id='ref-langLinearAlgebra1987-1'>Lang (1987)</a>. Some sources that 
@@ -175,37 +175,107 @@ use the <em>DF</em> convention <a href='#romanAdvancedLinearAlgebra2007' id='ref
 <a href='#carrollSpacetimeGeometryIntroduction2013' id='ref-carrollSpacetimeGeometryIntroduction2013-1'>Carroll (2013)</a>, <a href='#poissonRelativistToolkitMathematics2004' id='ref-poissonRelativistToolkitMathematics2004-1'>Poisson (2004)</a>, <a href='#misnerGravitation2017' id='ref-misnerGravitation2017-1'>Misner et al. (2017)</a>, 
 <a href='#spivakComprehensiveIntroductionDifferential1999' id='ref-spivakComprehensiveIntroductionDifferential1999-1'>Spivak (1999)</a>. 
 To explicitly make clear the above conventions, the <em>VF</em> convention 
-would define a type $(r, s)$ tensor $T$ as
-$$T: V_1\times \cdot\cdot\cdot \times V_r \times V^<em>_1 \times \cdot\cdot\cdot \times V^</em><em i="i">s\rightarrow C$$ 
-where $V</em>=V$ and $V^<em>_{i}=V^</em>$ for all $i$. On the other hand, the <em>DF</em> convention would define a type $(r, s)$ tensor $T$ as
-$$T: V^<em>_1\times \cdot\cdot\cdot \times V^</em><em I="I">r \times V_1 \times \cdot\cdot\cdot \times V_s\rightarrow C$$ where again 
-$V</em>=V$ and $V^<em>_{i}=V^</em>$ for all $i$.</p>
+would define a type <span class="math">\((r, s)\)</span> tensor <span class="math">\(T\)</span> as
+</p>
+<div class="math">$$T: V_1\times \cdot\cdot\cdot \times V_r \times V^*_1 \times \cdot\cdot\cdot \times V^*_s\rightarrow C$$</div>
+<p> 
+where <span class="math">\(V_{i}=V\)</span> and <span class="math">\(V^*_{i}=V^*\)</span> for all <span class="math">\(i\)</span>. On the other hand, the <em>DF</em> convention would define a type <span class="math">\((r, s)\)</span> tensor <span class="math">\(T\)</span> as
+</p>
+<div class="math">$$T: V^*_1\times \cdot\cdot\cdot \times V^*_r \times V_1 \times \cdot\cdot\cdot \times V_s\rightarrow C$$</div>
+<p> where again 
+<span class="math">\(V_{I}=V\)</span> and <span class="math">\(V^*_{i}=V^*\)</span> for all <span class="math">\(i\)</span>.</p>
 <h3>Cartesian vs. Tensor Product Notations</h3>
-<p>The usage of Cartesian products to define the domain of $T$ is typically used before introducing the tensor product, 
+<p>The usage of Cartesian products to define the domain of <span class="math">\(T\)</span> is typically used before introducing the tensor product, 
 as it is more familiar. In the Cartesian product notation, the <em>VF</em> convention places the vector spaces before the dual 
 spaces, and in some sense is "aligned" with the way in which the subject is taught. When using the tensor product notation, 
 however, this is no longer the case!</p>
-<p>Recall the tensor product of two vector spaces $V$ and $W$ is denoted $V\otimes W$ and is the set of all multilinear functions 
-from $V^<em> \times W^</em> \rightarrow C$. Notice how the usage of the tensor product $\otimes$ essentially replaces vector spaces 
-with their duals in the Cartesian notation. This "replacement" effect combined with only using the spaces $V$ and $V^<em>$ amounts 
-to reversing the order of the input spaces the domain. For example, the </em>VF<em> convention would define a type $(r, s)$ tensor $T$ 
-using the tensor product notation as $$T: V^</em>_1\otimes \cdot\cdot\cdot \otimes V^<em>_r \otimes V_1 \otimes \cdot\cdot\cdot \otimes 
-V_s\rightarrow C$$ For good measure, I will also note that the </em>DF<em> convention would define a type $(r, s)$ tensor $T$ using the 
-tensor product notation as $$T: V_1\otimes \cdot\cdot\cdot \otimes V_r \otimes V^</em>_1 \otimes \cdot\cdot\cdot \otimes 
-V^<em>_s\rightarrow C$$ Notice that these definitions are equivalent to the previous definitions using Cartesian product 
-notation, but that now the vector spaces are written first in what we called the </em>dual first<em> convention, not the </em>vector first* 
+<p>Recall the tensor product of two vector spaces <span class="math">\(V\)</span> and <span class="math">\(W\)</span> is denoted <span class="math">\(V\otimes W\)</span> and is the set of all multilinear functions 
+from <span class="math">\(V^* \times W^* \rightarrow C\)</span>. Notice how the usage of the tensor product <span class="math">\(\otimes\)</span> essentially replaces vector spaces 
+with their duals in the Cartesian notation. This "replacement" effect combined with only using the spaces <span class="math">\(V\)</span> and <span class="math">\(V^*\)</span> amounts 
+to reversing the order of the input spaces the domain. For example, the <em>VF</em> convention would define a type <span class="math">\((r, s)\)</span> tensor <span class="math">\(T\)</span> 
+using the tensor product notation as </p>
+<div class="math">$$T: V^*_1\otimes \cdot\cdot\cdot \otimes V^*_r \otimes V_1 \otimes \cdot\cdot\cdot \otimes 
+V_s\rightarrow C$$</div>
+<p> For good measure, I will also note that the <em>DF</em> convention would define a type <span class="math">\((r, s)\)</span> tensor <span class="math">\(T\)</span> using the 
+tensor product notation as </p>
+<div class="math">$$T: V_1\otimes \cdot\cdot\cdot \otimes V_r \otimes V^*_1 \otimes \cdot\cdot\cdot \otimes 
+V^*_s\rightarrow C$$</div>
+<p> Notice that these definitions are equivalent to the previous definitions using Cartesian product 
+notation, but that now the vector spaces are written first in what we called the <em>dual first</em> convention, not the <em>vector first</em> 
 convention!</p>
 <h3>Why is <em>DF</em> convention preferred?</h3>
-<p>It seems that the $DF$ convention has wider usage and appeal; naturally I wonder why. Since it feels natural to align the 
-notation with the epistemological order, in other words, to write $V$ before $V^<em>$, then I am forced to conclude that the 
-mathematical community, with malice of forethought, prefers to base the definition of a type $(r, s)$ tensor on the tensor 
-product notation, rather than the Cartesian notation, since the former requires that $V$ be written before $V^</em>$. I personally 
+<p>It seems that the <span class="math">\(DF\)</span> convention has wider usage and appeal; naturally I wonder why. Since it feels natural to align the 
+notation with the epistemological order, in other words, to write <span class="math">\(V\)</span> before <span class="math">\(V^*\)</span>, then I am forced to conclude that the 
+mathematical community, with malice of forethought, prefers to base the definition of a type <span class="math">\((r, s)\)</span> tensor on the tensor 
+product notation, rather than the Cartesian notation, since the former requires that <span class="math">\(V\)</span> be written before <span class="math">\(V^*\)</span>. I personally 
 have no objection to the choice, as it seems sensible.</p>
 <h4>Parting note on terminology</h4>
-<p>In the <em>DF</em> convention, the number $r$ is often referred to as the <em>covariant</em> number and the number $s$ is called the 
+<p>In the <em>DF</em> convention, the number <span class="math">\(r\)</span> is often referred to as the <em>covariant</em> number and the number <span class="math">\(s\)</span> is called the 
 <em>contravariant</em> number. These terms refer to the number of dual vectors and vectors respectively, since vectors are typically
 considered contravariant. Similar terms refer to <em>lower</em> and <em>upper</em> indices respectively.</p>
-<p>I should note that my exploration of these conventions is limited to differential geometry, relativity, and linear algebra texts. </p><hr>
+<p>I should note that my exploration of these conventions is limited to differential geometry, relativity, and linear algebra texts. </p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%&#64;#$&#64;#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%&#64;#$&#64;#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script><hr>
 <h3>Bibliography</h3>
 <p id='carrollSpacetimeGeometryIntroduction2013'>Sean Carroll.
 <em>Spacetime and <span class="bibtex-protected"><span class="bibtex-protected">Geometry</span></span>: <span class="bibtex-protected"><span class="bibtex-protected">An Introduction</span></span> to <span class="bibtex-protected"><span class="bibtex-protected">General Relativity</span></span></em>.
