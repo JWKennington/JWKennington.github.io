@@ -50,19 +50,19 @@ Standard introductory reference for experimental methodology, statistical analys
 ### Classical Mechanics
 <hr>
 
-##### [_Classical Mechanics_](https://amzn.to/2DOKHFb) - Taylor (I)
+##### [Taylor -_Classical Mechanics_](https://amzn.to/2DOKHFb) (I)
 
 Great undergraduate reference text, usually seen in an upper-division undergraduate mechanics course. 
 
-##### [Thornton and Marion _Classical Dynamics_](https://amzn.to/2VcPYB3) (M)
+##### [Thornton, Marion -  _Classical Dynamics_](https://amzn.to/2VcPYB3) (M)
 
 Undergraduate level classical mechanics text, more advanced than Taylor. 
 
-##### [Goldstein _Classical Mechanics_](https://amzn.to/2Jh4iRR) (A)
+##### [Goldstein - _Classical Mechanics_](https://amzn.to/2Jh4iRR) (A)
 
 The standard graduate-level text on mechanics.
 
-##### [Arnold _Mathematical Methods of Classical Mechanics_](https://amzn.to/2Lnp7hn) (A)
+##### [Arnold - _Mathematical Methods of Classical Mechanics_](https://amzn.to/2Lnp7hn) (A)
 
 Mathematical tools for classical mechanics. Notation is a bit old (and Russian), for instance $[A, B]$ is used for 
 the vector cross product instead of $A \times B$.
@@ -73,13 +73,13 @@ the vector cross product instead of $A \times B$.
 ### Electricity & Magnetism
 <hr>
 
-##### [Griffiths _Introduction to Electrodynamics_](https://amzn.to/2LjSvF7) (I)
+##### [Griffiths - _Introduction to Electrodynamics_](https://amzn.to/2LjSvF7) (I)
 
 Standard undergraduate level text on E&M, frequently used for upper-division courses on electricity and magnetism.
 Interestingly, doesn't include much on circuits. New edition has a chapter about symmetries and conserved quantities,
 a nice introduction to Noethers theorem. 
 
-##### [Jackson _Classical Electrodynamics_](https://amzn.to/2PO7rdk) (A)
+##### [Jackson - _Classical Electrodynamics_](https://amzn.to/2PO7rdk) (A)
 
 The standard graduate text on E&M, a rite of passage. 
 
@@ -88,29 +88,28 @@ The standard graduate text on E&M, a rite of passage.
 ### Classical Gravity (GR)
 <hr>
 
-##### [Carroll _Spacetime and Geometry_](https://amzn.to/2DN31hL) (I)
+##### [Carroll - _Spacetime and Geometry_](https://amzn.to/2DN31hL) (I)
 
 Clean, modern reference that is relatively self-contained. Builds the essential differential geometry (quickly) before
 introducing gravitational concepts. Notation is very close to modern mathematical literature.
 
-##### [Schutz _A First Course In General Relativity_](https://amzn.to/2VJ03VM) (I)
+##### [Schutz - _A First Course In General Relativity_](https://amzn.to/2VJ03VM) (I)
 
 Less modern introductory text to GR, worth reading after / with Carroll.
 
-
-##### [Wald _General Relativity_](https://amzn.to/2LldLu7) (M)
+##### [Wald - _General Relativity_](https://amzn.to/2LldLu7) (M)
 
 Standard graduate level introduction to GR. 
 
-##### [Poisson _Gravity_](https://amzn.to/2Jg7xsX) (M)
+##### [Poisson - _Gravity_](https://amzn.to/2Jg7xsX) (M)
 
 Moderately advanced text covering details of Newtonian, Post-Newtonian approximation methods.
 
-##### [Poisson _A Relativist's Toolkit_](https://amzn.to/2H262gr) (A)
+##### [Poisson - _A Relativist's Toolkit_](https://amzn.to/2H262gr) (A)
 
 Advanced techniques for applying GR to astrophysical situations, assumes a working knowledge of GR.
 
-##### [Misner et. al. _Gravitation_](https://amzn.to/2H0Tm9F) (A)
+##### [Misner, Thornton, Wheeler (MTW) - _Gravitation_](https://amzn.to/2H0Tm9F) (A)
 
 Standard reference text, absolutely massive. Includes the most detail on the most topics out of any book on the subject,
 and is a useful reference for practitioners.
@@ -121,11 +120,11 @@ and is a useful reference for practitioners.
 ### Numerical Relativity (NR)
 <hr>
 
-##### [Baumgarte _Numerical Relativity_](https://amzn.to/2DNEyci) (M)
+##### [Baumgarte - _Numerical Relativity_](https://amzn.to/2DNEyci) (M)
 
 Clean, modern introduction to NR, briefly reviews GR but most focus is on numerical considerations. 
 
-##### [_Introduction to 3 + 1 Numerical Relativity_](https://amzn.to/3A9xbXO) - Alcubierre (A)
+##### [Alcubierre - _Introduction to 3 + 1 Numerical Relativity_](https://amzn.to/3A9xbXO) (A)
 
 Standard, in-depth reference on numerical relativity. 
 
@@ -136,54 +135,130 @@ Standard, in-depth reference on numerical relativity.
 ### Quantum Gravity (QG)
 <hr>
 
-##### [Pullin _A First Course in Loop Quantum Gravity_]() (I)
+##### [Pullin - _A First Course in Loop Quantum Gravity_](https://amzn.to/3hqTsZP) (I)
 
-##### [Rovelli _Covariant Loop Quantum Gravity_](https://amzn.to/2WnIZBV) (M)
+Summary
 
-##### [Rovelli _Quantum Gravity_]() (M)
+##### [Rovelli - _Covariant Loop Quantum Gravity_](https://amzn.to/2WnIZBV) (M)
 
-##### [Ashtekar _Modern Canonical Quantum Relativity_]() (M)
+Summary
 
-##### [Thiemann _Modern Canonical Quantum Relativity_]() (A)
+##### [Rovelli - _Quantum Gravity_](https://amzn.to/3hk5jZJ) (M)
 
+Summary
+
+##### [Ashtekar - _Lectures on Non-Perturbative Canonical Gravity_](https://amzn.to/3nlPu8J) (M)
+
+Summary
+
+##### [Thiemann - _Modern Canonical Quantum General Relativity_](https://amzn.to/3EcBOmc) (A)
+
+Summary
 
 <br>
 
 ### Mathematical Physics
 <hr>
 
-##### [Arfken _Mathematical Methods for Physicists_](https://amzn.to/2DOLNk7) (A)
+##### [Arfken - _Mathematical Methods for Physicists_](https://amzn.to/2DOLNk7) (I)
 
-##### [Schwichtenberg _Physics from Symmetry_](https://amzn.to/2VQsDF3) (M)
+Summary
 
+##### [Rudolph, Schmidt - _Differential Geometry and Mathematical Physics: Part I. Manifolds, Lie Groups and Hamiltonian Systems_](https://amzn.to/2YNMsQm) (A)
+
+Summary
+
+##### [Rudolph, Schmidt - _Differential Geometry and Mathematical Physics: Part II. Fibre Bundles, Topology and Gauge Fields_](https://amzn.to/3hptFkO) (A)
+
+Summary
 
 <br>
 
 ### Quantum Mechanics
 <hr>
 
-##### [Feynman and Hibbs _Quantum Mechanics and Path Integrals_](https://amzn.to/2Y3TSsV) (A)
-##### [Griffiths _Introduction to Quantum Mechanics_](https://amzn.to/2DOAMiT) (I)
-##### [Sakurai _Modern Quantum Mechanics_](https://amzn.to/2WiTnL8) (A)
-##### [Shankar _Principles of Quantum Mechanics_](https://amzn.to/2VHqfA5) (M)
-##### [Zee _Quantum Field Theory in a Nutshell_](https://amzn.to/2LAQ5Cj) (M)
+##### [Feynman and Hibbs - _Quantum Mechanics and Path Integrals_](https://amzn.to/2Y3TSsV) (A)
+
+Summary
+
+##### [Griffiths - _Introduction to Quantum Mechanics_](https://amzn.to/2DOAMiT) (I)
+
+Summary
+
+##### [Sakurai - _Modern Quantum Mechanics_](https://amzn.to/2WiTnL8) (A)
+
+Summary
+
+##### [Shankar - _Principles of Quantum Mechanics_](https://amzn.to/2VHqfA5) (M)
+
+Summary
 
 <br>
 
-### Quantum Field Theory
+### Quantum Field Theory (QFT)
 <hr>
 
-##### [Zee _Quantum Field Theory in a Nutshell_](https://amzn.to/2LAQ5Cj) (M)
+##### [Zee - _Quantum Field Theory in a Nutshell_](https://amzn.to/2LAQ5Cj) (M)
 
+Summary
+
+##### [Peskin, Shroeder - _An Introduction to Quantum Field Theory_](https://amzn.to/3A8iZ1o) (M)
+
+Summary
+
+##### [DeWitt - _The Global Approach to Quantum Field Theory_](https://amzn.to/3k2pyNe) (A)
+
+Summary
+
+##### [Weinberg - _The Quantum Theory of Fields_](https://amzn.to/391bltK) (A)
+
+Summary
+
+##### [Coleman - _Lectures of Sidney Coleman on Quantum Field Theory_](https://amzn.to/3k1Mz2I) (A)
+
+Summary
+
+<br>
+
+### Quantum Theory - eg. Foundations, Formalism
+<hr>
+
+##### [Norsen - _Foundations of Quantum Mechanics: An Exploration of the Physical Meaning of Quantum Theory_](https://amzn.to/3E96yos) (I)
+
+Summary
+
+##### [Woit - _Quantum Theory, Groups and Representations: An Introduction_](https://amzn.to/3Eced59) (A)
+
+Summary
+
+##### [Hall - _Quantum Theory for Mathematicians_](https://amzn.to/3leLLam) (A)
+
+Summary
+
+##### [Landsman - _Foundations of Quantum Theory: From Classical Concepts to Operator Algebras _](https://amzn.to/3tzTxzg) (A)
+
+Summary
 
 <br>
 
 ### Statistical Mechanics & Thermodynamics
 <hr>
 
-##### [Schroeder _Introduction to Thermal Physics_](https://amzn.to/2VECzkP) (I)
-##### [Balakishnan _Elements of Nonequilibrium Statistical Mechanics_](https://amzn.to/2DNnUcC) (M)
+##### [Schroeder - _Introduction to Thermal Physics_](https://amzn.to/2VECzkP) (I)
 
+Summary
+
+##### [Kardar - _Statistical Physics of Particles_](https://amzn.to/3tyY5FU) (M)
+
+Summary
+
+##### [Kardar - _Statistical Physics of Fields_](https://amzn.to/3tAoPpR) (A)
+
+Summary
+
+##### [Balakishnan - _Elements of Nonequilibrium Statistical Mechanics_](https://amzn.to/2DNnUcC) (M)
+
+Summary
 
 
 <br>
