@@ -37,10 +37,10 @@ looking for new sources, so please send me anything great you find not listed he
 <br><br>
 
 ##### Other Physics & Math Blogs
-- John Baez's [Azimuth](https://johncarlosbaez.wordpress.com/)
-- Sean Carroll's [Preposterous Universe](https://www.preposterousuniverse.com/blog/)
-- Terry Tao's [What's New](https://terrytao.wordpress.com/)
-- Peter Woit's [Not Even Wrong](https://www.math.columbia.edu/~woit/wordpress/)
+- John Baez [Azimuth](https://johncarlosbaez.wordpress.com/)
+- Sean Carroll [Preposterous Universe](https://www.preposterousuniverse.com/blog/)
+- Terry Tao [What's New](https://terrytao.wordpress.com/)
+- Peter Woit [Not Even Wrong](https://www.math.columbia.edu/~woit/wordpress/)
 <br><br>
 
 

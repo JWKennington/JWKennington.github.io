@@ -19,7 +19,8 @@ quantum gravity. Specifically, I focus on gravitational wave source modeling and
 I am also interested in spinfoams, causal dynamical triangulations, and noncommutative geometry, with an emphasis on computational methods.
 
 <br>
-For more information, see my [Curriculum Vitae]({static}/pdfs/cv.pdf), [publications](/pages/publications), [GitHub](https://github.com/JWKennington), and [blog](/blog).  
+For more information, see my [Curriculum Vitae]({static}/pdfs/cv.pdf), [publications](/pages/publications), 
+[GitHub](https://github.com/JWKennington), [blog](/blog), and general [resources](/pages/resources).   
 <br>
 
 [Email Me](mailto:jwkennington@psu.edu) 
