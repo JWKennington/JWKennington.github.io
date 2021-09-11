@@ -49,7 +49,8 @@ These pages contain links and explanations of some of my favorite books, chalks,
 chosen texts and tools below are either essential to my work or essential to my happiness (a slight exxageration, but 
 who doesn't like the perfect piece of chalk?).
 
-- [My Favorite Reference Texts](/pages/texts)
+- [My Favorite Physics Reference Texts](/pages/texts-physics)
+- [My Favorite Maths Reference Texts](/pages/texts-math)
 - [My Favorite Tools of the Trade](/pages/tools)
 <br><br>
 

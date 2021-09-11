@@ -50,6 +50,7 @@ SOCIAL = (
 )
 
 DEFAULT_PAGINATION = 10
+RELATED_POSTS_MAX = 3
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
@@ -68,7 +69,7 @@ ARTICLE_ORDER_BY = 'reversed-date'
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
-    # ('Blog', '/blog'),
+    ('Blog', '/blog'),
     # ('CV', '/pages/cv'),
     # ('Code', '/pages/code'),
     # ('Publications', '/pages/publications'),
@@ -87,6 +88,8 @@ PLUGINS = [
     pelican_github_activity,
     pelican_ga_pageview,
     'render_math',
+    'related_posts',
+    'neighbors',
 ]
 
 LOAD_CONTENT_CACHE = False
