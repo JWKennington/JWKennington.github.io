@@ -195,6 +195,14 @@
         
         body.boxed,
         body.boxed #header                          { width: 100% }
+
+        .menu {
+            display: none;
+        }
+
+        #textlogo {
+            text-align: center;
+        }
     }
 
 
@@ -238,6 +246,14 @@
         
         body.boxed,
         body.boxed #header                          { width: 100% }
+
+        .menu {
+            display: none;
+        }
+
+        #textlogo {
+            text-align: center;
+        }
     }
 
 
