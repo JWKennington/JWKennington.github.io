@@ -201,7 +201,11 @@
         }
 
         #textlogo {
-            text-align: center;
+            text-align: center !important;
+        }
+
+        .vertical-line-container {
+            display: none;
         }
     }
 
@@ -252,7 +256,11 @@
         }
 
         #textlogo {
-            text-align: center;
+            text-align: center !important;
+        }
+
+        .vertical-line-container {
+            display: none;
         }
     }
 
