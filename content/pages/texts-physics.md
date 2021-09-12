@@ -67,6 +67,11 @@ The standard graduate-level text on mechanics.
 Mathematical tools for classical mechanics. Notation is a bit old (and Russian), for instance $[A, B]$ is used for 
 the vector cross product instead of $A \times B$.
 
+##### [Libermann, Marle - _Symplectic Geometry and Analytical Mechanics_](https://amzn.to/3EbwSOz) (A)
+
+Excellent reprint of a text that analyses the symplectic structure of classical mechanics. Insofar as classical mechanics
+is truly geometry of phase space - this text presents a rigorous treatment of symplectic forms, spaces, and how they relate
+to Hamiltonian systems. Very rigorous.
 
 <br>
 
@@ -81,6 +86,22 @@ Interestingly, doesn't include much on circuits.
 ##### [Jackson - _Classical Electrodynamics_](https://amzn.to/2PO7rdk) (A)
 
 The standard graduate text on E&M, a rite of passage. 
+
+##### [Baylis - _Electrodynamics: A Modern Geometric Approach_](https://amzn.to/3z4WyIU) (A)
+
+Interesting advanced text that analyses the geometric implications of EM theory, including deriving the Minkowski
+metric from the Clifford algebra. Draws really nice connections between special relativity and Maxwell's equations.
+
+##### [Hehl - _Foundations of Classical Electrodynamics_](https://amzn.to/3kaRMWl) (A)
+
+Excellent advanced reference on the detailed mathematical structure of electromagnetic theory, including exterior
+algebras and metric-free examination of Maxwell-Lorentz spacetime relations. Strong emphasis placed on axiomatic 
+approach, considerable rigor.
+
+##### [Scheck - _Classical Field Theory: On Electrodynamics, Non-Abelian Gauge Theories and Gravitation_](https://amzn.to/3EbwzDp) (A)
+
+Interesting advanced text that analyses Maxwell's equations as an example of a gauge theory, then develops generalized
+notions of gauge theory. Considers applications to gravity along the lines Weyl considered in the early days of GR.
 
 <br>
 
@@ -98,7 +119,8 @@ Less modern introductory text to GR, worth reading after / with Carroll.
 
 ##### [Wald - _General Relativity_](https://amzn.to/2LldLu7) (M)
 
-Standard graduate level introduction to GR. 
+Standard graduate level introduction to GR. Excellent exposition of mathematical aspects of GR with a medium amount
+of rigor. Does not discuss bundles, and only briefly mentions tetrads. 
 
 ##### [Poisson - _Gravity_](https://amzn.to/2Jg7xsX) (M)
 
@@ -112,6 +134,25 @@ Advanced techniques for applying GR to astrophysical situations, assumes a worki
 
 Standard reference text, absolutely massive. Includes the most detail on the most topics out of any book on the subject,
 and is a useful reference for practitioners.
+
+##### [Straumann - _General Relativity_](https://amzn.to/3leLNz2) (A)
+
+Great supplement reference at the graduate level. Shows full derivations of Schwarzschild and Kerr metrics, has great
+discussion on black hole thermodynamics. Also includes material of Cartan structure of the field equations and affine 
+connections. 
+
+##### [Geroch - _General Relativity: 1972 Lecture Notes_](https://amzn.to/2XaF1lV) (A)
+
+Geroch is a master. These lecture notes, while brief, expertly weave the mathematics and physics from a spacetime-first 
+perspective using a wealth of visuals. Geroch shows how physical phenomena can be explained first in spacetime, then
+decomposed into space + time to recover familiar quantities.
+
+##### [Chandrasekhar - _The Mathematical Theory of Black Holes_](https://amzn.to/3k5w59X) (A)
+
+One of the most rigorous treatises on black holes in existence, with pages upon pages of calculations. Excellent 
+introduction to tetrad formalism as well as Newman-Penrose formalism. Covers basically any topic in black holes imaginable,
+including derivations / construction of Schwarzschild, Reissner-Nordstrom, and Kerr solutions, perturbations and 
+effect on electromagnetic phenomena.
 
 
 <br>
@@ -187,6 +228,13 @@ introduces tensors as multilinear maps, and derives all the familiar behavior in
 mechanics. Introduces key concepts from Lie theory with just-enough rigor to prepare reader for further study, includes 
 many examples from physics including SU(2), SO(3) and others. Introduces representations in a clear way as well. Cannot
 recommend highly enough.
+
+##### [Isham - _Modern Differential Geometry for Physicists_](https://amzn.to/2VyDsNA) (I)
+
+The lecture notes of a course taught by a renowned expert in quantum gravity on the mathematical preliminaries for 
+classical gravity. Includes the standard intro to differential geometry; however, Isham also includes an excellent 
+exposition of connections and bundles (which is usually missing from such texts). Isham also includes multiple perspectives
+on elementary definitions, unifying the various methods by which these concepts are conventionally introduced.
 
 ##### [Arfken - _Mathematical Methods for Physicists_](https://amzn.to/2DOLNk7) (I)
 
@@ -325,6 +373,11 @@ Follow up volume to the one above, excellent discussion of Landau principles.
 
 Great reference on nonequilibrium systems and their statistical properties.
 
+##### [Berlinsky, Harris - _Statistical Mechanics: An Introductory Graduate Course_](https://amzn.to/3hqGueD) (A)
+
+Graduate level text focusing on more mathematical aspects of thermodynamics and statistical mechanics, including
+the renormalization group, Landau theory and mean field theory. Many examples considered including superconductivity 
+and quantum fluids.
 
 <br>
 <br>

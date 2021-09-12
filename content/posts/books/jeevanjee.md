@@ -1,4 +1,4 @@
-Title: Book Review: Tensors and Group Theory for Physcists (Jeevanjee)
+Title: Book Review: Tensors and Group Theory for Physicists (Jeevanjee)
 Date: 2019-06-28
 Category: Books
 Tags: physics, linear algebra, group theory, tensors

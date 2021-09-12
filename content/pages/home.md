@@ -23,5 +23,5 @@ For more information, see my [Curriculum Vitae]({static}/pdfs/cv.pdf), [publicat
 [GitHub](https://github.com/JWKennington), [blog](/blog), and general [resources](/pages/resources).   
 <br>
 
-[Email Me](mailto:jwkennington@psu.edu) 
+[Email Me](mailto:jwkennington.web@psu.edu)
 <br>
