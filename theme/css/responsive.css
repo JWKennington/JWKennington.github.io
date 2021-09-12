@@ -262,6 +262,10 @@
         .vertical-line-container {
             display: none;
         }
+
+        .home-section {
+            padding-top: 20px;
+        }
     }
 
 
