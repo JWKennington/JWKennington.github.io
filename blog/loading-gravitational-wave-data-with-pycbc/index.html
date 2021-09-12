@@ -4,7 +4,7 @@
 <html lang="en">
 <!--<![endif]-->
 	<head>
-            <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="author" content="Jim Kennington">
@@ -39,29 +39,29 @@
 
 
 
-        <meta name="tags" contents="physics" />
-        <meta name="tags" contents="gravity" />
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Loading Gravitational Wave Data with PyCBC">
-    <meta property="og:url" content="blog/loading-gravitational-wave-data-with-pycbc/">
-    <meta property="og:description" content="This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, using the PyCBC package. There is also a notebook-version of this post, available here, in a repo of PyCBC examples. Motivation In order to analyze observed gravitational waves, we must first find …">
-    <meta property="article:published_time" content="Saturday, October 12, 2019">
-    <meta name="twitter:title" content="Loading Gravitational Wave Data with PyCBC">
-    <meta name="twitter:description" content="This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, using the PyCBC package. There is also a notebook-version of this post, available here, in a repo of PyCBC examples. Motivation In order to analyze observed gravitational waves, we must first find …">
-    <meta name="description" content="This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, using the PyCBC package. There is also a notebook-version of this post, available here, in a repo of PyCBC examples. Motivation In order to analyze observed gravitational waves, we must first find …">
-    <meta name="twitter:image" content="">
-    <meta property="og:image" content="">
+<meta name="tags" contents="physics"/>
+<meta name="tags" contents="gravity"/>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Loading Gravitational Wave Data with PyCBC">
+<meta property="og:url" content="blog/loading-gravitational-wave-data-with-pycbc/">
+<meta property="og:description" content="This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, using the PyCBC package. There is also a notebook-version of this post, available here, in a repo of PyCBC examples. Motivation In order to analyze observed gravitational waves, we must first find …">
+<meta property="article:published_time" content="Saturday, October 12, 2019">
+<meta name="twitter:title" content="Loading Gravitational Wave Data with PyCBC">
+<meta name="twitter:description" content="This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, using the PyCBC package. There is also a notebook-version of this post, available here, in a repo of PyCBC examples. Motivation In order to analyze observed gravitational waves, we must first find …">
+<meta name="description" content="This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, using the PyCBC package. There is also a notebook-version of this post, available here, in a repo of PyCBC examples. Motivation In order to analyze observed gravitational waves, we must first find …">
+<meta name="twitter:image" content="">
+<meta property="og:image" content="">
 
-	                <meta property="og:locale" content="">
+                <meta property="og:locale" content="">
 		<meta property="og:site_name" content="Jim W. Kennington">
 
-	<meta property="og:type" content="article">
-	<meta property="article:author" content="">
-	<meta property="og:url" content="/blog/loading-gravitational-wave-data-with-pycbc/">
-	<meta property="og:title" content="Loading Gravitational Wave Data with PyCBC">
-	<meta property="og:description" content="">
-	   <meta property="og:image" content="/images/guilherme-toti.jpg">
-	<meta property="article:published_time" content="2019-10-12 00:00:00-05:00">
+<meta property="og:type" content="article">
+<meta property="article:author" content="">
+<meta property="og:url" content="/blog/loading-gravitational-wave-data-with-pycbc/">
+<meta property="og:title" content="Loading Gravitational Wave Data with PyCBC">
+<meta property="og:description" content="">
+<meta property="og:image" content="/images/guilherme-toti.jpg">
+<meta property="article:published_time" content="2019-10-12 00:00:00-05:00">
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-135655259-1']);
@@ -91,34 +91,40 @@
 			<!-- Container -->
 			<div class="container">
 				<!-- Logo / Mobile Menu -->
-				<div class="sixteen columns">
+				<div class="eight columns">
 					<div id="textlogo">
 						<h1><a class="logo-text" href="/">Jim W. Kennington</a></h1>
 					</div>
 				</div>
 						<!-- Navigation
 				================================================== -->
-<!--				<div class="eleven columns">-->
+				<div class="eight columns">
 
-<!--					<nav id="navigation" class="menu">-->
-<!--						<ul id="responsive">-->
+					<div class="vertical-line-container">
+						<div class="vertical-line">
+							<!--						<span>&#124;</span>-->
+						</div>
+					</div>
 
-<!--							&lt;!&ndash;<li><a href="/">Home</a></li>&ndash;&gt;-->
 
-<!--							-->
-<!--							    <li><a href="/pages/resources">Resources</a></li>-->
-<!--							-->
 
-<!--							-->
-<!--							&lt;!&ndash;<li>&ndash;&gt;-->
-<!--								&lt;!&ndash;<div class="clearfix search-nav-clearfix"></div>&ndash;&gt;-->
-<!--								&lt;!&ndash;<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">&ndash;&gt;-->
-<!--								  &lt;!&ndash;<input id="tipue_search_input" type="text" name="q" placeholder="Search">&ndash;&gt;-->
-<!--								&lt;!&ndash;</form>	&ndash;&gt;-->
-<!--							&lt;!&ndash;</li>&ndash;&gt;-->
-<!--						</ul>-->
-<!--					</nav>-->
-<!--				</div>-->
+					<nav id="navigation" class="menu">
+						<ul id="responsive">
+
+							<!--<li><a href="/">Home</a></li>-->
+
+							    <li><a href="/blog">Blog</a></li>
+							    <li><a href="/pages/resources">Resources</a></li>
+
+							<!--<li>-->
+								<!--<div class="clearfix search-nav-clearfix"></div>-->
+								<!--<form action="/search.html" onsubmit="return validateForm(this.elements['q'].value);">-->
+								  <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
+								<!--</form>	-->
+							<!--</li>-->
+						</ul>
+					</nav>
+				</div>
 			</div>
 			
 			<!-- Container / End -->
@@ -132,24 +138,24 @@
 			<!--</section>-->
 
 			<div class="container page-header-image">
-		<img src="../../images/bookshelf.png">
+<img src="../../images/bookshelf.png">
 			</div>
 
 			<div class="container">
 <div class="twelve alt columns">
 <article class="post" style="margin: 0; border: 0;">
 
-	<section class="post-content">
+    <section class="post-content">
 
-		<header class="meta">
-			<h2><a href="/blog/loading-gravitational-wave-data-with-pycbc/">Loading Gravitational Wave Data with PyCBC</a></h2>
-			<ul>
-				<li>By <a href="/author/jim-kennington.html">Jim Kennington</a></li>
-				<li>Sat 12 October 2019</li>
-			</ul>
-		</header>
+        <header class="meta">
+            <h2><a href="/blog/loading-gravitational-wave-data-with-pycbc/">Loading Gravitational Wave Data with PyCBC</a></h2>
+            <ul>
+                <li>By <a href="/author/jim-kennington.html">Jim Kennington</a>                </li>
+                <li>Sat 12 October 2019</li>
+            </ul>
+        </header>
 
-		<p>This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, 
+        <p>This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, 
 using the PyCBC package. There is also a notebook-version of this post, available <a href="https://github.com/JWKennington/pycbc-examples">here</a>,
 in a repo of PyCBC examples.</p>
 <h2>Motivation</h2>
@@ -163,9 +169,10 @@ be found on the web at the following <a href="https://www.gw-openscience.org/cat
     is just a small collection of convenience functions and utilities.
 </p>
 
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pycbc</span> <span class="kn">import</span> <span class="n">catalog</span><span class="p">,</span> <span class="n">frame</span>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pycbc</span> <span class="kn">import</span> <span class="n">catalog</span><span class="p">,</span> <span class="n">frame</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">gravtools</span> <span class="kn">import</span> <span class="n">MergerParameters</span><span class="p">,</span> <span class="n">Observatory</span><span class="p">,</span> <span class="n">merger</span><span class="p">,</span> <span class="n">time</span>
-</code></pre></div>
+</pre></div>
+
 
 <p><br></p>
 <h2>Exploring the Catalog</h2>
@@ -179,18 +186,20 @@ data-access file-download utilities.</p>
 In this case we specify <code>'gwtc-1'</code> which refers to the Gravitational-Wave Transient Catalog 1. This catalog 
 consists of compact binary mergers observed in the O1 and O2 runs, and is also the default catalog (so you don't 
 need to specify it, though we do for clarity).</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cat</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">Catalog</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;gwtc-1&#39;</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">cat</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">Catalog</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;gwtc-1&#39;</span><span class="p">)</span>
+</pre></div>
+
 
 <p><br></p>
 <h3>Where are the <code>Merger</code>s stored?</h3>
 <p>The Catalog class is an iterable with respect to the names of the mergers in the catalog, so you can pick your favorite 
 technique to iterate over the available merger names (we use the list coercion function below).</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Get names of mergers in catalog </span>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Get names of mergers in catalog </span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">merger_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span>  <span class="c1"># Catalog class is iterable, any collection coercion will suffice</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">merger_names</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;GW150914&#39;</span><span class="p">,</span> <span class="s1">&#39;GW151012&#39;</span><span class="p">,</span> <span class="s1">&#39;GW151226&#39;</span><span class="p">]</span>
-</code></pre></div>
+</pre></div>
+
 
 <p><br></p>
 <p>The Merger data associated to the name is stored in the <code>mergers</code> attribute of the <code>Catalog</code> instance, which 
@@ -207,7 +216,7 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
     and _is_ inspectable, so we use it below.
 </p>
 
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">mergers</span><span class="p">[</span><span class="s1">&#39;GW150914&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">mergers</span><span class="p">[</span><span class="s1">&#39;GW150914&#39;</span><span class="p">]</span>
 
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># convenient summary string from gravtools</span>
@@ -238,7 +247,8 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
     <span class="n">GW170817</span><span class="p">:</span> <span class="n">M1</span><span class="o">=</span> <span class="mi">1</span> <span class="n">M2</span><span class="o">=</span> <span class="mi">1</span> <span class="n">z</span><span class="o">=</span><span class="mf">0.01</span>
     <span class="n">GW170818</span><span class="p">:</span> <span class="n">M1</span><span class="o">=</span><span class="mi">36</span> <span class="n">M2</span><span class="o">=</span><span class="mi">27</span> <span class="n">z</span><span class="o">=</span><span class="mf">0.20</span>
     <span class="n">GW170823</span><span class="p">:</span> <span class="n">M1</span><span class="o">=</span><span class="mi">40</span> <span class="n">M2</span><span class="o">=</span><span class="mi">29</span> <span class="n">z</span><span class="o">=</span><span class="mf">0.34</span>
-</code></pre></div>
+</pre></div>
+
 
 <p><br></p>
 <h2>Merger Strain</h2>
@@ -246,9 +256,10 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
 timeseries of strain data (for efficiency of the API). It is possible, however, and quite easy to load the 
 strain timeseries around the event. The below code shows how to load the waveform data. We begin by choosing a 
 specific merger from the catalog.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Pick a merger from the catalog</span>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Pick a merger from the catalog</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">mergers</span><span class="p">[</span><span class="s1">&#39;GW170823&#39;</span><span class="p">]</span>
-</code></pre></div>
+</pre></div>
+
 
 <p><br></p>
 <h3>The <code>TimeSeries</code> Class</h3>
@@ -262,7 +273,7 @@ we show how to load the strain data, as well as how to do some useful manipulati
     interval between adjacent values in the array.
 </p>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Query the strain timeseries for the merger</span>
+<div class="highlight"><pre><span></span><span class="c1"># Query the strain timeseries for the merger</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">strain</span><span class="p">(</span><span class="n">ifo</span><span class="o">=</span><span class="n">Observatory</span><span class="o">.</span><span class="n">LIGOHanford</span><span class="p">)</span> <span class="c1"># the &quot;ifo&quot; argument refers to the observatory that recorded the strain</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Print the boundaries of the timeseries</span>
@@ -278,7 +289,8 @@ we show how to load the strain data, as well as how to do some useful manipulati
 <span class="n">Duration</span><span class="o">=</span><span class="mi">32</span><span class="n">s</span> <span class="n">Interval</span><span class="o">=</span><span class="mf">2.4e-04</span><span class="n">s</span> <span class="n">Start</span><span class="o">=</span><span class="mi">2017</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">23</span> <span class="mi">13</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span> <span class="n">End</span><span class="o">=</span><span class="mi">2017</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">23</span> <span class="mi">13</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">52</span>
 <span class="n">Array</span> <span class="n">Size</span><span class="p">:</span> <span class="mi">131</span><span class="p">,</span><span class="mi">072</span>
 <span class="n">Array</span> <span class="n">Size</span><span class="p">:</span> <span class="mi">100</span>
-</code></pre></div>
+</pre></div>
+
 
 <p><br></p>
 <h4>Physics Remark:</h4>
@@ -295,7 +307,7 @@ by Bond, Brown, Freise and Strain.</p>
 <p>This section is devoted to visualizing the Time-domain strain. We use the <code>sample_times</code> attribute of 
 the <code>TimeSeries</code> class for the x-coordinates of the plot, and simply pass the <code>TimeSeries</code> object itself 
 as the y-coordinates (since it is an array). </p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Import some plotting tools from the bokeh package</span>
+<div class="highlight"><pre><span></span><span class="c1"># Import some plotting tools from the bokeh package</span>
 <span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">figure</span>
 <span class="n">output_notebook</span><span class="p">(</span><span class="n">hide_banner</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># for Jupyter usage, otherwise it will write out files</span>
 
@@ -309,15 +321,15 @@ as the y-coordinates (since it is an array). </p>
 
 <span class="c1"># Display</span>
 <span class="n">show</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</code></pre></div>
+</pre></div>
+
 
 <p><img alt="GWaveData" src="/images/gwave-data.png" /></p>
-<p><br></p>
+<p><br>
 <p style="background: #e6e6e6; border-radius: 10px; padding: 10px">
     <i><b>Developer Note:</b></i><br>
     Plotting in Python is notoriously subjective; there are many competing libraries that all deserve proper attention, such as plotly, bokeh, plotnine, altair, and others (excluding matplotlib). There are meta-plotting libraries as well that sit atop these, such as holoviews. However, we choose to use Bokeh here primarily due to the simple interface, and clean style.
-</p>
-
+</p></p>
 <h2>Acknowledgments</h2>
 <p>This post is based on the official <a href="https://pycbc.org/tutorials/">PyCBC tutorials</a>, and is cited in the example 
 repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md">README</a>. </p>
@@ -383,56 +395,56 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-		    <div class="tags">
-		        <p>tags: <a href="/tag/physics.html">physics</a><a href="/tag/gravity.html">gravity</a></p>
-		    </div>
+        <div class="tags">
+            <p>tags: <a href="/tag/physics.html">physics</a><a href="/tag/gravity.html">gravity</a></p>
+        </div>
 
 <div class="sharing">
 </div>
 <hr>
 
-		<!---->
-		    <!--<div class="comments">-->
-		        <!--<div id="disqus_thread"></div>-->
-		        <!--<script type="text/javascript">-->
-		            <!--var disqus_shortname = 'jwkennington';-->
-		            <!--var disqus_identifier = 'blog/loading-gravitational-wave-data-with-pycbc/';-->
-		            <!--var disqus_url = 'jwkennington.com/blog/loading-gravitational-wave-data-with-pycbc/';-->
-		            <!--(function() {-->
-		                <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
-		                <!--dsq.src = 'https://jwkennington.disqus.com/embed.js';-->
-		                <!--(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
-		            <!--})();-->
-		        <!--</script>-->
-		        <!--<noscript>Please enable JavaScript to view the comments.</noscript>-->
-		    <!--</div>-->
-		<!---->
-			<div id="disqus_thread"></div>
-				<script>
-					
-					var disqus_config = function () {
-						this.page.url = 'https://jwkennington.com/blog/loading-gravitational-wave-data-with-pycbc/';
+        <!---->
+        <!--<div class="comments">-->
+        <!--<div id="disqus_thread"></div>-->
+        <!--<script type="text/javascript">-->
+        <!--var disqus_shortname = 'jwkennington';-->
+        <!--var disqus_identifier = 'blog/loading-gravitational-wave-data-with-pycbc/';-->
+        <!--var disqus_url = 'jwkennington.com/blog/loading-gravitational-wave-data-with-pycbc/';-->
+        <!--(function() {-->
+        <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
+        <!--dsq.src = 'https://jwkennington.disqus.com/embed.js';-->
+        <!--(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
+        <!--})();-->
+        <!--</script>-->
+        <!--<noscript>Please enable JavaScript to view the comments.</noscript>-->
+        <!--</div>-->
+        <!---->
+        <div id="disqus_thread"></div>
+        <script>
 
-						this.page.identifier = 'blog/loading-gravitational-wave-data-with-pycbc/'; 
-					};
-					
-					(function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-						var d = document, s = d.createElement('script');
-						
-						s.src = 'https://jwkennington.disqus.com/embed.js';
-						
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
-					})();
-				</script>
-				<noscript>
-					Please enable JavaScript to view the 
-					<a href="https://disqus.com/?ref_noscript" rel="nofollow">
-						comments powered by Disqus.
-					</a>
-				</noscript>
-	</section>
-	<div class="clearfix"></div>
+            var disqus_config = function () {
+                this.page.url = 'https://jwkennington.com/blog/loading-gravitational-wave-data-with-pycbc/';
+
+                this.page.identifier = 'blog/loading-gravitational-wave-data-with-pycbc/';
+            };
+
+            (function () {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                var d = document, s = d.createElement('script');
+
+                s.src = 'https://jwkennington.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>
+            Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                comments powered by Disqus.
+            </a>
+        </noscript>
+    </section>
+    <div class="clearfix"></div>
 
 </article>
 
@@ -440,6 +452,41 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
 
 <!-- Sidebar -->
 <div class="four columns">
+
+<div class="widget">
+<br>
+<h3 class="headline">Keep Reading</h3>
+<hr>
+<div class="clearfix"></div>
+    <ul>
+        <li>
+            <a href="/blog/quick-python-setup/">
+                Previous: Quick Python Setup
+            </a>
+        </li>
+        <li>
+            <a href="/blog/algebra-ladder/">
+                Next: Algebra Ladder
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+<div class="widget">
+    <br>
+    <h3 class="headline">Related Posts</h3>
+    <hr>
+    <div class="clearfix"></div>
+    <ul>
+        <li><a href="/blog/gravity-of-a-photon/">Gravity of a Photon</a></li>
+        <li><a href="/blog/book-review-tensors-and-group-theory-for-physcists-jeevanjee/">Book Review: Tensors and Group Theory for Physcists (Jeevanjee)</a></li>
+        <li><a href="/blog/tsaps-spring-meeting/">TSAPS Spring Meeting</a></li>
+    </ul>
+</div>
+<br>
+
+
 
     <!-- Categories -->
     <div class="widget no-mg-top">
@@ -459,6 +506,32 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
             </ul>
         </nav>
     </div>
+
+    <div class="widget">
+        <br>
+        <h3 class="headline">Support Me</h3>
+        <hr>
+        <div class="clearfix"></div>
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+        <script type='text/javascript'>kofiwidget2.init('Buy me a soda', '#42acdf', 'Z8Z4RGIA');
+        kofiwidget2.draw();</script>
+    </div>
+    <div class="widget">
+        <br>
+        <h3 class="headline">Subscribe</h3>
+        <hr>
+        <div class="clearfix"></div>
+        <!-- Trigger/Open The Modal -->
+        <div class="btn-container">
+            <a title="Subscribe via Email" class="kofi-button" style="background-color:#42acdf;"
+               href="http://jwkennington.com/pages/subscribe">
+                <span class="kofitext">Subscribe via Email</span>
+            </a>
+        </div>
+    </div>
+    <br>
+
+
 
     <!-- Tags -->
     <div class="widget">
@@ -482,36 +555,6 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
             <a href="/tag/waves.html">waves</a>
         </nav>
     </div>
-    <div class="widget">
-        <br>
-        <h3 class="headline">Support Me</h3>
-        <hr>
-        <div class="clearfix"></div>
-        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
-        <script type='text/javascript'>kofiwidget2.init('Buy me a soda', '#46b798', 'Z8Z4RGIA');
-        kofiwidget2.draw();</script>
-    </div>
-    <div class="widget">
-        <br>
-        <h3 class="headline">Subscribe</h3>
-        <hr>
-        <div class="clearfix"></div>
-        <!-- Trigger/Open The Modal -->
-        <div class="btn-container">
-            <a title="Subscribe via Email" class="kofi-button" style="background-color:#46b798;"
-               href="http://jwkennington.com/pages/subscribe">
-                <span class="kofitext">Subscribe via Email</span>
-            </a>
-        </div>
-    </div>
-    <div class="widget">
-        <br>
-        <span class="line"></span>
-        <div class="clearfix"></div>
-	        <b>Page views: </b>
- 231
-    </div>
-    <br>
 
 </div>
 			</div>
@@ -524,8 +567,7 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
 			<div class="container">
 				<div class="sixteen columns">&copy;
 					Jim Kennington&nbsp &middot &nbsp
-	        <b>Page views: </b>
- 231
+ 242
 &nbsp &middot &nbsp
 <!--						<ul class="social-icons-footer">-->
 <!--								<li >-->

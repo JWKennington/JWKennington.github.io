@@ -4076,8 +4076,12 @@ input.search {
 	background-color: transparent;
 }
 
+.home-left {
+	padding: 1px;
+}
+
 .home-section {
-	padding: 10px;
+	padding: 0px;
 }
 
 .home-subsection {
@@ -4117,10 +4121,31 @@ input.search {
 }
 
 #textlogo {
-	text-align: center;
+	text-align: right;
 	margin-top: .7em;
 }
 
 #footer-bottom {
 	text-align: center;
+}
+
+#navigation {
+	float: left !important;
+}
+
+
+.vertical-line-container {
+	padding: 20px 0px 0px 0px;
+	float: left;
+}
+
+.vertical-line {
+	border-left: 1px solid #0b7bb5;
+	height: 30px;
+	position: absolute;
+	left: 50.75%;
+}
+
+.menu ul > li > a {
+	padding: 28px 18px 22px 18px !important;
 }
