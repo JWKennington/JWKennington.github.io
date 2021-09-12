@@ -209,7 +209,7 @@
         }
 
         .home-section {
-            padding-top: 20px;
+            padding-top: 20px !important;
         }
     }
 
@@ -268,7 +268,7 @@
         }
 
         .home-section {
-            padding-top: 20px;
+            padding-top: 20px !important;
         }
     }
 
