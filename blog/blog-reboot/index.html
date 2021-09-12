@@ -10,11 +10,11 @@
         <meta name="author" content="Jim Kennington">
 
 
-        <title>Jim W. Kennington - Tensor Product for Programmers</title>
+        <title>Jim W. Kennington - Blog Reboot</title>
 
             <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jim W. Kennington Full Atom Feed" />
             <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Jim W. Kennington Full RSS Feed" />
-            <link href="/feeds/maths.atom.xml" type="application/atom+xml" rel="alternate" title="Jim W. Kennington Categories Atom Feed" />
+            <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Jim W. Kennington Categories Atom Feed" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="/theme/css/style.css?v=1.0.2">
@@ -39,16 +39,16 @@
 
 
 
-<meta name="tags" contents="maths"/>
-<meta name="tags" contents="tensors"/>
+<meta name="tags" contents="misc"/>
+<meta name="tags" contents="general"/>
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tensor Product for Programmers">
-<meta property="og:url" content="blog/tensor-product-for-programmers/">
-<meta property="og:description" content="The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. Tensors are defined …">
-<meta property="article:published_time" content="Monday, April 15, 2019">
-<meta name="twitter:title" content="Tensor Product for Programmers">
-<meta name="twitter:description" content="The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. Tensors are defined …">
-<meta name="description" content="The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. Tensors are defined …">
+<meta property="og:title" content="Blog Reboot">
+<meta property="og:url" content="blog/blog-reboot/">
+<meta property="og:description" content="After completing the first year of graduate school (post on the industry \(\to\) grad school transition forthcoming), I&#39;ve finally got time to reboot the blog, with more focus. I&#39;ll be posting on a \(\sim\)weekly basis about the interesting topics I come across in the course of research, class, and …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
+<meta property="article:published_time" content="Sunday, September 12, 2021">
+<meta name="twitter:title" content="Blog Reboot">
+<meta name="twitter:description" content="After completing the first year of graduate school (post on the industry \(\to\) grad school transition forthcoming), I&#39;ve finally got time to reboot the blog, with more focus. I&#39;ll be posting on a \(\sim\)weekly basis about the interesting topics I come across in the course of research, class, and …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
+<meta name="description" content="After completing the first year of graduate school (post on the industry \(\to\) grad school transition forthcoming), I&#39;ve finally got time to reboot the blog, with more focus. I&#39;ll be posting on a \(\sim\)weekly basis about the interesting topics I come across in the course of research, class, and …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
 <meta name="twitter:image" content="">
 <meta property="og:image" content="">
 
@@ -57,11 +57,11 @@
 
 <meta property="og:type" content="article">
 <meta property="article:author" content="">
-<meta property="og:url" content="/blog/tensor-product-for-programmers/">
-<meta property="og:title" content="Tensor Product for Programmers">
+<meta property="og:url" content="/blog/blog-reboot/">
+<meta property="og:title" content="Blog Reboot">
 <meta property="og:description" content="">
 <meta property="og:image" content="/images/guilherme-toti.jpg">
-<meta property="article:published_time" content="2019-04-15 00:00:00-05:00">
+<meta property="article:published_time" content="2021-09-12 00:00:00-05:00">
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-135655259-1']);
@@ -81,8 +81,8 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-135655259-1', {
-        'page_title' : 'blog/tensor-product-for-programmers/index.html',
-        'page_path': 'blog/tensor-product-for-programmers/index.html'
+        'page_title' : 'blog/blog-reboot/index.html',
+        'page_path': 'blog/blog-reboot/index.html'
       });
     </script>
 	</head>
@@ -148,37 +148,36 @@
     <section class="post-content">
 
         <header class="meta">
-            <h2><a href="/blog/tensor-product-for-programmers/">Tensor Product for Programmers</a></h2>
+            <h2><a href="/blog/blog-reboot/">Blog Reboot</a></h2>
             <ul>
                 <li>By <a href="/author/jim-kennington.html">Jim Kennington</a>                </li>
-                <li>Mon 15 April 2019</li>
+                <li>Sun 12 September 2021</li>
             </ul>
         </header>
 
-        <p>The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. </p>
-<p>Tensors are defined and introduced in two equivalent ways. The first way, called the "expansion coefficient" (or array) style of introducing tensors relies on many indices and iterates over the n dimensions of some array (n-dimensional generalization of a matrix) <a href='#wikipediaTensorMultidimensionalArrays2019' id='ref-wikipediaTensorMultidimensionalArrays2019-1'>Wikipedia (2019)</a>. I have found this approach to be overly cluttered; missing the forest for the trees. Instead, I prefer the second way of defining tensors, namely as "multilinear maps" <a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'>Roman (2007)</a> <a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'>Jeevanjee (2015)</a>. This technique focuses on functions and interfaces, as opposed to components, and will be the chosen method of explaining below. </p>
-<p>Before we begin, a brief note about preferences between the "coefficient" and "multilinear" approaches. The latter way has found greater resonance with mathematicians, while programmers often find the former more comforting. I believe this is caused by an over-reliance on data structures as atomic units of understanding. True, it is natural as a developer to ask "but what <em>is</em> the object"; however, using more functional-programming style of thought, the multilinear map approach is actually simpler! No need to keep track of various coefficients on various axes of some imaginary n-dimensional array (leave that to <code>numpy</code>). In the below, I outline a functional-programming style analogy for tensors, and the tensor product. Thought the below snippets are in python, some details are left to the imagination (i.e. this code is not a script).</p>
-<h3>Setting the Stage</h3>
-<p>Before we get to define tensors, we need to briefly define a few building blocks. First, there is a field <span class="math">\(C\)</span>, commonly the reals <span class="math">\(\mathbb{R}\)</span>, occasionally the complex numbers <span class="math">\(\mathbb{C}\)</span>. Members of <span class="math">\(C\)</span> are called <em>scalars</em> and are represented in the code by the type <code>scalar</code>. Second, there are vector spaces <span class="math">\(V\)</span> over this field, with the usual properties of closure under addition and scalar multiplication. Elements of <span class="math">\(V\)</span> are of type <code>vector</code>. Note, I am not specifying a vector as a tuple of scalars - though that is a valid vector space, there are others based on non-tuple like entities, like the vector space of square-integrable functions! The last piece of machinery is the dual space <span class="math">\(V^*\)</span>. If you're not familiar with the dual space, it is essentially the set of all linear functions that take 1 vector and spit out a scalar (specifically <span class="math">\(V^* = \{f: V\rightarrow C\}\)</span> where <span class="math">\(f\)</span> is linear). Elements of <span class="math">\(V^*\)</span> are of type <code>dual</code>.</p>
-<h4>Some dual vectors</h4>
-<p>Recall that dual vectors are functions that take a vector and return a scalar. Let <span class="math">\(f, g \in V^*\)</span>. In code:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="n">vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scalar</span><span class="p">:</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">w</span><span class="p">:</span> <span class="n">vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scalar</span><span class="p">:</span>
-    <span class="k">pass</span>
-</pre></div>
-
-
-<h4>Tensor Product</h4>
-<p>Now let's define the tensor product of <span class="math">\(f\)</span> and <span class="math">\(g\)</span> as <span class="math">\(h = f \otimes g\)</span>. What this amounts to, is combining the functional interface into a new, single tensor (function), that curries to the functions it was made from! Specifically:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">vector</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scalar</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-
-
-<p>In some sense, the tensor (or outer) product is like a concatenation operation, that joins functions together, using the superset of arguments, and passing those arguments back to the original functions returning a scalar! This definition is easy!</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%&#64;#$&#64;#')) {
+        <p>After completing the first year of graduate school (post on the industry <span class="math">\(\to\)</span> grad school transition forthcoming), I've
+finally got time to reboot the blog, with more focus. I'll be posting on a <span class="math">\(\sim\)</span>weekly basis about the interesting topics I come across in the course of research, class, and 
+general academic meandering. Renewed areas of focus will include various mathematical, physical, or programming topics, 
+such as:</p>
+<ul>
+<li>Unravelling bundles (as in fibre bundles)</li>
+<li>Wormhole solutions in GR and energy conditions</li>
+<li>Managing environments in Python and developer workflows</li>
+</ul>
+<p><br>
+I will also attempt some recurring installations, such as:</p>
+<ul>
+<li><em>Fermi Figures</em> - playful posts about solving various back-of-the-envelope questions </li>
+<li><em>Enthralling Theorem</em> - spotlight of an interesting theorem / mathematical fact</li>
+<li><em>Found this week</em> - weekly interesting discoveries, clearly and heavily inspired by the famous 
+<a href="https://math.ucr.edu/home/baez/TWF.html">"This week's finds"</a> - an asymptote I only hope to approach over time. </li>
+</ul>
+<p><br>
+Please <a href="/pages/subscribe">subscribe</a> if you like what you find, and feel free to 
+<a href="mailto:jwkennington.web@psu.edu?subject=Blog%20Post%20Suggestion">suggest</a> topics for future posts </p>
+<p>Also, the recommended <a href="/pages/texts-physics">physics</a> and <a href="/pages/texts-math">maths</a> references pages have been 
+thoroughly updated (they were quite stale).</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
         linebreak = "false";
@@ -190,7 +189,7 @@
     }
 
     var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%&#64;#$&#64;#';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
 
@@ -239,23 +238,9 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script><hr>
-<h3>Bibliography</h3>
-<p id='jeevanjeeIntroductionTensorsGroup2015'>Nadir Jeevanjee.
-<em>An Introduction to Tensors and Group Theory for Physicists</em>.
-<span class="bibtex-protected">Springer Science+Business Media</span>, <span class="bibtex-protected">New York, NY</span>, 2015.
-ISBN 978-3-319-14793-2. <a class="cite-backref" href="#ref-jeevanjeeIntroductionTensorsGroup2015-1" title="Jump back to reference 1">↩</a></p>
-<p id='romanAdvancedLinearAlgebra2007'>Steven Roman.
-<em>Advanced Linear Algebra</em>.
-Number&nbsp;135 in Graduate Texts in Mathematics.
-<span class="bibtex-protected">Springer</span>, <span class="bibtex-protected">New York</span>, 3rd ed edition, 2007.
-ISBN 978-0-387-72828-5. <a class="cite-backref" href="#ref-romanAdvancedLinearAlgebra2007-1" title="Jump back to reference 1">↩</a></p>
-<p id='wikipediaTensorMultidimensionalArrays2019'>Wikipedia.
-Tensor, as multidimensional arrays.
-<em>Wikipedia</em>, April 2019. <a class="cite-backref" href="#ref-wikipediaTensorMultidimensionalArrays2019-1" title="Jump back to reference 1">↩</a></p>
-
+</script>
         <div class="tags">
-            <p>tags: <a href="/tag/maths.html">maths</a><a href="/tag/tensors.html">tensors</a></p>
+            <p>tags: <a href="/tag/misc.html">misc</a><a href="/tag/general.html">general</a></p>
         </div>
 
 <div class="sharing">
@@ -267,8 +252,8 @@ Tensor, as multidimensional arrays.
         <!--<div id="disqus_thread"></div>-->
         <!--<script type="text/javascript">-->
         <!--var disqus_shortname = 'jwkennington';-->
-        <!--var disqus_identifier = 'blog/tensor-product-for-programmers/';-->
-        <!--var disqus_url = 'jwkennington.com/blog/tensor-product-for-programmers/';-->
+        <!--var disqus_identifier = 'blog/blog-reboot/';-->
+        <!--var disqus_url = 'jwkennington.com/blog/blog-reboot/';-->
         <!--(function() {-->
         <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
         <!--dsq.src = 'https://jwkennington.disqus.com/embed.js';-->
@@ -282,9 +267,9 @@ Tensor, as multidimensional arrays.
         <script>
 
             var disqus_config = function () {
-                this.page.url = 'https://jwkennington.com/blog/tensor-product-for-programmers/';
+                this.page.url = 'https://jwkennington.com/blog/blog-reboot/';
 
-                this.page.identifier = 'blog/tensor-product-for-programmers/';
+                this.page.identifier = 'blog/blog-reboot/';
             };
 
             (function () {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
@@ -319,13 +304,8 @@ Tensor, as multidimensional arrays.
 <div class="clearfix"></div>
     <ul>
         <li>
-            <a href="/blog/tsaps-spring-meeting/">
-                Previous: TSAPS Spring Meeting
-            </a>
-        </li>
-        <li>
-            <a href="/blog/tensor-type-notation/">
-                Next: Tensor Type Notation
+            <a href="/blog/algebra-ladder/">
+                Previous: Algebra Ladder
             </a>
         </li>
     </ul>
@@ -338,9 +318,6 @@ Tensor, as multidimensional arrays.
     <hr>
     <div class="clearfix"></div>
     <ul>
-        <li><a href="/blog/tensor-type-notation/">Tensor Type Notation</a></li>
-        <li><a href="/blog/algebra-ladder/">Algebra Ladder</a></li>
-        <li><a href="/blog/erasing-efficiently/">Erasing Efficiently</a></li>
     </ul>
 </div>
 <br>
@@ -357,9 +334,9 @@ Tensor, as multidimensional arrays.
                 <li
 ><a href="/category/books.html">Books</a></li>
                 <li
- class="active" ><a href="/category/maths.html">Maths</a></li>
+><a href="/category/maths.html">Maths</a></li>
                 <li
-><a href="/category/misc.html">Misc</a></li>
+ class="active" ><a href="/category/misc.html">Misc</a></li>
                 <li
 ><a href="/category/physics.html">Physics</a></li>
                 <li
@@ -391,7 +368,6 @@ Tensor, as multidimensional arrays.
         </div>
     </div>
     <br>
-
 
 
     <!-- Tags -->
@@ -430,7 +406,7 @@ Tensor, as multidimensional arrays.
 			<div class="container">
 				<div class="sixteen columns">&copy;
 					Jim Kennington&nbsp &middot &nbsp
- 544
+ 6
 &nbsp &middot &nbsp
 <!--						<ul class="social-icons-footer">-->
 <!--								<li >-->
