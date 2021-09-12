@@ -76,8 +76,7 @@ the vector cross product instead of $A \times B$.
 ##### [Griffiths - _Introduction to Electrodynamics_](https://amzn.to/2LjSvF7) (I)
 
 Standard undergraduate level text on E&M, frequently used for upper-division courses on electricity and magnetism.
-Interestingly, doesn't include much on circuits. New edition has a chapter about symmetries and conserved quantities,
-a nice introduction to Noethers theorem. 
+Interestingly, doesn't include much on circuits. 
 
 ##### [Jackson - _Classical Electrodynamics_](https://amzn.to/2PO7rdk) (A)
 
@@ -135,63 +134,121 @@ Standard, in-depth reference on numerical relativity.
 ### Quantum Gravity (QG)
 <hr>
 
+##### [Baez - _Gauge Fields, Knots, and Gravity_](https://amzn.to/2Xd7wis) (I)
+
+If you can read one introductory book on gravity, make it this book. Baez has the unique ability to present enough detail
+to give the interested reader a foothold in related mathematical subjects while staying high-level enough to provide
+a coherent overview of the many related fields that appear in quantum gravity. Introduces vector field functional 
+formalism, gauge fields and relations to local symmetries, elements of knot theory including crossings and windings,
+and how these apply to (loop) quantum gravity.
+
 ##### [Pullin - _A First Course in Loop Quantum Gravity_](https://amzn.to/3hqTsZP) (I)
 
-Summary
+A friendly introduction to LQG that doesn't assume prior familiarity with either GR or QFT. While this book doesn't 
+go into a great deal of depth, it provides a concise, high-level view of what loop quantum gravity is and how it 
+fits into the landscape of theoretical physics.
 
 ##### [Rovelli - _Covariant Loop Quantum Gravity_](https://amzn.to/2WnIZBV) (M)
 
-Summary
+A high-level text that introduces more detailed structure than the text above; however, this is mostly a summary for 
+new researchers in the field that have some familiarity with LQG. Carlo's inimitable style makes this an enjoyable read.
 
 ##### [Rovelli - _Quantum Gravity_](https://amzn.to/3hk5jZJ) (M)
 
-Summary
+Graduate level text on loop quantum gravity; the starting point for any serious reading into LQG. Jumps pretty quickly
+past the GR essentials and into the tetrad formalism, introduces the concept of spin networks, intertwiners.
 
 ##### [Ashtekar - _Lectures on Non-Perturbative Canonical Gravity_](https://amzn.to/3nlPu8J) (M)
 
-Summary
+Excellent set of lecture notes from the eponymous discoverer of the spinorial formulation of GR. These are a must-have 
+for any LQG reader.
 
 ##### [Thiemann - _Modern Canonical Quantum General Relativity_](https://amzn.to/3EcBOmc) (A)
 
-Summary
+The rigorous complement to Rovelli, a monolithic volume of mathematical detail. Discusses details of spaces of connections,
+bundle structures, and other aspects of the mathematical details of LQG.
+
+##### [Gambini, Pullin - _Loops, Knots, Gauge Theories and Quantum Gravity_](https://amzn.to/3twQaZQ) (A)
+
+Excellent, detailed reference for loop representations with applications to gauge theories and lattice techniques. Discusses
+applications to gravity including braid theories. Predates Rovelli and Thiemann, so final chapter is mostly interesting
+for understanding development of the current theory.
+
 
 <br>
 
 ### Mathematical Physics
 <hr>
 
+##### [Jeevanjee - _An Introduction to Tensors and Group Theory for Physicists_](https://amzn.to/3k0lSvw) (I)
+
+Excellent introduction to the theory of groups and tensors, aimed at physics students. Self contained, Jeevanjee (properly)
+introduces tensors as multilinear maps, and derives all the familiar behavior including transformation "rules" and index
+mechanics. Introduces key concepts from Lie theory with just-enough rigor to prepare reader for further study, includes 
+many examples from physics including SU(2), SO(3) and others. Introduces representations in a clear way as well. Cannot
+recommend highly enough.
+
 ##### [Arfken - _Mathematical Methods for Physicists_](https://amzn.to/2DOLNk7) (I)
 
-Summary
+Standard reference text at the undergraduate level for mathematical methods. Has many examples of each technique introduced,
+but doesn't introduce certain topics from the graduate level such as integral regularization.
+
+##### [Balakrishnan - _Mathematical Physics: Applications and Problems_](https://amzn.to/392b49Y) (M)
+
+Graduate level reference on mathematical methods from a renowned author of mathematical physics books. Goes into more 
+depth than Arfken (as expected), including functional analysis, operators and algebras. Covers distributional derivatives.
 
 ##### [Rudolph, Schmidt - _Differential Geometry and Mathematical Physics: Part I. Manifolds, Lie Groups and Hamiltonian Systems_](https://amzn.to/2YNMsQm) (A)
 
-Summary
+Great, verbose reference for differential geometry and applications to physics. The first part covers manifolds and elementary lie theory
+with applications to Lagrangian mechanics. 
 
 ##### [Rudolph, Schmidt - _Differential Geometry and Mathematical Physics: Part II. Fibre Bundles, Topology and Gauge Fields_](https://amzn.to/3hptFkO) (A)
 
-Summary
+Second volume of a great reference on differential geometry, covering aspects that are often missing from gravitation texts
+including fiber and principal bundles, Clifford algebras and spin geometry, and gauge theory.
 
 <br>
 
 ### Quantum Mechanics
 <hr>
 
-##### [Feynman and Hibbs - _Quantum Mechanics and Path Integrals_](https://amzn.to/2Y3TSsV) (A)
-
-Summary
 
 ##### [Griffiths - _Introduction to Quantum Mechanics_](https://amzn.to/2DOAMiT) (I)
 
-Summary
+Ubiquitous undergraduate text on quantum mechanics, covering the standard sequence of "shutup and calculate" quantum
+mechanics. Wavefunctions, some (unfortunately Copenhagen) interpretation, simple potentials, and basic properties 
+of quantum systems. New edition has a chapter about symmetries and conserved quantities,
+a nice introduction to Noethers theorem.
 
-##### [Sakurai - _Modern Quantum Mechanics_](https://amzn.to/2WiTnL8) (A)
+##### [Cohen-Tannoudjhi - _Quantum Mechanics_]() (M)
 
-Summary
+Three volume series at the graduate level on all aspects of quantum mechanics. Incredibly thorough, Cohen shows details
+that are omitted from most other quantum mechanics texts. The many supplemental chapters work through examples that 
+bring a higher degree of clarity to QM topics. Volumes I and II cover standard graduate level quantum mechanics, formalism
+and simple potentials, angular momentum and algebraic implications, 
+
 
 ##### [Shankar - _Principles of Quantum Mechanics_](https://amzn.to/2VHqfA5) (M)
 
-Summary
+Intermediate reference text on the mathematical aspects of quantum mechanics. Still focused largely on particle-based 
+non-relativistic systems. More rigorous references included in "Quantum Theory" section below.
+
+
+##### [Feynman and Hibbs - _Quantum Mechanics and Path Integrals_](https://amzn.to/2Y3TSsV) (A)
+
+Accessible introduction to the path integral formulation of quantum mechanics from the inimitable Feynman (who created
+the path integral approach). 
+
+
+##### [Sakurai - _Modern Quantum Mechanics_](https://amzn.to/2WiTnL8) (A)
+
+Included for completeness, a standard graduate-level text. Much more terse than Cohen. The author only wrote the first three
+chapters, then the rest of the text was written posthumously from lecture notes by collaborators - I include this detail
+because it explains why the first three chapters are the best in the book - formalism, dynamics, and angular momentum. The 
+remaining material I would recommend sourcing elsewhere.
+
+
 
 <br>
 
@@ -200,23 +257,23 @@ Summary
 
 ##### [Zee - _Quantum Field Theory in a Nutshell_](https://amzn.to/2LAQ5Cj) (M)
 
-Summary
+Approachable introduction in a relaxed style, Zee provides a clear presentation of QFT essentials.
 
 ##### [Peskin, Shroeder - _An Introduction to Quantum Field Theory_](https://amzn.to/3A8iZ1o) (M)
 
-Summary
+The standard, graduate level reference used in QFT courses.
 
 ##### [DeWitt - _The Global Approach to Quantum Field Theory_](https://amzn.to/3k2pyNe) (A)
 
-Summary
+Insightful two-volume set taking a unique approach to developing QFT.
 
 ##### [Weinberg - _The Quantum Theory of Fields_](https://amzn.to/391bltK) (A)
 
-Summary
+Standard rigorous reference on QFT.
 
 ##### [Coleman - _Lectures of Sidney Coleman on Quantum Field Theory_](https://amzn.to/3k1Mz2I) (A)
 
-Summary
+Set of advanced lectures from a renowned elucidator of QFT.
 
 <br>
 
@@ -225,40 +282,48 @@ Summary
 
 ##### [Norsen - _Foundations of Quantum Mechanics: An Exploration of the Physical Meaning of Quantum Theory_](https://amzn.to/3E96yos) (I)
 
-Summary
+Accessible introduction to a field often omitted from the standard physics education - interpreting quantum theory. Norsen presents
+the main interpretations, Copenhagen, Many Worlds, Bohmian, Spontaneous Collapse. Excellently introduces ontological considerations
+as well as the measurement problem.
 
 ##### [Woit - _Quantum Theory, Groups and Representations: An Introduction_](https://amzn.to/3Eced59) (A)
 
-Summary
+Rigorous, unconventional approach to developing quantum theory. Woit eschews the standard approach of introducing classical 
+systems first, then 'quantising' these systems with bad analogies. Instead, Woit develops intuition around the algebraic
+nature of quantum theory using examples that have no classical analogues. Excellent text with unique perspective.
 
 ##### [Hall - _Quantum Theory for Mathematicians_](https://amzn.to/3leLLam) (A)
 
-Summary
+Rigorous introduction to quantum theory aimed at mathematicians, using a Hilbert-space approach. Covers the role of Lie
+theory in quantum mechanics as well as a more rigorous presentation of path integrals.
 
 ##### [Landsman - _Foundations of Quantum Theory: From Classical Concepts to Operator Algebras _](https://amzn.to/3tzTxzg) (A)
 
-Summary
+Detailed (read: thick) exposition of operator algebras and the connection to classical Poisson structures.
 
 <br>
 
 ### Statistical Mechanics & Thermodynamics
 <hr>
 
+I've not found a thermo book that included everything satisfactorily, but below are some that I've used in various courses.
+
 ##### [Schroeder - _Introduction to Thermal Physics_](https://amzn.to/2VECzkP) (I)
 
-Summary
+Standard undergraduate thermodynamics book.
 
 ##### [Kardar - _Statistical Physics of Particles_](https://amzn.to/3tyY5FU) (M)
 
-Summary
+Clear, concise statistical mechanics and thermodynamics book at the graduate level. Derives the laws of thermodynamics in an
+abstract setting, includes several unique derivations (some are probably worth skipping).
 
 ##### [Kardar - _Statistical Physics of Fields_](https://amzn.to/3tAoPpR) (A)
 
-Summary
+Follow up volume to the one above, excellent discussion of Landau principles. 
 
 ##### [Balakishnan - _Elements of Nonequilibrium Statistical Mechanics_](https://amzn.to/2DNnUcC) (M)
 
-Summary
+Great reference on nonequilibrium systems and their statistical properties.
 
 
 <br>
