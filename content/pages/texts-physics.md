@@ -297,7 +297,7 @@ nature of quantum theory using examples that have no classical analogues. Excell
 Rigorous introduction to quantum theory aimed at mathematicians, using a Hilbert-space approach. Covers the role of Lie
 theory in quantum mechanics as well as a more rigorous presentation of path integrals.
 
-##### [Landsman - _Foundations of Quantum Theory: From Classical Concepts to Operator Algebras _](https://amzn.to/3tzTxzg) (A)
+##### [Landsman - _Foundations of Quantum Theory: From Classical Concepts to Operator Algebras_](https://amzn.to/3tzTxzg) (A)
 
 Detailed (read: thick) exposition of operator algebras and the connection to classical Poisson structures.
 
