@@ -4149,3 +4149,16 @@ input.search {
 .menu ul > li > a {
 	padding: 28px 18px 22px 18px !important;
 }
+
+.solution-button {
+	background-color: #42acdf;
+	color: #fff;
+	padding: 2px 12px !important;
+	text-align: center !important;
+	border-radius: 7px;
+	overflow-wrap: break-word;
+	vertical-align: middle;
+	border: 0 none #fff !important;
+	cursor: pointer;
+	font-weight: 700!important;
+}

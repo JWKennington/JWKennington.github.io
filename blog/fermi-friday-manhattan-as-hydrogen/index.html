@@ -10,7 +10,7 @@
         <meta name="author" content="Jim Kennington">
 
 
-        <title>Jim W. Kennington - Gravity of a Photon</title>
+        <title>Jim W. Kennington - Fermi Friday: Manhattan as Hydrogen</title>
 
             <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jim W. Kennington Full Atom Feed" />
             <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Jim W. Kennington Full RSS Feed" />
@@ -39,16 +39,15 @@
 
 
 
-<meta name="tags" contents="physics"/>
-<meta name="tags" contents="gravity"/>
+<meta name="tags" contents="fermi-problem"/>
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gravity of a Photon">
-<meta property="og:url" content="blog/gravity-of-a-photon/">
-<meta property="og:description" content="A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity. Specifically, he asked how the presence of electromagnetic fields impacts the gravitational field. Applying some modern-physics reasoning, he proposed that electromagnetic fields should exert gravitational influence because photons have momentum that can be …">
-<meta property="article:published_time" content="Saturday, June 15, 2019">
-<meta name="twitter:title" content="Gravity of a Photon">
-<meta name="twitter:description" content="A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity. Specifically, he asked how the presence of electromagnetic fields impacts the gravitational field. Applying some modern-physics reasoning, he proposed that electromagnetic fields should exert gravitational influence because photons have momentum that can be …">
-<meta name="description" content="A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity. Specifically, he asked how the presence of electromagnetic fields impacts the gravitational field. Applying some modern-physics reasoning, he proposed that electromagnetic fields should exert gravitational influence because photons have momentum that can be …">
+<meta property="og:title" content="Fermi Friday: Manhattan as Hydrogen">
+<meta property="og:url" content="blog/fermi-friday-manhattan-as-hydrogen/">
+<meta property="og:description" content="For this week&#39;s installment of Fermi estimation, the question of interest is: How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan? To estimate the burn-time \(\tau\) we&#39;ll need to guess at a few quantities: the above-ground mass of Manhattan, the solar luminosity …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
+<meta property="article:published_time" content="Friday, September 17, 2021">
+<meta name="twitter:title" content="Fermi Friday: Manhattan as Hydrogen">
+<meta name="twitter:description" content="For this week&#39;s installment of Fermi estimation, the question of interest is: How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan? To estimate the burn-time \(\tau\) we&#39;ll need to guess at a few quantities: the above-ground mass of Manhattan, the solar luminosity …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
+<meta name="description" content="For this week&#39;s installment of Fermi estimation, the question of interest is: How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan? To estimate the burn-time \(\tau\) we&#39;ll need to guess at a few quantities: the above-ground mass of Manhattan, the solar luminosity …if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
 <meta name="twitter:image" content="">
 <meta property="og:image" content="">
 
@@ -57,11 +56,11 @@
 
 <meta property="og:type" content="article">
 <meta property="article:author" content="">
-<meta property="og:url" content="/blog/gravity-of-a-photon/">
-<meta property="og:title" content="Gravity of a Photon">
+<meta property="og:url" content="/blog/fermi-friday-manhattan-as-hydrogen/">
+<meta property="og:title" content="Fermi Friday: Manhattan as Hydrogen">
 <meta property="og:description" content="">
 <meta property="og:image" content="/images/guilherme-toti.jpg">
-<meta property="article:published_time" content="2019-06-15 00:00:00-05:00">
+<meta property="article:published_time" content="2021-09-17 00:00:00-05:00">
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-135655259-1']);
@@ -81,8 +80,8 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-135655259-1', {
-        'page_title' : 'blog/gravity-of-a-photon/index.html',
-        'page_path': 'blog/gravity-of-a-photon/index.html'
+        'page_title' : 'blog/fermi-friday-manhattan-as-hydrogen/index.html',
+        'page_path': 'blog/fermi-friday-manhattan-as-hydrogen/index.html'
       });
     </script>
 	</head>
@@ -148,50 +147,119 @@
     <section class="post-content">
 
         <header class="meta">
-            <h2><a href="/blog/gravity-of-a-photon/">Gravity of a Photon</a></h2>
+            <h2><a href="/blog/fermi-friday-manhattan-as-hydrogen/">Fermi Friday: Manhattan as Hydrogen</a></h2>
             <ul>
                 <li>By <a href="/author/jim-kennington.html">Jim Kennington</a>                </li>
-                <li>Sat 15 June 2019</li>
+                <li>Fri 17 September 2021</li>
             </ul>
         </header>
 
-        <p>A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity.
-Specifically, he asked how the presence of electromagnetic fields impacts the gravitational field. Applying some modern-physics
-reasoning, he proposed that electromagnetic fields should exert gravitational influence because photons have momentum that
-can be viewed as mass in special relativity, and should interact gravitationally. I found this idea interesting, if a bit
-interpretive, and answered with the precise formulation of the impact of the electromagnetic field on the curvature tensor.
-He suggested I post this response in case anyone else finds it interesting; to colleagues working in classical or quantum gravity
-this might appear a bit pedestrian.</p>
-<p>The Einstein field equation (below) is arguably the most famous equation in gravity theory, second perhaps to Newton's inverse-square
-law, and despite its seemingly-complex tensorial notation, expresses a beautifully elegant and simple concept. For those less
-familiar, Einstein's general relativity reformulates gravitational interaction as a manifestation of the curvature of spacetime.
-Specifically, Einstein's formulation makes concrete the relationship between the curvature of spacetime and the mass-energy content
- of spacetime <a href='#misnerGravitation2017' id='ref-misnerGravitation2017-1'>Misner et al. (2017)</a>.</p>
-<div class="math">$$R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu} \quad\quad\quad(1)$$</div>
-<p>In the above equation (Einstein equation), the left-hand side contains terms related to curvature of spacetime, like the Ricci
-tensor <span class="math">\(R_{\mu\nu}\)</span>  and the metric <span class="math">\(g_{\mu\nu}\)</span>. The right-hand side contains terms related to energy and matter content,
-specifically <span class="math">\(T_{\mu\nu}\)</span>. This latter term, called the <em>stress-energy</em> tensor, is where the connection to the electromagnetic
-field appears.</p>
-<p>Various forms of matter contribute differently to the stress-energy tensor, and electromagnetic energy is no exception. The
-equation below outlines the way in which the electromagnetic field contributes to the stress energy density of a particular
-area of spacetime.</p>
-<div class="math">$$T^{\mu\nu} = \frac{1}{\mu_0}\left[F^{\mu\alpha}F^{\nu}{}_{\alpha} - \frac{1}{4} g^{\mu\nu}F_{\alpha\beta}F^{\alpha\beta} \right] \quad\quad\quad(2)$$</div>
-<p>Where <span class="math">\(F_{\mu\nu}\)</span> is the electromagnetic field tensor, also called the <em>Faraday</em> tensor, where <span class="math">\(\mathbf{E} = E^i e_i\)</span> and
-<span class="math">\(\mathbf{B} = B^i e_i\)</span> are the familiar electric and magnetic vector fields. Note that in the below, I adopt the <span class="math">\(c=1\)</span>
-convention for convenience <a href='#carrollSpacetimeGeometryIntroduction2013' id='ref-carrollSpacetimeGeometryIntroduction2013-1'>Carroll (2013)</a>.</p>
-<div class="math">$$F^{\mu\nu} =
-\begin{bmatrix}
-    0 &amp; -E^x &amp; -E^y &amp; -E^z \\
-    E^x &amp; 0 &amp; -B^z &amp; B^y \\
-    E^y &amp; B^z &amp; 0 &amp; -B^x \\
-    E^z &amp; -B^y &amp; B^x &amp; 0 \\
-\end{bmatrix} \quad\quad\quad(3)$$</div>
-<p>Thus, equation (2) tells us how the electromagnetic fields we are familiar with, namely <span class="math">\(\mathbf{E}\)</span> and <span class="math">\(\mathbf{B}\)</span>,
-contribute to the energy density of a region of spacetime. Then equation (1) builds on that result to relate the
-electromagnetic fields to the curvature of spacetime, which as Einstein revealed, manifests as the gravitational field. So
-yes, the conventional electromagnetic fields, and the photons that constitute them, impact the gravitational field despite
-having no rest mass!</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%&#64;#$&#64;#')) {
+        <p>For this week's installment of Fermi estimation, the question of interest is:</p>
+<blockquote>
+<p>How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan?</p>
+</blockquote>
+<p>To estimate the burn-time <span class="math">\(\tau\)</span> we'll need to guess at a few quantities: the above-ground mass of Manhattan, the solar
+luminosity (total energy emitted from the sun), and fraction of energy emitted from the core of the sun that makes it 
+to the surface.</p>
+<h3>Mass of Manhattan</h3>
+<p>We will estimate the above-ground mass <span class="math">\(m\)</span> of Manhattan by computing a rough volume <span class="math">\(V\)</span> and density <span class="math">\(\rho\)</span>, then using the 
+familiar relation <span class="math">\(m=\rho V\)</span>. To compute the volume we make some assumptions. First, we represent the average number of 
+stories of a building in Manhattan as <span class="math">\(n_{s}\)</span>, the height of a story as <span class="math">\(h_{s}\)</span>, and the number of buildings in Manhattan
+as <span class="math">\(n_{b}\)</span>. For simplicity, we assume each building to have a square base of length <span class="math">\(b_{s}\)</span>, then the total volume of 
+buildings in Manhattan <span class="math">\(V_{\text{M}}\)</span> is:</p>
+<div class="math">$$V_{\text{M}} = n_{b} n_{s} h_{s} b_{s}^2$$</div>
+<p>Computing the density will be a little easier. If we assume that each building is roughly a shell of concrete, then concrete
+will compose a fraction <span class="math">\(f_{c}\)</span> of the building. Given the density of concrete <span class="math">\(\rho_{c}\)</span>, the density of Manhattan <span class="math">\($ 
+will be $\rho_{\text{M}} = f_c \rho_{c}\)</span>. Plugging this in to get the above-ground mass of Manhattan:</p>
+<div class="math">$$m_{\text{M}} = V_{\text{M}} \rho_{\text{M}} = n_{b} n_{s} h_{s} b_{s}^2 f_c \rho_{c}$$</div>
+<h3>Solar Luminosity</h3>
+<p>Using the temperature <span class="math">\(T_{\odot}\)</span> and radius <span class="math">\(R_{\odot}\)</span> of the sun, and approximating the Sun as a blackbordy, we can 
+use the Stefan-Boltzman law. This law relates the temperature <span class="math">\(T\)</span> and surface area <span class="math">\(A\)</span> of a blackbody to the total 
+energy output <span class="math">\(\mathcal{L}\)</span> of the object: <span class="math">\(\mathcal{L} = \sigma A T^4\)</span>. For simplicity, we assume the sun to be a perfect
+sphere, then:</p>
+<div class="math">$$\mathcal{L}_{\odot} = 4 \pi \sigma R_{\odot}^2 T_{\odot}^4$$</div>
+<h3>Burn Rate</h3>
+<p>THe solar luminosity tells us how much energy per unit time is emitted from the sun. If we want to know how much
+mass is consumed to produce that energy, we need to understand how much energy is produced in the fusion of Hydrogen.
+Using a simple approximation, 4 Hydrogen atoms are converted into 1 Helium atom. The difference in total mass is due
+to the energy released by the process, which we can estimate using Einstein's famous relation: <span class="math">\(E=mc^2\)</span>. Therefore, 
+the reaction energy <span class="math">\(E_{r}\)</span> is a function of the change in reactant mass <span class="math">\(\Delta m_r = 4 m_{\text{H}} - m_{\text{He}}\)</span>, 
+which gives us an expression for the unit energy <span class="math">\(E_{\text{H}}\)</span>.  </p>
+<div class="math">$$E_{\text{H}} = \frac{E_r}{m_{\text{H}}} = \left(4 - \frac{m_{\text{He}}}{m_{\text{H}}} \right) c^2$$</div>
+<p>We can now compute the burn rate by unit analysis. If the luminosity gives (energy / time) and the 
+unit reaction energy gives (energy / mass), then in order to get the burn rate in terms of (mass / time) we need
+to divide the luminosity by the unit reaction rate:</p>
+<div class="math">$$r_{\text{burn}} = \frac{\mathcal{L}}{E_{\text{H}}}$$</div>
+<h3>Solution</h3>
+<p>Putting the above expressions together, we arrive at the burn-time:</p>
+<div class="math">$$\tau_{\text{burn}} = \frac{m_{\text{M}}}{r_{\text{burn}}} = \frac{m_{\text{M}} E_{\text{H}}  }{\mathcal{L}  }
+= \frac{ n_{b} n_{s} h_{s} b_{s}^2 f_c \rho_{c} \left(4 - \frac{m_{\text{He}}}{m_{\text{H}}} \right) c^2 }{ 4 \pi \sigma R_{\odot}^2 T_{\odot}^4 }$$</div>
+<p>Plugging in some numbers:</p>
+<ul>
+<li>Number of buildings in Manhattan: <span class="math">\(n_b = 5 \times 10^4\)</span></li>
+<li>Average number of stories: <span class="math">\(n_s = 2 \times 10^1\)</span></li>
+<li>Height of a story: <span class="math">\(h_s = 5 \times 10^0\)</span> (m)</li>
+<li>Width of a story: <span class="math">\(b_s = 5 \times 10^1\)</span> (m)</li>
+<li>Fraction of a building that is concrete: <span class="math">\(f_c = 1 \times 10^{-3}\)</span></li>
+<li>Density of concrete: <span class="math">\(\rho_c = 3 \times 10^3\)</span> (kg / m^3)</li>
+<li>Mass of Helium: <span class="math">\(m_{\text{He}} = 6.6 \times 10^{-27}\)</span> (kg)</li>
+<li>Mass of Hydrogen: <span class="math">\(m_{\text{H}} = 1.7 \times 10^{-27}\)</span> (kg)</li>
+<li>Speed of Light: <span class="math">\(c = 3 \times 10^8\)</span> (m / s)</li>
+<li>Temperature of sun: <span class="math">\(T_{\odot} = 6 \times 10^3\)</span> K (Kelvin)</li>
+<li>Radius of sun: <span class="math">\(R_{\odot} = 7 \times 10^8\)</span> m (meters)</li>
+<li>Stefan-Boltzmann constant: <span class="math">\(\sigma = 6 \times 10^-8 \quad \text{W} \cdot \text{m}^{-2} \cdot \text{K}^{-4}\)</span> </li>
+</ul>
+<p><br>
+The estimate is hidden below. Press the button below to see solution!</p>
+<p><button class="solution-button" onclick="getElementById('fermi-estimate').style.visibility='visible';"><b>Show
+Estimate</b></button></p>
+<div id="fermi-estimate" style="visibility: hidden;">
+    <span class="math">
+    <span class="MathJax_Preview" style="color: inherit; display: none;"></span>
+    <span class="MathJax" id="MathJax-Element-42-Frame" tabindex="0"
+          data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msub><mi>&amp;#x03C4;</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mtext>burn</mtext></mrow></msub><mo>=</mo><mn>8.7</mn><mo>&amp;#x00D7;</mo><msup><mn>10</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>&amp;#x2212;</mo><mn>1</mn></mrow></msup><mtext>&amp;#xA0;s</mtext></math>"
+          role="presentation" style="position: relative;"><nobr aria-hidden="true">
+    <span class="math" id="MathJax-Span-593" style="width: 9.796em; display: inline-block;"><span
+            style="display: inline-block; position: relative; width: 7.895em; height: 0px; font-size: 124%;"><span
+            style="position: absolute; clip: rect(1.443em, 1007.837em, 2.825em, -999.997em); top: -2.474em; left: 0em;"><span
+            class="mrow" id="MathJax-Span-594"><span class="msubsup" id="MathJax-Span-595"><span
+            style="display: inline-block; position: relative; width: 1.789em; height: 0px;"><span
+            style="position: absolute; clip: rect(3.401em, 1000.406em, 4.15em, -999.997em); top: -3.972em; left: 0em;"><span
+            class="mi" id="MathJax-Span-596" style="font-family: STIXGeneral-Italic;">τ<span
+            style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span
+            style="display: inline-block; width: 0px; height: 3.978em;"></span></span><span
+            style="position: absolute; top: -3.799em; left: 0.406em;"><span class="texatom" id="MathJax-Span-597"><span
+            class="mrow" id="MathJax-Span-598"><span class="mtext" id="MathJax-Span-599"
+                                                     style="font-size: 70.7%; font-family: STIXGeneral-Regular;">burn</span></span></span><span
+            style="display: inline-block; width: 0px; height: 3.978em;"></span></span></span></span><span class="mo"
+                                                                                                          id="MathJax-Span-600"
+                                                                                                          style="font-family: STIXGeneral-Regular; padding-left: 0.291em;">=</span><span
+            class="mn" id="MathJax-Span-601" style="font-family: STIXGeneral-Regular; padding-left: 0.291em;">8.7</span><span
+            class="mo" id="MathJax-Span-602"
+            style="font-family: STIXGeneral-Regular; padding-left: 0.233em;">×</span><span class="msubsup"
+                                                                                           id="MathJax-Span-603"
+                                                                                           style="padding-left: 0.233em;"><span
+            style="display: inline-block; position: relative; width: 1.904em; height: 0px;"><span
+            style="position: absolute; clip: rect(3.113em, 1000.982em, 4.15em, -999.997em); top: -3.972em; left: 0em;"><span
+            class="mn" id="MathJax-Span-604" style="font-family: STIXGeneral-Regular;">10</span><span
+            style="display: inline-block; width: 0px; height: 3.978em;"></span></span><span
+            style="position: absolute; top: -4.375em; left: 0.982em;"><span class="texatom" id="MathJax-Span-605"><span
+            class="mrow" id="MathJax-Span-606"><span class="mo" id="MathJax-Span-607"
+                                                     style="font-size: 70.7%; font-family: STIXGeneral-Regular;">−</span><span
+            class="mn" id="MathJax-Span-608" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span></span></span><span
+            style="display: inline-block; width: 0px; height: 3.978em;"></span></span></span></span><span class="mtext"
+                                                                                                          id="MathJax-Span-609"
+                                                                                                          style="font-family: STIXGeneral-Regular;">&nbsp;s</span></span><span
+            style="display: inline-block; width: 0px; height: 2.48em;"></span></span></span><span
+            style="display: inline-block; overflow: hidden; vertical-align: -0.282em; border-left-width: 0px; border-left-style: solid; width: 0px; height: 1.432em;"></span></span></nobr><span
+            class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>τ</mi><mrow
+            class="MJX-TeXAtom-ORD"><mtext>burn</mtext></mrow></msub><mo>=</mo><mn>8.7</mn><mo>×</mo><msup><mn>10</mn><mrow
+            class="MJX-TeXAtom-ORD"><mo>−</mo><mn>1</mn></mrow></msup><mtext>&nbsp;s</mtext></math></span></span>
+
+    <script type="math/tex" id="MathJax-Element-42">\tau_{\text{burn}} = 8.7 \times 10^{-1} \text{ s}</script></span>
+</div>
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
         linebreak = "false";
@@ -203,7 +271,7 @@ having no rest mass!</p>
     }
 
     var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%&#64;#$&#64;#';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
     mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
 
@@ -252,19 +320,9 @@ having no rest mass!</p>
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script><hr>
-<h3>Bibliography</h3>
-<p id='carrollSpacetimeGeometryIntroduction2013'>Sean Carroll.
-<em>Spacetime and <span class="bibtex-protected"><span class="bibtex-protected">Geometry</span></span>: <span class="bibtex-protected"><span class="bibtex-protected">An Introduction</span></span> to <span class="bibtex-protected"><span class="bibtex-protected">General Relativity</span></span></em>.
-<span class="bibtex-protected">Pearson Education</span>, 3 edition, 2013. <a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1">↩</a></p>
-<p id='misnerGravitation2017'>Charles&nbsp;W. Misner, Kip&nbsp;S. Thorne, John&nbsp;Archibald Wheeler, and David Kaiser.
-<em>Gravitation</em>.
-<span class="bibtex-protected">Princeton University Press</span>, <span class="bibtex-protected">Princeton, N.J</span>, 2017.
-ISBN 978-0-691-17779-3.
-OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1">↩</a></p>
-
+</script>
         <div class="tags">
-            <p>tags: <a href="/tag/physics.html">physics</a><a href="/tag/gravity.html">gravity</a></p>
+            <p>tags: <a href="/tag/fermi-problem.html">fermi-problem</a></p>
         </div>
 
 <div class="sharing">
@@ -276,8 +334,8 @@ OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" 
         <!--<div id="disqus_thread"></div>-->
         <!--<script type="text/javascript">-->
         <!--var disqus_shortname = 'jwkennington';-->
-        <!--var disqus_identifier = 'blog/gravity-of-a-photon/';-->
-        <!--var disqus_url = 'jwkennington.com/blog/gravity-of-a-photon/';-->
+        <!--var disqus_identifier = 'blog/fermi-friday-manhattan-as-hydrogen/';-->
+        <!--var disqus_url = 'jwkennington.com/blog/fermi-friday-manhattan-as-hydrogen/';-->
         <!--(function() {-->
         <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
         <!--dsq.src = 'https://jwkennington.disqus.com/embed.js';-->
@@ -291,9 +349,9 @@ OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" 
         <script>
 
             var disqus_config = function () {
-                this.page.url = 'https://jwkennington.com/blog/gravity-of-a-photon/';
+                this.page.url = 'https://jwkennington.com/blog/fermi-friday-manhattan-as-hydrogen/';
 
-                this.page.identifier = 'blog/gravity-of-a-photon/';
+                this.page.identifier = 'blog/fermi-friday-manhattan-as-hydrogen/';
             };
 
             (function () {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
@@ -328,13 +386,8 @@ OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" 
 <div class="clearfix"></div>
     <ul>
         <li>
-            <a href="/blog/erasing-efficiently/">
-                Previous: Erasing Efficiently
-            </a>
-        </li>
-        <li>
-            <a href="/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/">
-                Next: Book Review: Tensors and Group Theory for Physicists (Jeevanjee)
+            <a href="/blog/blog-reboot/">
+                Previous: Blog Reboot
             </a>
         </li>
     </ul>
@@ -347,9 +400,6 @@ OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" 
     <hr>
     <div class="clearfix"></div>
     <ul>
-        <li><a href="/blog/loading-gravitational-wave-data-with-pycbc/">Loading Gravitational Wave Data with PyCBC</a></li>
-        <li><a href="/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/">Book Review: Tensors and Group Theory for Physicists (Jeevanjee)</a></li>
-        <li><a href="/blog/tsaps-spring-meeting/">TSAPS Spring Meeting</a></li>
     </ul>
 </div>
 <br>
@@ -402,7 +452,6 @@ OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" 
     <br>
 
 
-
     <!-- Tags -->
     <div class="widget">
         <h3 class="headline">Tags</h3>
@@ -440,7 +489,7 @@ OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" 
 			<div class="container">
 				<div class="sixteen columns">&copy;
 					Jim Kennington&nbsp &middot &nbsp
- 4264
+ 28
 &nbsp &middot &nbsp
 <!--						<ul class="social-icons-footer">-->
 <!--								<li >-->

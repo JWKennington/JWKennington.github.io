@@ -1,5 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-09-12T00:00:00-05:00</updated><entry><title>Blog Reboot</title><link href="/blog/blog-reboot/" rel="alternate"></link><published>2021-09-12T00:00:00-05:00</published><updated>2021-09-12T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-12:/blog/blog-reboot/</id><summary type="html">&lt;p&gt;After completing the first year of graduate school (post on the industry &lt;span class="math"&gt;\(\to\)&lt;/span&gt; grad school transition forthcoming), I've
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-09-17T00:00:00-05:00</updated><entry><title>Fermi Friday: Manhattan as Hydrogen</title><link href="/blog/fermi-friday-manhattan-as-hydrogen/" rel="alternate"></link><published>2021-09-17T00:00:00-05:00</published><updated>2021-09-17T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-17:/blog/fermi-friday-manhattan-as-hydrogen/</id><summary type="html">&lt;p&gt;For this week's installment of Fermi estimation, the question of interest is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To estimate the burn-time &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; we'll need to guess at a few quantities: the above-ground mass of Manhattan, the solar
+luminosity …&lt;/p&gt;&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><content type="html">&lt;p&gt;For this week's installment of Fermi estimation, the question of interest is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To estimate the burn-time &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; we'll need to guess at a few quantities: the above-ground mass of Manhattan, the solar
+luminosity (total energy emitted from the sun), and fraction of energy emitted from the core of the sun that makes it 
+to the surface.&lt;/p&gt;
+&lt;h3&gt;Mass of Manhattan&lt;/h3&gt;
+&lt;p&gt;We will estimate the above-ground mass &lt;span class="math"&gt;\(m\)&lt;/span&gt; of Manhattan by computing a rough volume &lt;span class="math"&gt;\(V\)&lt;/span&gt; and density &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;, then using the 
+familiar relation &lt;span class="math"&gt;\(m=\rho V\)&lt;/span&gt;. To compute the volume we make some assumptions. First, we represent the average number of 
+stories of a building in Manhattan as &lt;span class="math"&gt;\(n_{s}\)&lt;/span&gt;, the height of a story as &lt;span class="math"&gt;\(h_{s}\)&lt;/span&gt;, and the number of buildings in Manhattan
+as &lt;span class="math"&gt;\(n_{b}\)&lt;/span&gt;. For simplicity, we assume each building to have a square base of length &lt;span class="math"&gt;\(b_{s}\)&lt;/span&gt;, then the total volume of 
+buildings in Manhattan &lt;span class="math"&gt;\(V_{\text{M}}\)&lt;/span&gt; is:&lt;/p&gt;
+&lt;div class="math"&gt;$$V_{\text{M}} = n_{b} n_{s} h_{s} b_{s}^2$$&lt;/div&gt;
+&lt;p&gt;Computing the density will be a little easier. If we assume that each building is roughly a shell of concrete, then concrete
+will compose a fraction &lt;span class="math"&gt;\(f_{c}\)&lt;/span&gt; of the building. Given the density of concrete &lt;span class="math"&gt;\(\rho_{c}\)&lt;/span&gt;, the density of Manhattan &lt;span class="math"&gt;\($ 
+will be $\rho_{\text{M}} = f_c \rho_{c}\)&lt;/span&gt;. Plugging this in to get the above-ground mass of Manhattan:&lt;/p&gt;
+&lt;div class="math"&gt;$$m_{\text{M}} = V_{\text{M}} \rho_{\text{M}} = n_{b} n_{s} h_{s} b_{s}^2 f_c \rho_{c}$$&lt;/div&gt;
+&lt;h3&gt;Solar Luminosity&lt;/h3&gt;
+&lt;p&gt;Using the temperature &lt;span class="math"&gt;\(T_{\odot}\)&lt;/span&gt; and radius &lt;span class="math"&gt;\(R_{\odot}\)&lt;/span&gt; of the sun, and approximating the Sun as a blackbordy, we can 
+use the Stefan-Boltzman law. This law relates the temperature &lt;span class="math"&gt;\(T\)&lt;/span&gt; and surface area &lt;span class="math"&gt;\(A\)&lt;/span&gt; of a blackbody to the total 
+energy output &lt;span class="math"&gt;\(\mathcal{L}\)&lt;/span&gt; of the object: &lt;span class="math"&gt;\(\mathcal{L} = \sigma A T^4\)&lt;/span&gt;. For simplicity, we assume the sun to be a perfect
+sphere, then:&lt;/p&gt;
+&lt;div class="math"&gt;$$\mathcal{L}_{\odot} = 4 \pi \sigma R_{\odot}^2 T_{\odot}^4$$&lt;/div&gt;
+&lt;h3&gt;Burn Rate&lt;/h3&gt;
+&lt;p&gt;THe solar luminosity tells us how much energy per unit time is emitted from the sun. If we want to know how much
+mass is consumed to produce that energy, we need to understand how much energy is produced in the fusion of Hydrogen.
+Using a simple approximation, 4 Hydrogen atoms are converted into 1 Helium atom. The difference in total mass is due
+to the energy released by the process, which we can estimate using Einstein's famous relation: &lt;span class="math"&gt;\(E=mc^2\)&lt;/span&gt;. Therefore, 
+the reaction energy &lt;span class="math"&gt;\(E_{r}\)&lt;/span&gt; is a function of the change in reactant mass &lt;span class="math"&gt;\(\Delta m_r = 4 m_{\text{H}} - m_{\text{He}}\)&lt;/span&gt;, 
+which gives us an expression for the unit energy &lt;span class="math"&gt;\(E_{\text{H}}\)&lt;/span&gt;.  &lt;/p&gt;
+&lt;div class="math"&gt;$$E_{\text{H}} = \frac{E_r}{m_{\text{H}}} = \left(4 - \frac{m_{\text{He}}}{m_{\text{H}}} \right) c^2$$&lt;/div&gt;
+&lt;p&gt;We can now compute the burn rate by unit analysis. If the luminosity gives (energy / time) and the 
+unit reaction energy gives (energy / mass), then in order to get the burn rate in terms of (mass / time) we need
+to divide the luminosity by the unit reaction rate:&lt;/p&gt;
+&lt;div class="math"&gt;$$r_{\text{burn}} = \frac{\mathcal{L}}{E_{\text{H}}}$$&lt;/div&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Putting the above expressions together, we arrive at the burn-time:&lt;/p&gt;
+&lt;div class="math"&gt;$$\tau_{\text{burn}} = \frac{m_{\text{M}}}{r_{\text{burn}}} = \frac{m_{\text{M}} E_{\text{H}}  }{\mathcal{L}  }
+= \frac{ n_{b} n_{s} h_{s} b_{s}^2 f_c \rho_{c} \left(4 - \frac{m_{\text{He}}}{m_{\text{H}}} \right) c^2 }{ 4 \pi \sigma R_{\odot}^2 T_{\odot}^4 }$$&lt;/div&gt;
+&lt;p&gt;Plugging in some numbers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Number of buildings in Manhattan: &lt;span class="math"&gt;\(n_b = 5 \times 10^4\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Average number of stories: &lt;span class="math"&gt;\(n_s = 2 \times 10^1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Height of a story: &lt;span class="math"&gt;\(h_s = 5 \times 10^0\)&lt;/span&gt; (m)&lt;/li&gt;
+&lt;li&gt;Width of a story: &lt;span class="math"&gt;\(b_s = 5 \times 10^1\)&lt;/span&gt; (m)&lt;/li&gt;
+&lt;li&gt;Fraction of a building that is concrete: &lt;span class="math"&gt;\(f_c = 1 \times 10^{-3}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Density of concrete: &lt;span class="math"&gt;\(\rho_c = 3 \times 10^3\)&lt;/span&gt; (kg / m^3)&lt;/li&gt;
+&lt;li&gt;Mass of Helium: &lt;span class="math"&gt;\(m_{\text{He}} = 6.6 \times 10^{-27}\)&lt;/span&gt; (kg)&lt;/li&gt;
+&lt;li&gt;Mass of Hydrogen: &lt;span class="math"&gt;\(m_{\text{H}} = 1.7 \times 10^{-27}\)&lt;/span&gt; (kg)&lt;/li&gt;
+&lt;li&gt;Speed of Light: &lt;span class="math"&gt;\(c = 3 \times 10^8\)&lt;/span&gt; (m / s)&lt;/li&gt;
+&lt;li&gt;Temperature of sun: &lt;span class="math"&gt;\(T_{\odot} = 6 \times 10^3\)&lt;/span&gt; K (Kelvin)&lt;/li&gt;
+&lt;li&gt;Radius of sun: &lt;span class="math"&gt;\(R_{\odot} = 7 \times 10^8\)&lt;/span&gt; m (meters)&lt;/li&gt;
+&lt;li&gt;Stefan-Boltzmann constant: &lt;span class="math"&gt;\(\sigma = 6 \times 10^-8 \quad \text{W} \cdot \text{m}^{-2} \cdot \text{K}^{-4}\)&lt;/span&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+The estimate is hidden below. Press the button below to see solution!&lt;/p&gt;
+&lt;p&gt;&lt;button class="solution-button" onclick="getElementById('fermi-estimate').style.visibility='visible';"&gt;&lt;b&gt;Show
+Estimate&lt;/b&gt;&lt;/button&gt;&lt;/p&gt;
+&lt;div id="fermi-estimate" style="visibility: hidden;"&gt;
+    &lt;span class="math"&gt;
+    &lt;span class="MathJax_Preview" style="color: inherit; display: none;"&gt;&lt;/span&gt;
+    &lt;span class="MathJax" id="MathJax-Element-42-Frame" tabindex="0"
+          data-mathml="&lt;math xmlns=&amp;quot;http://www.w3.org/1998/Math/MathML&amp;quot;&gt;&lt;msub&gt;&lt;mi&gt;&amp;amp;#x03C4;&lt;/mi&gt;&lt;mrow class=&amp;quot;MJX-TeXAtom-ORD&amp;quot;&gt;&lt;mtext&gt;burn&lt;/mtext&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;8.7&lt;/mn&gt;&lt;mo&gt;&amp;amp;#x00D7;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mrow class=&amp;quot;MJX-TeXAtom-ORD&amp;quot;&gt;&lt;mo&gt;&amp;amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mtext&gt;&amp;amp;#xA0;s&lt;/mtext&gt;&lt;/math&gt;"
+          role="presentation" style="position: relative;"&gt;&lt;nobr aria-hidden="true"&gt;
+    &lt;span class="math" id="MathJax-Span-593" style="width: 9.796em; display: inline-block;"&gt;&lt;span
+            style="display: inline-block; position: relative; width: 7.895em; height: 0px; font-size: 124%;"&gt;&lt;span
+            style="position: absolute; clip: rect(1.443em, 1007.837em, 2.825em, -999.997em); top: -2.474em; left: 0em;"&gt;&lt;span
+            class="mrow" id="MathJax-Span-594"&gt;&lt;span class="msubsup" id="MathJax-Span-595"&gt;&lt;span
+            style="display: inline-block; position: relative; width: 1.789em; height: 0px;"&gt;&lt;span
+            style="position: absolute; clip: rect(3.401em, 1000.406em, 4.15em, -999.997em); top: -3.972em; left: 0em;"&gt;&lt;span
+            class="mi" id="MathJax-Span-596" style="font-family: STIXGeneral-Italic;"&gt;τ&lt;span
+            style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span
+            style="display: inline-block; width: 0px; height: 3.978em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span
+            style="position: absolute; top: -3.799em; left: 0.406em;"&gt;&lt;span class="texatom" id="MathJax-Span-597"&gt;&lt;span
+            class="mrow" id="MathJax-Span-598"&gt;&lt;span class="mtext" id="MathJax-Span-599"
+                                                     style="font-size: 70.7%; font-family: STIXGeneral-Regular;"&gt;burn&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span
+            style="display: inline-block; width: 0px; height: 3.978em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mo"
+                                                                                                          id="MathJax-Span-600"
+                                                                                                          style="font-family: STIXGeneral-Regular; padding-left: 0.291em;"&gt;=&lt;/span&gt;&lt;span
+            class="mn" id="MathJax-Span-601" style="font-family: STIXGeneral-Regular; padding-left: 0.291em;"&gt;8.7&lt;/span&gt;&lt;span
+            class="mo" id="MathJax-Span-602"
+            style="font-family: STIXGeneral-Regular; padding-left: 0.233em;"&gt;×&lt;/span&gt;&lt;span class="msubsup"
+                                                                                           id="MathJax-Span-603"
+                                                                                           style="padding-left: 0.233em;"&gt;&lt;span
+            style="display: inline-block; position: relative; width: 1.904em; height: 0px;"&gt;&lt;span
+            style="position: absolute; clip: rect(3.113em, 1000.982em, 4.15em, -999.997em); top: -3.972em; left: 0em;"&gt;&lt;span
+            class="mn" id="MathJax-Span-604" style="font-family: STIXGeneral-Regular;"&gt;10&lt;/span&gt;&lt;span
+            style="display: inline-block; width: 0px; height: 3.978em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span
+            style="position: absolute; top: -4.375em; left: 0.982em;"&gt;&lt;span class="texatom" id="MathJax-Span-605"&gt;&lt;span
+            class="mrow" id="MathJax-Span-606"&gt;&lt;span class="mo" id="MathJax-Span-607"
+                                                     style="font-size: 70.7%; font-family: STIXGeneral-Regular;"&gt;−&lt;/span&gt;&lt;span
+            class="mn" id="MathJax-Span-608" style="font-size: 70.7%; font-family: STIXGeneral-Regular;"&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span
+            style="display: inline-block; width: 0px; height: 3.978em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="mtext"
+                                                                                                          id="MathJax-Span-609"
+                                                                                                          style="font-family: STIXGeneral-Regular;"&gt;&amp;nbsp;s&lt;/span&gt;&lt;/span&gt;&lt;span
+            style="display: inline-block; width: 0px; height: 2.48em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span
+            style="display: inline-block; overflow: hidden; vertical-align: -0.282em; border-left-width: 0px; border-left-style: solid; width: 0px; height: 1.432em;"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/nobr&gt;&lt;span
+            class="MJX_Assistive_MathML" role="presentation"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;msub&gt;&lt;mi&gt;τ&lt;/mi&gt;&lt;mrow
+            class="MJX-TeXAtom-ORD"&gt;&lt;mtext&gt;burn&lt;/mtext&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;8.7&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mrow
+            class="MJX-TeXAtom-ORD"&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mtext&gt;&amp;nbsp;s&lt;/mtext&gt;&lt;/math&gt;&lt;/span&gt;&lt;/span&gt;
+
+    &lt;script type="math/tex" id="MathJax-Element-42"&gt;\tau_{\text{burn}} = 8.7 \times 10^{-1} \text{ s}&lt;/script&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Physics"></category><category term="fermi-problem"></category></entry><entry><title>Blog Reboot</title><link href="/blog/blog-reboot/" rel="alternate"></link><published>2021-09-12T00:00:00-05:00</published><updated>2021-09-12T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-12:/blog/blog-reboot/</id><summary type="html">&lt;p&gt;After completing the first year of graduate school (post on the industry &lt;span class="math"&gt;\(\to\)&lt;/span&gt; grad school transition forthcoming), I've
 finally got time to reboot the blog, with more focus. I'll be posting on a &lt;span class="math"&gt;\(\sim\)&lt;/span&gt;weekly basis about the interesting topics I come across in the course of research, class, and …&lt;/p&gt;&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
