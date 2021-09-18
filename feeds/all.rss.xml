@@ -58,7 +58,7 @@ to divide the luminosity by the unit reaction rate:&lt;/p&gt;
 The estimate is hidden below. Press the button below to see solution!&lt;/p&gt;
 &lt;p&gt;&lt;button class="solution-button" onclick="getElementById('fermi-estimate').style.visibility='visible';"&gt;&lt;b&gt;Show
 Estimate&lt;/b&gt;&lt;/button&gt;&lt;/p&gt;
-&lt;p id="fermi-estimate" style="visibility: hidden;"&gt;8.7 * 10^-1&lt;/p&gt;
+&lt;p id="fermi-estimate" style="visibility: hidden;"&gt;8.7 * 10^-1 s&lt;/p&gt;
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
