@@ -3,7 +3,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan?&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;To estimate the burn-time &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; we'll need to guess at a few quantities: the above-ground mass of Manhattan, the solar
+&lt;p&gt;To estimate the burn-time we'll need to guess at a few quantities: the above-ground mass of Manhattan, the solar
 luminosity (total energy emitted from the sun), and fraction of energy emitted from the core of the sun that makes it 
 to the surface.&lt;/p&gt;
 &lt;h3&gt;Mass of Manhattan&lt;/h3&gt;
