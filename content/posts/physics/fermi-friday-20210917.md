@@ -1,4 +1,4 @@
-Title: Fermi Friday: Manhattan as Hydrogen
+Title: Fermi Friday: A Different Manhattan Project
 Date: 2021-09-17
 Category: Physics
 Tags: fermi-problem
