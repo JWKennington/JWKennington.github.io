@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jim W. Kennington</title><link>/</link><description></description><lastBuildDate>Fri, 17 Sep 2021 00:00:00 -0500</lastBuildDate><item><title>Fermi Friday: Manhattan as Hydrogen</title><link>/blog/fermi-friday-manhattan-as-hydrogen/</link><description>&lt;p&gt;For this week's installment of Fermi estimation, the question of interest is:&lt;/p&gt;
+<rss version="2.0"><channel><title>Jim W. Kennington</title><link>/</link><description></description><lastBuildDate>Fri, 17 Sep 2021 00:00:00 -0500</lastBuildDate><item><title>Fermi Friday: A Different Manhattan Project</title><link>/blog/fermi-friday-a-different-manhattan-project/</link><description>&lt;p&gt;For this week's installment of Fermi estimation, the question of interest is:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan?&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -121,7 +121,7 @@ Estimate&lt;/b&gt;&lt;/button&gt;&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Fri, 17 Sep 2021 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2021-09-17:/blog/fermi-friday-manhattan-as-hydrogen/</guid><category>Physics</category><category>fermi-problem</category></item><item><title>Blog Reboot</title><link>/blog/blog-reboot/</link><description>&lt;p&gt;After completing the first year of graduate school (post on the industry &lt;span class="math"&gt;\(\to\)&lt;/span&gt; grad school transition forthcoming), I've
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Fri, 17 Sep 2021 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2021-09-17:/blog/fermi-friday-a-different-manhattan-project/</guid><category>Physics</category><category>fermi-problem</category></item><item><title>Blog Reboot</title><link>/blog/blog-reboot/</link><description>&lt;p&gt;After completing the first year of graduate school (post on the industry &lt;span class="math"&gt;\(\to\)&lt;/span&gt; grad school transition forthcoming), I've
 finally got time to reboot the blog, with more focus. I'll be posting on a &lt;span class="math"&gt;\(\sim\)&lt;/span&gt;weekly basis about the interesting topics I come across in the course of research, class, and 
 general academic meandering. Renewed areas of focus will include various mathematical, physical, or programming topics, 
 such as:&lt;/p&gt;
