@@ -178,7 +178,7 @@ below.</p>
 = \gamma_2(\lambda=0) = p\)</span>, then it is natural to define the tangent vector <span class="math">\(v_p\)</span> at <span class="math">\(p\)</span> as an equivalence class of
 curves, denoted <span class="math">\(\left[\gamma\right]\)</span>, where the equivalence criteria is defined by sharing the tangent vector <span class="math">\(v_p\)</span>:</p>
 <div class="math">$$ \left. \frac{d x^{\mu}}{d \lambda} (\gamma_1(\lambda)) \right|_{\lambda=0} = v_p = \left. \frac{d x^{\mu}}{d \lambda}
-(\gamma_2(\lambda)) \right|_{\lambda=0} \tag{Geometric}$$</div>
+(\gamma_2(\lambda)) \right|_{\lambda=0}$$</div>
 <p>The tangent space <span class="math">\(T_p \mathcal{M}\)</span> can then be defined as the set of all tangent vectors at the point <span class="math">\(p\)</span>, or the set
 of all equivalence classes of curves at the point <span class="math">\(p\)</span>.</p>
 <p><em>Tangent Vectors Algebraically</em></p>
@@ -186,7 +186,7 @@ of all equivalence classes of curves at the point <span class="math">\(p\)</span
 linear and obeys the Leibniz rule. By thinking of the smooth functions on the manifold <span class="math">\(C^{\infty}(\mathcal{M})\)</span> as a
 ring over <span class="math">\(\mathbb{R}\)</span>, we can define the map <span class="math">\(v: C^{\infty}(\mathcal{M}) \to \mathbb{R}\)</span> as:</p>
 <div class="math">$$v(f) \equiv \left. \frac{df\left( \gamma(\lambda) \right)}{d\lambda} \right|_{\lambda=0} \quad\text{ where }\quad
-\left[\gamma\right] = v \tag{Algebraic}$$</div>
+\left[\gamma\right] = v$$</div>
 <p>By linear, we mean that for any <span class="math">\(f, g \in C^{\infty}(\mathcal{M})\)</span> and <span class="math">\(r, s \in \mathbb{R}\)</span>, we have <span class="math">\(v(rf + sg) = rv(
 f) + sv(g)\)</span>, and by Leibniz rule we mean <span class="math">\(v(fg) = f(p)v(g) + g(p)v(f)\)</span>. The set of all derivations at a point <span class="math">\(p\)</span> is 
 denoted <span class="math">\(D_p \mathcal{M}\)</span>.</p>
@@ -194,12 +194,11 @@ denoted <span class="math">\(D_p \mathcal{M}\)</span>.</p>
 <p>Isham shows that these two definitions of the tangent space, <span class="math">\(T_p \mathcal{M}\)</span> and <span class="math">\(D_p \mathcal{M}\)</span>, are equivalent by
 proving that the natural map between them <span class="math">\(\iota\)</span> is, in fact, an isomorphism, where <span class="math">\(\iota: T_p\mathcal{M} \to
 D_p\mathcal{M}\)</span> is defined as:</p>
-<div class="math">$$\iota(v)(f) \equiv \left. \frac{df \left(\gamma\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0}
-\tag{Isomorphism}$$</div>
+<div class="math">$$\iota(v)(f) \equiv \left. \frac{df \left(\gamma\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0}$$</div>
 <p>To show that <span class="math">\(\iota\)</span> is an isomorphism, Isham demonstrates that it is both injective (one-to-one) and surjective (onto).
 To show injectivity, assume that <span class="math">\(\iota(\left[\gamma_1\right]) = \iota(\left[\gamma_2\right])\)</span>, then we must have</p>
-<div class="math">$$ \left. \frac{df \left(\gamma_1\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0} = \left. \frac{df \left(
-\gamma_2\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0} $$</div>
+<div class="math">$$\left. \frac{df \left(\gamma_1\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0} = \left. \frac{df \left(
+\gamma_2\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0}$$</div>
 <p>The above shows that both <span class="math">\(\gamma_1\)</span> and <span class="math">\(\gamma_2\)</span> are tangent at <span class="math">\(p\)</span>, which implies that they are, in fact,
 equivalent. Therefore <span class="math">\(\left[\gamma_1\right] = \left[\gamma_2\right]\)</span>, and <span class="math">\(\iota\)</span> is injective. To show that <span class="math">\(\iota\)</span> is
 surjective we choose an element <span class="math">\(v\)</span> of the range <span class="math">\(D_p\mathcal{M}\)</span> and define a curve <span class="math">\(\gamma_v\)</span> such that <span class="math">\(\gamma_v(0) =
@@ -231,7 +230,7 @@ rule can be summarized broadly by the equation below. </p>
 v^{\mu}_{k}(t) &amp;= c_0 v^{\mu}_{k}(t - \Delta t) \\
 &amp;+ c_1 r_1 \left[\eta^{\mu}_k(t - \Delta t) - x^{\mu}_k(t - \Delta t)\right] \\
 &amp;+ c_2 r_2 \left[\zeta^{\mu}(t - \Delta t) - x^{\mu}_k(t - \Delta t)\right]   
-\end{align}\tag{PSO Iteration}$$</div>
+\end{align}$$</div>
 <p>Where the variable <span class="math">\(\eta^{\mu}_k\)</span> represents the best known position of the <em>local</em> neighbors of particle <span class="math">\(k\)</span> and the 
 variable <span class="math">\(\zeta^{\mu}\)</span> represents the best known position of the entire swarm (also called the <em>global</em> best). The term
 <em>best</em> here refers to the type of optimization, in our example we would maximizing our quality function <span class="math">\(f\)</span>, so for 
@@ -508,7 +507,7 @@ Particle swarm optimization and gravitational wave data analysis: <span class="b
 			<div class="container">
 				<div class="sixteen columns">&copy;
 					Jim Kennington&nbsp &middot &nbsp
- 52
+ 65
 &nbsp &middot &nbsp
 <!--						<ul class="social-icons-footer">-->
 <!--								<li >-->
