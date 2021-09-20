@@ -156,25 +156,25 @@
             </ul>
         </header>
 
-        <h3>What does type (r, s) mean?</h3>
+        <h3 id="what-does-type-r-s-mean">What does type (r, s) mean?</h3>
 <p>I'd like to discuss the notation of the tensor type, commonly denoted <span class="math">\((r, s)\)</span> as it relates to the tensor product. Specifically, 
 the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically 
 categorized by the number of vectors and dual vectors they require as arguments. To avoid ambiguity, for a given tensor <span class="math">\(T\)</span>, I will 
 denote the number of vector arguments as <span class="math">\(n_v\)</span> and the number of dual vector arguments as <span class="math">\(n_d\)</span>. </p>
-<h4>Preliminaries</h4>
+<h4 id="preliminaries">Preliminaries</h4>
 <p>Before we begin, recall that the dual vector space <span class="math">\(V^*\)</span> is defined as the set of linear functionals from <span class="math">\(V\rightarrow C\)</span>, 
 where <span class="math">\(C\)</span> is the field over which <span class="math">\(V\)</span> is a vector space. Note, the dual space <span class="math">\(V^*\)</span> is defined in terms of the vector space <span class="math">\(V\)</span>. 
 For similar reasons, the topic of dual spaces is introduced after the topic of vector spaces - in other words, <strong>epistemologically, 
 the dual space follows the vector space</strong>. I only draw attention to this ordering between the vector space and the dual because 
 it informs the aesthetic nature of the notation, as we'll see.</p>
-<h4>Conventions</h4>
+<h4 id="conventions">Conventions</h4>
 <p>The tensor type <span class="math">\((r, s)\)</span> is used to categories tensors based on the number of vectors and dual vectors they consume. Problem is, 
 there is a choice to made between the <span class="math">\(r=n_v\)</span> or <span class="math">\(r=n_d\)</span> conventions - and this choice isn't made consistently. As I mentioned above, 
 the epistemological ordering of vectors and dual vectors is unambiguous; dual vectors follow vectors. It therefore seems natural to 
 make the first number <span class="math">\(r\)</span> equal the number of vector arguments <span class="math">\(n_v\)</span>. I'll call this convention the <em>vector first</em> convention, or 
 "VF" for short. Similarly, I'll call the opposite convention, of using the number of dual vectors <span class="math">\(n_d\)</span> as the first number <span class="math">\(r\)</span>, 
 the <em>dual first</em> convention, or "DF" for short.</p>
-<h4>Usage of Conventions</h4>
+<h4 id="usage-of-conventions">Usage of Conventions</h4>
 <p>Some sources that use the <em>VF</em> convention <a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'>Jeevanjee (2015)</a>, <a href='#langLinearAlgebra1987' id='ref-langLinearAlgebra1987-1'>Lang (1987)</a>. Some sources that 
 use the <em>DF</em> convention <a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'>Roman (2007)</a>, <a href='#hallLieGroupsLie2015' id='ref-hallLieGroupsLie2015-1'>Hall (2015)</a>, <a href='#tuDifferentialGeometryConnections2017' id='ref-tuDifferentialGeometryConnections2017-1'>Tu (2017)</a>, 
 <a href='#leeIntroductionSmoothManifolds2013' id='ref-leeIntroductionSmoothManifolds2013-1'>Lee (2013)</a>, <a href='#rentelnManifoldsTensorsForms2014' id='ref-rentelnManifoldsTensorsForms2014-1'>Renteln (2014)</a>, <a href='#dasTensorsMathematicsRelativity2007' id='ref-dasTensorsMathematicsRelativity2007-1'>Das (2007)</a>, 
@@ -190,7 +190,7 @@ where <span class="math">\(V_{i}=V\)</span> and <span class="math">\(V^*_{i}=V^*
 <div class="math">$$T: V^*_1\times \cdot\cdot\cdot \times V^*_r \times V_1 \times \cdot\cdot\cdot \times V_s\rightarrow C$$</div>
 <p> where again 
 <span class="math">\(V_{I}=V\)</span> and <span class="math">\(V^*_{i}=V^*\)</span> for all <span class="math">\(i\)</span>.</p>
-<h3>Cartesian vs. Tensor Product Notations</h3>
+<h3 id="cartesian-vs-tensor-product-notations">Cartesian vs. Tensor Product Notations</h3>
 <p>The usage of Cartesian products to define the domain of <span class="math">\(T\)</span> is typically used before introducing the tensor product, 
 as it is more familiar. In the Cartesian product notation, the <em>VF</em> convention places the vector spaces before the dual 
 spaces, and in some sense is "aligned" with the way in which the subject is taught. When using the tensor product notation, 
@@ -209,13 +209,13 @@ V^*_s\rightarrow C$$</div>
 <p> Notice that these definitions are equivalent to the previous definitions using Cartesian product 
 notation, but that now the vector spaces are written first in what we called the <em>dual first</em> convention, not the <em>vector first</em> 
 convention!</p>
-<h3>Why is <em>DF</em> convention preferred?</h3>
+<h3 id="why-is-df-convention-preferred">Why is <em>DF</em> convention preferred?</h3>
 <p>It seems that the <span class="math">\(DF\)</span> convention has wider usage and appeal; naturally I wonder why. Since it feels natural to align the 
 notation with the epistemological order, in other words, to write <span class="math">\(V\)</span> before <span class="math">\(V^*\)</span>, then I am forced to conclude that the 
 mathematical community, with malice of forethought, prefers to base the definition of a type <span class="math">\((r, s)\)</span> tensor on the tensor 
 product notation, rather than the Cartesian notation, since the former requires that <span class="math">\(V\)</span> be written before <span class="math">\(V^*\)</span>. I personally 
 have no objection to the choice, as it seems sensible.</p>
-<h4>Parting note on terminology</h4>
+<h4 id="parting-note-on-terminology">Parting note on terminology</h4>
 <p>In the <em>DF</em> convention, the number <span class="math">\(r\)</span> is often referred to as the <em>covariant</em> number and the number <span class="math">\(s\)</span> is called the 
 <em>contravariant</em> number. These terms refer to the number of dual vectors and vectors respectively, since vectors are typically
 considered contravariant. Similar terms refer to <em>lower</em> and <em>upper</em> indices respectively.</p>
@@ -285,18 +285,16 @@ considered contravariant. Similar terms refer to <em>lower</em> and <em>upper</e
 <h3>Bibliography</h3>
 <p id='carrollSpacetimeGeometryIntroduction2013'>Sean Carroll.
 <em>Spacetime and <span class="bibtex-protected"><span class="bibtex-protected">Geometry</span></span>: <span class="bibtex-protected"><span class="bibtex-protected">An Introduction</span></span> to <span class="bibtex-protected"><span class="bibtex-protected">General Relativity</span></span></em>.
-<span class="bibtex-protected">Pearson Education</span>, 3 edition, 2013. <a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1">↩</a></p>
+<span class="bibtex-protected">Pearson Education</span>, third edition, 2013. <a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1">↩</a></p>
 <p id='dasTensorsMathematicsRelativity2007'>Anadijiban Das.
 <em>Tensors: The Mathematics of Relativity Theory and Continuum Mechanics</em>.
 <span class="bibtex-protected">Springer</span>, <span class="bibtex-protected">New York</span>, 2007.
-ISBN 978-0-387-69468-9 978-0-387-69469-6.
-OCLC: ocm77795794. <a class="cite-backref" href="#ref-dasTensorsMathematicsRelativity2007-1" title="Jump back to reference 1">↩</a></p>
+ISBN 978-0-387-69468-9 978-0-387-69469-6. <a class="cite-backref" href="#ref-dasTensorsMathematicsRelativity2007-1" title="Jump back to reference 1">↩</a></p>
 <p id='hallLieGroupsLie2015'>Brian&nbsp;C. Hall.
 <em>Lie Groups, <span class="bibtex-protected"><span class="bibtex-protected">Lie</span></span> Algebras, and Representations: An Elementary Introduction</em>.
 Number&nbsp;222 in Graduate Texts in Mathematics.
 <span class="bibtex-protected">Springer</span>, <span class="bibtex-protected">Cham ; New York</span>, second edition edition, 2015.
-ISBN 978-3-319-13466-6.
-OCLC: ocn910324548. <a class="cite-backref" href="#ref-hallLieGroupsLie2015-1" title="Jump back to reference 1">↩</a></p>
+ISBN 978-3-319-13466-6. <a class="cite-backref" href="#ref-hallLieGroupsLie2015-1" title="Jump back to reference 1">↩</a></p>
 <p id='jeevanjeeIntroductionTensorsGroup2015'>Nadir Jeevanjee.
 <em>An Introduction to Tensors and Group Theory for Physicists</em>.
 <span class="bibtex-protected">Springer Science+Business Media</span>, <span class="bibtex-protected">New York, NY</span>, 2015.
@@ -310,13 +308,11 @@ ISBN 978-0-387-96412-6. <a class="cite-backref" href="#ref-langLinearAlgebra1987
 <em>Introduction to Smooth Manifolds</em>.
 Number&nbsp;218 in Graduate Texts in Mathematics.
 <span class="bibtex-protected">Springer</span>, <span class="bibtex-protected">New York ; London</span>, 2nd ed edition, 2013.
-ISBN 978-1-4419-9981-8 978-1-4419-9982-5.
-OCLC: ocn800646950. <a class="cite-backref" href="#ref-leeIntroductionSmoothManifolds2013-1" title="Jump back to reference 1">↩</a></p>
+ISBN 978-1-4419-9981-8 978-1-4419-9982-5. <a class="cite-backref" href="#ref-leeIntroductionSmoothManifolds2013-1" title="Jump back to reference 1">↩</a></p>
 <p id='misnerGravitation2017'>Charles&nbsp;W. Misner, Kip&nbsp;S. Thorne, John&nbsp;Archibald Wheeler, and David Kaiser.
 <em>Gravitation</em>.
 <span class="bibtex-protected">Princeton University Press</span>, <span class="bibtex-protected">Princeton, N.J</span>, 2017.
-ISBN 978-0-691-17779-3.
-OCLC: on1006427790. <a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1">↩</a></p>
+ISBN 978-0-691-17779-3. <a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1">↩</a></p>
 <p id='poissonRelativistToolkitMathematics2004'>Eric Poisson.
 <em>A Relativist's Toolkit: The Mathematics of Black-Hole Mechanics</em>.
 <span class="bibtex-protected">Cambridge University Press</span>, <span class="bibtex-protected">Cambridge, UK ; New York</span>, 2004.
@@ -333,8 +329,7 @@ ISBN 978-0-387-72828-5. <a class="cite-backref" href="#ref-romanAdvancedLinearAl
 <p id='spivakComprehensiveIntroductionDifferential1999'>Michael Spivak.
 <em>A Comprehensive Introduction to Differential Geometry</em>.
 <span class="bibtex-protected">Publish or Perish, Inc</span>, <span class="bibtex-protected">Houston, Tex</span>, 3rd ed edition, 1999.
-ISBN 978-0-914098-70-6 978-0-914098-71-3 978-0-914098-72-0 978-0-914098-73-7 978-0-914098-74-4.
-OCLC: ocm42962004. <a class="cite-backref" href="#ref-spivakComprehensiveIntroductionDifferential1999-1" title="Jump back to reference 1">↩</a></p>
+ISBN 978-0-914098-70-6 978-0-914098-71-3 978-0-914098-72-0 978-0-914098-73-7 978-0-914098-74-4. <a class="cite-backref" href="#ref-spivakComprehensiveIntroductionDifferential1999-1" title="Jump back to reference 1">↩</a></p>
 <p id='tuDifferentialGeometryConnections2017'>Loring&nbsp;W. Tu.
 <em>Differential Geometry: Connections, Curvature, and Characteristic Classes</em>.
 <span class="bibtex-protected">Springer Science+Business Media</span>, <span class="bibtex-protected">New York, NY</span>, 2017.
@@ -490,6 +485,7 @@ ISBN 978-3-319-55082-4. <a class="cite-backref" href="#ref-tuDifferentialGeometr
             <a href="/tag/comp-physics.html">comp-physics</a>
             <a href="/tag/conference.html">conference</a>
             <a href="/tag/fermi-problem.html">fermi-problem</a>
+            <a href="/tag/found-this-week.html">found-this-week</a>
             <a href="/tag/general.html">general</a>
             <a href="/tag/gravity.html">gravity</a>
             <a href="/tag/group.html">group</a>
@@ -517,7 +513,7 @@ ISBN 978-3-319-55082-4. <a class="cite-backref" href="#ref-tuDifferentialGeometr
 			<div class="container">
 				<div class="sixteen columns">&copy;
 					Jim Kennington&nbsp &middot &nbsp
- 174
+ 176
 &nbsp &middot &nbsp
 <!--						<ul class="social-icons-footer">-->
 <!--								<li >-->

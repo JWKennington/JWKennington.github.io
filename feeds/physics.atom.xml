@@ -1,5 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington - Physics</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2021-09-17T00:00:00-05:00</updated><entry><title>Fermi Friday: A Different Manhattan Project</title><link href="/blog/fermi-friday-a-different-manhattan-project/" rel="alternate"></link><published>2021-09-17T00:00:00-05:00</published><updated>2021-09-17T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-17:/blog/fermi-friday-a-different-manhattan-project/</id><summary type="html">&lt;p&gt;For this week's installment of Fermi estimation, the question of interest is:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington - Physics</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2021-09-19T00:00:00-05:00</updated><entry><title>Found This Week #1</title><link href="/blog/found-this-week-1/" rel="alternate"></link><published>2021-09-19T00:00:00-05:00</published><updated>2021-09-19T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-19:/blog/found-this-week-1/</id><summary type="html">&lt;p&gt;As this is the inaugural issue of the &lt;em&gt;found-this-week&lt;/em&gt; series, I'll briefly note my motivation and inspiration. The
+title of this series is an overt nod to the famous series &lt;a href="https://math.ucr.edu/home/baez/TWF.html"&gt;&lt;em&gt;This Week's Finds&lt;/em&gt;&lt;/a&gt;
+written by the inimitable John Baez. I have learned a great deal from that series and his …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As this is the inaugural issue of the &lt;em&gt;found-this-week&lt;/em&gt; series, I'll briefly note my motivation and inspiration. The
+title of this series is an overt nod to the famous series &lt;a href="https://math.ucr.edu/home/baez/TWF.html"&gt;&lt;em&gt;This Week's Finds&lt;/em&gt;&lt;/a&gt;
+written by the inimitable John Baez. I have learned a great deal from that series and his book on gravity, and have the
+utmost admiration for Baez' abilities as a physicist and communicator. It is my hope that this series will be found
+useful by some, insightful by at least a few, and accessible by many. All feedback is welcome, and thank you in advance
+for bearing with me as I develop these posts.&lt;/p&gt;
+&lt;h3 id="algebraic-and-geometric-equivalence-of-tangent-vectors"&gt;Algebraic and Geometric Equivalence of Tangent Vectors&lt;/h3&gt;
+&lt;p&gt;As will likely come up in future posts, I'm thoroughly enjoying
+&lt;a href="https://amzn.to/39jLEEN"&gt;Modern Differential Geometry for Physicists&lt;/a&gt; by Chris Isham. He develops formalism and
+intuition without sacrificing rigor, all while carrying a conversational tone. See my
+&lt;a href="/pages/texts-physics/#isham-modern-differential-geometry-for-physicists-i"&gt;reference review&lt;/a&gt; for more on
+&lt;a href='#ishamModernDifferentialGeometry1999' id='ref-ishamModernDifferentialGeometry1999-1'&gt;Isham (1999)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Most students of physics or calculus are generally familiar with the notion of a tangent vector. This concept becomes
+more nuanced, of course, when the ambient space is generalized from &lt;span class="math"&gt;\(\mathbb{R}^n\)&lt;/span&gt; to a manifold &lt;span class="math"&gt;\(\mathcal{M}\)&lt;/span&gt; of
+dimension &lt;span class="math"&gt;\(n\)&lt;/span&gt;. Isham takes an unusual approach to formalizing the tangent vector concept by introducing two
+seemingly-different definitions (either of which are common among the relativity literature) and then formally proving
+their equivalence (done &lt;em&gt;nowhere&lt;/em&gt; in the literature). I appreciated the demonstration of equivalence, and will sketch it
+below.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tangent Vectors Geometrically&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Isham first introduces tangent vectors in the familiar, geometric manner. If we let &lt;span class="math"&gt;\(\gamma_1(\lambda)\)&lt;/span&gt; and &lt;span class="math"&gt;\(\gamma_2(
+\lambda)\)&lt;/span&gt; be curves passing through a point &lt;span class="math"&gt;\(p\)&lt;/span&gt; on a patch of the manifold &lt;span class="math"&gt;\(\mathcal{M}\)&lt;/span&gt; such that &lt;span class="math"&gt;\(\gamma_1(\lambda=0)
+= \gamma_2(\lambda=0) = p\)&lt;/span&gt;, then it is natural to define the tangent vector &lt;span class="math"&gt;\(v_p\)&lt;/span&gt; at &lt;span class="math"&gt;\(p\)&lt;/span&gt; as an equivalence class of
+curves, denoted &lt;span class="math"&gt;\(\left[\gamma\right]\)&lt;/span&gt;, where the equivalence criteria is defined by sharing the tangent vector &lt;span class="math"&gt;\(v_p\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left. \frac{d x^{\mu}}{d \lambda} (\gamma_1(\lambda)) \right|_{\lambda=0} = v_p = \left. \frac{d x^{\mu}}{d \lambda}
+(\gamma_2(\lambda)) \right|_{\lambda=0} \tag{Geometric}$$&lt;/div&gt;
+&lt;p&gt;The tangent space &lt;span class="math"&gt;\(T_p \mathcal{M}\)&lt;/span&gt; can then be defined as the set of all tangent vectors at the point &lt;span class="math"&gt;\(p\)&lt;/span&gt;, or the set
+of all equivalence classes of curves at the point &lt;span class="math"&gt;\(p\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tangent Vectors Algebraically&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The algebraic approach begins with the concept of a derivation, or directional derivative, &lt;span class="math"&gt;\(v\)&lt;/span&gt; as a map that is both
+linear and obeys the Leibniz rule. By thinking of the smooth functions on the manifold &lt;span class="math"&gt;\(C^{\infty}(\mathcal{M})\)&lt;/span&gt; as a
+ring over &lt;span class="math"&gt;\(\mathbb{R}\)&lt;/span&gt;, we can define the map &lt;span class="math"&gt;\(v: C^{\infty}(\mathcal{M}) \to \mathbb{R}\)&lt;/span&gt; as:&lt;/p&gt;
+&lt;div class="math"&gt;$$v(f) \equiv \left. \frac{df\left( \gamma(\lambda) \right)}{d\lambda} \right|_{\lambda=0} \quad\text{ where }\quad
+\left[\gamma\right] = v \tag{Algebraic}$$&lt;/div&gt;
+&lt;p&gt;By linear, we mean that for any &lt;span class="math"&gt;\(f, g \in C^{\infty}(\mathcal{M})\)&lt;/span&gt; and &lt;span class="math"&gt;\(r, s \in \mathbb{R}\)&lt;/span&gt;, we have &lt;span class="math"&gt;\(v(rf + sg) = rv(
+f) + sv(g)\)&lt;/span&gt;, and by Leibniz rule we mean &lt;span class="math"&gt;\(v(fg) = f(p)v(g) + g(p)v(f)\)&lt;/span&gt;. The set of all derivations at a point &lt;span class="math"&gt;\(p\)&lt;/span&gt; is 
+denoted &lt;span class="math"&gt;\(D_p \mathcal{M}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Equivalence of Definitions&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Isham shows that these two definitions of the tangent space, &lt;span class="math"&gt;\(T_p \mathcal{M}\)&lt;/span&gt; and &lt;span class="math"&gt;\(D_p \mathcal{M}\)&lt;/span&gt;, are equivalent by
+proving that the natural map between them &lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is, in fact, an isomorphism, where &lt;span class="math"&gt;\(\iota: T_p\mathcal{M} \to
+D_p\mathcal{M}\)&lt;/span&gt; is defined as:&lt;/p&gt;
+&lt;div class="math"&gt;$$\iota(v)(f) \equiv \left. \frac{df \left(\gamma\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0}
+\tag{Isomorphism}$$&lt;/div&gt;
+&lt;p&gt;To show that &lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is an isomorphism, Isham demonstrates that it is both injective (one-to-one) and surjective (onto).
+To show injectivity, assume that &lt;span class="math"&gt;\(\iota(\left[\gamma_1\right]) = \iota(\left[\gamma_2\right])\)&lt;/span&gt;, then we must have&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left. \frac{df \left(\gamma_1\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0} = \left. \frac{df \left(
+\gamma_2\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0} $$&lt;/div&gt;
+&lt;p&gt;The above shows that both &lt;span class="math"&gt;\(\gamma_1\)&lt;/span&gt; and &lt;span class="math"&gt;\(\gamma_2\)&lt;/span&gt; are tangent at &lt;span class="math"&gt;\(p\)&lt;/span&gt;, which implies that they are, in fact,
+equivalent. Therefore &lt;span class="math"&gt;\(\left[\gamma_1\right] = \left[\gamma_2\right]\)&lt;/span&gt;, and &lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is injective. To show that &lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is
+surjective we choose an element &lt;span class="math"&gt;\(v\)&lt;/span&gt; of the range &lt;span class="math"&gt;\(D_p\mathcal{M}\)&lt;/span&gt; and define a curve &lt;span class="math"&gt;\(\gamma_v\)&lt;/span&gt; such that &lt;span class="math"&gt;\(\gamma_v(0) =
+p\)&lt;/span&gt; and &lt;span class="math"&gt;\(v(x^{\mu}) = \frac{d}{d\lambda} x^{\mu} \circ \gamma(\lambda) |_{\lambda=0}\)&lt;/span&gt;. Recall that we can expand a
+tangent vector as &lt;span class="math"&gt;\(v_p\)&lt;/span&gt; in terms of derivatives of a coordinate system &lt;span class="math"&gt;\(x^{\mu}\)&lt;/span&gt; as &lt;span class="math"&gt;\(v = v^{\mu}\partial_{\mu}\)&lt;/span&gt; and
+therefore &lt;span class="math"&gt;\(v(f) = v^{\mu} \partial_{\mu} f = \frac{d}{d\lambda} x^{\mu} \circ \gamma_v |_{\lambda=0} \partial_{\mu} f\)&lt;/span&gt;.
+But Isham shows:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{align} \left. \frac{d}{d\lambda} f\circ \gamma_v \right|_{\lambda=0} &amp;amp;= \left. \frac{d}{d\lambda}(f \circ
+\phi^{-1} \circ \phi \circ \gamma_v) \right|_{\lambda=0} \\ &amp;amp;= \sum_{\mu} \left. \frac{\partial}{\partial u^{\mu}} (f
+\circ \phi^{-1}) \right|_{\phi(p)} \left. \frac{d}{d\lambda} u^{\mu} (\phi \circ \gamma_v) \right|_{\lambda=0} \\ &amp;amp;=
+\sum_{\mu} \left(\frac{\partial}{\partial x^{\mu}}\right)_{p} f \left. \frac{d}{d\lambda} x^{\mu} \circ \gamma_v(
+\lambda) \right|_{\lambda=0} = v(f)
+\end{align}$$&lt;/div&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(\frac{d}{d\lambda} f \circ \gamma_v |_{\lambda=0} = v(f)\)&lt;/span&gt;, then &lt;span class="math"&gt;\(\left[\gamma_v\right](f) = v(f)\)&lt;/span&gt; and therefore
+&lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is surjective. This completes the proof, and we can robustly conclude that the geometric and algebraic pictures
+are formally equivalent! We are then free to use either where convenient. &lt;/p&gt;
+&lt;h3 id="swarms-of-searching-particles"&gt;Swarms of Searching Particles&lt;/h3&gt;
+&lt;p&gt;During a recent talk &lt;a href='#adhicaryAdvanceAlertsGravitational2021' id='ref-adhicaryAdvanceAlertsGravitational2021-1'&gt;Adhicary (2021)&lt;/a&gt; the subject of optimization arose in the context of 
+gravitational wave detection. Though interested in the application (my present research overlaps heavily with GW
+detection), the general concept of &lt;em&gt;particle swarm optimization&lt;/em&gt; (PSO) captured my attention. &lt;/p&gt;
+&lt;p&gt;This optimization method involves an initial distribution of &lt;span class="math"&gt;\(m\)&lt;/span&gt; particles &lt;span class="math"&gt;\(\{x^{\mu}_{k}\}\)&lt;/span&gt; in the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-dimensional 
+parameter space &lt;span class="math"&gt;\(\mathcal{M}\)&lt;/span&gt; of some measure of quality &lt;span class="math"&gt;\(f: \mathcal{M} \to \mathbb{R}\)&lt;/span&gt;, where 
+&lt;span class="math"&gt;\(\mu = 1, \dots, n\)&lt;/span&gt; refers to the coordinate in &lt;span class="math"&gt;\(\mathcal{M}\)&lt;/span&gt; and &lt;span class="math"&gt;\(k = 1, \dots, m\)&lt;/span&gt; refers to the 
+particle number. Each particle is initialized with some velocity, and the velocity is updated throughout each iteration
+of the algorithm. Interestingly, the particles are &lt;em&gt;not&lt;/em&gt; computing local gradients, rather, their velocities are updated
+using a randomized combination of local (nearest-neighbors-in-swarm) and global (all-swarm) information. The iteration 
+rule can be summarized broadly by the equation below. &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{align}
+v^{\mu}_{k}(t) &amp;amp;= c_0 v^{\mu}_{k}(t - \Delta t) \\
+&amp;amp;+ c_1 r_1 \left[\eta^{\mu}_k(t - \Delta t) - x^{\mu}_k(t - \Delta t)\right] \\
+&amp;amp;+ c_2 r_2 \left[\zeta^{\mu}(t - \Delta t) - x^{\mu}_k(t - \Delta t)\right]   
+\end{align}\tag{PSO Iteration}$$&lt;/div&gt;
+&lt;p&gt;Where the variable &lt;span class="math"&gt;\(\eta^{\mu}_k\)&lt;/span&gt; represents the best known position of the &lt;em&gt;local&lt;/em&gt; neighbors of particle &lt;span class="math"&gt;\(k\)&lt;/span&gt; and the 
+variable &lt;span class="math"&gt;\(\zeta^{\mu}\)&lt;/span&gt; represents the best known position of the entire swarm (also called the &lt;em&gt;global&lt;/em&gt; best). The term
+&lt;em&gt;best&lt;/em&gt; here refers to the type of optimization, in our example we would maximizing our quality function &lt;span class="math"&gt;\(f\)&lt;/span&gt;, so for 
+example &lt;span class="math"&gt;\(\zeta^{\mu}\)&lt;/span&gt; is the position in the swarm that corresponds to the larges value of &lt;span class="math"&gt;\(f\)&lt;/span&gt;. When the velocity updates, 
+the algorithm is essentially trying to mix three things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The previous direction of the particle&lt;/li&gt;
+&lt;li&gt;The direction towards the known, local optimum&lt;/li&gt;
+&lt;li&gt;The direction toweards the known, global optimum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;
+The numbers &lt;span class="math"&gt;\((r_1, r_2)\)&lt;/span&gt; are randomly generated each iteration, and allow the particles to explore more of the parameter
+space instead of moving directly towards their known, best locations. Lastly, the constants &lt;span class="math"&gt;\((c_0, c_1, c_2)\)&lt;/span&gt; are tuning 
+parameters that control how to weight the particle, local, and global information when updating particle velocities. The
+image below represents a sample of PSO in a two-dimensional setting.&lt;/p&gt;
+&lt;p&gt;&lt;a title="Ephramac, CC BY-SA 4.0 &amp;lt;https://creativecommons.org/licenses/by-sa/4.0&amp;gt;, via Wikimedia Commons" 
+href="https://commons.wikimedia.org/wiki/File:ParticleSwarmArrowsAnimation.gif"&gt;
+&lt;img class="jwk-image" width="300" alt="ParticleSwarmArrowsAnimation" 
+    src="https://upload.wikimedia.org/wikipedia/commons/e/ec/ParticleSwarmArrowsAnimation.gif"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For further reading, the PSO algorithm has been studied extensively in general &lt;a href='#clercParticleSwarmOptimization2006' id='ref-clercParticleSwarmOptimization2006-1'&gt;Clerc (2006)&lt;/a&gt;. PSO
+has also been used in a variety of scientific fields, such as gravitational wave analysis &lt;a href='#wangParticleSwarmOptimization2010' id='ref-wangParticleSwarmOptimization2010-1'&gt;Wang and Mohanty (2010)&lt;/a&gt;,
+and has even been used in industry settings, such as financial portfolio optimization &lt;a href='#chenParticleSwarmOptimization2021' id='ref-chenParticleSwarmOptimization2021-1'&gt;Chen et al. (2021)&lt;/a&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;&lt;hr&gt;
+&lt;h3&gt;Bibliography&lt;/h3&gt;
+&lt;p id='adhicaryAdvanceAlertsGravitational2021'&gt;Shomik Adhicary.
+Advance &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Alerts&lt;/span&gt;&lt;/span&gt; from &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Gravitational Wave Searches&lt;/span&gt;&lt;/span&gt; of &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Binary Compact Objects&lt;/span&gt;&lt;/span&gt; for &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Electromagnetic Follow&lt;/span&gt;&lt;/span&gt;-ups.
+September 2021. &lt;a class="cite-backref" href="#ref-adhicaryAdvanceAlertsGravitational2021-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='chenParticleSwarmOptimization2021'&gt;Ren-Raw Chen, Wiliam&amp;nbsp;Kaihua Huang, and Shih-Kuo Yeh.
+Particle swarm optimization approach to portfolio construction.
+&lt;em&gt;Intelligent Systems in Accounting, Finance and Management&lt;/em&gt;, pages isaf.1498, July 2021.
+&lt;a href="https://doi.org/10.1002/isaf.1498"&gt;doi:10.1002/isaf.1498&lt;/a&gt;. &lt;a class="cite-backref" href="#ref-chenParticleSwarmOptimization2021-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='clercParticleSwarmOptimization2006'&gt;Maurice Clerc.
+&lt;em&gt;Particle Swarm Optimization&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;ISTE&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;London ; Newport Beach&lt;/span&gt;, 2006.
+ISBN 978-1-905209-04-0. &lt;a class="cite-backref" href="#ref-clercParticleSwarmOptimization2006-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='ishamModernDifferentialGeometry1999'&gt;C.&amp;nbsp;J. Isham.
+&lt;em&gt;Modern Differential Geometry for Physicists&lt;/em&gt;.
+Number&amp;nbsp;v. 61 in World &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Scientific&lt;/span&gt;&lt;/span&gt; Lecture Notes in Physics.
+&lt;span class="bibtex-protected"&gt;World Scientific&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Singapore ; River Edge, N.J&lt;/span&gt;, 2nd ed edition, 1999.
+ISBN 978-981-02-3555-0 978-981-02-3562-8. &lt;a class="cite-backref" href="#ref-ishamModernDifferentialGeometry1999-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='wangParticleSwarmOptimization2010'&gt;Yan Wang and Soumya&amp;nbsp;D. Mohanty.
+Particle swarm optimization and gravitational wave data analysis: &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Performance&lt;/span&gt;&lt;/span&gt; on a binary inspiral testbed.
+&lt;em&gt;Physical Review D&lt;/em&gt;, 81(6):063002, March 2010.
+&lt;a href="https://doi.org/10.1103/PhysRevD.81.063002"&gt;doi:10.1103/PhysRevD.81.063002&lt;/a&gt;. &lt;a class="cite-backref" href="#ref-wangParticleSwarmOptimization2010-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</content><category term="Physics"></category><category term="found-this-week"></category></entry><entry><title>Fermi Friday: A Different Manhattan Project</title><link href="/blog/fermi-friday-a-different-manhattan-project/" rel="alternate"></link><published>2021-09-17T00:00:00-05:00</published><updated>2021-09-17T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-17:/blog/fermi-friday-a-different-manhattan-project/</id><summary type="html">&lt;p&gt;For this week's installment of Fermi estimation, the question of interest is:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan?&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -11,7 +197,7 @@ luminosity (total …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For this 
 &lt;p&gt;To estimate the burn-time we'll need to guess at a few quantities: the above-ground mass of Manhattan, the solar
 luminosity (total energy emitted from the sun), and fraction of energy emitted from the core of the sun that makes it 
 to the surface.&lt;/p&gt;
-&lt;h3&gt;Mass of Manhattan&lt;/h3&gt;
+&lt;h3 id="mass-of-manhattan"&gt;Mass of Manhattan&lt;/h3&gt;
 &lt;p&gt;We will estimate the above-ground mass &lt;span class="math"&gt;\(m\)&lt;/span&gt; of Manhattan by computing a rough volume &lt;span class="math"&gt;\(V\)&lt;/span&gt; and density &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;, then using the 
 familiar relation &lt;span class="math"&gt;\(m=\rho V\)&lt;/span&gt;. To compute the volume we make some assumptions. First, we represent the average number of 
 stories of a building in Manhattan as &lt;span class="math"&gt;\(n_{s}\)&lt;/span&gt;, the height of a story as &lt;span class="math"&gt;\(h_{s}\)&lt;/span&gt;, and the number of buildings in Manhattan
@@ -22,13 +208,13 @@ buildings in Manhattan &lt;span class="math"&gt;\(V_{\text{M}}\)&lt;/span&gt; is
 will compose a fraction &lt;span class="math"&gt;\(f_{c}\)&lt;/span&gt; of the building. Given the density of concrete &lt;span class="math"&gt;\(\rho_{c}\)&lt;/span&gt;, the density of Manhattan &lt;span class="math"&gt;\($ 
 will be $\rho_{\text{M}} = f_c \rho_{c}\)&lt;/span&gt;. Plugging this in to get the above-ground mass of Manhattan:&lt;/p&gt;
 &lt;div class="math"&gt;$$m_{\text{M}} = V_{\text{M}} \rho_{\text{M}} = n_{b} n_{s} h_{s} b_{s}^2 f_c \rho_{c}$$&lt;/div&gt;
-&lt;h3&gt;Solar Luminosity&lt;/h3&gt;
+&lt;h3 id="solar-luminosity"&gt;Solar Luminosity&lt;/h3&gt;
 &lt;p&gt;Using the temperature &lt;span class="math"&gt;\(T_{\odot}\)&lt;/span&gt; and radius &lt;span class="math"&gt;\(R_{\odot}\)&lt;/span&gt; of the sun, and approximating the Sun as a blackbordy, we can 
 use the Stefan-Boltzman law. This law relates the temperature &lt;span class="math"&gt;\(T\)&lt;/span&gt; and surface area &lt;span class="math"&gt;\(A\)&lt;/span&gt; of a blackbody to the total 
 energy output &lt;span class="math"&gt;\(\mathcal{L}\)&lt;/span&gt; of the object: &lt;span class="math"&gt;\(\mathcal{L} = \sigma A T^4\)&lt;/span&gt;. For simplicity, we assume the sun to be a perfect
 sphere, then:&lt;/p&gt;
 &lt;div class="math"&gt;$$\mathcal{L}_{\odot} = 4 \pi \sigma R_{\odot}^2 T_{\odot}^4$$&lt;/div&gt;
-&lt;h3&gt;Burn Rate&lt;/h3&gt;
+&lt;h3 id="burn-rate"&gt;Burn Rate&lt;/h3&gt;
 &lt;p&gt;THe solar luminosity tells us how much energy per unit time is emitted from the sun. If we want to know how much
 mass is consumed to produce that energy, we need to understand how much energy is produced in the fusion of Hydrogen.
 Using a simple approximation, 4 Hydrogen atoms are converted into 1 Helium atom. The difference in total mass is due
@@ -40,7 +226,7 @@ which gives us an expression for the unit energy &lt;span class="math"&gt;\(E_{\
 unit reaction energy gives (energy / mass), then in order to get the burn rate in terms of (mass / time) we need
 to divide the luminosity by the unit reaction rate:&lt;/p&gt;
 &lt;div class="math"&gt;$$r_{\text{burn}} = \frac{\mathcal{L}}{E_{\text{H}}}$$&lt;/div&gt;
-&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;h3 id="solution"&gt;Solution&lt;/h3&gt;
 &lt;p&gt;Putting the above expressions together, we arrive at the burn-time:&lt;/p&gt;
 &lt;div class="math"&gt;$$\tau_{\text{burn}} = \frac{m_{\text{M}}}{r_{\text{burn}}} = \frac{m_{\text{M}} E_{\text{H}}  }{\mathcal{L}  }
 = \frac{ n_{b} n_{s} h_{s} b_{s}^2 f_c \rho_{c} \left(4 - \frac{m_{\text{He}}}{m_{\text{H}}} \right) c^2 }{ 4 \pi \sigma R_{\odot}^2 T_{\odot}^4 }$$&lt;/div&gt;
@@ -129,11 +315,11 @@ Estimate&lt;/b&gt;&lt;/button&gt;&lt;/p&gt;
 &lt;/script&gt;</content><category term="Physics"></category><category term="fermi-problem"></category></entry><entry><title>Loading Gravitational Wave Data with PyCBC</title><link href="/blog/loading-gravitational-wave-data-with-pycbc/" rel="alternate"></link><published>2019-10-12T00:00:00-05:00</published><updated>2019-10-12T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2019-10-12:/blog/loading-gravitational-wave-data-with-pycbc/</id><summary type="html">&lt;p&gt;This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, 
 using the PyCBC package. There is also a notebook-version of this post, available &lt;a href="https://github.com/JWKennington/pycbc-examples"&gt;here&lt;/a&gt;,
 in a repo of PyCBC examples.&lt;/p&gt;
-&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;In order to analyze observed gravitational waves, we must first find …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, 
 using the PyCBC package. There is also a notebook-version of this post, available &lt;a href="https://github.com/JWKennington/pycbc-examples"&gt;here&lt;/a&gt;,
 in a repo of PyCBC examples.&lt;/p&gt;
-&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;In order to analyze observed gravitational waves, we must first find the data containing the signal. This 
 example shows how to explore the Catalog of observed mergers available via the Gravitational Wave Open 
 Science Center (GWOSC). Though this example focuses on the Python API, the list of available mergers can also 
@@ -150,10 +336,10 @@ be found on the web at the following &lt;a href="https://www.gw-openscience.org/
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h2&gt;Exploring the Catalog&lt;/h2&gt;
+&lt;h2 id="exploring-the-catalog"&gt;Exploring the Catalog&lt;/h2&gt;
 &lt;p&gt;A common structure for grouping astonomical data, a Catalog is a sensible concept for a programmatic API. 
 The PyCBC package has taken this approach, which is shown below using the &lt;code&gt;Catalog&lt;/code&gt; class.&lt;/p&gt;
-&lt;h3&gt;The &lt;code&gt;Catalog&lt;/code&gt; Class&lt;/h3&gt;
+&lt;h3 id="the-catalog-class"&gt;The &lt;code&gt;Catalog&lt;/code&gt; Class&lt;/h3&gt;
 &lt;p&gt;The PyCBC Catalog class is capable of using the GWOSC data api to see essentially the same information
 contained in the link above (albeit through JSON instead of HTML). Under the hood, PyCBC relies on AstroPy
 data-access file-download utilities.&lt;/p&gt;
@@ -166,7 +352,7 @@ need to specify it, though we do for clarity).&lt;/p&gt;
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h3&gt;Where are the &lt;code&gt;Merger&lt;/code&gt;s stored?&lt;/h3&gt;
+&lt;h3 id="where-are-the-mergers-stored"&gt;Where are the &lt;code&gt;Merger&lt;/code&gt;s stored?&lt;/h3&gt;
 &lt;p&gt;The Catalog class is an iterable with respect to the names of the mergers in the catalog, so you can pick your favorite 
 technique to iterate over the available merger names (we use the list coercion function below).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Get names of mergers in catalog &lt;/span&gt;
@@ -179,7 +365,7 @@ technique to iterate over the available merger names (we use the list coercion f
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;The Merger data associated to the name is stored in the &lt;code&gt;mergers&lt;/code&gt; attribute of the &lt;code&gt;Catalog&lt;/code&gt; instance, which 
 is a dictionary keyed by the name of the merger (which we examined above). &lt;/p&gt;
-&lt;h3&gt;Basic Merger Properties&lt;/h3&gt;
+&lt;h3 id="basic-merger-properties"&gt;Basic Merger Properties&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;Merger&lt;/code&gt; object retrieved from the Catalog contains all the estimated parameters of the waveform. Each 
 attribute may be accessed directly, but the preferred way is through the "median1d" method of the Merger class. 
 Keep in mind that these parameters are in the &lt;em&gt;source&lt;/em&gt; frame, not the &lt;em&gt;detector&lt;/em&gt; frame.&lt;/p&gt;
@@ -226,7 +412,7 @@ Keep in mind that these parameters are in the &lt;em&gt;source&lt;/em&gt; frame,
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h2&gt;Merger Strain&lt;/h2&gt;
+&lt;h2 id="merger-strain"&gt;Merger Strain&lt;/h2&gt;
 &lt;p&gt;Though a Merger object loads several scalar parameters once instantiated, it does not automatically load the 
 timeseries of strain data (for efficiency of the API). It is possible, however, and quite easy to load the 
 strain timeseries around the event. The below code shows how to load the waveform data. We begin by choosing a 
@@ -237,7 +423,7 @@ specific merger from the catalog.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h3&gt;The &lt;code&gt;TimeSeries&lt;/code&gt; Class&lt;/h3&gt;
+&lt;h3 id="the-timeseries-class"&gt;The &lt;code&gt;TimeSeries&lt;/code&gt; Class&lt;/h3&gt;
 &lt;p&gt;The time series data containing the merger waveform is returned as an instance of the &lt;code&gt;TimeSeries&lt;/code&gt; class. Below, 
 we show how to load the strain data, as well as how to do some useful manipulations.&lt;/p&gt;
 &lt;p style="background: #e6e6e6; border-radius: 10px; padding: 10px"&gt;
@@ -268,7 +454,7 @@ we show how to load the strain data, as well as how to do some useful manipulati
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h4&gt;Physics Remark:&lt;/h4&gt;
+&lt;h4 id="physics-remark"&gt;Physics Remark:&lt;/h4&gt;
 &lt;p&gt;The &lt;em&gt;strain&lt;/em&gt; recorded in the above timeseries basically represents the degree to which space has expanded 
 or contracted along the path of the interferometer:
 &lt;/p&gt;
@@ -278,7 +464,7 @@ Where &lt;span class="math"&gt;\(L\)&lt;/span&gt; is the original length of the 
 detector arms. For more information on the experimental setup, see the excellent review, 
 &lt;a href="https://link.springer.com/article/10.1007/s41114-016-0002-8"&gt;Interferometer techniques for gravitational wave detection&lt;/a&gt; 
 by Bond, Brown, Freise and Strain.&lt;/p&gt;
-&lt;h3&gt;Visualize the Time-Domain&lt;/h3&gt;
+&lt;h3 id="visualize-the-time-domain"&gt;Visualize the Time-Domain&lt;/h3&gt;
 &lt;p&gt;This section is devoted to visualizing the Time-domain strain. We use the &lt;code&gt;sample_times&lt;/code&gt; attribute of 
 the &lt;code&gt;TimeSeries&lt;/code&gt; class for the x-coordinates of the plot, and simply pass the &lt;code&gt;TimeSeries&lt;/code&gt; object itself 
 as the y-coordinates (since it is an array). &lt;/p&gt;
@@ -305,7 +491,7 @@ as the y-coordinates (since it is an array). &lt;/p&gt;
     &lt;i&gt;&lt;b&gt;Developer Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
     Plotting in Python is notoriously subjective; there are many competing libraries that all deserve proper attention, such as plotly, bokeh, plotnine, altair, and others (excluding matplotlib). There are meta-plotting libraries as well that sit atop these, such as holoviews. However, we choose to use Bokeh here primarily due to the simple interface, and clean style.
 &lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;Acknowledgments&lt;/h2&gt;
+&lt;h2 id="acknowledgments"&gt;Acknowledgments&lt;/h2&gt;
 &lt;p&gt;This post is based on the official &lt;a href="https://pycbc.org/tutorials/"&gt;PyCBC tutorials&lt;/a&gt;, and is cited in the example 
 repository's &lt;a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md"&gt;README&lt;/a&gt;. &lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -473,12 +659,11 @@ having no rest mass!&lt;/p&gt;
 &lt;h3&gt;Bibliography&lt;/h3&gt;
 &lt;p id='carrollSpacetimeGeometryIntroduction2013'&gt;Sean Carroll.
 &lt;em&gt;Spacetime and &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Geometry&lt;/span&gt;&lt;/span&gt;: &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;An Introduction&lt;/span&gt;&lt;/span&gt; to &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;General Relativity&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;.
-&lt;span class="bibtex-protected"&gt;Pearson Education&lt;/span&gt;, 3 edition, 2013. &lt;a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;span class="bibtex-protected"&gt;Pearson Education&lt;/span&gt;, third edition, 2013. &lt;a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p id='misnerGravitation2017'&gt;Charles&amp;nbsp;W. Misner, Kip&amp;nbsp;S. Thorne, John&amp;nbsp;Archibald Wheeler, and David Kaiser.
 &lt;em&gt;Gravitation&lt;/em&gt;.
 &lt;span class="bibtex-protected"&gt;Princeton University Press&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Princeton, N.J&lt;/span&gt;, 2017.
-ISBN 978-0-691-17779-3.
-OCLC: on1006427790. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+ISBN 978-0-691-17779-3. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 </content><category term="Physics"></category><category term="physics"></category><category term="gravity"></category></entry><entry><title>TSAPS Spring Meeting</title><link href="/blog/tsaps-spring-meeting/" rel="alternate"></link><published>2019-03-12T00:00:00-05:00</published><updated>2019-03-12T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2019-03-12:/blog/tsaps-spring-meeting/</id><summary type="html">&lt;p&gt;Three hours south east of Dallas, Physicists gathered at Stephen F. Austin university in Nacogdoches to discuss recent developments in the field. They weren't alone, though. The meeting was shared between the APS, AAPT, and SPS - so if you were interested in physics research, studying physics, or teaching physics, there …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three hours south east of Dallas, Physicists gathered at Stephen F. Austin university in Nacogdoches to discuss recent developments in the field. They weren't alone, though. The meeting was shared between the APS, AAPT, and SPS - so if you were interested in physics research, studying physics, or teaching physics, there was something there that could hold your attention. For me, there were a couple talks related to astrophysics that seemed worth the drive; I hit the road early Friday morning to arrive in time for the first talk. &lt;/p&gt;
 &lt;p&gt;Dr. Billy Quarles' talk, &lt;em&gt;Potential for Exoplanetary Neighbors in Alpha Centauri&lt;/em&gt;, included a brief discussion of methodologies used to detect exoplanets. Though Quarles and his collaborators recent work seemed to focus mostly in RV techniques, the discussion on photometric methods was particularly interesting. The way that he presented the problem seemed to lend itself naturally to some geometric tricks that would allow for closed-form solutions to the intensity of the star during an exoplanet transit. I am drafting an analysis of these tricks presently, and will update this post with a link once complete - however the sketch goes something like this:&lt;/p&gt;
 &lt;p&gt;Let an exoplanet of mass &lt;span class="math"&gt;\(m\)&lt;/span&gt; orbit a star of mass &lt;span class="math"&gt;\(M\)&lt;/span&gt; (clearly, &lt;span class="math"&gt;\(m &amp;lt; M\)&lt;/span&gt;). The ellipticity of this orbit isn't immediately important, since we're going to make a few simplifying assumptions. First we use &lt;span class="math"&gt;\(T \cup \mathcal{O}(3)\)&lt;/span&gt; invariance of the trajectory geometry to align the orbital plane with the &lt;span class="math"&gt;\(x\)&lt;/span&gt; - &lt;span class="math"&gt;\(y\)&lt;/span&gt; plane in &lt;span class="math"&gt;\(\mathcal{R}^3\)&lt;/span&gt;. We also choose to align the orbital angular momentum &lt;span class="math"&gt;\(L\)&lt;/span&gt; with the &lt;span class="math"&gt;\(z\)&lt;/span&gt; axis of &lt;span class="math"&gt;\(\mathcal{R}^3\)&lt;/span&gt;. Next, we choose a reference point &lt;span class="math"&gt;\(p\)&lt;/span&gt; along the &lt;span class="math"&gt;\(x\)&lt;/span&gt; axis to serve as the "observer". When the observer is sufficiently far from the planetary system, as the Earth is from even our nearest  neighboring system, then we may approximate the path of the light exiting the system as a projection along the &lt;span class="math"&gt;\(x\)&lt;/span&gt; axis into the &lt;span class="math"&gt;\(y\)&lt;/span&gt; - &lt;span class="math"&gt;\(z\)&lt;/span&gt; plane, namely &lt;span class="math"&gt;\(\pi_{1}: \mathcal{R}^3 \rightarrow \mathcal{R}^2\)&lt;/span&gt; defined by &lt;span class="math"&gt;\(\pi_{1}(x, y, z) = (y, z)\)&lt;/span&gt;. This assumption allows us to reduce the problem of intersecting volumes to one of intersecting areas! The remaining geometric problem can thus be stated: Given two circles &lt;span class="math"&gt;\(S_{p1}^1(r_1)\)&lt;/span&gt; and &lt;span class="math"&gt;\(S_{p_2}^1(r_2)\)&lt;/span&gt;, where the centers &lt;span class="math"&gt;\(p_1\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_2\)&lt;/span&gt; are represented as smooth functions of time &lt;span class="math"&gt;\(\alpha_1(t)\)&lt;/span&gt; and &lt;span class="math"&gt;\(\alpha_2(t)\)&lt;/span&gt;, give the intersectional area &lt;span class="math"&gt;\(A_{\cap}(t)\)&lt;/span&gt; as a function of time. The intensity of the star during transit will be proportional to this function to a first order.&lt;/p&gt;

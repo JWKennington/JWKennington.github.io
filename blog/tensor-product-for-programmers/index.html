@@ -158,9 +158,9 @@
         <p>The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. </p>
 <p>Tensors are defined and introduced in two equivalent ways. The first way, called the "expansion coefficient" (or array) style of introducing tensors relies on many indices and iterates over the n dimensions of some array (n-dimensional generalization of a matrix) <a href='#wikipediaTensorMultidimensionalArrays2019' id='ref-wikipediaTensorMultidimensionalArrays2019-1'>Wikipedia (2019)</a>. I have found this approach to be overly cluttered; missing the forest for the trees. Instead, I prefer the second way of defining tensors, namely as "multilinear maps" <a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'>Roman (2007)</a> <a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'>Jeevanjee (2015)</a>. This technique focuses on functions and interfaces, as opposed to components, and will be the chosen method of explaining below. </p>
 <p>Before we begin, a brief note about preferences between the "coefficient" and "multilinear" approaches. The latter way has found greater resonance with mathematicians, while programmers often find the former more comforting. I believe this is caused by an over-reliance on data structures as atomic units of understanding. True, it is natural as a developer to ask "but what <em>is</em> the object"; however, using more functional-programming style of thought, the multilinear map approach is actually simpler! No need to keep track of various coefficients on various axes of some imaginary n-dimensional array (leave that to <code>numpy</code>). In the below, I outline a functional-programming style analogy for tensors, and the tensor product. Thought the below snippets are in python, some details are left to the imagination (i.e. this code is not a script).</p>
-<h3>Setting the Stage</h3>
+<h3 id="setting-the-stage">Setting the Stage</h3>
 <p>Before we get to define tensors, we need to briefly define a few building blocks. First, there is a field <span class="math">\(C\)</span>, commonly the reals <span class="math">\(\mathbb{R}\)</span>, occasionally the complex numbers <span class="math">\(\mathbb{C}\)</span>. Members of <span class="math">\(C\)</span> are called <em>scalars</em> and are represented in the code by the type <code>scalar</code>. Second, there are vector spaces <span class="math">\(V\)</span> over this field, with the usual properties of closure under addition and scalar multiplication. Elements of <span class="math">\(V\)</span> are of type <code>vector</code>. Note, I am not specifying a vector as a tuple of scalars - though that is a valid vector space, there are others based on non-tuple like entities, like the vector space of square-integrable functions! The last piece of machinery is the dual space <span class="math">\(V^*\)</span>. If you're not familiar with the dual space, it is essentially the set of all linear functions that take 1 vector and spit out a scalar (specifically <span class="math">\(V^* = \{f: V\rightarrow C\}\)</span> where <span class="math">\(f\)</span> is linear). Elements of <span class="math">\(V^*\)</span> are of type <code>dual</code>.</p>
-<h4>Some dual vectors</h4>
+<h4 id="some-dual-vectors">Some dual vectors</h4>
 <p>Recall that dual vectors are functions that take a vector and return a scalar. Let <span class="math">\(f, g \in V^*\)</span>. In code:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="n">vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scalar</span><span class="p">:</span>
     <span class="k">pass</span>
@@ -170,7 +170,7 @@
 </pre></div>
 
 
-<h4>Tensor Product</h4>
+<h4 id="tensor-product">Tensor Product</h4>
 <p>Now let's define the tensor product of <span class="math">\(f\)</span> and <span class="math">\(g\)</span> as <span class="math">\(h = f \otimes g\)</span>. What this amounts to, is combining the functional interface into a new, single tensor (function), that curries to the functions it was made from! Specifically:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">vector</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scalar</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
@@ -404,6 +404,7 @@ Tensor, as multidimensional arrays.
             <a href="/tag/comp-physics.html">comp-physics</a>
             <a href="/tag/conference.html">conference</a>
             <a href="/tag/fermi-problem.html">fermi-problem</a>
+            <a href="/tag/found-this-week.html">found-this-week</a>
             <a href="/tag/general.html">general</a>
             <a href="/tag/gravity.html">gravity</a>
             <a href="/tag/group.html">group</a>
@@ -431,7 +432,7 @@ Tensor, as multidimensional arrays.
 			<div class="container">
 				<div class="sixteen columns">&copy;
 					Jim Kennington&nbsp &middot &nbsp
- 545
+ 546
 &nbsp &middot &nbsp
 <!--						<ul class="social-icons-footer">-->
 <!--								<li >-->

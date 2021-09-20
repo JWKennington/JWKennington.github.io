@@ -158,7 +158,7 @@
         <p>This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, 
 using the PyCBC package. There is also a notebook-version of this post, available <a href="https://github.com/JWKennington/pycbc-examples">here</a>,
 in a repo of PyCBC examples.</p>
-<h2>Motivation</h2>
+<h2 id="motivation">Motivation</h2>
 <p>In order to analyze observed gravitational waves, we must first find the data containing the signal. This 
 example shows how to explore the Catalog of observed mergers available via the Gravitational Wave Open 
 Science Center (GWOSC). Though this example focuses on the Python API, the list of available mergers can also 
@@ -175,10 +175,10 @@ be found on the web at the following <a href="https://www.gw-openscience.org/cat
 
 
 <p><br></p>
-<h2>Exploring the Catalog</h2>
+<h2 id="exploring-the-catalog">Exploring the Catalog</h2>
 <p>A common structure for grouping astonomical data, a Catalog is a sensible concept for a programmatic API. 
 The PyCBC package has taken this approach, which is shown below using the <code>Catalog</code> class.</p>
-<h3>The <code>Catalog</code> Class</h3>
+<h3 id="the-catalog-class">The <code>Catalog</code> Class</h3>
 <p>The PyCBC Catalog class is capable of using the GWOSC data api to see essentially the same information
 contained in the link above (albeit through JSON instead of HTML). Under the hood, PyCBC relies on AstroPy
 data-access file-download utilities.</p>
@@ -191,7 +191,7 @@ need to specify it, though we do for clarity).</p>
 
 
 <p><br></p>
-<h3>Where are the <code>Merger</code>s stored?</h3>
+<h3 id="where-are-the-mergers-stored">Where are the <code>Merger</code>s stored?</h3>
 <p>The Catalog class is an iterable with respect to the names of the mergers in the catalog, so you can pick your favorite 
 technique to iterate over the available merger names (we use the list coercion function below).</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Get names of mergers in catalog </span>
@@ -204,7 +204,7 @@ technique to iterate over the available merger names (we use the list coercion f
 <p><br></p>
 <p>The Merger data associated to the name is stored in the <code>mergers</code> attribute of the <code>Catalog</code> instance, which 
 is a dictionary keyed by the name of the merger (which we examined above). </p>
-<h3>Basic Merger Properties</h3>
+<h3 id="basic-merger-properties">Basic Merger Properties</h3>
 <p>The <code>Merger</code> object retrieved from the Catalog contains all the estimated parameters of the waveform. Each 
 attribute may be accessed directly, but the preferred way is through the "median1d" method of the Merger class. 
 Keep in mind that these parameters are in the <em>source</em> frame, not the <em>detector</em> frame.</p>
@@ -251,7 +251,7 @@ Keep in mind that these parameters are in the <em>source</em> frame, not the <em
 
 
 <p><br></p>
-<h2>Merger Strain</h2>
+<h2 id="merger-strain">Merger Strain</h2>
 <p>Though a Merger object loads several scalar parameters once instantiated, it does not automatically load the 
 timeseries of strain data (for efficiency of the API). It is possible, however, and quite easy to load the 
 strain timeseries around the event. The below code shows how to load the waveform data. We begin by choosing a 
@@ -262,7 +262,7 @@ specific merger from the catalog.</p>
 
 
 <p><br></p>
-<h3>The <code>TimeSeries</code> Class</h3>
+<h3 id="the-timeseries-class">The <code>TimeSeries</code> Class</h3>
 <p>The time series data containing the merger waveform is returned as an instance of the <code>TimeSeries</code> class. Below, 
 we show how to load the strain data, as well as how to do some useful manipulations.</p>
 <p style="background: #e6e6e6; border-radius: 10px; padding: 10px">
@@ -293,7 +293,7 @@ we show how to load the strain data, as well as how to do some useful manipulati
 
 
 <p><br></p>
-<h4>Physics Remark:</h4>
+<h4 id="physics-remark">Physics Remark:</h4>
 <p>The <em>strain</em> recorded in the above timeseries basically represents the degree to which space has expanded 
 or contracted along the path of the interferometer:
 </p>
@@ -303,7 +303,7 @@ Where <span class="math">\(L\)</span> is the original length of the detector, an
 detector arms. For more information on the experimental setup, see the excellent review, 
 <a href="https://link.springer.com/article/10.1007/s41114-016-0002-8">Interferometer techniques for gravitational wave detection</a> 
 by Bond, Brown, Freise and Strain.</p>
-<h3>Visualize the Time-Domain</h3>
+<h3 id="visualize-the-time-domain">Visualize the Time-Domain</h3>
 <p>This section is devoted to visualizing the Time-domain strain. We use the <code>sample_times</code> attribute of 
 the <code>TimeSeries</code> class for the x-coordinates of the plot, and simply pass the <code>TimeSeries</code> object itself 
 as the y-coordinates (since it is an array). </p>
@@ -330,7 +330,7 @@ as the y-coordinates (since it is an array). </p>
     <i><b>Developer Note:</b></i><br>
     Plotting in Python is notoriously subjective; there are many competing libraries that all deserve proper attention, such as plotly, bokeh, plotnine, altair, and others (excluding matplotlib). There are meta-plotting libraries as well that sit atop these, such as holoviews. However, we choose to use Bokeh here primarily due to the simple interface, and clean style.
 </p></p>
-<h2>Acknowledgments</h2>
+<h2 id="acknowledgments">Acknowledgments</h2>
 <p>This post is based on the official <a href="https://pycbc.org/tutorials/">PyCBC tutorials</a>, and is cited in the example 
 repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md">README</a>. </p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -545,6 +545,7 @@ repository's <a href="https://github.com/JWKennington/pycbc-examples/blob/master
             <a href="/tag/comp-physics.html">comp-physics</a>
             <a href="/tag/conference.html">conference</a>
             <a href="/tag/fermi-problem.html">fermi-problem</a>
+            <a href="/tag/found-this-week.html">found-this-week</a>
             <a href="/tag/general.html">general</a>
             <a href="/tag/gravity.html">gravity</a>
             <a href="/tag/group.html">group</a>

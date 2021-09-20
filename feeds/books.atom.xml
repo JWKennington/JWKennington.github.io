@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington - Books</title><link href="/" rel="alternate"></link><link href="/feeds/books.atom.xml" rel="self"></link><id>/</id><updated>2019-06-28T00:00:00-05:00</updated><entry><title>Book Review: Tensors and Group Theory for Physicists (Jeevanjee)</title><link href="/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/" rel="alternate"></link><published>2019-06-28T00:00:00-05:00</published><updated>2019-06-28T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2019-06-28:/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/</id><summary type="html">&lt;h5&gt;Summary&lt;/h5&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington - Books</title><link href="/" rel="alternate"></link><link href="/feeds/books.atom.xml" rel="self"></link><id>/</id><updated>2019-06-28T00:00:00-05:00</updated><entry><title>Book Review: Tensors and Group Theory for Physicists (Jeevanjee)</title><link href="/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/" rel="alternate"></link><published>2019-06-28T00:00:00-05:00</published><updated>2019-06-28T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2019-06-28:/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/</id><summary type="html">&lt;h5 id="summary"&gt;Summary&lt;/h5&gt;
 &lt;p&gt;I picked up a copy of Nadir Jeevnajee's &lt;a href="https://amzn.to/2XzHfp2"&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/a&gt;
 a few months ago with the intent of skimming through and spending most of my time in reference texts. To my pleasant
-surprise, I found this text to be self contained - requiring …&lt;/p&gt;</summary><content type="html">&lt;h5&gt;Summary&lt;/h5&gt;
+surprise, I found this text to be self contained - requiring …&lt;/p&gt;</summary><content type="html">&lt;h5 id="summary"&gt;Summary&lt;/h5&gt;
 &lt;p&gt;I picked up a copy of Nadir Jeevnajee's &lt;a href="https://amzn.to/2XzHfp2"&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/a&gt;
 a few months ago with the intent of skimming through and spending most of my time in reference texts. To my pleasant
 surprise, I found this text to be self contained - requiring little to no references. The presentation is at once 
@@ -10,21 +10,21 @@ mathematically rigorous and physically intuitive, alluding to well-known example
 text to be such a great introduction to tensors that I have even recommended it to computer-scientist colleagues of mine
 who have no interest in physics. I whole-heartedly recommend it to anyone interesting in becoming more familiar with tensors
 and elementary group / representation theory.&lt;/p&gt;
-&lt;h5&gt;Part I: Tensors&lt;/h5&gt;
+&lt;h5 id="part-i-tensors"&gt;Part I: Tensors&lt;/h5&gt;
 &lt;p&gt;The presentation of tensors as multilinear functions achieves a remarkable degree of exposition, and arrives at all the 
 more heuristic definitions of tensors as derived from the simple multilinear-map definitions. This gave the impression
 of a more solid ground basis for many subsequent tensorial notations and usages.&lt;/p&gt;
 &lt;p&gt;The derivation of commonly assumed definitions is most satisfying. Specifically, the definitions of the adjoint operator
 and tensor product are much simpler than the more commonly given "behavioral" definitions presented in physics. I appreciated
 the rigorous yet succinct treatment of the tensor and wedge products.&lt;/p&gt;
-&lt;h5&gt;Part II: Group Theory&lt;/h5&gt;
+&lt;h5 id="part-ii-group-theory"&gt;Part II: Group Theory&lt;/h5&gt;
 &lt;p&gt;Though I am still working through the last part of chapter 6, I must admit I found this section to be superbly clear. The 
 methodical, sequential development of topics in Lie theory were especially thoughtful. The presentation of Lie algebra elements
 as derivatives of Lie group elements yielded the conventional tangent-space definitions nicely. &lt;/p&gt;
 &lt;p&gt;At the same time, Jeevanjee also presents many common groups and the important relations between them, such as the double-cover 
 relationship of SU(2) and SO(3). He also presents the higher-level relations between the various common groups, such as the
 quantum implications of the Lorentz (improper) group. Good stuff!&lt;/p&gt;
-&lt;h5&gt;Solutions&lt;/h5&gt;
+&lt;h5 id="solutions"&gt;Solutions&lt;/h5&gt;
 &lt;p&gt;As I read through the text I'm compiling some solutions. Much to my fortunate suprise, Dr. Jeevanjee has welcomed these 
 solutions as contributions to his solutions manual which he has published on 
 Overleaf here: &lt;a href="https://www.overleaf.com/read/smdmygtbwtxk"&gt;Solutions Manual&lt;/a&gt;.&lt;/p&gt;</content><category term="Books"></category><category term="physics"></category><category term="linear algebra"></category><category term="group theory"></category><category term="tensors"></category></entry></feed>

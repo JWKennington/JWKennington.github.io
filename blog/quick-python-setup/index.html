@@ -155,13 +155,13 @@
             </ul>
         </header>
 
-        <h4>Motivation</h4>
+        <h4 id="motivation">Motivation</h4>
 <p>Python has increased in popularity to near ubiquity in the past five years. While the Python community (correctly) professes 
 simplicity as a major accomplishment of the language, I still get a lot of questions about how to get a python environment 
 setup properly. There are some lengthy guides out there on this - this post will aim to summarize and explain the relevant 
 components to getting started.</p>
 <p><strong>Note: skip to bottom if you want quick install commands</strong></p>
-<h4>The Pieces</h4>
+<h4 id="the-pieces">The Pieces</h4>
 <ul>
 <li><strong><em>Python</em></strong> is a language. Combination of syntax rules, semantics, keyword commands, an interpreter that can execute code abiding the rules. </li>
 <li><strong><em>package</em></strong> is a self-contained, reusable piece of python code. Often a directory containing one or more python files (or more subdirectories). One typically packages python code in order to share it. There are some packages that come with the language itself (called "builtin") and others that users can install optionally (called "3rd party" packages)</li>
@@ -170,16 +170,16 @@ components to getting started.</p>
 <li><strong><em>miniconda</em></strong> is an environment that contains bare-bones packages only, including the conda package manager.</li>
 <li><strong><em>Anaconda</em></strong> is an environment that contains a <em>large</em> amount of packages, aimed at scientific computing (such as numpy, scipy, etc)</li>
 </ul>
-<h4>The Process</h4>
+<h4 id="the-process">The Process</h4>
 <p>Recall that this guide is designed for novice-users, or as a reference for other users. I will assume that the user is 
 able to use a desktop GUI (not headless).</p>
-<h5>Using Pip (not recommended)</h5>
+<h5 id="using-pip-not-recommended">Using Pip (not recommended)</h5>
 <p>Install python using the <a href="https://www.python.org/downloads/">os-specific Python installation programs</a>. I recommend 
 installing the latest version of Python 3.*, since most new packages do not include support for older versions of 2.7. 
 The program will install all the base packages you require, including pip. At which point you can open up a command line 
 (terminal on Mac or CMD on Win), and use commands like <code>pip install x</code> to install a package named "x" (for more pip commands 
 see the <a href="https://pip.pypa.io/en/stable/quickstart/">docs</a>).</p>
-<h5>Using Conda (recommended)</h5>
+<h5 id="using-conda-recommended">Using Conda (recommended)</h5>
 <p>Install <strong>miniconda</strong> using the <a href="https://docs.conda.io/en/latest/miniconda.html">install program</a>. Once installed, create 
 your Python environment by doing the following:</p>
 <ol>
@@ -192,7 +192,7 @@ your Python environment by doing the following:</p>
 </ol>
 <p>There are, of course, more complicated options available using conda, for those see 
 the <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">conda cheat sheet</a></p>
-<h4>TL;DR - Get Python Setup</h4>
+<h4 id="tldr-get-python-setup">TL;DR - Get Python Setup</h4>
 <p>The below steps give a quick, general-purpose environment setup.</p>
 <ol>
 <li>Install <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a></li>
@@ -204,7 +204,7 @@ the <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c4
 <p>The "env1" directory will be installed in the user x directory (<code>~/.anaconda</code> on Mac or <code>C:\Users\x\.anaconda</code> on Win). 
 If you are using a python editor (like PyCharm) that wants to be "pointed" to the environment, then you will configure 
 it to look at the "env1" directory under the ".anaconda" folder.</p>
-<h4>Conda env shortcut</h4>
+<h4 id="conda-env-shortcut">Conda env shortcut</h4>
 <p>It is also possible to create a clickable shortcut to the conda environment, see <a href="https://anaconda.org/anaconda/console_shortcut">the docs</a> for more.</p>
         <div class="tags">
             <p>tags: <a href="/tag/python.html">python</a><a href="/tag/comp-physics.html">comp-physics</a></p>
@@ -352,6 +352,7 @@ it to look at the "env1" directory under the ".anaconda" folder.</p>
             <a href="/tag/comp-physics.html">comp-physics</a>
             <a href="/tag/conference.html">conference</a>
             <a href="/tag/fermi-problem.html">fermi-problem</a>
+            <a href="/tag/found-this-week.html">found-this-week</a>
             <a href="/tag/general.html">general</a>
             <a href="/tag/gravity.html">gravity</a>
             <a href="/tag/group.html">group</a>

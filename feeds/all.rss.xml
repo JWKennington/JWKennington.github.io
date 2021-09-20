@@ -1,12 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jim W. Kennington</title><link>/</link><description></description><lastBuildDate>Fri, 17 Sep 2021 00:00:00 -0500</lastBuildDate><item><title>Fermi Friday: A Different Manhattan Project</title><link>/blog/fermi-friday-a-different-manhattan-project/</link><description>&lt;p&gt;For this week's installment of Fermi estimation, the question of interest is:&lt;/p&gt;
+<rss version="2.0"><channel><title>Jim W. Kennington</title><link>/</link><description></description><lastBuildDate>Sun, 19 Sep 2021 00:00:00 -0500</lastBuildDate><item><title>Found This Week #1</title><link>/blog/found-this-week-1/</link><description>&lt;p&gt;As this is the inaugural issue of the &lt;em&gt;found-this-week&lt;/em&gt; series, I'll briefly note my motivation and inspiration. The
+title of this series is an overt nod to the famous series &lt;a href="https://math.ucr.edu/home/baez/TWF.html"&gt;&lt;em&gt;This Week's Finds&lt;/em&gt;&lt;/a&gt;
+written by the inimitable John Baez. I have learned a great deal from that series and his book on gravity, and have the
+utmost admiration for Baez' abilities as a physicist and communicator. It is my hope that this series will be found
+useful by some, insightful by at least a few, and accessible by many. All feedback is welcome, and thank you in advance
+for bearing with me as I develop these posts.&lt;/p&gt;
+&lt;h3 id="algebraic-and-geometric-equivalence-of-tangent-vectors"&gt;Algebraic and Geometric Equivalence of Tangent Vectors&lt;/h3&gt;
+&lt;p&gt;As will likely come up in future posts, I'm thoroughly enjoying
+&lt;a href="https://amzn.to/39jLEEN"&gt;Modern Differential Geometry for Physicists&lt;/a&gt; by Chris Isham. He develops formalism and
+intuition without sacrificing rigor, all while carrying a conversational tone. See my
+&lt;a href="/pages/texts-physics/#isham-modern-differential-geometry-for-physicists-i"&gt;reference review&lt;/a&gt; for more on
+&lt;a href='#ishamModernDifferentialGeometry1999' id='ref-ishamModernDifferentialGeometry1999-1'&gt;Isham (1999)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Most students of physics or calculus are generally familiar with the notion of a tangent vector. This concept becomes
+more nuanced, of course, when the ambient space is generalized from &lt;span class="math"&gt;\(\mathbb{R}^n\)&lt;/span&gt; to a manifold &lt;span class="math"&gt;\(\mathcal{M}\)&lt;/span&gt; of
+dimension &lt;span class="math"&gt;\(n\)&lt;/span&gt;. Isham takes an unusual approach to formalizing the tangent vector concept by introducing two
+seemingly-different definitions (either of which are common among the relativity literature) and then formally proving
+their equivalence (done &lt;em&gt;nowhere&lt;/em&gt; in the literature). I appreciated the demonstration of equivalence, and will sketch it
+below.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tangent Vectors Geometrically&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Isham first introduces tangent vectors in the familiar, geometric manner. If we let &lt;span class="math"&gt;\(\gamma_1(\lambda)\)&lt;/span&gt; and &lt;span class="math"&gt;\(\gamma_2(
+\lambda)\)&lt;/span&gt; be curves passing through a point &lt;span class="math"&gt;\(p\)&lt;/span&gt; on a patch of the manifold &lt;span class="math"&gt;\(\mathcal{M}\)&lt;/span&gt; such that &lt;span class="math"&gt;\(\gamma_1(\lambda=0)
+= \gamma_2(\lambda=0) = p\)&lt;/span&gt;, then it is natural to define the tangent vector &lt;span class="math"&gt;\(v_p\)&lt;/span&gt; at &lt;span class="math"&gt;\(p\)&lt;/span&gt; as an equivalence class of
+curves, denoted &lt;span class="math"&gt;\(\left[\gamma\right]\)&lt;/span&gt;, where the equivalence criteria is defined by sharing the tangent vector &lt;span class="math"&gt;\(v_p\)&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left. \frac{d x^{\mu}}{d \lambda} (\gamma_1(\lambda)) \right|_{\lambda=0} = v_p = \left. \frac{d x^{\mu}}{d \lambda}
+(\gamma_2(\lambda)) \right|_{\lambda=0} \tag{Geometric}$$&lt;/div&gt;
+&lt;p&gt;The tangent space &lt;span class="math"&gt;\(T_p \mathcal{M}\)&lt;/span&gt; can then be defined as the set of all tangent vectors at the point &lt;span class="math"&gt;\(p\)&lt;/span&gt;, or the set
+of all equivalence classes of curves at the point &lt;span class="math"&gt;\(p\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tangent Vectors Algebraically&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The algebraic approach begins with the concept of a derivation, or directional derivative, &lt;span class="math"&gt;\(v\)&lt;/span&gt; as a map that is both
+linear and obeys the Leibniz rule. By thinking of the smooth functions on the manifold &lt;span class="math"&gt;\(C^{\infty}(\mathcal{M})\)&lt;/span&gt; as a
+ring over &lt;span class="math"&gt;\(\mathbb{R}\)&lt;/span&gt;, we can define the map &lt;span class="math"&gt;\(v: C^{\infty}(\mathcal{M}) \to \mathbb{R}\)&lt;/span&gt; as:&lt;/p&gt;
+&lt;div class="math"&gt;$$v(f) \equiv \left. \frac{df\left( \gamma(\lambda) \right)}{d\lambda} \right|_{\lambda=0} \quad\text{ where }\quad
+\left[\gamma\right] = v \tag{Algebraic}$$&lt;/div&gt;
+&lt;p&gt;By linear, we mean that for any &lt;span class="math"&gt;\(f, g \in C^{\infty}(\mathcal{M})\)&lt;/span&gt; and &lt;span class="math"&gt;\(r, s \in \mathbb{R}\)&lt;/span&gt;, we have &lt;span class="math"&gt;\(v(rf + sg) = rv(
+f) + sv(g)\)&lt;/span&gt;, and by Leibniz rule we mean &lt;span class="math"&gt;\(v(fg) = f(p)v(g) + g(p)v(f)\)&lt;/span&gt;. The set of all derivations at a point &lt;span class="math"&gt;\(p\)&lt;/span&gt; is 
+denoted &lt;span class="math"&gt;\(D_p \mathcal{M}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Equivalence of Definitions&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Isham shows that these two definitions of the tangent space, &lt;span class="math"&gt;\(T_p \mathcal{M}\)&lt;/span&gt; and &lt;span class="math"&gt;\(D_p \mathcal{M}\)&lt;/span&gt;, are equivalent by
+proving that the natural map between them &lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is, in fact, an isomorphism, where &lt;span class="math"&gt;\(\iota: T_p\mathcal{M} \to
+D_p\mathcal{M}\)&lt;/span&gt; is defined as:&lt;/p&gt;
+&lt;div class="math"&gt;$$\iota(v)(f) \equiv \left. \frac{df \left(\gamma\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0}
+\tag{Isomorphism}$$&lt;/div&gt;
+&lt;p&gt;To show that &lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is an isomorphism, Isham demonstrates that it is both injective (one-to-one) and surjective (onto).
+To show injectivity, assume that &lt;span class="math"&gt;\(\iota(\left[\gamma_1\right]) = \iota(\left[\gamma_2\right])\)&lt;/span&gt;, then we must have&lt;/p&gt;
+&lt;div class="math"&gt;$$ \left. \frac{df \left(\gamma_1\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0} = \left. \frac{df \left(
+\gamma_2\left(\lambda\right)\right) }{d\lambda} \right|_{\lambda=0} $$&lt;/div&gt;
+&lt;p&gt;The above shows that both &lt;span class="math"&gt;\(\gamma_1\)&lt;/span&gt; and &lt;span class="math"&gt;\(\gamma_2\)&lt;/span&gt; are tangent at &lt;span class="math"&gt;\(p\)&lt;/span&gt;, which implies that they are, in fact,
+equivalent. Therefore &lt;span class="math"&gt;\(\left[\gamma_1\right] = \left[\gamma_2\right]\)&lt;/span&gt;, and &lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is injective. To show that &lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is
+surjective we choose an element &lt;span class="math"&gt;\(v\)&lt;/span&gt; of the range &lt;span class="math"&gt;\(D_p\mathcal{M}\)&lt;/span&gt; and define a curve &lt;span class="math"&gt;\(\gamma_v\)&lt;/span&gt; such that &lt;span class="math"&gt;\(\gamma_v(0) =
+p\)&lt;/span&gt; and &lt;span class="math"&gt;\(v(x^{\mu}) = \frac{d}{d\lambda} x^{\mu} \circ \gamma(\lambda) |_{\lambda=0}\)&lt;/span&gt;. Recall that we can expand a
+tangent vector as &lt;span class="math"&gt;\(v_p\)&lt;/span&gt; in terms of derivatives of a coordinate system &lt;span class="math"&gt;\(x^{\mu}\)&lt;/span&gt; as &lt;span class="math"&gt;\(v = v^{\mu}\partial_{\mu}\)&lt;/span&gt; and
+therefore &lt;span class="math"&gt;\(v(f) = v^{\mu} \partial_{\mu} f = \frac{d}{d\lambda} x^{\mu} \circ \gamma_v |_{\lambda=0} \partial_{\mu} f\)&lt;/span&gt;.
+But Isham shows:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{align} \left. \frac{d}{d\lambda} f\circ \gamma_v \right|_{\lambda=0} &amp;amp;= \left. \frac{d}{d\lambda}(f \circ
+\phi^{-1} \circ \phi \circ \gamma_v) \right|_{\lambda=0} \\ &amp;amp;= \sum_{\mu} \left. \frac{\partial}{\partial u^{\mu}} (f
+\circ \phi^{-1}) \right|_{\phi(p)} \left. \frac{d}{d\lambda} u^{\mu} (\phi \circ \gamma_v) \right|_{\lambda=0} \\ &amp;amp;=
+\sum_{\mu} \left(\frac{\partial}{\partial x^{\mu}}\right)_{p} f \left. \frac{d}{d\lambda} x^{\mu} \circ \gamma_v(
+\lambda) \right|_{\lambda=0} = v(f)
+\end{align}$$&lt;/div&gt;
+&lt;p&gt;Since &lt;span class="math"&gt;\(\frac{d}{d\lambda} f \circ \gamma_v |_{\lambda=0} = v(f)\)&lt;/span&gt;, then &lt;span class="math"&gt;\(\left[\gamma_v\right](f) = v(f)\)&lt;/span&gt; and therefore
+&lt;span class="math"&gt;\(\iota\)&lt;/span&gt; is surjective. This completes the proof, and we can robustly conclude that the geometric and algebraic pictures
+are formally equivalent! We are then free to use either where convenient. &lt;/p&gt;
+&lt;h3 id="swarms-of-searching-particles"&gt;Swarms of Searching Particles&lt;/h3&gt;
+&lt;p&gt;During a recent talk &lt;a href='#adhicaryAdvanceAlertsGravitational2021' id='ref-adhicaryAdvanceAlertsGravitational2021-1'&gt;Adhicary (2021)&lt;/a&gt; the subject of optimization arose in the context of 
+gravitational wave detection. Though interested in the application (my present research overlaps heavily with GW
+detection), the general concept of &lt;em&gt;particle swarm optimization&lt;/em&gt; (PSO) captured my attention. &lt;/p&gt;
+&lt;p&gt;This optimization method involves an initial distribution of &lt;span class="math"&gt;\(m\)&lt;/span&gt; particles &lt;span class="math"&gt;\(\{x^{\mu}_{k}\}\)&lt;/span&gt; in the &lt;span class="math"&gt;\(n\)&lt;/span&gt;-dimensional 
+parameter space &lt;span class="math"&gt;\(\mathcal{M}\)&lt;/span&gt; of some measure of quality &lt;span class="math"&gt;\(f: \mathcal{M} \to \mathbb{R}\)&lt;/span&gt;, where 
+&lt;span class="math"&gt;\(\mu = 1, \dots, n\)&lt;/span&gt; refers to the coordinate in &lt;span class="math"&gt;\(\mathcal{M}\)&lt;/span&gt; and &lt;span class="math"&gt;\(k = 1, \dots, m\)&lt;/span&gt; refers to the 
+particle number. Each particle is initialized with some velocity, and the velocity is updated throughout each iteration
+of the algorithm. Interestingly, the particles are &lt;em&gt;not&lt;/em&gt; computing local gradients, rather, their velocities are updated
+using a randomized combination of local (nearest-neighbors-in-swarm) and global (all-swarm) information. The iteration 
+rule can be summarized broadly by the equation below. &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{align}
+v^{\mu}_{k}(t) &amp;amp;= c_0 v^{\mu}_{k}(t - \Delta t) \\
+&amp;amp;+ c_1 r_1 \left[\eta^{\mu}_k(t - \Delta t) - x^{\mu}_k(t - \Delta t)\right] \\
+&amp;amp;+ c_2 r_2 \left[\zeta^{\mu}(t - \Delta t) - x^{\mu}_k(t - \Delta t)\right]   
+\end{align}\tag{PSO Iteration}$$&lt;/div&gt;
+&lt;p&gt;Where the variable &lt;span class="math"&gt;\(\eta^{\mu}_k\)&lt;/span&gt; represents the best known position of the &lt;em&gt;local&lt;/em&gt; neighbors of particle &lt;span class="math"&gt;\(k\)&lt;/span&gt; and the 
+variable &lt;span class="math"&gt;\(\zeta^{\mu}\)&lt;/span&gt; represents the best known position of the entire swarm (also called the &lt;em&gt;global&lt;/em&gt; best). The term
+&lt;em&gt;best&lt;/em&gt; here refers to the type of optimization, in our example we would maximizing our quality function &lt;span class="math"&gt;\(f\)&lt;/span&gt;, so for 
+example &lt;span class="math"&gt;\(\zeta^{\mu}\)&lt;/span&gt; is the position in the swarm that corresponds to the larges value of &lt;span class="math"&gt;\(f\)&lt;/span&gt;. When the velocity updates, 
+the algorithm is essentially trying to mix three things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The previous direction of the particle&lt;/li&gt;
+&lt;li&gt;The direction towards the known, local optimum&lt;/li&gt;
+&lt;li&gt;The direction toweards the known, global optimum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;
+The numbers &lt;span class="math"&gt;\((r_1, r_2)\)&lt;/span&gt; are randomly generated each iteration, and allow the particles to explore more of the parameter
+space instead of moving directly towards their known, best locations. Lastly, the constants &lt;span class="math"&gt;\((c_0, c_1, c_2)\)&lt;/span&gt; are tuning 
+parameters that control how to weight the particle, local, and global information when updating particle velocities. The
+image below represents a sample of PSO in a two-dimensional setting.&lt;/p&gt;
+&lt;p&gt;&lt;a title="Ephramac, CC BY-SA 4.0 &amp;lt;https://creativecommons.org/licenses/by-sa/4.0&amp;gt;, via Wikimedia Commons" 
+href="https://commons.wikimedia.org/wiki/File:ParticleSwarmArrowsAnimation.gif"&gt;
+&lt;img class="jwk-image" width="300" alt="ParticleSwarmArrowsAnimation" 
+    src="https://upload.wikimedia.org/wikipedia/commons/e/ec/ParticleSwarmArrowsAnimation.gif"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For further reading, the PSO algorithm has been studied extensively in general &lt;a href='#clercParticleSwarmOptimization2006' id='ref-clercParticleSwarmOptimization2006-1'&gt;Clerc (2006)&lt;/a&gt;. PSO
+has also been used in a variety of scientific fields, such as gravitational wave analysis &lt;a href='#wangParticleSwarmOptimization2010' id='ref-wangParticleSwarmOptimization2010-1'&gt;Wang and Mohanty (2010)&lt;/a&gt;,
+and has even been used in industry settings, such as financial portfolio optimization &lt;a href='#chenParticleSwarmOptimization2021' id='ref-chenParticleSwarmOptimization2021-1'&gt;Chen et al. (2021)&lt;/a&gt;.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;&lt;hr&gt;
+&lt;h3&gt;Bibliography&lt;/h3&gt;
+&lt;p id='adhicaryAdvanceAlertsGravitational2021'&gt;Shomik Adhicary.
+Advance &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Alerts&lt;/span&gt;&lt;/span&gt; from &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Gravitational Wave Searches&lt;/span&gt;&lt;/span&gt; of &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Binary Compact Objects&lt;/span&gt;&lt;/span&gt; for &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Electromagnetic Follow&lt;/span&gt;&lt;/span&gt;-ups.
+September 2021. &lt;a class="cite-backref" href="#ref-adhicaryAdvanceAlertsGravitational2021-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='chenParticleSwarmOptimization2021'&gt;Ren-Raw Chen, Wiliam&amp;nbsp;Kaihua Huang, and Shih-Kuo Yeh.
+Particle swarm optimization approach to portfolio construction.
+&lt;em&gt;Intelligent Systems in Accounting, Finance and Management&lt;/em&gt;, pages isaf.1498, July 2021.
+&lt;a href="https://doi.org/10.1002/isaf.1498"&gt;doi:10.1002/isaf.1498&lt;/a&gt;. &lt;a class="cite-backref" href="#ref-chenParticleSwarmOptimization2021-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='clercParticleSwarmOptimization2006'&gt;Maurice Clerc.
+&lt;em&gt;Particle Swarm Optimization&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;ISTE&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;London ; Newport Beach&lt;/span&gt;, 2006.
+ISBN 978-1-905209-04-0. &lt;a class="cite-backref" href="#ref-clercParticleSwarmOptimization2006-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='ishamModernDifferentialGeometry1999'&gt;C.&amp;nbsp;J. Isham.
+&lt;em&gt;Modern Differential Geometry for Physicists&lt;/em&gt;.
+Number&amp;nbsp;v. 61 in World &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Scientific&lt;/span&gt;&lt;/span&gt; Lecture Notes in Physics.
+&lt;span class="bibtex-protected"&gt;World Scientific&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Singapore ; River Edge, N.J&lt;/span&gt;, 2nd ed edition, 1999.
+ISBN 978-981-02-3555-0 978-981-02-3562-8. &lt;a class="cite-backref" href="#ref-ishamModernDifferentialGeometry1999-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='wangParticleSwarmOptimization2010'&gt;Yan Wang and Soumya&amp;nbsp;D. Mohanty.
+Particle swarm optimization and gravitational wave data analysis: &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Performance&lt;/span&gt;&lt;/span&gt; on a binary inspiral testbed.
+&lt;em&gt;Physical Review D&lt;/em&gt;, 81(6):063002, March 2010.
+&lt;a href="https://doi.org/10.1103/PhysRevD.81.063002"&gt;doi:10.1103/PhysRevD.81.063002&lt;/a&gt;. &lt;a class="cite-backref" href="#ref-wangParticleSwarmOptimization2010-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Sun, 19 Sep 2021 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2021-09-19:/blog/found-this-week-1/</guid><category>Physics</category><category>found-this-week</category></item><item><title>Fermi Friday: A Different Manhattan Project</title><link>/blog/fermi-friday-a-different-manhattan-project/</link><description>&lt;p&gt;For this week's installment of Fermi estimation, the question of interest is:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;How fast would the sun burn an amount of hydrogen equivalent to the above-ground mass of Manhattan?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;To estimate the burn-time we'll need to guess at a few quantities: the above-ground mass of Manhattan, the solar
 luminosity (total energy emitted from the sun), and fraction of energy emitted from the core of the sun that makes it 
 to the surface.&lt;/p&gt;
-&lt;h3&gt;Mass of Manhattan&lt;/h3&gt;
+&lt;h3 id="mass-of-manhattan"&gt;Mass of Manhattan&lt;/h3&gt;
 &lt;p&gt;We will estimate the above-ground mass &lt;span class="math"&gt;\(m\)&lt;/span&gt; of Manhattan by computing a rough volume &lt;span class="math"&gt;\(V\)&lt;/span&gt; and density &lt;span class="math"&gt;\(\rho\)&lt;/span&gt;, then using the 
 familiar relation &lt;span class="math"&gt;\(m=\rho V\)&lt;/span&gt;. To compute the volume we make some assumptions. First, we represent the average number of 
 stories of a building in Manhattan as &lt;span class="math"&gt;\(n_{s}\)&lt;/span&gt;, the height of a story as &lt;span class="math"&gt;\(h_{s}\)&lt;/span&gt;, and the number of buildings in Manhattan
@@ -17,13 +201,13 @@ buildings in Manhattan &lt;span class="math"&gt;\(V_{\text{M}}\)&lt;/span&gt; is
 will compose a fraction &lt;span class="math"&gt;\(f_{c}\)&lt;/span&gt; of the building. Given the density of concrete &lt;span class="math"&gt;\(\rho_{c}\)&lt;/span&gt;, the density of Manhattan &lt;span class="math"&gt;\($ 
 will be $\rho_{\text{M}} = f_c \rho_{c}\)&lt;/span&gt;. Plugging this in to get the above-ground mass of Manhattan:&lt;/p&gt;
 &lt;div class="math"&gt;$$m_{\text{M}} = V_{\text{M}} \rho_{\text{M}} = n_{b} n_{s} h_{s} b_{s}^2 f_c \rho_{c}$$&lt;/div&gt;
-&lt;h3&gt;Solar Luminosity&lt;/h3&gt;
+&lt;h3 id="solar-luminosity"&gt;Solar Luminosity&lt;/h3&gt;
 &lt;p&gt;Using the temperature &lt;span class="math"&gt;\(T_{\odot}\)&lt;/span&gt; and radius &lt;span class="math"&gt;\(R_{\odot}\)&lt;/span&gt; of the sun, and approximating the Sun as a blackbordy, we can 
 use the Stefan-Boltzman law. This law relates the temperature &lt;span class="math"&gt;\(T\)&lt;/span&gt; and surface area &lt;span class="math"&gt;\(A\)&lt;/span&gt; of a blackbody to the total 
 energy output &lt;span class="math"&gt;\(\mathcal{L}\)&lt;/span&gt; of the object: &lt;span class="math"&gt;\(\mathcal{L} = \sigma A T^4\)&lt;/span&gt;. For simplicity, we assume the sun to be a perfect
 sphere, then:&lt;/p&gt;
 &lt;div class="math"&gt;$$\mathcal{L}_{\odot} = 4 \pi \sigma R_{\odot}^2 T_{\odot}^4$$&lt;/div&gt;
-&lt;h3&gt;Burn Rate&lt;/h3&gt;
+&lt;h3 id="burn-rate"&gt;Burn Rate&lt;/h3&gt;
 &lt;p&gt;THe solar luminosity tells us how much energy per unit time is emitted from the sun. If we want to know how much
 mass is consumed to produce that energy, we need to understand how much energy is produced in the fusion of Hydrogen.
 Using a simple approximation, 4 Hydrogen atoms are converted into 1 Helium atom. The difference in total mass is due
@@ -35,7 +219,7 @@ which gives us an expression for the unit energy &lt;span class="math"&gt;\(E_{\
 unit reaction energy gives (energy / mass), then in order to get the burn rate in terms of (mass / time) we need
 to divide the luminosity by the unit reaction rate:&lt;/p&gt;
 &lt;div class="math"&gt;$$r_{\text{burn}} = \frac{\mathcal{L}}{E_{\text{H}}}$$&lt;/div&gt;
-&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;h3 id="solution"&gt;Solution&lt;/h3&gt;
 &lt;p&gt;Putting the above expressions together, we arrive at the burn-time:&lt;/p&gt;
 &lt;div class="math"&gt;$$\tau_{\text{burn}} = \frac{m_{\text{M}}}{r_{\text{burn}}} = \frac{m_{\text{M}} E_{\text{H}}  }{\mathcal{L}  }
 = \frac{ n_{b} n_{s} h_{s} b_{s}^2 f_c \rho_{c} \left(4 - \frac{m_{\text{He}}}{m_{\text{H}}} \right) c^2 }{ 4 \pi \sigma R_{\odot}^2 T_{\odot}^4 }$$&lt;/div&gt;
@@ -241,7 +425,7 @@ ISBN 978-0-387-72828-5. &lt;a class="cite-backref" href="#ref-romanAdvancedLinea
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Sun, 15 Mar 2020 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2020-03-15:/blog/algebra-ladder/</guid><category>Maths</category><category>maths</category><category>algebra</category><category>group</category></item><item><title>Loading Gravitational Wave Data with PyCBC</title><link>/blog/loading-gravitational-wave-data-with-pycbc/</link><description>&lt;p&gt;This post is the first in a series of in-depth examples for analyzing gravitational wave data in Python, 
 using the PyCBC package. There is also a notebook-version of this post, available &lt;a href="https://github.com/JWKennington/pycbc-examples"&gt;here&lt;/a&gt;,
 in a repo of PyCBC examples.&lt;/p&gt;
-&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;In order to analyze observed gravitational waves, we must first find the data containing the signal. This 
 example shows how to explore the Catalog of observed mergers available via the Gravitational Wave Open 
 Science Center (GWOSC). Though this example focuses on the Python API, the list of available mergers can also 
@@ -258,10 +442,10 @@ be found on the web at the following &lt;a href="https://www.gw-openscience.org/
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h2&gt;Exploring the Catalog&lt;/h2&gt;
+&lt;h2 id="exploring-the-catalog"&gt;Exploring the Catalog&lt;/h2&gt;
 &lt;p&gt;A common structure for grouping astonomical data, a Catalog is a sensible concept for a programmatic API. 
 The PyCBC package has taken this approach, which is shown below using the &lt;code&gt;Catalog&lt;/code&gt; class.&lt;/p&gt;
-&lt;h3&gt;The &lt;code&gt;Catalog&lt;/code&gt; Class&lt;/h3&gt;
+&lt;h3 id="the-catalog-class"&gt;The &lt;code&gt;Catalog&lt;/code&gt; Class&lt;/h3&gt;
 &lt;p&gt;The PyCBC Catalog class is capable of using the GWOSC data api to see essentially the same information
 contained in the link above (albeit through JSON instead of HTML). Under the hood, PyCBC relies on AstroPy
 data-access file-download utilities.&lt;/p&gt;
@@ -274,7 +458,7 @@ need to specify it, though we do for clarity).&lt;/p&gt;
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h3&gt;Where are the &lt;code&gt;Merger&lt;/code&gt;s stored?&lt;/h3&gt;
+&lt;h3 id="where-are-the-mergers-stored"&gt;Where are the &lt;code&gt;Merger&lt;/code&gt;s stored?&lt;/h3&gt;
 &lt;p&gt;The Catalog class is an iterable with respect to the names of the mergers in the catalog, so you can pick your favorite 
 technique to iterate over the available merger names (we use the list coercion function below).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# Get names of mergers in catalog &lt;/span&gt;
@@ -287,7 +471,7 @@ technique to iterate over the available merger names (we use the list coercion f
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;The Merger data associated to the name is stored in the &lt;code&gt;mergers&lt;/code&gt; attribute of the &lt;code&gt;Catalog&lt;/code&gt; instance, which 
 is a dictionary keyed by the name of the merger (which we examined above). &lt;/p&gt;
-&lt;h3&gt;Basic Merger Properties&lt;/h3&gt;
+&lt;h3 id="basic-merger-properties"&gt;Basic Merger Properties&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;Merger&lt;/code&gt; object retrieved from the Catalog contains all the estimated parameters of the waveform. Each 
 attribute may be accessed directly, but the preferred way is through the "median1d" method of the Merger class. 
 Keep in mind that these parameters are in the &lt;em&gt;source&lt;/em&gt; frame, not the &lt;em&gt;detector&lt;/em&gt; frame.&lt;/p&gt;
@@ -334,7 +518,7 @@ Keep in mind that these parameters are in the &lt;em&gt;source&lt;/em&gt; frame,
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h2&gt;Merger Strain&lt;/h2&gt;
+&lt;h2 id="merger-strain"&gt;Merger Strain&lt;/h2&gt;
 &lt;p&gt;Though a Merger object loads several scalar parameters once instantiated, it does not automatically load the 
 timeseries of strain data (for efficiency of the API). It is possible, however, and quite easy to load the 
 strain timeseries around the event. The below code shows how to load the waveform data. We begin by choosing a 
@@ -345,7 +529,7 @@ specific merger from the catalog.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h3&gt;The &lt;code&gt;TimeSeries&lt;/code&gt; Class&lt;/h3&gt;
+&lt;h3 id="the-timeseries-class"&gt;The &lt;code&gt;TimeSeries&lt;/code&gt; Class&lt;/h3&gt;
 &lt;p&gt;The time series data containing the merger waveform is returned as an instance of the &lt;code&gt;TimeSeries&lt;/code&gt; class. Below, 
 we show how to load the strain data, as well as how to do some useful manipulations.&lt;/p&gt;
 &lt;p style="background: #e6e6e6; border-radius: 10px; padding: 10px"&gt;
@@ -376,7 +560,7 @@ we show how to load the strain data, as well as how to do some useful manipulati
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h4&gt;Physics Remark:&lt;/h4&gt;
+&lt;h4 id="physics-remark"&gt;Physics Remark:&lt;/h4&gt;
 &lt;p&gt;The &lt;em&gt;strain&lt;/em&gt; recorded in the above timeseries basically represents the degree to which space has expanded 
 or contracted along the path of the interferometer:
 &lt;/p&gt;
@@ -386,7 +570,7 @@ Where &lt;span class="math"&gt;\(L\)&lt;/span&gt; is the original length of the 
 detector arms. For more information on the experimental setup, see the excellent review, 
 &lt;a href="https://link.springer.com/article/10.1007/s41114-016-0002-8"&gt;Interferometer techniques for gravitational wave detection&lt;/a&gt; 
 by Bond, Brown, Freise and Strain.&lt;/p&gt;
-&lt;h3&gt;Visualize the Time-Domain&lt;/h3&gt;
+&lt;h3 id="visualize-the-time-domain"&gt;Visualize the Time-Domain&lt;/h3&gt;
 &lt;p&gt;This section is devoted to visualizing the Time-domain strain. We use the &lt;code&gt;sample_times&lt;/code&gt; attribute of 
 the &lt;code&gt;TimeSeries&lt;/code&gt; class for the x-coordinates of the plot, and simply pass the &lt;code&gt;TimeSeries&lt;/code&gt; object itself 
 as the y-coordinates (since it is an array). &lt;/p&gt;
@@ -413,7 +597,7 @@ as the y-coordinates (since it is an array). &lt;/p&gt;
     &lt;i&gt;&lt;b&gt;Developer Note:&lt;/b&gt;&lt;/i&gt;&lt;br&gt;
     Plotting in Python is notoriously subjective; there are many competing libraries that all deserve proper attention, such as plotly, bokeh, plotnine, altair, and others (excluding matplotlib). There are meta-plotting libraries as well that sit atop these, such as holoviews. However, we choose to use Bokeh here primarily due to the simple interface, and clean style.
 &lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;Acknowledgments&lt;/h2&gt;
+&lt;h2 id="acknowledgments"&gt;Acknowledgments&lt;/h2&gt;
 &lt;p&gt;This post is based on the official &lt;a href="https://pycbc.org/tutorials/"&gt;PyCBC tutorials&lt;/a&gt;, and is cited in the example 
 repository's &lt;a href="https://github.com/JWKennington/pycbc-examples/blob/master/README.md"&gt;README&lt;/a&gt;. &lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -477,13 +661,13 @@ repository's &lt;a href="https://github.com/JWKennington/pycbc-examples/blob/mas
     (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Sat, 12 Oct 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-10-12:/blog/loading-gravitational-wave-data-with-pycbc/</guid><category>Physics</category><category>physics</category><category>gravity</category></item><item><title>Quick Python Setup</title><link>/blog/quick-python-setup/</link><description>&lt;h4&gt;Motivation&lt;/h4&gt;
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Sat, 12 Oct 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-10-12:/blog/loading-gravitational-wave-data-with-pycbc/</guid><category>Physics</category><category>physics</category><category>gravity</category></item><item><title>Quick Python Setup</title><link>/blog/quick-python-setup/</link><description>&lt;h4 id="motivation"&gt;Motivation&lt;/h4&gt;
 &lt;p&gt;Python has increased in popularity to near ubiquity in the past five years. While the Python community (correctly) professes 
 simplicity as a major accomplishment of the language, I still get a lot of questions about how to get a python environment 
 setup properly. There are some lengthy guides out there on this - this post will aim to summarize and explain the relevant 
 components to getting started.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note: skip to bottom if you want quick install commands&lt;/strong&gt;&lt;/p&gt;
-&lt;h4&gt;The Pieces&lt;/h4&gt;
+&lt;h4 id="the-pieces"&gt;The Pieces&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;Python&lt;/em&gt;&lt;/strong&gt; is a language. Combination of syntax rules, semantics, keyword commands, an interpreter that can execute code abiding the rules. &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;package&lt;/em&gt;&lt;/strong&gt; is a self-contained, reusable piece of python code. Often a directory containing one or more python files (or more subdirectories). One typically packages python code in order to share it. There are some packages that come with the language itself (called "builtin") and others that users can install optionally (called "3rd party" packages)&lt;/li&gt;
@@ -492,16 +676,16 @@ components to getting started.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;miniconda&lt;/em&gt;&lt;/strong&gt; is an environment that contains bare-bones packages only, including the conda package manager.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;Anaconda&lt;/em&gt;&lt;/strong&gt; is an environment that contains a &lt;em&gt;large&lt;/em&gt; amount of packages, aimed at scientific computing (such as numpy, scipy, etc)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;The Process&lt;/h4&gt;
+&lt;h4 id="the-process"&gt;The Process&lt;/h4&gt;
 &lt;p&gt;Recall that this guide is designed for novice-users, or as a reference for other users. I will assume that the user is 
 able to use a desktop GUI (not headless).&lt;/p&gt;
-&lt;h5&gt;Using Pip (not recommended)&lt;/h5&gt;
+&lt;h5 id="using-pip-not-recommended"&gt;Using Pip (not recommended)&lt;/h5&gt;
 &lt;p&gt;Install python using the &lt;a href="https://www.python.org/downloads/"&gt;os-specific Python installation programs&lt;/a&gt;. I recommend 
 installing the latest version of Python 3.*, since most new packages do not include support for older versions of 2.7. 
 The program will install all the base packages you require, including pip. At which point you can open up a command line 
 (terminal on Mac or CMD on Win), and use commands like &lt;code&gt;pip install x&lt;/code&gt; to install a package named "x" (for more pip commands 
 see the &lt;a href="https://pip.pypa.io/en/stable/quickstart/"&gt;docs&lt;/a&gt;).&lt;/p&gt;
-&lt;h5&gt;Using Conda (recommended)&lt;/h5&gt;
+&lt;h5 id="using-conda-recommended"&gt;Using Conda (recommended)&lt;/h5&gt;
 &lt;p&gt;Install &lt;strong&gt;miniconda&lt;/strong&gt; using the &lt;a href="https://docs.conda.io/en/latest/miniconda.html"&gt;install program&lt;/a&gt;. Once installed, create 
 your Python environment by doing the following:&lt;/p&gt;
 &lt;ol&gt;
@@ -514,7 +698,7 @@ your Python environment by doing the following:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;There are, of course, more complicated options available using conda, for those see 
 the &lt;a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf"&gt;conda cheat sheet&lt;/a&gt;&lt;/p&gt;
-&lt;h4&gt;TL;DR - Get Python Setup&lt;/h4&gt;
+&lt;h4 id="tldr-get-python-setup"&gt;TL;DR - Get Python Setup&lt;/h4&gt;
 &lt;p&gt;The below steps give a quick, general-purpose environment setup.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Install &lt;a href="https://docs.conda.io/en/latest/miniconda.html"&gt;miniconda&lt;/a&gt;&lt;/li&gt;
@@ -526,8 +710,8 @@ the &lt;a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a9560
 &lt;p&gt;The "env1" directory will be installed in the user x directory (&lt;code&gt;~/.anaconda&lt;/code&gt; on Mac or &lt;code&gt;C:\Users\x\.anaconda&lt;/code&gt; on Win). 
 If you are using a python editor (like PyCharm) that wants to be "pointed" to the environment, then you will configure 
 it to look at the "env1" directory under the ".anaconda" folder.&lt;/p&gt;
-&lt;h4&gt;Conda env shortcut&lt;/h4&gt;
-&lt;p&gt;It is also possible to create a clickable shortcut to the conda environment, see &lt;a href="https://anaconda.org/anaconda/console_shortcut"&gt;the docs&lt;/a&gt; for more.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Tue, 02 Jul 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-07-02:/blog/quick-python-setup/</guid><category>Python</category><category>python</category><category>comp-physics</category></item><item><title>Book Review: Tensors and Group Theory for Physicists (Jeevanjee)</title><link>/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/</link><description>&lt;h5&gt;Summary&lt;/h5&gt;
+&lt;h4 id="conda-env-shortcut"&gt;Conda env shortcut&lt;/h4&gt;
+&lt;p&gt;It is also possible to create a clickable shortcut to the conda environment, see &lt;a href="https://anaconda.org/anaconda/console_shortcut"&gt;the docs&lt;/a&gt; for more.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Tue, 02 Jul 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-07-02:/blog/quick-python-setup/</guid><category>Python</category><category>python</category><category>comp-physics</category></item><item><title>Book Review: Tensors and Group Theory for Physicists (Jeevanjee)</title><link>/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/</link><description>&lt;h5 id="summary"&gt;Summary&lt;/h5&gt;
 &lt;p&gt;I picked up a copy of Nadir Jeevnajee's &lt;a href="https://amzn.to/2XzHfp2"&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/a&gt;
 a few months ago with the intent of skimming through and spending most of my time in reference texts. To my pleasant
 surprise, I found this text to be self contained - requiring little to no references. The presentation is at once 
@@ -535,21 +719,21 @@ mathematically rigorous and physically intuitive, alluding to well-known example
 text to be such a great introduction to tensors that I have even recommended it to computer-scientist colleagues of mine
 who have no interest in physics. I whole-heartedly recommend it to anyone interesting in becoming more familiar with tensors
 and elementary group / representation theory.&lt;/p&gt;
-&lt;h5&gt;Part I: Tensors&lt;/h5&gt;
+&lt;h5 id="part-i-tensors"&gt;Part I: Tensors&lt;/h5&gt;
 &lt;p&gt;The presentation of tensors as multilinear functions achieves a remarkable degree of exposition, and arrives at all the 
 more heuristic definitions of tensors as derived from the simple multilinear-map definitions. This gave the impression
 of a more solid ground basis for many subsequent tensorial notations and usages.&lt;/p&gt;
 &lt;p&gt;The derivation of commonly assumed definitions is most satisfying. Specifically, the definitions of the adjoint operator
 and tensor product are much simpler than the more commonly given "behavioral" definitions presented in physics. I appreciated
 the rigorous yet succinct treatment of the tensor and wedge products.&lt;/p&gt;
-&lt;h5&gt;Part II: Group Theory&lt;/h5&gt;
+&lt;h5 id="part-ii-group-theory"&gt;Part II: Group Theory&lt;/h5&gt;
 &lt;p&gt;Though I am still working through the last part of chapter 6, I must admit I found this section to be superbly clear. The 
 methodical, sequential development of topics in Lie theory were especially thoughtful. The presentation of Lie algebra elements
 as derivatives of Lie group elements yielded the conventional tangent-space definitions nicely. &lt;/p&gt;
 &lt;p&gt;At the same time, Jeevanjee also presents many common groups and the important relations between them, such as the double-cover 
 relationship of SU(2) and SO(3). He also presents the higher-level relations between the various common groups, such as the
 quantum implications of the Lorentz (improper) group. Good stuff!&lt;/p&gt;
-&lt;h5&gt;Solutions&lt;/h5&gt;
+&lt;h5 id="solutions"&gt;Solutions&lt;/h5&gt;
 &lt;p&gt;As I read through the text I'm compiling some solutions. Much to my fortunate suprise, Dr. Jeevanjee has welcomed these 
 solutions as contributions to his solutions manual which he has published on 
 Overleaf here: &lt;a href="https://www.overleaf.com/read/smdmygtbwtxk"&gt;Solutions Manual&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Fri, 28 Jun 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-06-28:/blog/book-review-tensors-and-group-theory-for-physicists-jeevanjee/</guid><category>Books</category><category>physics</category><category>linear algebra</category><category>group theory</category><category>tensors</category></item><item><title>Gravity of a Photon</title><link>/blog/gravity-of-a-photon/</link><description>&lt;p&gt;A friend, who focuses primarily on experimental particle physics, recently asked me an interesting question about gravity.
@@ -653,12 +837,11 @@ having no rest mass!&lt;/p&gt;
 &lt;h3&gt;Bibliography&lt;/h3&gt;
 &lt;p id='carrollSpacetimeGeometryIntroduction2013'&gt;Sean Carroll.
 &lt;em&gt;Spacetime and &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Geometry&lt;/span&gt;&lt;/span&gt;: &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;An Introduction&lt;/span&gt;&lt;/span&gt; to &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;General Relativity&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;.
-&lt;span class="bibtex-protected"&gt;Pearson Education&lt;/span&gt;, 3 edition, 2013. &lt;a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;span class="bibtex-protected"&gt;Pearson Education&lt;/span&gt;, third edition, 2013. &lt;a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p id='misnerGravitation2017'&gt;Charles&amp;nbsp;W. Misner, Kip&amp;nbsp;S. Thorne, John&amp;nbsp;Archibald Wheeler, and David Kaiser.
 &lt;em&gt;Gravitation&lt;/em&gt;.
 &lt;span class="bibtex-protected"&gt;Princeton University Press&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Princeton, N.J&lt;/span&gt;, 2017.
-ISBN 978-0-691-17779-3.
-OCLC: on1006427790. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+ISBN 978-0-691-17779-3. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Sat, 15 Jun 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-06-15:/blog/gravity-of-a-photon/</guid><category>Physics</category><category>physics</category><category>gravity</category></item><item><title>Erasing Efficiently</title><link>/blog/erasing-efficiently/</link><description>&lt;p&gt;I've spent time focusing on the best chalkboards and chalks on my &lt;a href="/pages/tools"&gt;tools page&lt;/a&gt;, but -until recently- I've 
 not spent much time thinking about the last part of the process -- erasing. At the suggestion of several colleagues, I 
 played around with several different methods of erasing chalk marks to find which is most effective. The results were
@@ -694,25 +877,25 @@ well long after the eraser needs to be cleaned, there's a surface-area advantage
 &lt;p&gt;An aside about cleaning up the tools: the microfiber towels are machine-washable (do &lt;em&gt;not&lt;/em&gt; use softener, only dry on low 
 or no heat). This is much easier than the felt erasers, which I either had to clap against eachother outdoors, or vacuum 
 with a special nozzle on the vacuum cleaner.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Winner: Microfiber Towel!&lt;/strong&gt; (I won't go back). If you prefer the form-factor of the felt eraser, wrap it in a microfiber towel!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Mon, 06 May 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-05-06:/blog/erasing-efficiently/</guid><category>Maths</category><category>maths</category><category>tools</category><category>chalk</category></item><item><title>Tensor Type Notation</title><link>/blog/tensor-type-notation/</link><description>&lt;h3&gt;What does type (r, s) mean?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Winner: Microfiber Towel!&lt;/strong&gt; (I won't go back). If you prefer the form-factor of the felt eraser, wrap it in a microfiber towel!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Mon, 06 May 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-05-06:/blog/erasing-efficiently/</guid><category>Maths</category><category>maths</category><category>tools</category><category>chalk</category></item><item><title>Tensor Type Notation</title><link>/blog/tensor-type-notation/</link><description>&lt;h3 id="what-does-type-r-s-mean"&gt;What does type (r, s) mean?&lt;/h3&gt;
 &lt;p&gt;I'd like to discuss the notation of the tensor type, commonly denoted &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; as it relates to the tensor product. Specifically, 
 the ordering of the vector spaces and dual vector spaces involved in the product. The order matters since tensors are typically 
 categorized by the number of vectors and dual vectors they require as arguments. To avoid ambiguity, for a given tensor &lt;span class="math"&gt;\(T\)&lt;/span&gt;, I will 
 denote the number of vector arguments as &lt;span class="math"&gt;\(n_v\)&lt;/span&gt; and the number of dual vector arguments as &lt;span class="math"&gt;\(n_d\)&lt;/span&gt;. &lt;/p&gt;
-&lt;h4&gt;Preliminaries&lt;/h4&gt;
+&lt;h4 id="preliminaries"&gt;Preliminaries&lt;/h4&gt;
 &lt;p&gt;Before we begin, recall that the dual vector space &lt;span class="math"&gt;\(V^*\)&lt;/span&gt; is defined as the set of linear functionals from &lt;span class="math"&gt;\(V\rightarrow C\)&lt;/span&gt;, 
 where &lt;span class="math"&gt;\(C\)&lt;/span&gt; is the field over which &lt;span class="math"&gt;\(V\)&lt;/span&gt; is a vector space. Note, the dual space &lt;span class="math"&gt;\(V^*\)&lt;/span&gt; is defined in terms of the vector space &lt;span class="math"&gt;\(V\)&lt;/span&gt;. 
 For similar reasons, the topic of dual spaces is introduced after the topic of vector spaces - in other words, &lt;strong&gt;epistemologically, 
 the dual space follows the vector space&lt;/strong&gt;. I only draw attention to this ordering between the vector space and the dual because 
 it informs the aesthetic nature of the notation, as we'll see.&lt;/p&gt;
-&lt;h4&gt;Conventions&lt;/h4&gt;
+&lt;h4 id="conventions"&gt;Conventions&lt;/h4&gt;
 &lt;p&gt;The tensor type &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; is used to categories tensors based on the number of vectors and dual vectors they consume. Problem is, 
 there is a choice to made between the &lt;span class="math"&gt;\(r=n_v\)&lt;/span&gt; or &lt;span class="math"&gt;\(r=n_d\)&lt;/span&gt; conventions - and this choice isn't made consistently. As I mentioned above, 
 the epistemological ordering of vectors and dual vectors is unambiguous; dual vectors follow vectors. It therefore seems natural to 
 make the first number &lt;span class="math"&gt;\(r\)&lt;/span&gt; equal the number of vector arguments &lt;span class="math"&gt;\(n_v\)&lt;/span&gt;. I'll call this convention the &lt;em&gt;vector first&lt;/em&gt; convention, or 
 "VF" for short. Similarly, I'll call the opposite convention, of using the number of dual vectors &lt;span class="math"&gt;\(n_d\)&lt;/span&gt; as the first number &lt;span class="math"&gt;\(r\)&lt;/span&gt;, 
 the &lt;em&gt;dual first&lt;/em&gt; convention, or "DF" for short.&lt;/p&gt;
-&lt;h4&gt;Usage of Conventions&lt;/h4&gt;
+&lt;h4 id="usage-of-conventions"&gt;Usage of Conventions&lt;/h4&gt;
 &lt;p&gt;Some sources that use the &lt;em&gt;VF&lt;/em&gt; convention &lt;a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'&gt;Jeevanjee (2015)&lt;/a&gt;, &lt;a href='#langLinearAlgebra1987' id='ref-langLinearAlgebra1987-1'&gt;Lang (1987)&lt;/a&gt;. Some sources that 
 use the &lt;em&gt;DF&lt;/em&gt; convention &lt;a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'&gt;Roman (2007)&lt;/a&gt;, &lt;a href='#hallLieGroupsLie2015' id='ref-hallLieGroupsLie2015-1'&gt;Hall (2015)&lt;/a&gt;, &lt;a href='#tuDifferentialGeometryConnections2017' id='ref-tuDifferentialGeometryConnections2017-1'&gt;Tu (2017)&lt;/a&gt;, 
 &lt;a href='#leeIntroductionSmoothManifolds2013' id='ref-leeIntroductionSmoothManifolds2013-1'&gt;Lee (2013)&lt;/a&gt;, &lt;a href='#rentelnManifoldsTensorsForms2014' id='ref-rentelnManifoldsTensorsForms2014-1'&gt;Renteln (2014)&lt;/a&gt;, &lt;a href='#dasTensorsMathematicsRelativity2007' id='ref-dasTensorsMathematicsRelativity2007-1'&gt;Das (2007)&lt;/a&gt;, 
@@ -728,7 +911,7 @@ where &lt;span class="math"&gt;\(V_{i}=V\)&lt;/span&gt; and &lt;span class="math
 &lt;div class="math"&gt;$$T: V^*_1\times \cdot\cdot\cdot \times V^*_r \times V_1 \times \cdot\cdot\cdot \times V_s\rightarrow C$$&lt;/div&gt;
 &lt;p&gt; where again 
 &lt;span class="math"&gt;\(V_{I}=V\)&lt;/span&gt; and &lt;span class="math"&gt;\(V^*_{i}=V^*\)&lt;/span&gt; for all &lt;span class="math"&gt;\(i\)&lt;/span&gt;.&lt;/p&gt;
-&lt;h3&gt;Cartesian vs. Tensor Product Notations&lt;/h3&gt;
+&lt;h3 id="cartesian-vs-tensor-product-notations"&gt;Cartesian vs. Tensor Product Notations&lt;/h3&gt;
 &lt;p&gt;The usage of Cartesian products to define the domain of &lt;span class="math"&gt;\(T\)&lt;/span&gt; is typically used before introducing the tensor product, 
 as it is more familiar. In the Cartesian product notation, the &lt;em&gt;VF&lt;/em&gt; convention places the vector spaces before the dual 
 spaces, and in some sense is "aligned" with the way in which the subject is taught. When using the tensor product notation, 
@@ -747,13 +930,13 @@ V^*_s\rightarrow C$$&lt;/div&gt;
 &lt;p&gt; Notice that these definitions are equivalent to the previous definitions using Cartesian product 
 notation, but that now the vector spaces are written first in what we called the &lt;em&gt;dual first&lt;/em&gt; convention, not the &lt;em&gt;vector first&lt;/em&gt; 
 convention!&lt;/p&gt;
-&lt;h3&gt;Why is &lt;em&gt;DF&lt;/em&gt; convention preferred?&lt;/h3&gt;
+&lt;h3 id="why-is-df-convention-preferred"&gt;Why is &lt;em&gt;DF&lt;/em&gt; convention preferred?&lt;/h3&gt;
 &lt;p&gt;It seems that the &lt;span class="math"&gt;\(DF\)&lt;/span&gt; convention has wider usage and appeal; naturally I wonder why. Since it feels natural to align the 
 notation with the epistemological order, in other words, to write &lt;span class="math"&gt;\(V\)&lt;/span&gt; before &lt;span class="math"&gt;\(V^*\)&lt;/span&gt;, then I am forced to conclude that the 
 mathematical community, with malice of forethought, prefers to base the definition of a type &lt;span class="math"&gt;\((r, s)\)&lt;/span&gt; tensor on the tensor 
 product notation, rather than the Cartesian notation, since the former requires that &lt;span class="math"&gt;\(V\)&lt;/span&gt; be written before &lt;span class="math"&gt;\(V^*\)&lt;/span&gt;. I personally 
 have no objection to the choice, as it seems sensible.&lt;/p&gt;
-&lt;h4&gt;Parting note on terminology&lt;/h4&gt;
+&lt;h4 id="parting-note-on-terminology"&gt;Parting note on terminology&lt;/h4&gt;
 &lt;p&gt;In the &lt;em&gt;DF&lt;/em&gt; convention, the number &lt;span class="math"&gt;\(r\)&lt;/span&gt; is often referred to as the &lt;em&gt;covariant&lt;/em&gt; number and the number &lt;span class="math"&gt;\(s\)&lt;/span&gt; is called the 
 &lt;em&gt;contravariant&lt;/em&gt; number. These terms refer to the number of dual vectors and vectors respectively, since vectors are typically
 considered contravariant. Similar terms refer to &lt;em&gt;lower&lt;/em&gt; and &lt;em&gt;upper&lt;/em&gt; indices respectively.&lt;/p&gt;
@@ -823,18 +1006,16 @@ considered contravariant. Similar terms refer to &lt;em&gt;lower&lt;/em&gt; and 
 &lt;h3&gt;Bibliography&lt;/h3&gt;
 &lt;p id='carrollSpacetimeGeometryIntroduction2013'&gt;Sean Carroll.
 &lt;em&gt;Spacetime and &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Geometry&lt;/span&gt;&lt;/span&gt;: &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;An Introduction&lt;/span&gt;&lt;/span&gt; to &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;General Relativity&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;.
-&lt;span class="bibtex-protected"&gt;Pearson Education&lt;/span&gt;, 3 edition, 2013. &lt;a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;span class="bibtex-protected"&gt;Pearson Education&lt;/span&gt;, third edition, 2013. &lt;a class="cite-backref" href="#ref-carrollSpacetimeGeometryIntroduction2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p id='dasTensorsMathematicsRelativity2007'&gt;Anadijiban Das.
 &lt;em&gt;Tensors: The Mathematics of Relativity Theory and Continuum Mechanics&lt;/em&gt;.
 &lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;New York&lt;/span&gt;, 2007.
-ISBN 978-0-387-69468-9 978-0-387-69469-6.
-OCLC: ocm77795794. &lt;a class="cite-backref" href="#ref-dasTensorsMathematicsRelativity2007-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+ISBN 978-0-387-69468-9 978-0-387-69469-6. &lt;a class="cite-backref" href="#ref-dasTensorsMathematicsRelativity2007-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p id='hallLieGroupsLie2015'&gt;Brian&amp;nbsp;C. Hall.
 &lt;em&gt;Lie Groups, &lt;span class="bibtex-protected"&gt;&lt;span class="bibtex-protected"&gt;Lie&lt;/span&gt;&lt;/span&gt; Algebras, and Representations: An Elementary Introduction&lt;/em&gt;.
 Number&amp;nbsp;222 in Graduate Texts in Mathematics.
 &lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Cham ; New York&lt;/span&gt;, second edition edition, 2015.
-ISBN 978-3-319-13466-6.
-OCLC: ocn910324548. &lt;a class="cite-backref" href="#ref-hallLieGroupsLie2015-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+ISBN 978-3-319-13466-6. &lt;a class="cite-backref" href="#ref-hallLieGroupsLie2015-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p id='jeevanjeeIntroductionTensorsGroup2015'&gt;Nadir Jeevanjee.
 &lt;em&gt;An Introduction to Tensors and Group Theory for Physicists&lt;/em&gt;.
 &lt;span class="bibtex-protected"&gt;Springer Science+Business Media&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;New York, NY&lt;/span&gt;, 2015.
@@ -848,13 +1029,11 @@ ISBN 978-0-387-96412-6. &lt;a class="cite-backref" href="#ref-langLinearAlgebra1
 &lt;em&gt;Introduction to Smooth Manifolds&lt;/em&gt;.
 Number&amp;nbsp;218 in Graduate Texts in Mathematics.
 &lt;span class="bibtex-protected"&gt;Springer&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;New York ; London&lt;/span&gt;, 2nd ed edition, 2013.
-ISBN 978-1-4419-9981-8 978-1-4419-9982-5.
-OCLC: ocn800646950. &lt;a class="cite-backref" href="#ref-leeIntroductionSmoothManifolds2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+ISBN 978-1-4419-9981-8 978-1-4419-9982-5. &lt;a class="cite-backref" href="#ref-leeIntroductionSmoothManifolds2013-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p id='misnerGravitation2017'&gt;Charles&amp;nbsp;W. Misner, Kip&amp;nbsp;S. Thorne, John&amp;nbsp;Archibald Wheeler, and David Kaiser.
 &lt;em&gt;Gravitation&lt;/em&gt;.
 &lt;span class="bibtex-protected"&gt;Princeton University Press&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Princeton, N.J&lt;/span&gt;, 2017.
-ISBN 978-0-691-17779-3.
-OCLC: on1006427790. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+ISBN 978-0-691-17779-3. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p id='poissonRelativistToolkitMathematics2004'&gt;Eric Poisson.
 &lt;em&gt;A Relativist's Toolkit: The Mathematics of Black-Hole Mechanics&lt;/em&gt;.
 &lt;span class="bibtex-protected"&gt;Cambridge University Press&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Cambridge, UK ; New York&lt;/span&gt;, 2004.
@@ -871,8 +1050,7 @@ ISBN 978-0-387-72828-5. &lt;a class="cite-backref" href="#ref-romanAdvancedLinea
 &lt;p id='spivakComprehensiveIntroductionDifferential1999'&gt;Michael Spivak.
 &lt;em&gt;A Comprehensive Introduction to Differential Geometry&lt;/em&gt;.
 &lt;span class="bibtex-protected"&gt;Publish or Perish, Inc&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Houston, Tex&lt;/span&gt;, 3rd ed edition, 1999.
-ISBN 978-0-914098-70-6 978-0-914098-71-3 978-0-914098-72-0 978-0-914098-73-7 978-0-914098-74-4.
-OCLC: ocm42962004. &lt;a class="cite-backref" href="#ref-spivakComprehensiveIntroductionDifferential1999-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+ISBN 978-0-914098-70-6 978-0-914098-71-3 978-0-914098-72-0 978-0-914098-73-7 978-0-914098-74-4. &lt;a class="cite-backref" href="#ref-spivakComprehensiveIntroductionDifferential1999-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;p id='tuDifferentialGeometryConnections2017'&gt;Loring&amp;nbsp;W. Tu.
 &lt;em&gt;Differential Geometry: Connections, Curvature, and Characteristic Classes&lt;/em&gt;.
 &lt;span class="bibtex-protected"&gt;Springer Science+Business Media&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;New York, NY&lt;/span&gt;, 2017.
@@ -880,9 +1058,9 @@ ISBN 978-3-319-55082-4. &lt;a class="cite-backref" href="#ref-tuDifferentialGeom
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kennington</dc:creator><pubDate>Tue, 23 Apr 2019 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:None,2019-04-23:/blog/tensor-type-notation/</guid><category>Maths</category><category>maths</category><category>tensors</category><category>notation</category></item><item><title>Tensor Product for Programmers</title><link>/blog/tensor-product-for-programmers/</link><description>&lt;p&gt;The introduction to tensor products and tensor algebras is often riddled with rigor, in which a mathematician would delight but a programmer would despair. I find myself in the intersection of these camps and while I appreciate notation, a simpler introduction is possible using functional programming concepts. &lt;/p&gt;
 &lt;p&gt;Tensors are defined and introduced in two equivalent ways. The first way, called the "expansion coefficient" (or array) style of introducing tensors relies on many indices and iterates over the n dimensions of some array (n-dimensional generalization of a matrix) &lt;a href='#wikipediaTensorMultidimensionalArrays2019' id='ref-wikipediaTensorMultidimensionalArrays2019-1'&gt;Wikipedia (2019)&lt;/a&gt;. I have found this approach to be overly cluttered; missing the forest for the trees. Instead, I prefer the second way of defining tensors, namely as "multilinear maps" &lt;a href='#romanAdvancedLinearAlgebra2007' id='ref-romanAdvancedLinearAlgebra2007-1'&gt;Roman (2007)&lt;/a&gt; &lt;a href='#jeevanjeeIntroductionTensorsGroup2015' id='ref-jeevanjeeIntroductionTensorsGroup2015-1'&gt;Jeevanjee (2015)&lt;/a&gt;. This technique focuses on functions and interfaces, as opposed to components, and will be the chosen method of explaining below. &lt;/p&gt;
 &lt;p&gt;Before we begin, a brief note about preferences between the "coefficient" and "multilinear" approaches. The latter way has found greater resonance with mathematicians, while programmers often find the former more comforting. I believe this is caused by an over-reliance on data structures as atomic units of understanding. True, it is natural as a developer to ask "but what &lt;em&gt;is&lt;/em&gt; the object"; however, using more functional-programming style of thought, the multilinear map approach is actually simpler! No need to keep track of various coefficients on various axes of some imaginary n-dimensional array (leave that to &lt;code&gt;numpy&lt;/code&gt;). In the below, I outline a functional-programming style analogy for tensors, and the tensor product. Thought the below snippets are in python, some details are left to the imagination (i.e. this code is not a script).&lt;/p&gt;
-&lt;h3&gt;Setting the Stage&lt;/h3&gt;
+&lt;h3 id="setting-the-stage"&gt;Setting the Stage&lt;/h3&gt;
 &lt;p&gt;Before we get to define tensors, we need to briefly define a few building blocks. First, there is a field &lt;span class="math"&gt;\(C\)&lt;/span&gt;, commonly the reals &lt;span class="math"&gt;\(\mathbb{R}\)&lt;/span&gt;, occasionally the complex numbers &lt;span class="math"&gt;\(\mathbb{C}\)&lt;/span&gt;. Members of &lt;span class="math"&gt;\(C\)&lt;/span&gt; are called &lt;em&gt;scalars&lt;/em&gt; and are represented in the code by the type &lt;code&gt;scalar&lt;/code&gt;. Second, there are vector spaces &lt;span class="math"&gt;\(V\)&lt;/span&gt; over this field, with the usual properties of closure under addition and scalar multiplication. Elements of &lt;span class="math"&gt;\(V\)&lt;/span&gt; are of type &lt;code&gt;vector&lt;/code&gt;. Note, I am not specifying a vector as a tuple of scalars - though that is a valid vector space, there are others based on non-tuple like entities, like the vector space of square-integrable functions! The last piece of machinery is the dual space &lt;span class="math"&gt;\(V^*\)&lt;/span&gt;. If you're not familiar with the dual space, it is essentially the set of all linear functions that take 1 vector and spit out a scalar (specifically &lt;span class="math"&gt;\(V^* = \{f: V\rightarrow C\}\)&lt;/span&gt; where &lt;span class="math"&gt;\(f\)&lt;/span&gt; is linear). Elements of &lt;span class="math"&gt;\(V^*\)&lt;/span&gt; are of type &lt;code&gt;dual&lt;/code&gt;.&lt;/p&gt;
-&lt;h4&gt;Some dual vectors&lt;/h4&gt;
+&lt;h4 id="some-dual-vectors"&gt;Some dual vectors&lt;/h4&gt;
 &lt;p&gt;Recall that dual vectors are functions that take a vector and return a scalar. Let &lt;span class="math"&gt;\(f, g \in V^*\)&lt;/span&gt;. In code:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;scalar&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;pass&lt;/span&gt;
@@ -892,7 +1070,7 @@ ISBN 978-3-319-55082-4. &lt;a class="cite-backref" href="#ref-tuDifferentialGeom
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4&gt;Tensor Product&lt;/h4&gt;
+&lt;h4 id="tensor-product"&gt;Tensor Product&lt;/h4&gt;
 &lt;p&gt;Now let's define the tensor product of &lt;span class="math"&gt;\(f\)&lt;/span&gt; and &lt;span class="math"&gt;\(g\)&lt;/span&gt; as &lt;span class="math"&gt;\(h = f \otimes g\)&lt;/span&gt;. What this amounts to, is combining the functional interface into a new, single tensor (function), that curries to the functions it was made from! Specifically:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;h&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;vector&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;scalar&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
