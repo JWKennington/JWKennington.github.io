@@ -1,5 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington - Physics</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2021-09-19T00:00:00-05:00</updated><entry><title>Found This Week #1</title><link href="/blog/found-this-week-1/" rel="alternate"></link><published>2021-09-19T00:00:00-05:00</published><updated>2021-09-19T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-19:/blog/found-this-week-1/</id><summary type="html">&lt;p&gt;As this is the inaugural issue of the &lt;em&gt;found-this-week&lt;/em&gt; series, I'll briefly note my motivation and inspiration. The
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington - Physics</title><link href="/" rel="alternate"></link><link href="/feeds/physics.atom.xml" rel="self"></link><id>/</id><updated>2021-09-24T00:00:00-05:00</updated><entry><title>Fermi Friday: Baseball Blackhole</title><link href="/blog/fermi-friday-baseball-blackhole/" rel="alternate"></link><published>2021-09-24T00:00:00-05:00</published><updated>2021-09-24T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-24:/blog/fermi-friday-baseball-blackhole/</id><summary type="html">&lt;p&gt;The question of interest this week is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If all baseballs ever used in an MLB game were compressed into a blackhole, how large would the blackhole be?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To estimate the blackhole radius &lt;span class="math"&gt;\(r_{BH}\)&lt;/span&gt;, we'll need to compute the number of baseballs used in MLB games, translate that number to …&lt;/p&gt;&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><content type="html">&lt;p&gt;The question of interest this week is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If all baseballs ever used in an MLB game were compressed into a blackhole, how large would the blackhole be?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To estimate the blackhole radius &lt;span class="math"&gt;\(r_{BH}\)&lt;/span&gt;, we'll need to compute the number of baseballs used in MLB games, translate that number to a total mass, then compute the blackhole radius of the corresponding mass.&lt;/p&gt;
+&lt;h3 id="counting-baseballs"&gt;Counting Baseballs&lt;/h3&gt;
+&lt;p&gt;We begin with a lower-bound on the number of baseballs used in all MLB games. If we define &lt;span class="math"&gt;\(n_u\)&lt;/span&gt; as the number of pitches that a ball is used for, then the problem translates to counting pitches. The pitches per game can be computed in terms of the number of pitches per inning &lt;span class="math"&gt;\(n_p\)&lt;/span&gt; and the number of innings per game &lt;span class="math"&gt;\(n_i\)&lt;/span&gt; as &lt;span class="math"&gt;\(n_p n_i\)&lt;/span&gt;. The number of regular season games per year  can be given in terms of the number of games per team &lt;span class="math"&gt;\(n_{g}\)&lt;/span&gt;, the number of teams &lt;span class="math"&gt;\(n_{t}\)&lt;/span&gt;, and the number of postseason games &lt;span class="math"&gt;\(n_{ps}\)&lt;/span&gt; as &lt;span class="math"&gt;\(n_g n_t / 2 + n_{ps}\)&lt;/span&gt;. Scaling by the number of seasons &lt;span class="math"&gt;\(n_s\)&lt;/span&gt;, then the complete expression for total baseballs is then given by:&lt;/p&gt;
+&lt;div class="math"&gt;$$n_B = \frac{n_s n_p n_i \left(n_g n_t + 2 n_{ps}  \right)}{2 n_u}$$&lt;/div&gt;
+&lt;h3 id="blackhole-radius"&gt;Blackhole Radius&lt;/h3&gt;
+&lt;p&gt;To estimate the blackhole radius &lt;span class="math"&gt;\(r_{BH}\)&lt;/span&gt; of an arbitrary mass &lt;span class="math"&gt;\(m\)&lt;/span&gt;, we use the well-known, elegant equation for the Schwarzschild event-horizon radius:&lt;/p&gt;
+&lt;div class="math"&gt;$$r_{s} = \frac{2 G m}{c^2}$$&lt;/div&gt;
+&lt;h3 id="solution"&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Putting the above expressions together, we arrive at the baseball black hole radius:&lt;/p&gt;
+&lt;div class="math"&gt;$$r_{b} = \frac{G m_B n_s n_p n_i \left(n_g n_t + 2 n_{ps}  \right)}{n_u c^2}$$&lt;/div&gt;
+&lt;p&gt;Plugging in some numbers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mass of a baseball: &lt;span class="math"&gt;\(m_B = 1.5 \times 10^{-1}\)&lt;/span&gt; kg&lt;/li&gt;
+&lt;li&gt;Number of pitches per baseball: &lt;span class="math"&gt;\(n_u = 2 \times 10^0\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Number of seasons: &lt;span class="math"&gt;\(n_s = 1.0 \times 10^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Number of pitches per inning: &lt;span class="math"&gt;\(n_p = 2 \times 10^1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Number of innings per game: &lt;span class="math"&gt;\(n_i = 1 \times 10^1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Number of games per team: &lt;span class="math"&gt;\(n_g = 1.6 \times 10^2\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Number of teams: &lt;span class="math"&gt;\(n_t = 3 \times 10^1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Number of post-season games: &lt;span class="math"&gt;\(n_{ps} = 5 \times 10^1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Gravitational constant: &lt;span class="math"&gt;\(G = 6.7 \times 10^{-11}\ \text{m}^3 \text{kg}^{-1}\text{s}^{-2}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Speed of Light: &lt;span class="math"&gt;\(c = 3 \times 10^8\ \text{ms}^{-1}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+The estimate is hidden below. Press the button below to see solution!&lt;/p&gt;
+&lt;p&gt;&lt;button class="solution-button" onclick="getElementById('fermi-estimate').style.visibility='visible';"&gt;&lt;b&gt;Show
+Estimate&lt;/b&gt;&lt;/button&gt;&lt;/p&gt;
+&lt;p id="fermi-estimate" style="visibility: hidden;"&gt;5.4 * 10^-21 m&lt;/p&gt;
+
+&lt;p&gt;The radius is so small, that I had to compute a few other numbers to contextualize it. The following numbers are the amount of time required, at the current rate of game play, for the baseball black hole to reach a certain size.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Proton Radius (&lt;span class="math"&gt;\(10^{-15}\)&lt;/span&gt; m) would require 18 million more years of baseball&lt;/li&gt;
+&lt;li&gt;Baseball Radius (&lt;span class="math"&gt;\(10^{-2}\)&lt;/span&gt; m) would require &lt;span class="math"&gt;\(1.3 \times 10^{21}\)&lt;/span&gt; more years of baseball. Considerably longer than the age of the universe (&lt;span class="math"&gt;\(1.4 \times 10^{10}\)&lt;/span&gt; yr)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Physics"></category><category term="fermi-problem"></category></entry><entry><title>Found This Week #1</title><link href="/blog/found-this-week-1/" rel="alternate"></link><published>2021-09-19T00:00:00-05:00</published><updated>2021-09-19T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-19:/blog/found-this-week-1/</id><summary type="html">&lt;p&gt;As this is the inaugural issue of the &lt;em&gt;found-this-week&lt;/em&gt; series, I'll briefly note my motivation and inspiration. The
 title of this series is an overt nod to the famous series &lt;a href="https://math.ucr.edu/home/baez/TWF.html"&gt;&lt;em&gt;This Week's Finds&lt;/em&gt;&lt;/a&gt;
 written by the inimitable John Baez. I have learned a great deal from that series and his …&lt;/p&gt;</summary><content type="html">&lt;p&gt;As this is the inaugural issue of the &lt;em&gt;found-this-week&lt;/em&gt; series, I'll briefly note my motivation and inspiration. The
 title of this series is an overt nod to the famous series &lt;a href="https://math.ucr.edu/home/baez/TWF.html"&gt;&lt;em&gt;This Week's Finds&lt;/em&gt;&lt;/a&gt;
