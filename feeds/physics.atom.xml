@@ -11,7 +11,6 @@ spaghetti as a tether, how much spaghetti would be required? Restated, the quest
 &lt;/blockquote&gt;
 &lt;p&gt;The term for such an orbit (of a massive test particle) is commonly called the &lt;em&gt;innermost stable circular orbit&lt;/em&gt;, or ISCO
 for short. For today's post, we'll pretend the "S" stands for &lt;em&gt;spaghetti&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;To estimate the blackhole radius &lt;span class="math"&gt;\(r_{BH}\)&lt;/span&gt;, we'll need to compute the number of baseballs used in MLB games, translate that number to a total mass, then compute the blackhole radius of the corresponding mass.&lt;/p&gt;
 &lt;h3 id="isco-radius"&gt;ISCO Radius&lt;/h3&gt;
 &lt;p&gt;To keep things simple, we take the case of a non-spinning blackhole, which is described by the Schwarzschild solution to
 the Einstein equations. The radius of the spaghetti orbit in this case would be &lt;span class="math"&gt;\(3\)&lt;/span&gt; times the blackhole radius &lt;span class="math"&gt;\(R_S\)&lt;/span&gt;,
