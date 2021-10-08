@@ -1,5 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-09-24T00:00:00-05:00</updated><entry><title>Fermi Friday: Baseball Blackhole</title><link href="/blog/fermi-friday-baseball-blackhole/" rel="alternate"></link><published>2021-09-24T00:00:00-05:00</published><updated>2021-09-24T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-24:/blog/fermi-friday-baseball-blackhole/</id><summary type="html">&lt;p&gt;The question of interest this week is:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jim W. Kennington</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2021-10-08T00:00:00-05:00</updated><entry><title>Fermi Friday: Galactic Spaghetti</title><link href="/blog/fermi-friday-galactic-spaghetti/" rel="alternate"></link><published>2021-10-08T00:00:00-05:00</published><updated>2021-10-08T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-10-08:/blog/fermi-friday-galactic-spaghetti/</id><summary type="html">&lt;p&gt;Often in discussions about blackholes, the question arises of observer experience when falling into a blackhole. Due to
+the extreme tidal forces experienced along such a path, the observer would be stretched out - a process colloquially
+referred to as &lt;em&gt;spaghettification&lt;/em&gt;. This week I would like to look at a happier …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Often in discussions about blackholes, the question arises of observer experience when falling into a blackhole. Due to
+the extreme tidal forces experienced along such a path, the observer would be stretched out - a process colloquially
+referred to as &lt;em&gt;spaghettification&lt;/em&gt;. This week I would like to look at a happier use for spaghetti near blackholes.
+If an observer in a stable circular orbit around the supermassive blackhole at the center of our galaxy were to use 
+spaghetti as a tether, how much spaghetti would be required? Restated, the question of interest this week is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How much spaghetti would be required to form the smallest stable circle around the supermassive blackhole at the center of the Milky Way?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The term for such an orbit (of a massive test particle) is commonly called the &lt;em&gt;innermost stable circular orbit&lt;/em&gt;, or ISCO
+for short. For today's post, we'll pretend the "S" stands for &lt;em&gt;spaghetti&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To estimate the blackhole radius &lt;span class="math"&gt;\(r_{BH}\)&lt;/span&gt;, we'll need to compute the number of baseballs used in MLB games, translate that number to a total mass, then compute the blackhole radius of the corresponding mass.&lt;/p&gt;
+&lt;h3 id="isco-radius"&gt;ISCO Radius&lt;/h3&gt;
+&lt;p&gt;To keep things simple, we take the case of a non-spinning blackhole, which is described by the Schwarzschild solution to
+the Einstein equations. The radius of the spaghetti orbit in this case would be &lt;span class="math"&gt;\(3\)&lt;/span&gt; times the blackhole radius &lt;span class="math"&gt;\(R_S\)&lt;/span&gt;,
+which is also called the &lt;em&gt;Schwarzschild&lt;/em&gt; radius. &lt;a href='#misnerGravitation2017' id='ref-misnerGravitation2017-1'&gt;Misner et al. (2017)&lt;/a&gt;&lt;/p&gt;
+&lt;div class="math"&gt;$$R_{\mathrm{ISCO}} = 6 \frac{G M}{c^2} = 3 R_{S}$$&lt;/div&gt;
+&lt;p&gt;
+In the above, &lt;span class="math"&gt;\(G\)&lt;/span&gt; represents Newton's gravitational constant, &lt;span class="math"&gt;\(c\)&lt;/span&gt; represents the speed of light, and &lt;span class="math"&gt;\(M\)&lt;/span&gt; represents the
+mass of the blackhole around which our spaghetti tether has been formed.&lt;/p&gt;
+&lt;h3 id="spaghetti-distance"&gt;Spaghetti Distance&lt;/h3&gt;
+&lt;p&gt;Next, we'll need a relationship between the length of spaghetti &lt;span class="math"&gt;\(\ell\)&lt;/span&gt; and the mass of that spaghetti &lt;span class="math"&gt;\(m\)&lt;/span&gt;. If we assume a fixed
+cross-sectional area &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; then we can use the familiar relationship between the density &lt;span class="math"&gt;\(\rho\)&lt;/span&gt; and volume &lt;span class="math"&gt;\(V\)&lt;/span&gt; of matter:&lt;/p&gt;
+&lt;div class="math"&gt;$$m = \rho V = \rho \sigma \ell \implies \ell = \frac{m}{\rho \sigma}$$&lt;/div&gt;
+&lt;p&gt;
+We can estimate the cross-sectional area of the spaghetti strands &lt;span class="math"&gt;\(\sigma\)&lt;/span&gt; by using the radius of a spaghetti stick &lt;span class="math"&gt;\(r_s\)&lt;/span&gt;
+as &lt;span class="math"&gt;\(\sigma = \pi r_s^2\)&lt;/span&gt;. Similarly, we can estimate the density of spaghetti in terms of a familiar spaghetti box!&lt;/p&gt;
+&lt;div class="math"&gt;$$\rho = \frac{m_{\mathrm{box}}}{V_{\mathrm{box}}} = \frac{m_{\mathrm{box}}}{\ell_{\mathrm{box}} h_{\mathrm{box}} w_{\mathrm{box}}}$$&lt;/div&gt;
+&lt;p&gt;
+Where &lt;span class="math"&gt;\(\ell_{\mathrm{box}}, h_{\mathrm{box}}, w_{\mathrm{box}}\)&lt;/span&gt; are the length, height, and width of a spaghetti box, respectively.&lt;/p&gt;
+&lt;h3 id="solution"&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Putting the above expressions together, we arrive at the innermost spaghetti circular orbit mass:&lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{split}m &amp;amp;= \ell \rho \sigma = \left(2 \pi \frac{6 GM}{c^2}\right) \left( \frac{m_{\mathrm{box}}}{\ell_{\mathrm{box}} h_{\mathrm{box}} w_{\mathrm{box}}} \right) \left(\pi r_s^2\right)\\ &amp;amp; \\ &amp;amp;= \frac{12 \pi^2 r_s^2 G M m_{\mathrm{box}}}{c^2 \ell_{\mathrm{box}} h_{\mathrm{box}} w_{\mathrm{box}}}\end{split}$$&lt;/div&gt;
+&lt;p&gt;
+Plugging in some numbers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mass of a (galactic center) blackhole: &lt;span class="math"&gt;\(M \approx 4e6 M_{\odot} = 8 \times 10^{36}\)&lt;/span&gt; kg&lt;/li&gt;
+&lt;li&gt;Radius of spaghetti strand: &lt;span class="math"&gt;\(r_s \approx 2 \times 10^{-3}\)&lt;/span&gt; m&lt;/li&gt;
+&lt;li&gt;Newton's Gravitational constant &lt;span class="math"&gt;\(G \approx 7 \times 10^{-11} \mathrm{\ m^{3} kg^{-1} s^{-2}}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Mass of spaghetti box: &lt;span class="math"&gt;\(m_{\mathrm{box}} \approx 5 \times 10^{-1}\)&lt;/span&gt; kg&lt;/li&gt;
+&lt;li&gt;Dimensions of spaghetti box: &lt;span class="math"&gt;\((\ell_{\mathrm{box}}, h_{\mathrm{box}}, w_{\mathrm{box}}) \approx (25, 3, 7) \times 10^{-2}\)&lt;/span&gt; m&lt;/li&gt;
+&lt;li&gt;Speed of light: &lt;span class="math"&gt;\(c \approx 3 \times 10^8\ \mathrm{ms^{-1}}\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+The estimate is hidden below. Press the button below to see solution!&lt;/p&gt;
+&lt;p&gt;&lt;button class="solution-button" onclick="getElementById('fermi-estimate').style.visibility='visible';"&gt;&lt;b&gt;Show
+Estimate&lt;/b&gt;&lt;/button&gt;&lt;/p&gt;
+&lt;p id="fermi-estimate" style="visibility: hidden;"&gt;2.8 * 10^9 kg&lt;/p&gt;
+
+&lt;p&gt;What a large amount of pasta! To put this number in context, This amount of spaghetti could feed every human on Earth approximately &lt;span class="math"&gt;\(3\)&lt;/span&gt; times. &lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%&amp;#64;#$&amp;#64;#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;&lt;hr&gt;
+&lt;h3&gt;Bibliography&lt;/h3&gt;
+&lt;p id='misnerGravitation2017'&gt;Charles&amp;nbsp;W. Misner, Kip&amp;nbsp;S. Thorne, John&amp;nbsp;Archibald Wheeler, and David Kaiser.
+&lt;em&gt;Gravitation&lt;/em&gt;.
+&lt;span class="bibtex-protected"&gt;Princeton University Press&lt;/span&gt;, &lt;span class="bibtex-protected"&gt;Princeton, N.J&lt;/span&gt;, 2017.
+ISBN 978-0-691-17779-3. &lt;a class="cite-backref" href="#ref-misnerGravitation2017-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</content><category term="Physics"></category><category term="fermi-problem"></category></entry><entry><title>Fermi Friday: Baseball Blackhole</title><link href="/blog/fermi-friday-baseball-blackhole/" rel="alternate"></link><published>2021-09-24T00:00:00-05:00</published><updated>2021-09-24T00:00:00-05:00</updated><author><name>Jim Kennington</name></author><id>tag:None,2021-09-24:/blog/fermi-friday-baseball-blackhole/</id><summary type="html">&lt;p&gt;The question of interest this week is:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If all baseballs ever used in an MLB game were compressed into a blackhole, how large would the blackhole be?&lt;/p&gt;
 &lt;/blockquote&gt;
