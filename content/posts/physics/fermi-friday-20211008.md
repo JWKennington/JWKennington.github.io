@@ -16,9 +16,6 @@ The term for such an orbit (of a massive test particle) is commonly called the *
 for short. For today's post, we'll pretend the "S" stands for *spaghetti*.
 
 
-To estimate the blackhole radius $r_{BH}$, we'll need to compute the number of baseballs used in MLB games, translate that number to a total mass, then compute the blackhole radius of the corresponding mass.
-
-
 ### ISCO Radius
 
 To keep things simple, we take the case of a non-spinning blackhole, which is described by the Schwarzschild solution to
